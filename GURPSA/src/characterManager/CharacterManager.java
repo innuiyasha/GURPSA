@@ -14,6 +14,7 @@ public class CharacterManager {
 
 	Character[] players;
 	
+	//This needs to be changed later. Right now, it's a toggle between read/write the XML file.
 	public CharacterManager(boolean MakeXML)
 	{
 		if(MakeXML)
@@ -25,6 +26,7 @@ public class CharacterManager {
 			players = new Character[0];
 	}
 	
+	//Generates a character from an XML file.
 	public Character makeCharacter(File XMLInput)
 	{
 		Character character = null;
@@ -40,6 +42,7 @@ public class CharacterManager {
 		return character;
 	}
 	
+	//Adds a character to the manager's list, using the function above
 	public void AddCharacter(File file)
 	{
 		Character[] tempPlayers = new Character[players.length + 1];
@@ -54,6 +57,7 @@ public class CharacterManager {
 		return players[i];
 	}
 	
+	//Turns a character into an XML file. Currently overwrites a single file.
 	public void toXMLFile(Character character)
 	{
 		try {
