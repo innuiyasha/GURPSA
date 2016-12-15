@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<character>
+    <name>Teresa</name>
+    <player>David Clare</player>
+    <height>5'8</height>
+    <weight>200lbs</weight>
+    <appearance>Purple hair??</appearance>
+    <SM>0</SM>
+    <age>24</age>
+    <ST>15</ST>
+    <DX>12</DX>
+    <IQ>8</IQ>
+    <HT>15</HT>
+    <HP>18</HP>
+    <FP>18</FP>
+    <Will>13</Will>
+    <PER>6</PER>
+    <speed>7.0</speed>
+    <move>7</move>
+    <SkillList>
+        <PlayerSkill>
+            <skill baseAttribute="DX" difficulty="HARD" name="Acrobatics"/>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skill baseAttribute="DX" difficulty="AVERAGE" name="Bow"/>
+            <relativeLevel>1</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skill baseAttribute="DX" difficulty="EASY" name="Brawling"/>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skill baseAttribute="HT" difficulty="AVERAGE" name="Running"/>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+    </SkillList>
+</character>
