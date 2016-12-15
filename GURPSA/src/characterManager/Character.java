@@ -40,7 +40,8 @@ public class Character {
 	@XmlElement(name = "ReactionModifier")
 	private ReactionModifier[] reactionMods;
 	
-
+//This constructor is just for generating an XML file to test.
+//We'll need much, much more awesome constructors soon.
 	public Character()
 	{
 		name = "Teresa";
@@ -250,7 +251,7 @@ public class Character {
 	{
 		this.move = move;
 	}
-
+//Just to help me test reading the XML file
 	public String toString()
 	{
 		String output =  "Name: " + name + "\r\n";
