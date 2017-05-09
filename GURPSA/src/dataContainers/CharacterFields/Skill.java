@@ -10,13 +10,13 @@ import javax.xml.bind.annotation.XmlEnum;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Skill {
 	private String name;
-	private BaseAttribute attr;
-	private Difficulty diff;
+	private String attr;
+	private String diff;
 	private boolean TL;
 	private Vector<SkillDefault> skillDefault;
 	private String desc;
 	
-	public Skill(String name, BaseAttribute baseAttribute, Difficulty difficulty, boolean TL, Vector<SkillDefault> skillDefault, String description)
+	public Skill(String name, String baseAttribute, String difficulty, boolean TL, Vector<SkillDefault> skillDefault, String description)
 	{
 		this.name = name;
 		this.attr = baseAttribute;
@@ -29,8 +29,8 @@ public class Skill {
 	public Skill()
 	{
 		this.name = "";
-		this.attr = BaseAttribute.DX;
-		this.diff = Difficulty.WILD_CARD;
+		this.attr = "DX";
+		this.diff = "None";
 		this.TL = false;
 		this.skillDefault = new Vector<SkillDefault>();
 		this.desc = "";
@@ -43,13 +43,13 @@ public class Skill {
 	}
 	
 //	@XmlElement(name = "diff")
-	public void setDifficulty(Difficulty difficulty)
+	public void setDifficulty(String difficulty)
 	{
 		this.diff = difficulty;
 	}
 	
 //	@XmlElement(name = "attr")
-	public void setBaseAttribute(BaseAttribute baseAttribute)
+	public void setBaseAttribute(String baseAttribute)
 	{
 		this.attr = baseAttribute;
 	}
@@ -72,7 +72,7 @@ public class Skill {
 		this.desc = description;
 	}
 	
-	public Difficulty getDifficulty()
+	public String getDifficulty()
 	{
 		return diff;
 	}
@@ -82,7 +82,7 @@ public class Skill {
 		return name;
 	}
 
-	public BaseAttribute getBaseAttribute() {
+	public String getBaseAttribute() {
 		return attr;
 	}
 	
@@ -100,17 +100,17 @@ public class Skill {
 	{
 		return desc;
 	}
-	
+/*	
 	@XmlEnum
 	public enum Difficulty {
-		EASY, AVERAGE, HARD, VERY_HARD, WILD_CARD
+		Easy, Average, Hard, VeryHard, WildCard
 	}
 	
 	@XmlEnum
 	public enum BaseAttribute {
 		ST, DX, IQ, HT, Will, PER
 	}
-	
+	*/
 	public String toString()
 	{
 		String tempString = name + " " + attr + "/" + diff + ". " + desc + ". Its defaults are ";

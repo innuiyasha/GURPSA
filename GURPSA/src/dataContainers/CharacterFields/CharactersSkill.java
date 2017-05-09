@@ -7,7 +7,7 @@ public class CharactersSkill extends Skill {
 
 	private int relativeLevel;
 	
-	public CharactersSkill(String name, BaseAttribute baseAttribute, Difficulty difficulty, int relLevel)
+	public CharactersSkill(String name, String baseAttribute, String difficulty, int relLevel)
 	{
 		//super(name, baseAttribute, difficulty);
 		this.relativeLevel = relLevel;

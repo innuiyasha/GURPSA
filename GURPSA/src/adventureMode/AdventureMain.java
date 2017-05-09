@@ -35,7 +35,7 @@ public class AdventureMain {
 			}
 			else
 			{
-				skillManager.GenerateSkills(new File("skillList.xml"));
+				skillManager.GenerateSkills(new File("skills.xml"));
 				skillManager.displaySkills();
 			}
 		}

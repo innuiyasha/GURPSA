@@ -77,10 +77,10 @@ public class Character {
 		move = 7;
 
 		playerSkills = new Vector<CharactersSkill>();
-		playerSkills.add(new CharactersSkill("Acrobatics",Skill.BaseAttribute.DX, Skill.Difficulty.HARD, 3));
-		playerSkills.add(new CharactersSkill("Bow", Skill.BaseAttribute.DX, Skill.Difficulty.AVERAGE, 1));
-		playerSkills.add(new CharactersSkill("Brawling", Skill.BaseAttribute.DX, Skill.Difficulty.EASY, 0));
-		playerSkills.add(new CharactersSkill("Running", Skill.BaseAttribute.HT, Skill.Difficulty.AVERAGE, 0));
+		playerSkills.add(new CharactersSkill("Acrobatics", "DX", "Hard", 3));
+		playerSkills.add(new CharactersSkill("Bow", "DX", "Average", 1));
+		playerSkills.add(new CharactersSkill("Brawling", "DX", "Easy", 0));
+		playerSkills.add(new CharactersSkill("Running", "HT", "Average", 0));
 		
 		playerAdvantages = new Vector<Advantage>();
 		playerAdvantages.add(new Advantage("Very Fit", "15 Points", "Placeholder for Very Fit description."));

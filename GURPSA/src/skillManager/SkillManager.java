@@ -19,8 +19,6 @@ import javax.xml.bind.annotation.*;
 import characterManager.Character;
 import dataContainers.CharacterFields.CharactersSkill;
 import dataContainers.CharacterFields.Skill;
-import dataContainers.CharacterFields.Skill.BaseAttribute;
-import dataContainers.CharacterFields.Skill.Difficulty;
 import dataContainers.CharacterFields.SkillDefault;
 
 @XmlRootElement
@@ -41,14 +39,14 @@ public class SkillManager {
 			
 			Vector<SkillDefault> tempList1 = new Vector<SkillDefault>(1,1);
 			tempList1.add(new SkillDefault("DX",6));
-			skillMap.put("Acrobatics", new Skill("Acrobatics", BaseAttribute.DX, Difficulty.HARD, false, tempList1, "showoff skill"));
+			skillMap.put("Acrobatics", new Skill("Acrobatics", "DX", "Hard", false, tempList1, "showoff skill"));
 			
 			Vector<SkillDefault> tempList2 = new Vector<SkillDefault>(1,1);
 			tempList2.add(new SkillDefault("DX",5));
-			skillMap.put("Bow", new Skill("Bow", BaseAttribute.DX, Difficulty.AVERAGE, false, tempList2, "legolas"));
+			skillMap.put("Bow", new Skill("Bow", "DX", "Average", false, tempList2, "legolas"));
 			
 			Vector<SkillDefault> tempList3 = new Vector<SkillDefault>(0,1);
-			skillMap.put("Brawling", new Skill("Brawling", BaseAttribute.DX, Difficulty.EASY, false, tempList3, "punching, but not very good"));
+			skillMap.put("Brawling", new Skill("Brawling", "DX", "Easy", false, tempList3, "punching, but not very good"));
 			
 			Vector<SkillDefault> tempList4 = new Vector<SkillDefault>(4,1);
 			tempList4.add(new SkillDefault("IQ",4));
@@ -56,7 +54,7 @@ public class SkillManager {
 			tempList4.add(new SkillDefault("Physician",0));
 			tempList4.add(new SkillDefault("Veterinary",4));
 			
-			skillMap.put("First Aid", new Skill("First Aid", BaseAttribute.IQ, Difficulty.EASY, false, tempList4, "you will be bullied"));
+			skillMap.put("First Aid", new Skill("First Aid", "IQ", "Easy", false, tempList4, "you will be bullied"));
 		}
 		else
 		{
