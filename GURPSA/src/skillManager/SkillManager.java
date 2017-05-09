@@ -117,23 +117,23 @@ public class SkillManager {
 		System.out.println(toString());
 	}
 	
-	public String getDifficulty(String name) {
+	private String getDifficulty(String name) {
 		return skillMap.get(name).getDifficulty();
 	}
 	
-	public String getDescription(String name) {
+	private String getDescription(String name) {
 		return skillMap.get(name).getDescription();
 	}
 	
-	public String getTL(String name) {
+	private String getTL(String name) {
 		return "" + skillMap.get(name).getTLDependancy();
 	}
 	
-	public String getAttribute(String name) {
+	private String getAttribute(String name) {
 		return skillMap.get(name).getBaseAttribute();
 	}
 	
-	public String getDefault(String name) {
+	private String getDefault(String name) {
 		List<SkillDefault> list = skillMap.get(name).getDefaults();
 		if(list != null) {
 			String defaults = "\n\t\t";
@@ -143,6 +143,23 @@ public class SkillManager {
 			return defaults;
 		} else {
 			return "No defaults";
+		}
+	}
+	
+	public String request(String skillName, String element) {
+		switch(element) {
+		case "difficulty":
+			return getDifficulty(skillName);
+		case "description": 
+			return getDescription(skillName);
+		case "attribute": 
+			return getAttribute(skillName);
+		case "default": 
+			return getDefault(skillName);
+		case "TL":
+			return getTL(skillName);
+		default:
+			return "Invalid Entry: " + element;
 		}
 	}
 }

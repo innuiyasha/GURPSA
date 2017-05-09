@@ -52,28 +52,7 @@ public class AdventureMain {
 					String name = parts[0].replace(".", " ");
 					System.out.println(name + ":");
 					for (int i = 1; i < parts.length; i++) {
-						String output = "\t";
-						switch(parts[i]) {
-						case "difficulty":
-							output += "difficulty: " + skillManager.getDifficulty(name);
-							break;
-						case "description": 
-							output += "description: " + skillManager.getDescription(name);
-							break;
-						case "attribute": 
-							output += "attribute: " + skillManager.getAttribute(name);
-							break;
-						case "default": 
-							output += "default(s): " + skillManager.getDefault(name);
-							break;
-						case "TL":
-							output += "TL: " + skillManager.getTL(name);
-							break;
-						default:
-							output += "Invalid Entry: " + parts[i];
-							break;
-						}
-						System.out.println(output);
+						System.out.println("\t" + parts[i] + ": " + skillManager.request(name, parts[i]));
 					}
 				}
 				in.close();
