@@ -107,12 +107,42 @@ public class SkillManager {
 		while(i.hasNext())
 		{
 			Map.Entry<String, Skill> pair = (Entry<String, Skill>)i.next();
-			output += pair.getKey() + " corresponds to " + pair.getValue().toString() + "\r\n";
+			output += pair.getKey() + " corresponds to " + pair.getValue().getName() + " at difficulty " 
+					+ pair.getValue().getBaseAttribute() + "/" + pair.getValue().getDifficulty() + "\r\n";
 		}
 		return output;
 	}
 
 	public void displaySkills() {
 		System.out.println(toString());
+	}
+	
+	public String getDifficulty(String name) {
+		return skillMap.get(name).getDifficulty();
+	}
+	
+	public String getDescription(String name) {
+		return skillMap.get(name).getDescription();
+	}
+	
+	public String getTL(String name) {
+		return "" + skillMap.get(name).getTLDependancy();
+	}
+	
+	public String getAttribute(String name) {
+		return skillMap.get(name).getBaseAttribute();
+	}
+	
+	public String getDefault(String name) {
+		List<SkillDefault> list = skillMap.get(name).getDefaults();
+		if(list != null) {
+			String defaults = "\n\t\t";
+			for (SkillDefault entry : list) {
+				defaults += entry.getName() + " at -" + entry.getPenalty() + "\n\t\t";
+			}
+			return defaults;
+		} else {
+			return "No defaults";
+		}
 	}
 }
