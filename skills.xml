@@ -127,7 +127,15 @@
 					<name>IQ</name>
 					<penalty>6</penalty>
 				</skillDefault>
-				<desc>edgeable in the ways of primitive Anthropology roll might explain, or even predict, unusual rituals and folk customs. This skill requires specialization by species (if left unspecified, assume the anthropologist's own species). Specialties usually default to one another at -2 to -5, although there may be no default for completely alien species. Optional Rule: Wildcard Skills The professor who has studied every science, the swordsman who can fight with any blade . . . cinematic fiction is full of heroes who know a little bit about everything in one broad area. The time required to list every last skill such a hero might need, and the difficulty of figuring out which skills to take (and which to use), might discourage many gamers from playing cinematic experts. Such broad expertise doesn't exist in real life, but it is all part of the fun in cinematic games! A solution to this problem is "wildcard skills" or "bang skills": skills that cover extremely broad categories of ability. The names of these skills end in an exclamation point in order to distinguish them from normal skills; e.g., "Science!" is the skill of "all science." Wildcard skills include and replace all specific skills within their area. For instance, a hero could attempt a Science! roll whenever the adventure calls for a roll against Chemistry, Physics, or another science skill. Wildcard skills that cover mainly intellectual pursuits are IQ-based, while those that pertain chiefly to physical actions are DX-based. Such skills have no default; to use them, you must spend points on them. Buy wildcard skills as Very Hard skills, but at triple the usual point cost. For instance, it would normally cost 8 points to buy an IQ/Very Hard skill at IQ level, so Science! skill at IQ level would cost 24 points. The GM might choose to limit wildcard skills to those with a suitable Unusual Background â€“ perhaps "Cinematic Hero." This Unusual Background should never be available to sidekicks and random thugs! To give each hero a well-defined dramatic niche, the GM might wish to limit PCs to one or two wildcard skills apiece (preferably those that emerge naturally from their character stories). Some examples: Detective! (IQ). Replaces Criminology, Detect Lies, Electronics Operation (Security and Surveillance), Forensics, Interrogation, Law, Observation, Research, Savoir-Faire (Police), Search, Shadowing, Streetwise, etc. Gun! (DX). Replaces all specialties of Beam Weapons, Gunner, Guns, and Liquid Projector, as well as all related Fast-Draw skills. Make an IQbased roll for Armoury pertaining to these weapons. Science! (IQ). Replaces Astronomy, Bioengineering, Biology, Chemistry, Engineer, Geology, Mathematics, Metallurgy, Meteorology, Naturalist, Paleontology, Physics, Psychology, etc. Sword! (DX). Replaces Broadsword, Force Sword, Jitte/Sai, Knife, Main-Gauche, Rapier, Saber, Shortsword, Smallsword, and Two-Handed Sword, as well as related Fast-Draw skills. Use in place of such skills as Acrobatics and Jumping for physical stunts while fighting. Wildcard skills are useful for omniproficient characters. Someone who can pick up and play any instrument, or sight-read any choral work, would have the Music! skill. If he's gifted with several instruments and can pick up others easily (but does have to learn them first), that's the Musical Ability Talent.</desc>
+				<skillDefault>
+					<name>Paleontology (Paleoanthropology)</name>
+					<penalty>2</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Sociology</name>
+					<penalty>3</penalty>
+				</skillDefault>
+				<desc>This is the science of evolution and culture. An anthropologist is knowl- edgeable in the ways of primitive (and not-so-primitive) societies. An Anthropology roll might explain, or even predict, unusual rituals and folk customs. This skill requires specialization by species (if left unspecified, assume the anthropolo- gist’s own species). Specialties usually default to one another at -2 to -5, although there may be no default for completely alien species.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -179,7 +187,12 @@
 					<name>IQ</name>
 					<penalty>4</penalty>
 				</skillDefault>
-				<desc>default for Area Knowledge of the specialty region. This skill represents familiarity with the people, places, and politics of a given region. You usually have Area Knowledge only for the area you consider your "home base," whether that's a single farm or a solar system. If information about other areas is available, the GM may allow you to learn additional Area Knowledge skills. The GM should not require Area Knowledge rolls for ordinary situations; e.g., to find the blacksmith, tavern, or your own home. But he could require a roll to locate a smith to shoe your horse at 3 a.m., or to find the best ambush spot along a stretch of road. give a penalty, require a Hidden Lore skill (p. 199), or simply be unavailable Knowledge of Washington, D.C. gives you the location of the Russian Embassy, but not the KGB's current safe house. The information covered by Area Knowledge often overlaps such skills as Current Affairs, Geography, Naturalist, and Streetwise. The difference is that Area Knowledge works for a single area: you know the habits of this tiger or gang boss, but have no special insight into tigers or gangs in general. You can learn Area Knowledge for any sort of area. The larger the territory, the less "personal" and more general your knowledge becomes. Almost everyone will have Area Knowledge of some type. The "canonical" area classes are: Neighborhood: For an urban area: the residents and buildings of a few city blocks. For a rural area: the inhabitants, trails, streams, hiding places, ambush sites, flora, and fauna of a few hundred acres. Village or Town: All important citizens and businesses, and most unimportant ones; all public buildings and most houses. City: All important businesses, streets, citizens, leaders, etc. Barony, County, Duchy, or Small Nation: General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+. Large Nation: Location of its major cities and important sites; awareness of its major customs, ethnic groups, and languages (but not necessarily expertise); names of folk of Status 6+; and a general understanding of the economic and political situation. Planet: As for a large nation, but more general; knowledge of people of Status 7+ only. Interplanetary State: Location of major planets; familiarity with all known races (but not necessarily expertise); knowledge of people of Status 7+; general understanding of the economic and political situation. Galaxy: Location of the capitals of interplanetary states and the homeworlds of major races; general awareness of all major races; knowledge of individuals of Status 8; general understanding of relations between interplanetary states. Area Knowledge for anything larger than a galaxy would be meaninglessly vague. Your IQ-4 default applies to any of these classes, as long as you have lived in the area. Defaults are limited by level! A TL0 hunter would have a default for every level up to "Village or Town," while a TL8 student would have defaults up to "Planet" level. You must live in an interplanetary or interstellar state to have defaults for levels above "Planet." In some game worlds, Area Knowledge specialties may exist for parallel realities and other dimensions Knowledge (Dream Realms), etc. The knowledge such skills provide is left to the GM's judgment.</desc>
+				<!--You have an IQ default only for Area Knowledge of a place where you live or once lived. Geography only gives a default for Area Knowledge of the specialty region. -->
+				<skillDefault>
+					<name>Geography (Regional)</name>
+					<penalty>3</penalty>
+				</skillDefault>
+				<desc>This skill represents familiarity with the people, places, and politics of a given region. You usually have Area Knowledge only for the area you con- sider your “home base,” whether that’s a single farm or a solar system. If information about other areas is avail- able, the GM may allow you to learn additional Area Knowledge skills. The GM should not require Area Knowledge rolls for ordinary situa- tions; e.g., to find the blacksmith, tav- ern, or your own home. But he could require a roll to locate a smith to shoe your horse at 3 a.m., or to find the best ambush spot along a stretch of road. “Secret” or obscure information might give a penalty, require a Hidden Lore skill (p. 199), or simply be unavailable – GM’s decision. For instance, Area Knowledge of Washington, D.C. gives you the location of the Russian Embassy, but not the KGB’s current safe house. The information covered by Area Knowledge often overlaps such skills as Current Affairs, Geography, Naturalist, and Streetwise. The differ- ence is that Area Knowledge works for a single area: you know the habits of this tiger or gang boss, but have no special insight into tigers or gangs in general. You can learn Area Knowledge for any sort of area. The larger the territo- ry, the less “personal” and more gener- al your knowledge becomes. Almost everyone will have Area Knowledge of some type. The “canonical” area classes are: Neighborhood: For an urban area: the residents and buildings of a few city blocks. For a rural area: the inhab- itants, trails, streams, hiding places, ambush sites, flora, and fauna of a few hundred acres. Village or Town: All important citi- zens and businesses, and most unim- portant ones; all public buildings and most houses. City: All important businesses, streets, citizens, leaders, etc. Barony, County, Duchy, or Small Nation: General nature of its settle- ments and towns, political allegiances, leaders, and most citizens of Status 5+. Large Nation: Location of its major cities and important sites; awareness of its major customs, ethnic groups, and languages (but not necessarily expertise); names of folk of Status 6+; and a general understanding of the economic and political situation. Planet: As for a large nation, but more general; knowledge of people of Status 7+ only. Interplanetary State: Location of major planets; familiarity with all known races (but not necessarily expertise); knowledge of people of Status 7+; general understanding of the economic and political situation. Galaxy: Location of the capitals of interplanetary states and the homeworlds of major races; general awareness of all major races; knowl- edge of individuals of Status 8; gener- al understanding of relations between interplanetary states. Area Knowledge for anything larg- er than a galaxy would be meaning- lessly vague. Your IQ-4 default applies to any of these classes, as long as you have lived in the area. Defaults are limited by “common knowledge” at your tech level! A TL0 hunter would have a default for every level up to “Village or Town,” while a TL8 student would have defaults up to “Planet” level. You must live in an interplanetary or inter- stellar state to have defaults for levels above “Planet.” In some game worlds, Area Knowledge specialties may exist for parallel realities and other dimensions – Area Knowledge (Cyberspace), Area Knowledge (Dream Realms), etc. The knowledge such skills provide is left to the GM’s judgment.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -467,6 +480,10 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<skillDefault>
+					<name>Special</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>Prerequisite: Psychology. This is the "black arts" of technological personality alteration and mind control. Only intelligence, military, and security services teach it â€“ and only to individuals with suitable Rank or Security Clearance. Even then, it is rare outside police states (except perhaps during wartime). Brainwashing encompasses many techniques â€“ some proven, others little better than witchcraft. Depending on the setting, these might include drugs, electroshock, hypnotism, sensory deprivation, sleep deprivation, social pressure, subliminal messages, or surgery . . . and most likely a combination of several of these. Regardless of the techniques employed, brainwashing is handled as a Regular Contest (not a Quick Contest) between Brainwashing skill and the victim's Will. Roll once per day. Obviously, the brainwasher has a tremendous advantage: even if the victim wins this time, it is only a matter of time before he slips. Results depend on how effective the GM deems brainwashing to be, but might include insanity, personality alteration, or suggestions that can be triggered by future events. In game terms, the victim can acquire almost any mental quirk or disadvantage. In settings where neural interfaces exist, it might be possible to "hack" the victim's brain using a computer. This takes only a fraction of a second per attempt! Brain Hacking should be treated as its own skill, with Computer Hacking instead of Psychology as a prerequisite. This skill normally has no default. However, GMs who wish to explore the gory details can specify the techniques used in their campaign and have Brainwashing default to one or more of Electronics Operation (Medical)-6, Hypnotism-6, Interrogation-6, Pharmacy-6, Psychology-6, or Surgery6, as appropriate.</desc>
 			</value>
 		</entry>
@@ -570,7 +587,15 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Geography (any)Navigation (any)</name>
+					<name>Geography (any)</name>
+					<penalty>2</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Mathematics (Surveying)</name>
+					<penalty>2</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Navigation (any)</name>
 					<penalty>4</penalty>
 				</skillDefault>
 				<desc>This is the ability to create and interpret maps and charts. Roll against this skill to map any location as you move through it. At TL7+, this skill includes knowledge of computer mapping techniques and generating maps from sensor information.</desc>
@@ -620,7 +645,11 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Net</name>
+					<name>Net</name>
+					<penalty>4</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Shield (any)</name>
 					<penalty>4</penalty>
 				</skillDefault>
 				<desc>This is the skill of using a cloak or a cape as a weapon. It covers the use of two types of cloak: the waist-length “light cloak” (any cloak, cape, or coat weighing less than 5 lbs.) and the fulllength “heavy cloak” (any cloak weighing 5 lbs. or more). Offensively, you can use a cloak to entangle an opponent – see Special Melee Weapon Rules (p. 404) for details. You can also snap a cloak in your opponent’s face or simply use it to block his vision, either of which counts as a Feint maneuver. Defensively, a cloak works much like a shield. It provides a Defense Bonus (+1 if light, +2 if heavy) and gives a Block defense equal to (skill/2) + 3, rounded down. A cloak is not as robust as a shield, though! A light cloak has only DR 1 and 3 HP, while a heavy cloak has DR 1 and 5 HP.</desc>
@@ -633,6 +662,10 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Varies</diff>
+				<skillDefault>
+					<name>Special</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>You can opt to learn most combat skills in nonlethal forms aimed at either exhibition (Combat Art skill) or competition (Combat Sport skill). Combat Art skills emphasize graceful movements and perfect stances. Since these skills still give a default to full-fledged, lethal combat skills (see below), they are a logical choice for Pacifists who want some combat ability. Combat Sport skills concentrate on speed of movement and nondamaging attacks. A failed skill roll means a foul that might disqualify you from a tournament! You can make an IQ-based roll against Combat Sport to recall basic tournament rules, but to become a qualified judge or referee, learn the relevant Games skill (p. 197). Combat Art and Sport skills are DX-based, with the same difficulty level and defaults as the corresponding combat skill. A combat skill, its Art form, and its Sport form default among themselves at -3. For instance,</desc>
 			</value>
 		</entry>
@@ -661,9 +694,9 @@
 			</value>
 		</entry>
 		<entry>
-			<key>Programming</key>
+			<key>Computer Programming</key>
 			<value>
-				<name>Programming</name>
+				<name>Computer Programming</name>
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
@@ -731,7 +764,7 @@
 					<name>IQ</name>
 					<penalty>4</penalty>
 				</skillDefault>
-				<desc>This is the ability to serve as crew aboard a specific type of large vehicle. It includes familiarity with "shipboard life," knowledge of safety measures, and training in damage control (the use of emergency equipment to control flooding, fight fires, patch the hull, and so forth). Make a skill roll for basic map or chart reading, practical meteorology, or to recall laws and regulations that pertain to your vehicle. This skill also lets you steer the vessel. It is easier than Piloting, Submarine, and similar skills because it only includes knowledge of how to steer. Specialists handle such activities as plotting courses and operating sensors. These experts report to the captain, who in turn tells you how to maneuver. Make a DX-based skill roll whenever you take the helm â€“ but note that your effective skill cannot exceed your captain's Shiphandling skill The average Crewman skill of an entire crew can be used as a measure of overall crew quality. The GM rolls against average skill whenever the vehicle arrives or departs, in unfavorable conditions, or in battle. Failure and critical failure results depend on the circumstances. There is a separate skill for each class of vessel: Airshipman/TL: The skill of handling ballast, gas valves, mooring lines, etc. on a blimp, zeppelin, or other large airship. Seamanship/TL: The skill of operating anchors, hatches, mooring lines, pumps, sails, windlasses, etc. aboard a large surface ship (but not a submarine). Spacer/TL: The skill of working with airlocks, docking clamps, hull patches, pressure doors, etc. on a large spacecraft or space base. Submariner/TL: The skill of handling pressure doors, pumps, valves, etc. aboard a submarine or in an undersea base. Connoisseur represents an educated understanding of art and luxury items. It is vital to art dealers, critics, master thieves, and anyone who wishes to appear cultured.</desc>
+				<desc>This is the ability to serve as crew aboard a specific type of large vehicle. It includes familiarity with "shipboard life," knowledge of safety measures, and training in damage control (the use of emergency equipment to control flooding, fight fires, patch the hull, and so forth). Make a skill roll for basic map or chart reading, practical meteorology, or to recall laws and regulations that pertain to your vehicle. This skill also lets you steer the vessel. It is easier than Piloting, Submarine, and similar skills because it only includes knowledge of how to steer. Specialists handle such activities as plotting courses and operating sensors. These experts report to the captain, who in turn tells you how to maneuver. Make a DX-based skill roll whenever you take the helm â€“ but note that your effective skill cannot exceed your captain's Shiphandling skill The average Crewman skill of an entire crew can be used as a measure of overall crew quality. The GM rolls against average skill whenever the vehicle arrives or departs, in unfavorable conditions, or in battle. Failure and critical failure results depend on the circumstances. There is a separate skill for each class of vessel: Airshipman/TL: The skill of handling ballast, gas valves, mooring lines, etc. on a blimp, zeppelin, or other large airship. Seamanship/TL: The skill of operating anchors, hatches, mooring lines, pumps, sails, windlasses, etc. aboard a large surface ship (but not a submarine). Spacer/TL: The skill of working with airlocks, docking clamps, hull patches, pressure doors, etc. on a large spacecraft or space base. Submariner/TL: The skill of handling pressure doors, pumps, valves, etc. aboard a submarine or in an undersea base. </desc>
 			</value>
 		</entry>
 		<entry>
@@ -997,7 +1030,7 @@
 			</value>
 		</entry>
 		<entry>
-			<key>Operation</key>
+			<key>Electronics Operation</key>
 			<value>
 				<name>Operation</name>
 				<TL>true</TL>
@@ -1005,6 +1038,14 @@
 				<diff>Average</diff>
 				<skillDefault>
 					<name>IQ</name>
+					<penalty>5</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Electronics Repair (same)</name>
+					<penalty>5</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Engineer (Electronics)</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<desc>Make a skill roll in an emergency situation or for "abnormal" use of equipment â€“ not for ordinary, everyday use. always attempt their default roll!) You must specialize. Available specialties vary by game world, but might include: Communications (Comm): All forms of electronic communications technology: radios, satellite uplinks, laser communicators, etc. Includes knowledge of any standard, current communications codes appropriate to your background. These do not require a skill roll â€“ although attempts to understand or use an unfamiliar code do require a roll. At TL5-7, this includes telegraphy: you can send or receive 2 words per minute (wpm) per point of skill at TL5, 3 wpm per point of skill at TL6-7. Electronic Warfare (EW): All signals-intelligence and jamming equipment, including electronic countermeasures (ECM) and electronic counter-countermeasures (ECCM). In most game worlds, only intelligence agencies and the military teach this specialty â€“ and only to individuals with suitable Military Rank (p. 30) or Security Clearance (p. 82). Force Shields: Portable, vehicular, base, and starship force shields and deflectors. Matter Transmitters (MT): All matter transmitters and teleporters. Critical failures can be disastrous, especially when transmitting living beings! Media: All forms of audio, film, and video editing equipment. If threedimensional video ("holographics") or sensory recordings ("sensies") exist in the setting, this specialty includes the ability to operate the relevant equipment. Treat different media as mutually unfamiliar technologies. Medical: All manner of electronic diagnostic and life-support equipment. Parachronic: Technological means of travel between dimensions or timelines. Psychotronics: Psionic technology, such as telepathic shields and amplifiers. Scientific: Laboratory electronics and survey gear. You are automatically familiar with the equipment used with any scientific skill on which you have spent at least one point. Security: Both operating and circumventing all forms of alarms, security sensors, and area-surveillance technology. Sensors: Most forms of long-range detection gear, from air-defense radar to starship sensor suites. Certain highly specialized sensors (such as sonar, below) have their own specialties. Sonar: All types of acoustic detection and ranging gear (normally used underwater). Surveillance: All forms of concealable or remote surveillance gear: microphones, wiretaps, etc. Temporal: All manner of time machines. Critical failures can be disastrous for the time travelers! Make separate rolls to "lock onto" and transfer the travelers. These specialties default to one another at -4; however, the GM is free to rule that in his campaign, there is no default between exotic specialties mundane ones (Media, Security, etc.). The technologies covered by a particular specialty vary with TL. For instance, Electronics Operation (Comm) covers telegraphs at TL5, telephones and radios at TL6, and digital communications systems at TL8 . . . and might cover faster-than-light or telepathic communicators at higher TLs. Familiarity (p. 169) is crucial here! Electronics Operation/TL8 (Sensors) covers both thermographs on fighter jets and ground-penetrating radars on satellites, but going from one to the other gives you -2 for type (thermograph to radar) and -2 for implementation (jet to satellite), for a net -4 to skill until you familiarize yourself with all the differences. Modifiers: Equipment modifiers ogy of a known type (e.g., radar when you are used to thermograph) or an unfamiliar implementation of a familiar technology (e.g., air-defense radar when you are used to weather radar); the field for a long time (this varies by field) and have not had a chance to become familiar with the changes.</desc>
@@ -1022,7 +1063,11 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> ElectronicsOperation (same)</name>
+					<name>Electronics Operation (same)</name>
+					<penalty>3</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Engineer (Electronics)</name>
 					<penalty>3</penalty>
 				</skillDefault>
 				<desc>attempt is up to the GM. You must specialize in one of the areas listed under Electronics Operation (above), or in Computers (Electronics Repair Operation-5). These specialties default to one another at -4. Modifiers: Equipment modifiers ics; -2 for an unfamiliar technology or implementation (just as for Electronics Operation); -4 to modify a device away from its intended purpose.</desc>
@@ -1035,6 +1080,10 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<skillDefault>
+					<name>Special</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>Prerequisites: Mathematics noted. This is the ability to design and build technological devices and systems. A successful roll lets you design a new system, diagnose a glitch, identify the purpose of a strange device, or improvise a gadget to solve a problem. Time required for each attempt is up to the GM. Note that engineers are designers and inventors; they are not necessarily skilled at the routine operation or maintenance of the things they design! For instance, Engineer (Small Arms) lets you design a new assault rifle, but you need Armoury skill to maintain it and Guns skill to shoot it. You must specialize. Possible fields include: Artillery: Designing whatever passes for artillery at your TL, from trebuchets to smart missiles. Default: Armoury (Heavy Weapons)-6. Civil: Planning highways, aqueducts, buildings, etc. Default: Architecture-6. Clockwork: Designing wind-up gadgetry â€“ watches, mechanical men, and the like. Default: Mechanic Combat: Building or removing fortifications, trenches, etc. Default: Explosives (Demolition)-6. Electrical: Designing electrical systems, such as power cells and transmission lines. Default: Electrician-6. Electronics: Designing and building electronic apparatus, from computers to starship sensor arrays. (The specific technologies involved â€“ vacuum tubes, transistors, photonics, etc. â€“ will depend on the tech level.) Default: Electronics Repair (any)-6. Materials: Concocting new structural materials. Prerequisites: Chemistry or Metallurgy. Defaults: Chemistry-6 or Metallurgy-6. Microtechnology: Designing micromachines. Default: Mechanic Mining: Designing underground structures. Defaults: Explosives Nanotechnology: Designing nanomachines. Default: Mechanic Parachronic: Designing apparatus for crossing dimensions or timelines. Prerequisite: Physics. Default: Electronics Operation (Parachronic)6, but there is no default if your society has not discovered dimensional travel. Psychotronics: Designing psionic technology, such as telepathic shields and amplifiers. Default: Electronics Operation (Psychotronics)-6, but there is no default for individuals from backgrounds where psionics do not exist. Robotics: Designing robotics and cybernetics. Default: Mechanic Small Arms: Designing personal firearms, such as guns and portable rocket launchers. Default: Armoury Temporal: Designing time machines. Prerequisite: Physics. Default: Electronics Operation for individuals from backgrounds without time travel! Vehicle Type: Designing a single, broad class of vehicle. Examples include Engineer (Automobiles), Engineer (Ships), and Engineer vehicle type)-6. Engineer specialties normally default to one another at -4; however, the GM is free to rule that in his campaign, there is no default between exotic specialties (Nanotechnology, Parachronic, Psychotronics, etc.) and more mundane ones (Civil, Combat, Mining, etc.). Modifiers: Equipment modifiers you can give the GM a good description of what you want it to do.</desc>
 			</value>
 		</entry>
@@ -1099,6 +1148,10 @@
 					<name>DX</name>
 					<penalty>5</penalty>
 				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>This is training in the use of a specific class of protective suit. Suits designed to shield the wearer from environmental or battlefield hazards frequently incorporate gadgets (such as autoinjectors and sensors) and lifesupport equipment. Some suits even contain motors to enhance ST or Move. As a result, you do not merely wear such gear â€“ you operate it. Roll against Environment Suit skill to get into or out of your suit quickly. A successful roll halves the time required. To activate a specific subsystem of a suit, or to gauge whether a suit is in good repair, make an IQbased skill roll instead. When rolling against DX or any DX-based skill while suited up, use the lower of your Environment Suit skill and your actual skill level. For instance, if you have DX 14, Stealth15, and Vacc Suit-13, you will function at DX 13 and Stealth-13 while wearing a spacesuit. Particularly ungainly suits might give -1 or more to DX on top of this, regardless of skill level. On the other hand, some sleek, ultra-tech suits might not limit skills at all! However, Environment Suit is strictly the skill of donning and operating the suit. Familiarity with and knowledge of dangerous environments is covered by other skills: Free Fall, Hazardous Materials, Survival, etc. Each suit type requires its own skill. Examples include: Battlesuit/TL: All kinds of powered battle armor and exoskeletons. Battle armor and exoskeletons are similar but not identical. If you only have experience with one, you are at -2 to operate the other until you gain familiarity (see Familiarity, p. 169). Diving Suit/TL: All types of hard diving suits (as opposed to the wetsuits and drysuits used with Scuba skill). This includes "open dress" gear at TL5 and "hard hat" gear at TL6, both of which use a sealed helmet and supplied air, but not always a full, sealed suit. At TL7+, this skill covers true underwater "hardsuits." The GM may require Swimming rolls to maneuver while wearing such a suit. Default: Scuba-2. NBC Suit/TL: All forms of hazardous materials ("HazMat") gear â€“ including sealed, unpowered body armor that can be buttoned down against nuclear-biological-chemical run the risk of misusing the equipment and being exposed to contamination. To improvise NBC gear, make an IQbased skill roll at -5 to -15 to skill. Vacc Suit/TL: Any kind of spacesuit. In addition to true vacuum suits, this includes suits intended for use in highpressure, corrosive, and poisonous atmospheres. Battlesuit, NBC Suit, and Vacc Suit default among themselves at -2. Diving Suit defaults to or from any other Environment Suit skill at -4. Note that unpowered, unsealed body armor never requires an Environment Suit skill.</desc>
 			</value>
 		</entry>
@@ -1160,7 +1213,15 @@
 					<penalty>6</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Religious RitualTheology (any)</name>
+					<name>Religious Ritual (any)</name>
+					<penalty>3</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Religious Magic (any)</name>
+					<penalty>3</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Theology (any)</name>
 					<penalty>3</penalty>
 				</skillDefault>
 				<desc>This is the ability to drive a spirit from a possessed person or haunted location. It is not a magical skill, but a religious ritual. Exorcism is not specific to any one religion. A Malay witch doctor and a Catholic priest can both perform exorcisms; their relative effectiveness depends on the originating culture of the spirit. The length of the ritual is 15 minutes Â¥ the spirit's HT. Some spirits wait patiently through the ritual, anticipating the combat to come; others try to distract or even attack you before you can complete the ritual. Once the ritual is complete, roll against Exorcism skill. On a failure, the spirit remains and you must wait at least a week before you can repeat the ritual. On a critical failure, immediately roll 3d+10 on the Fright Check Table (p. 360). Even if you keep your sanity, you may never attempt to exorcise this particular spirit again. On a critical success, you immediately banish the spirit. On a regular success, you meet your opponent in a Quick Contest: your Exorcism skill vs. the higher of the spirit's ST or Will. When fighting a spirit in a living host, add higher of the ST or Will of the possession victim to your Exorcism skill as he tries to "push the spirit out." If the spirit wins or ties, it retains its current status and you must wait at least a week before you can repeat the ritual. If you win, you drive the spirit from its haunt or victim. The spirit of a deceased mortal is laid to rest. For demons and similar entities, make a reaction roll. On a "Poor" or better reaction, the spirit flees in humiliation. On a "Bad" or worse reaction, the spirit immediately uses whatever resources it has to take vengeance on you and those nearby. If the exorcism fails at any stage, make an IQ roll afterward. A success means that you learned something about the spirit that will help you in your next attempt to banish that foe, giving you +2 on later skill rolls. You may only claim this bonus once for a particular spirit. Modifiers: -4 if you do not have one or more of Blessed (p. 40), Power Investiture (p. 77), or True Faith ual, but you lack holy support.</desc>
@@ -1186,6 +1247,10 @@
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Other</name>
+					<penalty>0</penalty>
 				</skillDefault>
 				<desc>This is the skill of working with explosives and incendiaries. You must specialize: Demolition: The ability to prepare and set explosives in order to blow things up. Make a roll whenever you use explosives in this way. A failure indicates an error. The gravity of the error depends on the amount by which you failed; a badly failed roll in close quarters can blow you up! Time required varies â€“ it takes only a couple of seconds to set a prepared charge, but it might take hours to demolish a large bridge or a skyscraper. When setting an explosive trap, use this skill rather than Traps. Rolls to set a "trap" fuse (e.g., a land mine) instead of a timed fuse are at Explosive Ordnance Disposal pose of bombs and other explosives. When disarming a trap, roll a Quick Contest of your Explosives (EOD) skill vs. the Explosives (Demolition) skill of the person who created the device. A failure (or even a critical failure) does not necessarily mean an explosion â€“ the GM can be much more creative than that! Sudden hissing noises, mysterious parts falling off, cramps, itches, and alarm bells are all possible in the right circumstances. It is best if the GM rolls the dice and describes the physical circumstances to the victim. Fright Checks are appropriate for the survivors of a failed EOD attempt! Prerequisite: DX 12+. Fireworks: The skill of making pyrotechnic devices â€“ fireworks, flares, smoke bombs, flash grenades, etc. Most of these things can be used by anyone. Default: Chemistry-3. Nuclear Ordnance Disposal a military nuclear weapon is straightforward; disarming a homemade terrorist bomb might be more difficult. Only a critical failure verified by a second critical failure will result in a nuclear detonation. Any lesser failure will â€“ at worst â€“ detonate the highexplosive trigger and contaminate the immediate area with radioactive material . . . not that this is a great deal of consolation to those nearby. Underwater Demolition (UD): The ability to prepare and set explosives underwater. This is otherwise identical to Explosives (Demolition). You usually need Scuba skill â€“ or at least Swimming skill â€“ to get into a position where you can use this skill. These specialties default to one another at -4 except for Demolition and UD, which default to one another at -2, and EOD and NOD, which also default to one another at -2. Modifiers: Equipment modifiers enemy fire or swarms of biting ants) or physical motion (e.g., a rocking boat or speeding bus). The time modifiers under Time Spent (p. 346) will often apply.</desc>
 			</value>
@@ -1324,7 +1389,15 @@
 					<penalty>4</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Esoteric MedicinePhysician Veterinary</name>
+					<name>Esoteric Mediciney</name>
+					<penalty>4</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Physician</name>
+					<penalty>4</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Veterinary</name>
 					<penalty>4</penalty>
 				</skillDefault>
 				<desc>This is the ability to patch up an injury in the field (see Recovery, p. 423). Make a skill roll to halt bleeding, suck out poison, give artificial respiration to a drowning victim, etc. Unusual problems must be identified using Diagnosis skill first. Modifiers: Equipment modifiers</desc>
@@ -1470,7 +1543,7 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name>and others</name>
+					<name>Others</name>
 					<penalty>0</penalty>
 				</skillDefault>
 				<desc>This is the skill of being a "potter" for artillery. It includes locating targets (with map and compass at TL6-, global positioning systems and satellite imagery at TL7+), marking targets matching ordnance to target for best effect, and calling in corrections to any fire you personally observe. Failure means the ordnance misses the target; critical failures result in severe "collateral damage" or "friendly fire" incidents. The very worst critical failures (GM's decision) drop the ordnance on your position! At higher tech levels, Forward Observer is less about observing targets and more about operating specialized technology such as drones, GPS, and laser designators. To remotely pilot a drone or use a laser designator to direct "smart" munitions onto a target, make a DX-based skill roll. At TL7+, Forward Observer defaults to Electronics Operation Modifiers: Equipment modifiers the artillery (e.g., aircraft bombs when you are used to naval guns); -3 per 500 yards between you and the target â€“ but divide the actual range by the magnification of any vision aid first.</desc>
@@ -1519,7 +1592,11 @@
 					<name>IQ</name>
 					<penalty>5</penalty>
 				</skillDefault>
-				<desc>can (among other things) tell you if a game is rigged, identify a fellow gambler in a group of strangers, or "estimate the odds" in any tricky situation. When you gamble against the house, make a skill roll (the GM will secretly modify this roll if the odds are poor!). When you gamble against someone else, roll a Regular Contest of Gambling (p. 197) until one of you wins. Sleight of Hand skill (p. 221) is helpful if you want to cheat! To spot a cheater, roll a Quick Contest of your Gambling or Vision roll, whichever is higher, vs. your opponent's Sleight of Hand skill (for card or dice tricks) or IQ (for other kinds of cheating). Modifiers: +1 to +5 for familiarity with the game being played; -1 to -5 if the game is rigged against you; -3 for Killjoy (p. 140), since you don't care if you win or lose.</desc>
+				<skillDefault>
+					<name>Mathematics (Statistics)</name>
+					<penalty>5</penalty>
+				</skillDefault>
+				<desc>This is skill at playing games of chance. A successful Gambling roll can (among other things) tell you if a game is rigged, identify a fellow gam- bler in a group of strangers, or “esti- mate the odds” in any tricky situation. When you gamble against the house, make a skill roll (the GM will secretly modify this roll if the odds are poor!). When you gamble against someone else, roll a Regular Contest of Gambling (p. 197) until one of you wins. Sleight of Hand skill (p. 221) is helpful if you want to cheat! To spot a cheater, roll a Quick Contest of your Gambling or Vision roll, whichever is higher, vs. your opponent’s Sleight of Hand skill (for card or dice tricks) or IQ (for other kinds of cheating). Modifiers: +1 to +5 for familiarity with the game being played; -1 to -5 if the game is rigged against you; -3 for Killjoy (p. 140), since you don’t care if you win or lose.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -1593,6 +1670,14 @@
 					<name>IQ</name>
 					<penalty>6</penalty>
 				</skillDefault>
+				<skillDefault>
+					<name>Geography (Physical)</name>
+					<penalty>4</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Prospecting</name>
+					<penalty>5</penalty>
+				</skillDefault>
 				<desc>This is the ability to communicate through improvised hand signals. A successful skill roll will let you convey one simple idea to another person, or understand one simple idea he is attempting to get across to you. Gesture is not suited to complex communication, however. Modifiers: Cultural Familiarity modifiers (p. 23) definitely apply! Different cultures develop distinct gesture vocabularies.</desc>
 			</value>
 		</entry>
@@ -1620,6 +1705,10 @@
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
 				</skillDefault>
 				<desc>This is the ability to arrange a performance and direct a group of performers in its execution â€“ in rehearsal, in a studio, or before a live audience. A successful roll means the performance is pleasing. You must specialize in a particular performing art. All specialties have prerequisites: the specific skills listed below, plus any one of Diplomacy, Intimidation, or Leadership. Choreography: The ability to instruct and lead a group of dancers. Prerequisite: Dancing. Default: Dancing-2. Conducting: The ability to coordinate a group of musicians. Choirs, swing bands, symphony orchestras, etc. are different familiarities; see Familiarity (p. 169). Prerequisites: Any two Musical Instrument skills, or one Musical Instrument and Singing. Defaults: Musical Instrument-2 or Singing-2. Directing: The ability to direct a group of actors. Film, opera, television, and theater are different familiarities. Prerequisite: Performance. Default: Performance-5. Fight Choreography: Similar to Choreography, but for Stage Combat Prerequisite: Stage Combat. Default: Stage Combat-2.</desc>
 			</value>
@@ -1653,7 +1742,7 @@
 			</value>
 		</entry>
 		<entry>
-			<key>Materials</key>
+			<key>Hazardous Materials</key>
 			<value>
 				<name>Materials</name>
 				<TL>true</TL>
@@ -1676,6 +1765,10 @@
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Savoir-Faire (High Society)</name>
+					<penalty>3</penalty>
 				</skillDefault>
 				<desc>cessful roll lets you recognize a knight or a noble from his banner or shield, create attractive and proper arms designs), etc. In some settings, you might have to specialize in a particular type of Heraldry: Coats of Arms (the usual specialty, described above), Corporate Logos (defaults to Current Affairs Modifiers: Cultural Familiarity modifiers (p. 23). Up to +5 to recognize a well-known design, and down to -5 for an obscure design or one that was retired long ago.</desc>
 			</value>
@@ -1735,6 +1828,7 @@
 				<TL>false</TL>
 				<attr>DX or IQ</attr>
 				<diff>Easy</diff>
+				<!--Default depends on controlling attribute-->
 				<skillDefault>
 					<name>DX</name>
 					<penalty>4</penalty>
@@ -2227,6 +2321,10 @@
 					<name>IQ</name>
 					<penalty>6</penalty>
 				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>This is the scientific study of quantities and magnitudes, and their relationships and attributes, through the use of numbers and symbols. You must specialize: Applied: The branch of mathematics that interacts directly with the physical sciences and engineering, dealing with mathematical models of the behavior of physical systems. Defaults: Engineer Computer Science: The theoretical study of data structures and computation. Roll vs. skill to answer questions about what is possible with computers. This gives you no special ability to use computers! Default: Computer Programming-5. Cryptology: The mathematical study of codes and ciphers. This gives you a theoretical understanding of encryption schemes, including how they change with TL and why some schemes are more effective than others. To create or break codes, use Cryptography skill (p. 186). Default: Cryptography-5. Pure: Generic "academic" mathematics. Make a skill roll to answer any math-related question not covered by another specialty. Pure mathematics encompasses dozens of obscure subfields that will never affect the game. If you must be an expert in something like "non-selfadjoint operator algebras," you may further note an optional specialty (p. 169). Statistics: The science of assembling and analyzing data for the purpose of calculating probabilities, constructing models, and making forecasts. Roll vs. skill to determine the odds of a particular outcome, given sufficient data about similar situations in the past. Surveying: The science of determining the area of a portion of the Earth's surface, the lengths and directions of the bounding lines, and the contour of the surface. Make a skill roll to determine the dimensions of any area you can see. More complex determinations require specialized equipment. Defaults: Cartography-3 or Navigation (any)-4. These specialties default to one another at -5.</desc>
 			</value>
 		</entry>
@@ -2264,7 +2362,7 @@
 					<penalty>6</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name>Auhypnosis</name>
+					<name>Autohypnosis</name>
 					<penalty>4</penalty>
 				</skillDefault>
 				<desc>This is the ability to calm the emotions, control the mind, and relax the body. To use this skill, you must concentrate for (20 skill) seconds, minimum one second, and then roll vs. skill. On a success, you enter a trancelike state, which you can maintain for hours. A meditative trance is required for certain rituals and is a common preparation for prayer. In addition, the GM may permit you to meditate on a particular moral dilemma. On a successful Meditation roll, the GM will "enlighten" you, providing a hint as to which course of action "feels" right.</desc>
@@ -2277,6 +2375,10 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Varies</diff>
+				<skillDefault>
+					<name>Special</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>This is not one skill, but an entire collection of skills â€“ one per class of closely related melee weapons. Melee Weapon skills are based on DX, and default to DX-4 if Easy, DX-5 if Average, or DX-6 if Hard. See specific skill descriptions for other defaults. Make a Melee Weapon roll to hit an opponent in combat. You may also use these skills to parry. Your Parry defense is (skill/2) + 3, rounded down. Melee weapons fall into broad categories on the basis of overall balance and function. When a rule refers to one of these categories, it applies to all weapons in that category and all Melee Weapon skills used to wield them. For instance, "fencing weapons" means "all weapons used with any of Main-Gauche, Rapier, Saber, or Smallsword skill." Fencing Weapons Fencing weapons are light, onehanded weapons, usually hilted blades, optimized for parrying. If you have a fencing weapon, you get an improved retreating bonus when you parry â€“ see Retreat (p. 377). Furthermore, you have half the usual penalty for parrying more than once with the same hand (see Parrying, p. 376). Note that fencing weapons are light and likely to break when used to parry a heavier weapon. They cannot parry flail weapons at all! You must be relatively mobile to capitalize on their speed and maneuverability: all attacks and parries take a penalty equal to your encumbrance level (e.g., Heavy encumbrance gives -3 to hit or to parry). The skills in this category default to one another at -3. They also default to sword skills, as noted below. Main-Gauche (DX/Average): Any weapon normally wielded with Knife or Jitte/Sai skill (see below), used in the "off" hand. With this skill, you may ignore the penalty for using the "off" hand on defense (attacks are still at -4) and the -1 for parrying with a knife. To wield a knife as a primary weapon, use Knife skill. Defaults: Jitte/Sai-4 or Knife-4. Rapier (DX/Average): Any long (over 1 yard), light thrusting sword. Default: Broadsword-4. Saber (DX/Average): Any light cutand-thrust sword. Note that cavalry sabers are quite heavy, and use Broadsword instead. Defaults: Broadsword-4 or Shortsword-4. Smallsword (DX/Average): Any short (up to 1 yard), light thrusting sword or one-handed short staff (such as the sticks used in the martial arts arnis, escrima, and kali). Default: Shortsword-4. Flails A flail is any flexible, unbalanced weapon with its mass concentrated in the head. Such a weapon cannot parry if you have already attacked with it on your turn. Because flails tend to wrap around the target's shield or weapon, attempts to block them are at -2 and attempts to parry them are at -4. Fencing weapons and knives cannot parry them at all! An unarmed fighter can parry a flail, but at -4 in addition to any penalty for parrying unarmed. The skills in this category default to one another at -3. Flail (DX/Hard): Any one-handed flail, such as a morningstar or nunchaku. Default: Axe/Mace-4. Two-Handed Flail (DX/Hard): Any two-handed flail. Defaults: Kusari-4 or Two-Handed Axe/Mace-4. Impact Weapons An impact weapon is any rigid, unbalanced weapon with most of its mass concentrated in the head. Such a weapon cannot parry if you have already attacked with it on your turn. The skills in this category default to one another at -3. Axe/Mace (DX/Average): Any shortor medium-length, one-handed impact weapon, such as an axe, hatchet, knobbed club, or pick. Default: Flail-4. Two-Handed Axe/Mace impact weapon, such as a baseball bat, battleaxe, maul, or warhammer. Defaults: Polearm-4 or Two-Handed Flail-4. Pole Weapons Pole weapons are long (usually wooden) shafts, often adorned with striking heads. All require two hands. Polearm (DX/Average): Any very long weapon with a heavy striking head, including the glaive, halberd, poleaxe, and countless others. Polearms become unready after an attack, but not after a parry. Defaults: Spear-4, Staff-4, or TwoHanded Axe/Mace-4. Spear (DX/Average): Any long, balanced pole weapon with a thrusting point, including spears, javelins, tridents, and fixed bayonets. Defaults: Polearm-4 or Staff-2. Staff (DX/Average): Any long, balanced pole without a striking head. This skill makes good use of the staff's extensive parrying surface when defending, giving +2 to your Parry score. Defaults: Polearm-4 or Spear-2. Swords A sword is a rigid, hilted blade with a thrusting point, cutting edge, or both. All swords are balanced, and can attack and parry without becoming unready. Broadsword (DX/Average): Any balanced, 2to 4-foot blade wielded in one hand â€“ broadsword, cavalry saber, scimitar, etc. This skill also covers any stick or club of similar size and balance to these blades, as well as bastard swords, katanas, and longswords used one-handed. Defaults: Force Sword-4, Rapier-4, Saber-4, Shortsword-2, or Two-Handed Sword-4. Force Sword (DX/Average): Any sword with a "blade" made of energy instead of matter. This generally refers to an ultra-tech weapon that projects energy from a powered hilt, but extends to similar effects produced using magic or psionics. Default: any sword skill at -3. Jitte/Sai (DX/Average): Any tined, one-handed sword designed to catch rigid weapons. Jitte/Sai weapons are built for disarming, and give +2 in the Quick Contest to disarm an opponent Furthermore, if you attempt to disarm on the turn immediately after you parry your opponent's weapon, you need not roll to hit his weapon first. Just state that you are attempting to disarm and move directly to the Quick Contest! This still counts as an attack. Defaults: Force Sword-4, MainGauche-4, or Shortsword-3. Knife (DX/Easy): Any rigid, hilted blade less than one foot long, from a pocketknife to a bowie knife. A knife has a very small parrying surface, which gives you -1 to your Parry score. Defaults: Force Sword-3, MainGauche-3, or Shortsword-3. Shortsword (DX/Average): Any balanced, one-handed weapon 1-2 feet in length â€“ including the shortsword and any club of comparable size and balance (e.g., a police baton). Defaults: Broadsword-2, Force Sword-4, Jitte/Sai-3, Knife-4, Saber-4, Smallsword-4, or Tonfa-3. Two-Handed Sword (DX/Average): Any balanced, two-handed blade over 4 feet in length: greatswords, zweihanders, etc. This skill also covers quarterstaffs wielded like swords, as well as bastard swords, katanas, and longswords used two-handed. Defaults: Broadsword-4 or Force Sword-4. Whips A whip is a flexible weapon made from a length of chain, leather, wire, etc. A whip can be up to seven yards long â€“ but note that a whip two yards or more in length cannot strike at one yard or closer, and is slow to ready after an attack. A whip tends to wind around its target, making it an excellent disarming and entangling weapon. However, a whip's lack of rigidity makes it a poor parrying weapon. For details, see Special Melee Weapon Rules (p. 404). The skills in this category default to one another at -3. Force Whip (DX/Average): Any whip made of pure energy instead of matter. These are usually ultra-tech devices that project energy from a powered hilt, but magical or psi-tech versions are possible. Most force whips can lash the target but not ensnare him. Kusari (DX/Hard): A weighted chain wielded in two hands. Default: Two-Handed Flail-4. Monowire Whip (DX/Hard): A whip made of a weighted length of monomolecular wire attached to a handle. Whip (DX/Average): Any ordinary whip. Other Weapons Some hand weapons defy easy classification. For instance: Tonfa (DX/Average): A tonfa is a baton with a protruding handle on one side. It can function as a baton, but you can also grasp it by the handle and hold it against the forearm in close combat. This grip lets you jab for thrust+1 crushing damage and parry close-combat attacks at (skill/2) + 3, rounded down. Roll vs. skill to change grips. On a success, the grip change is a free action. On a failure, you must spend the entire turn changing grips. A critical failure means you throw your weapon away! Default: Shortsword-3.</desc>
 			</value>
 		</entry>
@@ -2359,6 +2461,10 @@
 					<name>IQ</name>
 					<penalty>6</penalty>
 				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>This is the ability to imitate voices. The Voice advantage (p. 97) gives +2 to skill. You must specialize: Animal Sounds: Lets you emulate a lion's roar, a wolf's howl, a frog's croak, etc. You can only imitate animals that have distinctive sounds. Make a skill roll to attract animals of the type mimicked â€“ or predators that normally hunt those animals â€“ if any are nearby. To fool people, you must win a Quick Contest of Mimicry vs. the listeners' Naturalist-3 or Perception-6. Default: Naturalist-6. Bird Calls: Allows you to reproduce the whistles, chirps, and other sounds made by birds. Otherwise, this works as Animal Sounds. Default: Naturalist-6. Speech: Enables you to imitate vocal sounds. This does not allow you to converse in a foreign language, but if you have heard it, you can reproduce the sound of it. If you are trying to mimic a specific person, roll at -3. Treat this roll as a Quick Contest vs. the IQ of anyone who knows the person mimicked well. Defaults: Acting-6 or Linguistics-4. Animal Sounds and Bird Calls default to one another at -6. There is no default between these specialties and Speech. Note that if you have the Mimicry advantage (p. 68), there is no need to learn this skill!</desc>
 			</value>
 		</entry>
@@ -2411,6 +2517,7 @@
 					<name>Musical Instrument</name>
 					<penalty>2</penalty>
 				</skillDefault>
+				<!--Only for song-->
 				<skillDefault>
 					<name>Poetry</name>
 					<penalty>2</penalty>
@@ -2435,6 +2542,10 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<skillDefault>
+					<name>Special</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>This is the ability to play a musical instrument. With a successful skill roll, you give a competent performance. You must specialize in a particular instrument. Defaults between specialties range from -3 for similar instruments to "no default" for utterly unrelated ones, such as Musical Instrument (Drums) and Musical Instrument (Harp). This skill includes the ability to read music in your culture's notation system (if any). Treat different systems as familiarities (see Familiarity, p. 169).</desc>
 			</value>
 		</entry>
@@ -2463,6 +2574,10 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<skillDefault>
+					<name>Special</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>This is the ability to find your position through careful observation of your surroundings and the use of instrumentation. A successful roll tells you where you are or lets you plot a course. You must specialize: Sea: Navigation by the stars and ocean currents. Modifiers: +3 if you have Absolute Direction (p. 34), or a high-tech global positioning system or inertial compass; -5 (and no use of Astronomy default) if you lack hightech aids, the weather is bad, and the stars are hidden. Defaults: Astronomy-5 or Seamanship-5. Air: Navigation by the stars and by the terrain below. Modifiers are as for Navigation (Sea). Default: Astronomy-5. Land: Navigation using landmarks and the stars; also called "orienteering." Modifiers: +3 if you have Absolute Direction or a high-tech substitute. Defaults: IQ-5, Cartography-4, or Mathematics Space: Navigating through ordinary interplanetary and interstellar space, usually at less than the speed of light (but some science-fiction than-light speeds in normal space). Modifiers: +2 for 3D Spatial Sense Mathematics (Applied)-4. Hyperspace: Also called "astrogation." Similar to Navigation (Space), but used when traveling through tings with multiple faster-than-light drive technologies, there may be one Navigation specialty per drive type. Modifiers are as for Navigation Mathematics (Applied)-4. Air, Land, and Sea default to one another at -2. Space and Hyperspace default to one another at -5. There are no defaults between these two groups. Modifiers: -1 to -10 for being in an unfamiliar area (GM's discretion, but an unfamiliar world, star system, etc. should give at least -5); equipment modifiers (p. 345).</desc>
 			</value>
 		</entry>
@@ -2547,6 +2662,10 @@
 					<name>Biology</name>
 					<penalty>4</penalty>
 				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>This is the science of fossil study. Make a skill roll to recognize fossils or to deduce an organism's habitat, structure, etc. from fossil evidence. A successful roll â€“ with equipment modifiers (p. 345) for lab facilities â€“ identifies the approximate age of a fossil. You must specialize: Micropaleontology: The study of fossils too small to be seen with the naked eye. This skill requires a lab. Paleoanthropology: The study of human fossils and tools, and the relation of primitive tribes to their habitats. Also defaults to Anthropology-2. Paleobotany: The study of vegetable fossils. Paleozoology: The study of prehistoric animals from fossilized bones, food, feces, footprints, etc. These specialties default to one another at -2.</desc>
 			</value>
 		</entry>
@@ -2615,7 +2734,7 @@
 					<name>Public Speaking</name>
 					<penalty>2</penalty>
 				</skillDefault>
-				<desc>Note that an occultist does not have to believe in the material he studies! This is the ability to act on the stage or screen. It is different from Acting in that you are trying to impress and entertain people â€“ not deceive them. If you studied this skill formally, it includes the knowledge expected of a professional actor from your culture and tech level (stage directions, actor-agent-producer relations, etc.). Modifiers: +2 for Voice (p. 97); -1 to Stuttering (p. 157).</desc>
+				<desc>This is the ability to act on the stage or screen. It is different from Acting in that you are trying to impress and entertain people â€“ not deceive them. If you studied this skill formally, it includes the knowledge expected of a professional actor from your culture and tech level (stage directions, actor-agent-producer relations, etc.). Modifiers: +2 for Voice (p. 97); -1 to Stuttering (p. 157).</desc>
 			</value>
 		</entry>
 		<entry>
@@ -2634,6 +2753,10 @@
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
 				</skillDefault>
 				<desc>This is the skill of preparing medicines to treat illness. (To work with noxious drugs, use Poisons skill, p. 214.) You must specialize: Herbal: The ability to make and administer remedies prepared from plants. Make a Naturalist roll to locate herbs. Before TL5, this is the only specialty available. It replaces Physician junction with Esoteric Medicine remains available, but Pharmacy Prerequisite: Naturalist. Defaults: Biology-5, Herb Lore-5, or Naturalist-5. Synthetic: The skill of preparing drugs under "laboratory" conditions. To prescribe drugs, use Physician skill. This specialty is only available at TL5+. Defaults: Chemistry-5 or Physician-5.</desc>
 			</value>
@@ -2664,7 +2787,7 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> ElectronicsOperation (Media)</name>
+					<name>Electronics Operation (Media)</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<desc>This is the ability to use a camera competently, use a darkroom (TL5+) or digital imaging software (TL8+), etc., and to produce recognizable and attractive photos. You may roll at default to use a camera, but not to develop film or prints in a darkroom. Modifiers: -3 for an unfamiliar camera; -3 for a motion-picture camera.</desc>
@@ -2853,6 +2976,11 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<!--Only in cinematic campaign-->
+				<skillDefault>
+					<name>Esoteric Medicine</name>
+					<penalty>4</penalty>
+				</skillDefault>
 				<desc>This is the art of striking pressure points in order to disable an opponent. To use this ability, you must make a successful attack with Karate (or other appropriate combat skill; see below). This attack is at -2 in addition to any hit location modifier (see Hit Location, p. 398). If at least one point of damage penetrates the target’s DR, roll a Quick Contest of Pressure Points vs. the victim’s HT. If you win, you temporarily disable your target. A limb is paralyzed and effectively crippled for 5d seconds. A hit to a torso pressure point interferes with the victim’s breathing, resulting in suffocation (see Suffocation, p. 436); he may roll against HT every second to recover. A hit to the face stuns the victim; he gets an IQ roll every second to recover. A blow to the skull blinds the victim for 2d seconds; see Blindness (p. 124). You can also use Pressure Points with Judo. Roll the Quick Contest described above after successfully applying a lock. This is in addition to any other effects of the lock. The GM may permit warriors to learn specialties of this skill for use with crushing weapons. Examples include Pressure Points (Bow) for use with blunt arrows, Pressure Points (Shortsword) for use with a baton, and Pressure Points (Staff) for use with a staff. Modifiers: Physiology modifiers (p. 181).</desc>
 			</value>
 		</entry>
@@ -2864,6 +2992,20 @@
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
 				<desc>Prerequisites: Trained By A Master and Pressure Points at 16+. This skill represents knowledge of the most vulnerable vital points of the human body. It allows you to maim and kill by crushing and tearing vital organs and nerve clusters with deadly precision. To use this ability, you must make a successful unarmed attack. This attack is at -2 in addition to any hit location modifier (see Hit Location, p. 398). If you hit, make a Pressure Secrets roll. On a success, any damage that penetrates DR is doubled – or tripled if you targeted the vital organs. In effect, your hands and feet have become impaling weapons! You can also use this ability with locks and similar grappling attacks. This represents knowledge of exactly where to apply pressure to tear or sprain joints and ligaments. After applying the lock, make a Pressure Secrets roll. On a success, double the damage, shock, or harmful effects of the lock for that turn. This skill is unrealistic and potentially unbalancing. The GM should carefully weigh its impact before allowing it, and may wish to make it very difficult for PCs to learn – or even restrict it to deadly NPC opponents. Modifiers: Physiology modifiers (p. 181).</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Professional Skill</key>
+			<value>
+				<name>Professional Skill</name>
+				<TL>true</TL>
+				<attr>DX or IQ</attr>
+				<diff>Average</diff>
+				<skillDefault>
+					<name>Special</name>
+					<penalty>0</penalty>
+				</skillDefault>
+				<desc>Many realistic job skills are more useful for making a living than for adventuring. Most such skills do not appear in this skill list – but you can still learn them if you want! Each is a separate Professional Skill. If your “adventuring” skills aren’t useful for earning money, a Professional Skill can help you earn a steady income. To qualify for most jobs, you will need the relevant Professional Skill at 12+ (unless you are supposed to be incompetent!). SKILLS 215 Most professions encompass a body of knowledge. The associated Professional Skills are IQ/Average and default to IQ-5, because the smarter you are, the better you can recall and employ the techniques used at your job. Examples include air traffic controller, barber, brewer, cooper, distiller, dyer, florist, game designer, journalist, prostitute, tanner, vintner, and zookeeper. A few professions – glassblower, tailor, weaver, etc. – focus more on precision than on recall. These Professional Skills are DX/Average and default to DX-5. At the GM’s option, a given Professional Skill might also default to other skills. For instance, “Journalist” would logically default to Writing-3. The skills associated with highly paid or respected professions often have prerequisites. For instance, “Air Traffic Controller” might require Electronics Operation (Sensors) skill. Like defaults, prerequisites are up to the GM. You are free to create your own Professional Skills, subject to GM approval. They should be unique and well defined, not just a compilation of existing skills. For example: Bartender IQ/Average Defaults: IQ-5 or Carousing-3. This is the skill of maintaining a professional-quality bar and interacting with customers in a professional yet friendly way. A successful skill roll lets you mix drinks, recall local laws regarding alcohol, gauge the intoxication level of a customer, or calm an unruly drunk before the bouncer needs to get involved. At higher levels, this skill takes on an element of showmanship, allowing you to present drinks in unique and attractive ways, and to mix them with showy tricks and flourishes.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -2886,20 +3028,6 @@
 					<penalty>4</penalty>
 				</skillDefault>
 				<desc>This is the skill of indirect persuasion through the media. It is used for psychological warfare by intelligence and military organizations, and for advertising and marketing in the civilian world. Use familiarity (p. 169) to reflect the differences between these areas. Propaganda works on groups, not individuals. The GM should set the effective Will of the target group based on its size, composition, and resistance to the desired outcome, and then use the Influence Rolls (p. 359) rules to determine the results. Success might inform the target audience or even alter its perceptions. Propaganda attempts nearly always take more time and exposure than ordinary Influence rolls, however; how much time is up to the GM.</desc>
-			</value>
-		</entry>
-		<entry>
-			<key>Professional Skill</key>
-			<value>
-				<name>Professional Skill</name>
-				<TL>true</TL>
-				<attr>DX or IQ</attr>
-				<diff>Average</diff>
-				<skillDefault>
-					<name>Special</name>
-					<penalty>0</penalty>
-				</skillDefault>
-				<desc>Many realistic job skills are more useful for making a living than for adventuring. Most such skills do not appear in this skill list – but you can still learn them if you want! Each is a separate Professional Skill. If your “adventuring” skills aren’t useful for earning money, a Professional Skill can help you earn a steady income. To qualify for most jobs, you will need the relevant Professional Skill at 12+ (unless you are supposed to be incompetent!). SKILLS 215 Most professions encompass a body of knowledge. The associated Professional Skills are IQ/Average and default to IQ-5, because the smarter you are, the better you can recall and employ the techniques used at your job. Examples include air traffic controller, barber, brewer, cooper, distiller, dyer, florist, game designer, journalist, prostitute, tanner, vintner, and zookeeper. A few professions – glassblower, tailor, weaver, etc. – focus more on precision than on recall. These Professional Skills are DX/Average and default to DX-5. At the GM’s option, a given Professional Skill might also default to other skills. For instance, “Journalist” would logically default to Writing-3. The skills associated with highly paid or respected professions often have prerequisites. For instance, “Air Traffic Controller” might require Electronics Operation (Sensors) skill. Like defaults, prerequisites are up to the GM. You are free to create your own Professional Skills, subject to GM approval. They should be unique and well defined, not just a compilation of existing skills. For example: Bartender IQ/Average Defaults: IQ-5 or Carousing-3. This is the skill of maintaining a professional-quality bar and interacting with customers in a professional yet friendly way. A successful skill roll lets you mix drinks, recall local laws regarding alcohol, gauge the intoxication level of a customer, or calm an unruly drunk before the bouncer needs to get involved. At higher levels, this skill takes on an element of showmanship, allowing you to present drinks in unique and attractive ways, and to mix them with showy tricks and flourishes.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -2992,7 +3120,7 @@
 					<penalty>6</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Theology (same)</name>
+					<name>Theology (same)</name>
 					<penalty>4</penalty>
 				</skillDefault>
 				<desc>This is the ability to perform religious rites â€“ masses, funerals, weddings, etc. â€“ before a congregation. You must specialize by religion. This skill includes detailed knowledge of the ritual motions, prayers, and trappings of the faith, as well as the ability to capture and hold the attention of worshipers. For religions that practice sacrifice, Religious Ritual also covers familiarity with sacrificial tools and methods. To be a priest or holy man at TL1+, you must have both Religious Ritual and Theology skill (p. 226) for your religion. TL0 shamans need only learn Religious Ritual. In worlds where priests can perform miracles, each magical ritual or spell is a separate skill, but certain sacrifice â€“ can give bonuses to spell rolls. You must always make a successful Religious Ritual roll to claim such a bonus. In other settings, a priest's magic is only as good as his ritual. If this is the case, your roll to work magic is against the lower of Religious Ritual and your actual spell skill.</desc>
@@ -3026,6 +3154,10 @@
 				<skillDefault>
 					<name>DX</name>
 					<penalty>5</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Animal Handling (same)</name>
+					<penalty>3</penalty>
 				</skillDefault>
 				<desc>when you first try to mount a riding animal, and again each time something happens to frighten or challenge the creature (e.g., a jump). You must specialize by riding beast. Defaults between specialties vary from 0 to -10. For instance, if you have Riding (Horse), Riding (Mule) is essentially the same skill (no default penalty), Riding (Camel) would default at -3, Riding (Dolphin) at -6, and Riding (Dragon) at a whopping Modifiers: +5 if the animal knows and likes you; +1 or more for a mount with the Mount skill (p. 210); -10 if the animal has not been trained for riding.</desc>
 			</value>
@@ -3075,6 +3207,10 @@
 					<name>IQ</name>
 					<penalty>4</penalty>
 				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>This is the skill of appropriate behavior in a subculture that has an established code of conduct – for instance, high society or the military. When dealing with that social group, a successful skill roll lets you interact without embarrassing yourself, detect pretenders to high standing, and so on. You may also substitute an Influence roll against Savoir-Faire for any reaction roll required in a social situation involving that subculture; see Influence Rolls (p. 359). Roll once per encounter. You must specialize. Common specialties include: Dojo: How to greet masters, wear weapons, and issue challenges at a karate dojo, kung fu kwoon, fencing salle, or similar academy of the martial arts. Recognized skill determines relative standing. In certain places and times, to flout tradition is to risk violent retribution! For competitive martial arts (only), this skill defaults to any relevant Games skill at -3. High Society: The manners of those of “good” birth and breeding. Status determines relative standing. Roll against skill whenever you must impersonate someone more than three Status levels away from your own. If your Status is negative and you are trying to pass yourself off as someone of Status 1+, or vice versa, this roll is at -2. Mafia: Proper conduct within a formal criminal organization. This includes such things as codes of silence and showing proper deference to “made men.” These protocols often ape those of high society . . . but the penalties for misconduct are far more severe. Default: Streetwise-3. Military: The customs, traditions, and regulations of military service. This also includes knowledge of the unwritten rules: what is acceptable even if not regulation, and what is forbidden although there is nothing in writing against it. Military Rank determines relative standing. Police: As Savoir-Faire (Military), but for civilian police service. This gives knowledge of the social protocols for police officers; use Law (Police) for the legal protocols. Police Rank determines relative standing. Servant: Knowledge of how to serve the upper class. Certain procedures are always done just so (the salad fork goes outside the dinner fork, the Duke is announced before the Earl, etc.), and certain attitudes in a servant are unacceptable. Savoir-Faire (High Society) is the most common specialty, and you may list this as simply “Savoir-Faire” on your character sheet. Savoir Faire (High Society) and (Servant) default to one another at -2. There are no defaults between other types of Savoir-Faire. Modifiers: Cultural Familiarity modifiers (p. 23). +2 if you are of higher standing than those you are trying to impress, or -2 if you are of lower standing (“standing” might mean Rank, Status, skill level, or something else). +2 if you seem to have important friends. -4 for Clueless (p. 126); -3 for Low Empathy (p. 142); -1 for Oblivious (p. 146); -1 to -4 for Shyness (p. 154).</desc>
 			</value>
 		</entry>
@@ -3104,7 +3240,7 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Diving Suit</name>
+					<name>Diving Suit</name>
 					<penalty>2</penalty>
 				</skillDefault>
 				<desc>Prerequisite: Swimming. This is the ability to use self-contained underwater breathing apparatus (scuba). Roll when you first enter the water, and again every 30 minutes thereafter, to avoid inhaling water p. 436). If you know this skill above default level, a successful roll also lets you spot problems with the equipment before you put it on. Modifiers: -2 to -4 for unfamiliar scuba rigs; e.g., closed-circuit gear when you're used to open-circuit.</desc>
@@ -3128,7 +3264,7 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Criminology</name>
+					<name>Criminology</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<desc>This is the ability to search people, baggage, and vehicles for items that aren't in plain sight. The GM rolls once â€“ in secret â€“ per item of interest. For deliberately concealed items, this is a Quick Contest of your Search skill vs. the Holdout or Smuggling skill used to hide the item. If you fail, the GM simply says, "You found nothing." (It defeats the purpose to say, jacket.") If more than one person is searching, roll separately for each searcher. The GM should avoid unnecessary rolls. For instance, no human can get a sawed-off shotgun through a body search. Likewise, a knife or jewel simply cannot be found on a normally dressed person without an X-ray or skin search. In general, if the net bonus to the concealer's Holdout roll is +3 or more, a skin search is required. If his Holdout is at -2 or worse for size, a skin search will automatically find the hidden item. Modifiers: +1 for a "pat-down" of an unresisting person (takes one minute), +3 for a thorough "skin search" of a person's hair and clothing plete search, including body cavities Acute Touch (p. 35) and Sensitive Touch (p. 83) apply to all hands-on searches. On a successful Electronics Operation (Security) roll, specialized sensors â€“ metal detectors, X-ray machines, etc. â€“ give from +1 to +5 to find items they can detect (a metal detector won't help you find plastic explosives!).</desc>
@@ -3174,11 +3310,11 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Observation</name>
+					<name>Observation</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Stealth</name>
+					<name>Stealth</name>
 					<penalty>4</penalty>
 				</skillDefault>
 				<desc>This is the ability to follow another person through a crowd without being noticed. (In the wilderness, use Tracking and Stealth.) Roll a Quick Contest every 10 minutes: your Shadowing vs. the subject’s Vision roll. If you lose, you lost the subject; if you lose by more than 5, you were seen. Once the subject is aware you are shadowing him, roll a Quick Contest every five minutes: your Shadowing skill vs. his Shadowing or Stealth skill. If he wins, he eludes you. If he loses by more than 5, he thinks he eluded you. If you critically fail, you lose him and follow the wrong person. Following someone in a vehicle is harder than shadowing on foot. Use the same rules, but you roll at -2 (and may not use your Stealth default). Modifiers: -3 if the subject knows you. Distinctive appearance gives a penalty – see Build (p. 18), Unnatural Features (p. 22), and specific disadvantages (e.g., Hunchback, p. 139) for details. If you belong to a visibly different race than most of the people around you, the penalty is up to the GM; it is never smaller in magnitude than the difference between your Size Modifier and that of those around you.</desc>
@@ -3208,6 +3344,10 @@
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
 				</skillDefault>
 				<desc>Prerequisites: see below. This is the ability to act as the master of a large vessel. It involves directing the crew in the tasks necessary to control the vehicle's speed and direction. It also covers such duties as keeping the captain's log and inspecting the crew. Someone with Shiphandling skill (at better than default!) should stand watch at all times when the vessel is underway. Roll vs. skill when encountering hazards or maneuvering for battle. A failed roll when encountering hazards means the vessel is damaged. This might mean anything from scratched paint to crippling damage that requires extensive repairs. A failed roll in battle means the vessel did not go exactly where intended. The details depend on the vessel, the tech level, and the GM's judgment, but might include weapons being enemy), a failed boarding attempt, or drifting out of formation with your fleet (which might deny you the benefits of area defenses, fire support, or tactical communications). Whether they then save your ship for you, or mutiny and flee, is up to the GM. You must specialize: Airship: Blimps, zeppelins, and similar large airships. Prerequisites: Airshipman, Leadership, and Navigation (Air). Defaults: Airshipman-5 or Piloting (LighterThan-Air)-5. Ship: Surface vessels, from tugboats to carriers. Prerequisites: Leadership, Navigation (Sea), and Seamanship. Defaults: Seamanship-5, or to Boating (Large Powerboat)-5 for ships with engines or Boating Spaceship: Slower-than-light spacecraft. Prerequisites: Leadership, Navigation (Space), and Spacer. Defaults: Spacer-5 or any spaceship Piloting-5. Starship: Faster-than-light spacecraft. Prerequisites: Leadership, Navigation (Hyperspace), and Spacer. Defaults: Spacer-5 or any spaceship Piloting-5. Submarine: All forms of large submersibles. Prerequisites: Leadership, Navigation (Sea), and Submariner. Defaults: Submariner-5 or Submarine Modifiers: -2 to master an unfamiliar vessel (e.g., an aircraft carrier when you're used to a battleship); -2 for an unfamiliar crew; -2 or more for a vehicle in bad repair.</desc>
 			</value>
@@ -3243,7 +3383,7 @@
 					<name>HT</name>
 					<penalty>6</penalty>
 				</skillDefault>
-				<desc>When you are moving on skates, this skill replaces Hiking skill (p. 200) for routine travel and Running skill require DX-based skill rolls in combat or chases, or for hazardous maneuvers, conditions, or speeds. Under those circumstances, any failure indicates a fall, while critical failure results in 1d-2 damage to a randomly chosen limb. A critical failure under any circumstances means an appropriate disaster: running aground, colliding with another vessel, being dismasted, losing your screws or rudder, or simply giving an order that your crew disregards.</desc>
+				<desc>When you are moving on skates, this skill replaces Hiking skill (p. 200) for routine travel and Running skill require DX-based skill rolls in combat or chases, or for hazardous maneuvers, conditions, or speeds. Under those circumstances, any failure indicates a fall, while critical failure results in 1d-2 damage to a randomly chosen limb. </desc>
 			</value>
 		</entry>
 		<entry>
@@ -3305,6 +3445,10 @@
 					<name>IQ</name>
 					<penalty>5</penalty>
 				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>This is the ability to work nonprecious metals by hand. You must specialize: Copper: Copper itself and its alloys, including brass and bronze. Traditionally, a smith who worked with these metals was called a Iron: The skill of being a blacksmith. Also covers steel, at tech levels where it exists. Lead and Tin: Any of the softer, as pewter. The traditional name for such a smith was "whitesmith." Default: Jeweler-4. These specialties default to one another at -4. This skill is IQ-based, but ST is important, and some tools have a</desc>
 			</value>
 		</entry>
@@ -3334,11 +3478,11 @@
 					<penalty>6</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Anthropology</name>
+					<name>Anthropology</name>
 					<penalty>3</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Psychology</name>
+					<name>Psychology</name>
 					<penalty>4</penalty>
 				</skillDefault>
 				<desc>This is the study of societies and social relationships. A successful skill roll lets you judge how well a large group of people will work together; deduce the social pressures contributing to a crime wave, revolution, war, etc.; or predict the most probable outcome of dissimilar societies coming into contact.</desc>
@@ -3381,6 +3525,10 @@
 					<name>DX</name>
 					<penalty>5</penalty>
 				</skillDefault>
+				<skillDefault>
+					<name>Thrown Weapon (Spear)</name>
+					<penalty>4</penalty>
+				</skillDefault>
 				<desc>force with which you can hurl a javelin or similar weapon. It takes one turn to position the spear in the thrower after both are in hand and ready. Modifiers: -5 in tight quarters (less than two yards of overhead clearance).</desc>
 			</value>
 		</entry>
@@ -3404,6 +3552,10 @@
 				<skillDefault>
 					<name>DX</name>
 					<penalty>5</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
 				</skillDefault>
 				<desc>This is the ability to play a particular sport well â€“ perhaps well enough to earn a living. Each sport is a separate</desc>
 			</value>
@@ -3470,11 +3622,11 @@
 					<penalty>6</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> IntelligenceAnalysis</name>
+					<name>Intelligence Analysis</name>
 					<penalty>6</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Tactics</name>
+					<name>Tactics</name>
 					<penalty>6</penalty>
 				</skillDefault>
 				<desc>This is the ability to plan military actions and predict the actions of the enemy. In most settings, only the military teaches this skill. A successful Strategy roll lets you deduce, in advance, enemy military plans unless another person with this skill leads them. In that case, the GM rolls a Quick Contest of Strategy. The amount of information gained depends on how well you roll (but not on the quality of the foe's plans). If you fail an uncontested roll or lose a Quick Contest, the GM gives you false information. You must specialize in a type of strategy â€“ Land, Naval, Space, etc. These specialties default to one another at -4. The specific units being commanded are less important; even the units of another nation or tech level would give -1 or -2 at most (GM's judgment), as long as you had accurate information about their capabilities.</desc>
@@ -3491,7 +3643,7 @@
 					<name>IQ</name>
 					<penalty>5</penalty>
 				</skillDefault>
-				<desc>This is the skill of getting along in rough company. A successful Streetwise roll might let you learn of illegal "action" is; which local cops or bureaucrats can be bought, and for how much; and how to contact the local underworld. Note that you might also be able to get this information by asking a Contact (p. 44). This skill is a measure of your ability to make new connections as needed. You may substitute an Influence roll against Streetwise for any reaction roll made in an underworld or "bad neighborhood" situation; see Influence Rolls (p. 359). Modifiers: +3 if you have a tough reputation (either "good" or "bad") in the area; -3 if you are obviously a stranger in the area. -3 for Low Empathy (p. 142); -1 for Oblivious</desc>
+				<desc>This is the skill of getting along in rough company. Note that you might also be able to get this information by asking a Contact (p. 44). This skill is a measure of your ability to make new connections as needed. You may substitute an Influence roll against Streetwise for any reaction roll made in an underworld or "bad neighborhood" situation; see Influence Rolls (p. 359). Modifiers: +3 if you have a tough reputation (either "good" or "bad") in the area; -3 if you are obviously a stranger in the area. -3 for Low Empathy (p. 142); -1 for Oblivious</desc>
 			</value>
 		</entry>
 		<entry>
@@ -3542,7 +3694,7 @@
 					<penalty>12</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Physician</name>
+					<name>Physician</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
@@ -3550,7 +3702,7 @@
 					<penalty>8</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Veterinary</name>
+					<name>Veterinary</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<desc>Prerequisites: First Aid or Physician. This is skill at using invasive medical techniques to treat sickness or injury. Roll once per operation. On a success, the operation proceeded without complications. On a failure, the patient took damage â€“ 2d for a simple amputation, 3d for other procedures. Surgery rolls can also facilitate recovery from wounds; see Surgery (p. 424). This skill represents general surgical expertise, which is relatively rare in real life. Most surgeons have an optional specialty (p. 169) in a certain part of the body (brain, heart, etc.) or a specific type of surgery (cosmetic surgery, microsurgery, transplant surgery, etc.). Modifiers: Equipment modifiers properly cleaned and sterilized; -3 for head or chest surgery; -5 for undiagnosed problems. If you lack Physician skill, you are at -5 to do anything but wounds or extract arrowheads, bullets, and shrapnel).</desc>
@@ -3566,6 +3718,10 @@
 				<skillDefault>
 					<name>Perception</name>
 					<penalty>5</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Naturalist (same planet)</name>
+					<penalty>3</penalty>
 				</skillDefault>
 				<desc>This is the ability to “live off the land,” find safe food and water, avoid hazards, build shelter, etc. You may look after up to 10 other people. To live safely in a wilderness situation, you must make a successful Survival roll once per day. Failure inflicts 2d-4 injury on you and anyone in your care; roll separately for each victim. This skill also gives an “eye for country.” A successful roll shows you the best direction of travel to find flowing water, a mountain pass, or whatever other terrain feature you desire – assuming that it exists. Finally, you can use this skill to trap wild animals. (A city-bred thief could use Traps skill, but he’s used to different game . . . so the roll would be at a -5.) Make one roll per trap. It takes about 30 minutes to improvise a trap from ordinary materials, or 10 minutes to set and hide a commercial steel trap. Pit traps for large game take several hours to dig. Survival often requires skill rolls based on scores other than PercepSKILLS 223 tion. The GM might ask for a ST-based roll to dig a pit trap or erect a log shelter, a DX-based roll to start a fire using primitive techniques (flint sparking, bow and palette, etc.), or even a HTbased roll to avoid nutritional deficiencies from an improvised diet. You must specialize by terrain type. Land-dwellers may choose from Arctic, Desert, Island/Beach, Jungle, Mountain, Plains, Swampland, and Woodlands. Aquatic beings may take any of Bank, Deep Ocean Vent, FreshWater Lake, Open Ocean, Reef, River/Stream, Salt-Water Sea, and Tropical Lagoon. Amphibious individuals can pick from either list! Land specialties default to one another at -3, while aquatic specialties default among themselves at -4. Island/Beach and Tropical Lagoon default to each other at -4, as do Swampland and River/Stream, but there are no other defaults between land and aquatic specialties. In settings where it is possible to visit other worlds, you must also specialize by planet. Each Survival specialty defaults to the same terrain type for a different planet at -4. The defaults between terrain types given above are at an extra -4 between different planets. All this assumes the two planets are of the same planet type (see Planet Types, p. 180). There is no default at all between Survival skills for two planets of different planet types. At the GM’s option, extreme manmade terrain may call for unique specialties; e.g., Survival (Radioactive Wasteland). Most such specialties have no default of any kind. See also Urban Survival, p. 228.</desc>
 			</value>
@@ -3597,6 +3753,10 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<skillDefault>
+					<name>Special</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>This is the art of scribing magical symbols. Depending on your magical tradition, you might carve these symbols with a ritual dagger, draw them on the ground or an altar using blood or ceremonial powders, write them in ink, trace them in the air with a wand or your fingers, or something else. You must specialize in a particular magical tradition. Roll against Symbol Drawing before each ritual. On a success, add half your margin of success (round down) to your skill with the next ritual you conduct over the symbols. This kind of Symbol Drawing defaults to Ritual Magic Drawing (Voodoo) defaults to Ritual Magic (Voodoo)-4, and lets you draw the vevers used in Voodoo ritual. In traditions where the symbols themselves imbue items or places (or even people, in the case of tattoos) with magic, the magic is only as good as the symbols. Roll against the lower of Symbol Drawing and your skill with the enchantment itself. This is most common in rune magic. Each runic alphabet is a separate Symbol Drawing skill with no default. For instance, Symbol Drawing (Futhark Runes) would let you scribe the runes used in Norse magic. More-exotic traditions may have their own rules; see the appropriate worldbook for more information. Modifiers: -1 or more if using nontraditional means to mark the symbols; -1 or more if placing the symbols on any surface other than those prescribed by your tradition.</desc>
 			</value>
 		</entry>
@@ -3643,7 +3803,15 @@
 					<name>IQ</name>
 					<penalty>5</penalty>
 				</skillDefault>
-				<desc>It includes the ability to harness and care for the beasts, and judge them for quality before purchase. If the animals are ornery or badly trained (GM's judgment), you must make a successful Animal Handling roll before you can attempt a Teamster roll. For normal travel, make a Teamster roll once per day. When moving at a gallop (80% or more of the animals' full Move) or when executing complex maneuvers with a chariot in combat, roll every 10 seconds. A failure usually means nothing worse than lost time or a wider turn than intended. A critical failure â€“ or any failure at a gallop â€“ spills the wagon or chariot. Treat this as a fiveyard fall for each passenger and animal involved (see Falling, p. 431). As well, roll 2d for each beast; on a 12, a leg is broken! You will have to make Animal Handling rolls to calm the beasts. Time required to reload the cargo depends on the load, terrain, and weather. You must specialize by animal type; the most common specialty is Teamster (Equines), which covers horses and mules. Teamster specialties default to one another at -3. Modifiers: -2 for more than four animals; -2 for a team of unfamiliar animals; up to -5 for bad terrain.</desc>
+				<skillDefault>
+					<name>Animal Handling (same)</name>
+					<penalty>4</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Riding (same)</name>
+					<penalty>2</penalty>
+				</skillDefault>
+				<desc>This is the skill of driving a team of animals pulling a wagon, chariot, etc. It includes the ability to harness and care for the beasts, and judge them for quality before purchase. If the animals are ornery or badly trained (GM’s judgment), you must make a success- ful Animal Handling roll before you can attempt a Teamster roll. For normal travel, make a Teamster roll once per day. When moving at a gallop (80% or more of the animals’ full Move) or when exe- cuting complex maneuvers with a chariot in combat, roll every 10 seconds. A failure usually means nothing worse than lost time or a wider turn than intended. A critical failure – or any failure at a gallop – spills the wagon or chariot. Treat this as a five- yard fall for each passenger and animal involved (see Falling, p. 431). As well, roll 2d for each beast; on a 12, a leg is broken! You will have to make Animal Handling rolls to calm the beasts. Time required to reload the cargo depends on the load, terrain, and weather. You must specialize by animal type; the most common specialty is Teamster (Equines), which covers horses and mules. Teamster special- ties default to one another at -3. Modifiers: -2 for more than four animals; -2 for a team of unfamiliar animals; up to -5 for bad terrain.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -3653,6 +3821,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
+				<!--Only in magical setting and to those who have witnessed "real" magic-->
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>7</penalty>
@@ -3671,6 +3840,10 @@
 					<name>IQ</name>
 					<penalty>6</penalty>
 				</skillDefault>
+				<skillDefault>
+					<name>Religious Ritual (same)</name>
+					<penalty>4</penalty>
+				</skillDefault>
 				<desc>This is the study of a particular religion: its gods, cosmology, doctrines, scriptures, etc. You must specialize by religion. There are usually no defaults between specialties, but the GM might permit a default at -4 or so for belief systems that have similar origins, or where one is derived from the other. Alternatively, you may study the similarities and differences between religions; this is Theology (Comparative). The Theology of any religion routinely studied by scholars in your game world defaults to this specialty at -5. To be a priest or holy man at TL1+, you must have both Theology and Religious Ritual skill (p. 217) for your religion. TL0 shamans need only learn Religious Ritual. You do not necessarily believe in the religion you study – faith comes from within, not from book learning! If you do, you may ask the GM to make a secret roll against your Theology skill when confronted with moral uncertainty. On a success, the GM will advise you on which course of action “feels” right, given your beliefs and understanding of scripture.</desc>
 			</value>
 		</entry>
@@ -3686,7 +3859,7 @@
 					<penalty>3</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Dropping</name>
+					<name>Dropping</name>
 					<penalty>4</penalty>
 				</skillDefault>
 				<desc>This is the ability to throw any small, relatively smooth object that fits in the palm of your hand. Examples include baseballs, hand grenades, and rocks. (Boomerangs, javelins, knives, etc. require their own specialized skills; see Thrown Weapon, below.) Roll against skill to hit. Furthermore, if you know Throwing at DX+1 level, add +1 to ST when figuring throwing distance (but not damage). Add +2 to ST for Throwing at DX+2 or better. If you do not have this skill, roll against your default to hit a specific target, but against full DX to lob an object into a general area.</desc>
@@ -3713,6 +3886,10 @@
 					<name>DX</name>
 					<penalty>4</penalty>
 				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
+				</skillDefault>
 				<desc>This is the ability to hurl any one type of thrown weapon. You must specialize: Axe/Mace: Any axe, hatchet, or mace balanced for throwing (but not an unbalanced battleaxe or maul!). Dart: Any sort of small, finned dart. Games (Darts) defaults to this skill at no penalty. Default: Throwing-2. Harpoon: Any sort of tethered spear. Default: Thrown Weapon (Spear)-2. Knife: Any sort of knife. Shuriken: Any sort of hiltless blade, notably shuriken ("ninja stars"). Default: Throwing-2. Spear: Any sort of spear, javelin, etc. Defaults: Spear Thrower-4 or Thrown Weapon (Harpoon)-2. Stick: Any balanced and shaped throwing stick, such as a boomerang. This type of throwing stick does not return to the user.</desc>
 			</value>
 		</entry>
@@ -3734,7 +3911,7 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Naturalist</name>
+					<name>Naturalist</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<desc>This is the ability to follow a man or an animal by its tracks. Make a Tracking roll to pick up the trail, then roll periodically to avoid losing it. The frequency and difficulty of these rolls depend on the terrain: Jungle, Plains, or Woodlands: Roll every 30 minutes. Arctic, Desert, Island/Beach, or Mountain: Roll at -2 every 15 minutes. Swampland: Roll at -4 every 5 minutes. Urban: Roll at -6 every minute! You may also use this skill to cover your tracks. This doubles your travel time! A successful roll means you have hidden your tracks well enough that only someone else with this skill can see them. If another tracker follows you, the Tracking rolls above become Quick Contests of Tracking skill. If he loses any of the Contests, he loses your trail. To stalk game once you have tracked it, use the Stealth skill (p. 222). Modifiers: -5 if the trail is more than a day old, or -10 if more than a week old. +3 if you are following a man, or +6 if following a group of men. Superior senses help a lot: bonuses for Acute Vision (p. 35) and Discriminatory Smell (p. 49) usually apply, and many superhuman senses (Infravision, Subsonic Hearing, etc.) give situational bonuses.</desc>
@@ -3752,8 +3929,13 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name> Lockpicking</name>
+					<name>Lockpicking</name>
 					<penalty>3</penalty>
+				</skillDefault>
+				<!--Only when disarming or resetting a trap-->
+				<skillDefault>
+					<name>DX</name>
+					<penalty>5</penalty>
 				</skillDefault>
 				<desc>This is the skill of building and nullifying traps. A successful Traps roll will (among other things) disarm a trap once you have found it, reset it after you pass, or build a new trap required is as for Lockpicking (p. 206). To detect a trap, make a Perceptionbased skill roll. Note that for the purposes of Traps skill, detection devices are "traps." Thus, this skill covers everything from covered pits to elaborate electronic security systems! Modifiers: Infinitely variable. The more sophisticated the trap, the harder it will be to disarm, reset, build, or find â€“ and a given trap might be (for instance) easy to find but hard to disarm. The GM should be creative! Equipment modifiers (p. 345) apply to most rolls to set or disarm traps. Bonuses for Acute Vision (p. 35) apply to rolls to detect traps (only).</desc>
 			</value>
@@ -3786,6 +3968,10 @@
 				<skillDefault>
 					<name>DX</name>
 					<penalty>4</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
 				</skillDefault>
 				<desc>This is the skill of using a typewriter. Typing speed is skill Â¥ 3 words per minute (wpm) on a manual, skill Â¥ 5 wpm on an electric typewriter or computer keyboard. This skill defaults at -3 to any skill that involves a lot of typing, notably Administration, Computer Operation, Research, and Writing, and Professional Skills such as Journalist. If you have such a skill, Typing skill is redundant (unless you wish to work as a professional typist).</desc>
 			</value>
