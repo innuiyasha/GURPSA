@@ -1,6 +1,7 @@
 package characterManager;
 
 import java.io.File;
+import java.util.Vector;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -12,18 +13,14 @@ import dataContainers.CharacterFields.Skill;
 
 public class CharacterManager {
 
-	Character[] players;
+	Vector<Character> players;
 	
 	//This needs to be changed later. Right now, it's a toggle between read/write the XML file.
 	public CharacterManager(boolean MakeXML)
 	{
+		players = new Vector<Character>();
 		if(MakeXML)
-		{
-			players = new Character[1];
-			players[0] = new Character();
-		}
-		else
-			players = new Character[0];
+			players.add(new Character());
 	}
 	
 	//Generates a character from an XML file.
@@ -34,27 +31,26 @@ public class CharacterManager {
 			JAXBContext jaxbContext = JAXBContext.newInstance(Character.class);
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			character = (Character) jaxbUnmarshaller.unmarshal(XMLInput);
-			//System.out.println(character);
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
-
 		return character;
 	}
 	
 	//Adds a character to the manager's list, using the function above
 	public void AddCharacter(File file)
 	{
-		Character[] tempPlayers = new Character[players.length + 1];
-		for(int i = 0 ; i < players.length ; i++)
-			tempPlayers[i] = players[i];
-		tempPlayers[players.length] = makeCharacter(file);
-		players = tempPlayers;
+		players.add(makeCharacter(file));
+	}
+	
+	public void AddCharacter(Character newChara)
+	{
+		players.add(newChara);
 	}
 	
 	public Character getCharacter(int i)
 	{
-		return players[i];
+		return players.get(i);
 	}
 	
 	//Turns a character into an XML file. Currently overwrites a single file.
@@ -72,14 +68,14 @@ public class CharacterManager {
 			jaxbMarshaller.marshal(character, System.out);
 
 		      } catch (JAXBException e) {
-			e.printStackTrace();
+		    	  e.printStackTrace();
 		      }
 	}
 
 	public void displayCharacters() {
-		for(int i = 0 ; i < players.length ; i++)
+		for(int i = 0 ; i < players.size() ; i++)
 		{
-			System.out.println(players[i].toString());
+			System.out.println(players.get(i).toString());
 		}
 		
 	}

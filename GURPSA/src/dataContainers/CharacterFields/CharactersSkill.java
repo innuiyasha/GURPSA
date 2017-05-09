@@ -3,54 +3,38 @@ package dataContainers.CharacterFields;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CharactersSkill {
+public class CharactersSkill extends Skill {
 
-	private Skill skill;
 	private int relativeLevel;
-	//Needs ENUM for default base attribute
 	
-	public CharactersSkill(String name, int relLevel, Skill.BaseAttribute baseAttribute, Skill.Difficulty difficulty)
+	public CharactersSkill(String name, BaseAttribute baseAttribute, Difficulty difficulty, int relLevel)
 	{
-		this.skill = new Skill(name, baseAttribute, difficulty);
+		//super(name, baseAttribute, difficulty);
+		this.relativeLevel = relLevel;
+	}
+	
+	public CharactersSkill(Skill skill, int relLevel)
+	{
+		//super(skill.getName(), skill.getBaseAttribute(), skill.getDifficulty());
 		this.relativeLevel = relLevel;
 	}
 	
 	public CharactersSkill()
 	{
-		this.skill = new Skill();
+		super();
 		this.relativeLevel = -99;
 	}
 
-//	@XmlElement
-	public void setName(String name)
-	{
-		this.skill.setName(name);
-	}
-	
 //	@XmlElement
 	public void setLevel(int level)
 	{
 		this.relativeLevel = level;
 	}
 	
-	public String getName()
-	{
-		return skill.getName();
-	}
 	
 	public int getLevel()
 	{
 		return relativeLevel;
-	}
-	
-	public Skill.Difficulty getDifficulty()
-	{
-		return skill.getDifficulty();
-	}
-	
-	public Skill.BaseAttribute getBaseAttribute()
-	{
-		return skill.getBaseAttribute();
 	}
 	
 }
