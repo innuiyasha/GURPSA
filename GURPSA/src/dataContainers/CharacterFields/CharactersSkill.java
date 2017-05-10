@@ -3,25 +3,26 @@ package dataContainers.CharacterFields;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CharactersSkill extends Skill {
+public class CharactersSkill {
 
+	private String skillName;
 	private int relativeLevel;
 	
-	public CharactersSkill(String name, String baseAttribute, String difficulty, int relLevel)
+	public CharactersSkill(String name, int relLevel)
 	{
-		//super(name, baseAttribute, difficulty);
+		this.skillName = name;
 		this.relativeLevel = relLevel;
 	}
 	
 	public CharactersSkill(Skill skill, int relLevel)
 	{
-		//super(skill.getName(), skill.getBaseAttribute(), skill.getDifficulty());
+		this.skillName = skill.getName();
 		this.relativeLevel = relLevel;
 	}
 	
 	public CharactersSkill()
 	{
-		super();
+		this.skillName = "Not a Skill";
 		this.relativeLevel = -99;
 	}
 
@@ -31,6 +32,15 @@ public class CharactersSkill extends Skill {
 		this.relativeLevel = level;
 	}
 	
+	public void setSkillName(String name)
+	{
+		this.skillName = name;
+	}
+	
+	public String getSkillName()
+	{
+		return skillName;
+	}
 	
 	public int getLevel()
 	{

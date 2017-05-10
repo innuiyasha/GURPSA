@@ -15,24 +15,46 @@
     <FP>18</FP>
     <Will>13</Will>
     <PER>6</PER>
+    <TL>4</TL>
     <speed>7.0</speed>
     <move>7</move>
     <SkillList>
         <PlayerSkill>
-            <skill baseAttribute="DX" difficulty="HARD" name="Acrobatics"/>
+            <skillName>Acrobatics</skillName>
             <relativeLevel>3</relativeLevel>
         </PlayerSkill>
         <PlayerSkill>
-            <skill baseAttribute="DX" difficulty="AVERAGE" name="Bow"/>
+            <skillName>Bow</skillName>
             <relativeLevel>1</relativeLevel>
         </PlayerSkill>
         <PlayerSkill>
-            <skill baseAttribute="DX" difficulty="EASY" name="Brawling"/>
+            <skillName>Brawling</skillName>
             <relativeLevel>0</relativeLevel>
         </PlayerSkill>
         <PlayerSkill>
-            <skill baseAttribute="HT" difficulty="AVERAGE" name="Running"/>
+            <skillName>Running</skillName>
             <relativeLevel>0</relativeLevel>
         </PlayerSkill>
     </SkillList>
+    <AdvantageList>
+        <Advantage name="Very Fit" description="Placeholder for Very Fit description." cost="15 Points"/>
+        <Advantage name="Ambidexterity" description="Placeholder for Ambidexterity description." cost="5 Points"/>
+        <Advantage name="Fast Swimmer (+1 basic move)" description="Placeholder for increased Move Speed description." cost="5 Points"/>
+    </AdvantageList>
+    <LanguageList>
+        <Language languageName="Human" written="NATIVE" spoken="NATIVE"/>
+    </LanguageList>
+    <CultureList>
+        <Culture cultureName="Human"/>
+        <Culture cultureName="Lynian"/>
+        <Culture cultureName="Wyverian"/>
+    </CultureList>
+    <AppearanceModifier appropriateSex="0" otherSex="0"/>
+    <ReputationList>
+        <Reputation context="Loc Lac Guild workers" modifier="2" chanceOfRecog="recognized on a 10- roll."/>
+        <Reputation context="Loc Lac Guild workers" modifier="-2" chanceOfRecog="recognized on a 7- roll."/>
+    </ReputationList>
+    <StatusList>
+        <Status context="Hunter" statusValue="1"/>
+    </StatusList>
 </character>
