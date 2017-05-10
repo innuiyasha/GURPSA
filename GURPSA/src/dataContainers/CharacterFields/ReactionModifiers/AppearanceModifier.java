@@ -1,7 +1,6 @@
 package dataContainers.CharacterFields.ReactionModifiers;
 
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlEnum;
 
 public class AppearanceModifier extends ReactionModifier {
 

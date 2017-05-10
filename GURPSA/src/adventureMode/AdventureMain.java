@@ -136,6 +136,7 @@ public class AdventureMain {
 		
 		System.out.println("Please enter skill of interest and field(s) of interest OR type 'exit' to leave\n"
 				+ "If a multi-word skill, use periods rather than spaces\n"
+				+ "Valid fields are: 'difficulty' 'description' 'attribute' 'default' 'TL'\n"
 				+ "'SkillName' Field1 Field2 . . . FieldN");
 		
 		String line;
@@ -243,7 +244,11 @@ public class AdventureMain {
 			String name = parts[0].replace(".", " ");
 			if(parts.length > 1)
 			{
-				newChara.addSkill(name, Integer.parseInt(parts[1]));
+				if(skillManager.isSkill(name)) {
+					newChara.addSkill(name, Integer.parseInt(parts[1]));
+				} else {
+					System.out.println(name + " is not a skill");
+				}
 			}
 		}
 		

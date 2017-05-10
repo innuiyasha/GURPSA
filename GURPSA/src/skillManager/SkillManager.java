@@ -1,8 +1,6 @@
 package skillManager;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -16,8 +14,8 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.*;
 
-import characterManager.Character;
-import dataContainers.CharacterFields.CharactersSkill;
+import org.apache.commons.lang3.text.WordUtils;
+
 import dataContainers.CharacterFields.Skill;
 import dataContainers.CharacterFields.SkillDefault;
 
@@ -147,6 +145,9 @@ public class SkillManager {
 	}
 	
 	public String request(String skillName, String element) {
+		skillName = formatSkillName(skillName);
+		element = element.toLowerCase();
+		
 		switch(element) {
 		case "difficulty":
 			return getDifficulty(skillName);
@@ -161,5 +162,24 @@ public class SkillManager {
 		default:
 			return "Invalid Entry: " + element;
 		}
+	}
+	
+	public Boolean isSkill(String skillName) {
+		skillName = formatSkillName(skillName);
+		
+		return skillMap.containsKey(skillName);
+	}
+	
+	private String formatSkillName(String unformated) {
+		String[] components = unformated.split("-");
+		String skillName = WordUtils.capitalizeFully(components[0]);
+		
+		for(int i = 1; i < components.length; i++) {
+			skillName += "-" + WordUtils.capitalizeFully(components[i]);
+		}
+		
+		System.out.println(skillName);
+		return skillName;
+		
 	}
 }
