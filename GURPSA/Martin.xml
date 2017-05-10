@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<character>
+    <name>Martin</name>
+    <player>David Clare</player>
+    <height>6'3"</height>
+    <weight>250lbs</weight>
+    <appearance></appearance>
+    <SM>0</SM>
+    <age>80</age>
+    <ST>14</ST>
+    <DX>14</DX>
+    <IQ>12</IQ>
+    <HT>12</HT>
+    <HP>15</HP>
+    <FP>16</FP>
+    <Will>16</Will>
+    <PER>14</PER>
+    <TL>8</TL>
+    <speed>6.5</speed>
+    <move>7</move>
+    <SkillList>
+        <PlayerSkill>
+            <skillName>Acrobatics</skillName>
+            <relativeLevel>1</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Administration</skillName>
+            <relativeLevel>1</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Writing</skillName>
+            <relativeLevel>1</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Literature</skillName>
+            <relativeLevel>1</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Blind Fighting</skillName>
+            <relativeLevel>-1</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Breath Control</skillName>
+            <relativeLevel>2</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Climbing</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Current Affairs</skillName>
+            <relativeLevel>2</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Savoir Faire (Magic)</skillName>
+            <relativeLevel>2</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Detect Lies</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Driving</skillName>
+            <relativeLevel>-1</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Escape</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>First Aid</skillName>
+            <relativeLevel>2</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Holdout</skillName>
+            <relativeLevel>2</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Soldier</skillName>
+            <relativeLevel>2</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Interrogation</skillName>
+            <relativeLevel>4</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Judo</skillName>
+            <relativeLevel>4</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Karate</skillName>
+            <relativeLevel>4</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Melee Weapon (Knife)</skillName>
+            <relativeLevel>6</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Thrown Weapon (Knife)</skillName>
+            <relativeLevel>6</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Quick Draw (Knife)</skillName>
+            <relativeLevel>6</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Leadership</skillName>
+            <relativeLevel>2</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Meditation</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Occultism</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Parry Missile Weapons</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Public Speaking</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Teaching</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Ritual Magic (Catholic)</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Running</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Stealth</skillName>
+            <relativeLevel>5</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Tactics</skillName>
+            <relativeLevel>4</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Theology (Catholic)</skillName>
+            <relativeLevel>6</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Tracking</skillName>
+            <relativeLevel>1</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Observation</skillName>
+            <relativeLevel>1</relativeLevel>
+        </PlayerSkill>
+    </SkillList>
+    <AdvantageList/>
+    <LanguageList/>
+    <CultureList/>
+    <AppearanceModifier appropriateSex="0" otherSex="0"/>
+    <ReputationList/>
+    <StatusList/>
+</character>
