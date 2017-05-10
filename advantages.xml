@@ -6,7 +6,7 @@
 				<name>360° Vision</name>
 				<nums>31</nums>
 				<stat>25 points</stat>
-				<desc>You have a 360° field of vision. You have no penalty to defend against attacks from the sides or rear. You can attack foes to your sides or rear without making a Wild Swing, but you are at -2 to hit due to the clumsy angle of attack (note that some Karate techniques do not suffer this penalty). Finally, you are at +5 to detect Shadowing attempts, and are never surprised by a danger that comes from behind, unless it also is concealed from sight. Extra eyes are merely a special effect of this trait – you can have any number of eyes, but the point cost remains the same. Special Limitations Easy to Hit: Your eyes are on stalks, unusually large, or otherwise more vulnerable to attack. Others can target your eyes from within their arc of vision at only -6 to hit. -20%. 3D Spatial Sense see Absolute Direction</desc>
+				<desc>You have a 360° field of vision. You have no penalty to defend against attacks from the sides or rear. You can attack foes to your sides or rear without making a Wild Swing, but you are at -2 to hit due to the clumsy angle of attack (note that some Karate techniques do not suffer this penalty). Finally, you are at +5 to detect Shadowing attempts, and are never surprised by a danger that comes from behind, unless it also is concealed from sight. Extra eyes are merely a special effect of this trait – you can have any number of eyes, but the point cost remains the same. Special Limitations Easy to Hit: Your eyes are on stalks, unusually large, or otherwise more vulnerable to attack. Others can target your eyes from within their arc of vision at only -6 to hit. -20%. 3D Spatial Sense see Absolute Direction.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -288,13 +288,13 @@
 				<name>Common Sense</name>
 				<nums>2</nums>
 				<stat>10 points</stat>
-				<desc>Any time you start to do something the GM feels is STUPID, he will roll against your IQ. A successful roll means he must warn you: “Hadn’t you better think about that?” This advantage lets an impulsive player take the part of a thoughtful character. Compartmentalized</desc>
+				<desc>Any time you start to do something the GM feels is STUPID, he will roll against your IQ. A successful roll means he must warn you: “Hadn’t you better think about that?” This advantage lets an impulsive player take the part of a thoughtful character.</desc>
 			</value>
 		</entry>
 		<entry>
-			<key>Mind</key>
+			<key>Compartmentalized Mind</key>
 			<value>
-				<name>Mind</name>
+				<name>Compartmentalized Mind</name>
 				<nums>21</nums>
 				<stat>50 points/level</stat>
 				<desc>Your mental coordination gives you, in effect, more than one mind. Each mind – or “compartment” – functions independently and at full capability. Your compartments are identical, but hypnotism, magic, psionics, and the like affect them separately (e.g., one compartment could be hypnotized without affecting any of the others). This advantage does not allow your body to perform more than one task. A normal character may select one maneuver on his turn in combat. This may be physical or mental. Each level of Compartmentalized Mind adds one extra mental maneuver to this allotment. For instance, Compartmentalized Mind 1 would let you perform one mental maneuver and one physical maneuver (e.g., Concentrate on a spell and Attack) or two mental maneuvers (e.g., Concentrate on two spells), but never more than one physical maneuver – for that, see Extra Attack (p. 53). If one compartment is under external influence, roll a Quick Contest of Will to see whether it gains control of the body. The compartment currently in control of the body rolls at +1. Battling compartments may attempt to use mental powers on each other. Treat them as completely separate minds for this purpose, each with your IQ, Will, and mental abilities (such as Mind Shield). Two variations on this advantage are available for vehicles built as characters: Controls: Each level buys one set of controls. Controls let an operator perform his own physical or mental maneuvers using your abilities (e.g., Innate Attack or Radar), as per the rules for vehicular combat (see p. 467). The operator directs all actions of an IQ 0 vehicle with this advantage. Physical limits still apply; for instance, a vehicle can make no more attacks than it has ready weapons. Resolve conflicts between operators by rolling a Quick Contest of vehicle operation skill. 25 points/level. Dedicated Controls: As Controls, but each set of controls handles a specific task; e.g., “tail gunner.” The person manning them can’t operate anything else. 10 points/level.</desc>
@@ -425,27 +425,27 @@
 			</value>
 		</entry>
 		<entry>
-			<key/>
+			<key>Discriminatory Hearing</key>
 			<value>
-				<name/>
+				<name>Discriminatory Hearing</name>
 				<nums>31</nums>
 				<stat>15 points</stat>
 				<desc>You have a superhuman ability to distinguish between sounds. You can always identify people by voice, and can recognize individual machines by their “sound signature.” You may memorize a sound by listening to it for at least one minute and making a successful IQ roll. On a failure, you must wait at least one full day before making a repeated attempt. You get +4 (in addition to any Acute Hearing bonuses) on any task that utilizes hearing, and receive +4 to Shadowing skill when following a noisy target. To simulate the passive sonar used by submarines, add a -30% Accessibility limitation, “Only underwater.” Discriminatory Smell 3</desc>
 			</value>
 		</entry>
 		<entry>
-			<key/>
+			<key>Discriminatory Smell</key>
 			<value>
-				<name/>
+				<name>Discriminatory Hearing</name>
 				<nums>1</nums>
 				<stat>15 points</stat>
 				<desc>Your sense of smell is far beyond the human norm, and can register distinctive odors for practically everything you may encounter. This allows you to recognize people, places, and things by scent. You may memorize a scent by sniffing it for at least one minute and making a successful IQ roll. On a failure, you must wait at least one full day before making a repeated attempt. You get +4 (in addition to any Acute Taste and Smell bonuses) on any task that utilizes the sense of smell, and receive +4 to Tracking skill. If you actually become ill when exposed to the odor of a particular substance, take the Temporary Disadvantage limitation (p. 115). The most common effect is Revulsion allow other temporary disadvantages. Special Enhancements Emotion Sense: You can detect a person or animal’s emotional state by odor. This functions as the Empathy advantage (p. 51), but you must be within 2 yards of the subject. +50%. Discriminatory Taste</desc>
 			</value>
 		</entry>
 		<entry>
-			<key/>
+			<key>Discriminatory Taste</key>
 			<value>
-				<name/>
+				<name>Discriminatory Taste</name>
 				<nums>31</nums>
 				<stat>10 points</stat>
 				<desc>This talent functions in most ways like Discriminatory Smell (above), but enhances the sense of taste instead, so tracking is not possible. You must ingest a small quantity of the material to be examined; for a living subject, this means bodily fluids. This gives you an IQ roll to recognize the taste, identify whether a substance is safe to eat, etc. You can perform a detailed skill (Chemistry, Cooking, Pharmacy, Poisons . . .). You get +4 (in addition to any Acute Taste and Smell bonuses) on any task that utilizes the sense of taste.</desc>
@@ -798,9 +798,9 @@
 			</value>
 		</entry>
 		<entry>
-			<key/>
+			<key>High Manual Dexterity</key>
 			<value>
-				<name/>
+				<name>High Manual Dexterity</name>
 				<nums>3</nums>
 				<stat>5 points/level</stat>
 				<desc>You have remarkably fine motor skills. Each level (to a maximum of four) gives +1 to DX for tasks that require a delicate touch. This includes all DX-based rolls against Artist, Jeweler, Knot-Tying, Leatherworking, Lockpicking, Pickpocket, Sewing, Sleight of Hand, and Surgery, as well as DX-based rolls to do fine work with Machinist or Mechanic (e.g., on clockwork). This bonus doesn’t apply to IQbased tasks or large-scale DX-based tasks, nor does it apply to combatrelated die rolls of any kind.</desc>
@@ -833,10 +833,10 @@
 			</value>
 		</entry>
 		<entry>
-			<key/>
+			<key>Hyperspectral Vision</key>
 			<value>
-				<name/>
-				<nums>1</nums>
+				<name>Hyperspectral Vision</name>
+				<nums>31</nums>
 				<stat>25 points</stat>
 				<desc>Your vision extends across the infrared, visible, and ultraviolet portions of the spectrum. This integrated picture often reveals details that are invisible to those who merely possess normal vision, Infravision (p. 60), or Ultravision (p. 94). Hyperspectral Vision grants nearperfect night vision: you suffer no vision or combat penalties if there is any light at all. In total darkness, it functions exactly like Infravision. This trait also gives +3 on all Vision rolls; on all rolls to spot hidden clues or objects with Forensics, Observation, or Search skill; and on all Tracking rolls. If you possess Hyperspectral Vision, you cannot also have Infravision or Ultravision. This trait is essentially a higher level of both those advantages. Its game effects replace the specific effects of those traits. As described, this trait emulates realistic TL7+ sensors. The GM may permit supers to take the two special enhancements below. Neither is appropriate for real-world sensors! Special Enhancements Extended Low-Band: You perceive radiation below the infrared, allowing you to “see” microwave, radar, and radio sources. This gives no special ability to understand radio signals! Extended High-Band: You sense radiation above the ultraviolet, allowing you to “see” X-ray and gamma ray sources. +30%.</desc>
 			</value>
@@ -851,9 +851,9 @@
 			</value>
 		</entry>
 		<entry>
-			<key/>
+			<key>Improved G-Tolerance</key>
 			<value>
-				<name/>
+				<name>Improved G-Tolerance</name>
 				<nums>3</nums>
 				<stat>5 to 25 points</stat>
 				<desc>You can function under a wide range of gravities. For a normal human, the penalties for non-native gravity accrue in increments of 0.2G; see Different Gravity (p. 350). A larger increment costs points: 5 points for 0.3G, 10 points for 0.5G, 15 points for 1G, 20 points for 5G, and 25 points for 10G. Normal humans are limited to 10 points in this trait.</desc>
@@ -957,9 +957,9 @@
 			</value>
 		</entry>
 		<entry>
-			<key>Powers</key>
+			<key>Legal Enforcement Powers</key>
 			<value>
-				<name>Powers</name>
+				<name>Legal Enforcement Powers</name>
 				<nums>4</nums>
 				<stat>5, 10, or 15 points</stat>
 				<desc>You are a law enforcer, with the accompanying powers and restrictions. In some times and places, this amounts to a license to kill. In others, it’s little more than the right to carry a badge and write parking tickets. The point cost depends on the kinds of laws you enforce, the size of your jurisdiction, how answerable you are for your actions, and the degree of respect you must show for the civil rights of others: ability to arrest suspected criminals, the power to perform searches with an appropriate warrant, and possibly the right to carry a concealed weapon. Examples: a Victorian bobby or a modern policeman. 5 points. national or international jurisdiction, or are not obligated to respect the civil rights of others, or are free to engage in covert investigations, or may kill with relative impunity. Examples: an FBI agent or a medieval Royal Guardsman. 10 points. above abilities. Examples: a Gestapo, KGB, or Stasi agent. 15 points. Legal Enforcement Powers almost always require an appropriate Duty appropriate. All levels of Legal Enforcement Powers include Police Rank 0 (see p. 30). To become a senior law enforcer, buy more Rank.</desc>
@@ -1072,9 +1072,9 @@
 			</value>
 		</entry>
 		<entry>
-			<key/>
+			<key>Metabolism Control</key>
 			<value>
-				<name/>
+				<name>Metabolism COntrol</name>
 				<nums>31</nums>
 				<stat>5 points/level</stat>
 				<desc>You can control normally involuntary biological functions such as pulse, blood flow, digestion, and respiration. Each level of Metabolism Control gives +1 on any HT roll that would benefit from such control rolls (see Bleeding, p. 420) and rolls to recover from (not resist) disease and poison. You can also enter a deathlike trance. Anyone unfamiliar with your metabolism must win a Quick Contest of Diagnosis vs. your HT + Metabolism Control to discover that you aren’t dead. In this state, each level of Metabolism Control reduces by 10% the amount of oxygen you need to stay alive (at level 10 or higher, you don’t breathe at all), and doubles the amount of time you can safely go without food or water. You are unaware of your surroundings while in your trance, but awaken automatically if injured. You may also set a mental “alarm clock” to awaken you after a certain amount of time has passed. This ability is incompatible with the Machine meta-trait (see p. 263). Special Limitations Hibernation: You can only use the trance ability, and get no bonus to HT rolls. Furthermore, you automatically enter a trance when exposed to certain environmental conditions – great cold, drought, etc. Work this out with the GM. In such conditions, you must make a Will roll to avoid hibernation. You can induce hibernation voluntarily. To do so, roll vs. Will-4 hourly until you succeed. You cannot set a precise multiply by (2d+3)/10. -60%.</desc>
@@ -1178,9 +1178,9 @@
 			</value>
 		</entry>
 		<entry>
-			<key/>
+			<key>Nictitating Membrane</key>
 			<value>
-				<name/>
+				<name>Nictitating Membrane</name>
 				<nums>31</nums>
 				<stat>1 point/level</stat>
 				<desc>You have a transparent lens over your eyes that you can open and close like an eyelid. This lets you see normally underwater, and protects your eyes from sand, irritants, etc. Each level of Nictitating Membrane provides your eyes (only) with DR 1 and adds +1 to all HT rolls concerned with eye damage.</desc>
@@ -1452,9 +1452,9 @@
 			</value>
 		</entry>
 		<entry>
-			<key/>
+			<key>Reduced Consumption</key>
 			<value>
-				<name/>
+				<name>Reduced Consumption</name>
 				<nums>3</nums>
 				<stat>2 points/level</stat>
 				<desc>You can go for a long time without food and water, or fuel – although you still require these things. (For indefinite endurance, see Doesn’t Eat or Drink, p. 50.) This advantage comes in four levels: Reduced Consumption 1: You require 2/3 as much food and water, or fuel, as usual (“two meals a day”). 2 points. Reduced Consumption 2: You require 1/3 as much food and water, or fuel, as usual (“one meal a day”). 4 points. Reduced Consumption 3: You require food and water only once per week (“one meal a week,” or about 5% as much). 6 points. Reduced Consumption 4: You require food and water only once per month (“one meal a month,” or about 1% as much). 8 points. Note that one or even two levels of this advantage might be appropriate for ascetics in cinematic games! Special Limitations Cast-Iron Stomach: You require the standard amount of food and water, but the quality is irrelevant. You can eat rotten vegetables and fuzzy bluegreen meat, and drink dishwater and sour milk. Instead of reducing how often you must eat, reduce your demands on life support (and your food costs) by a like amount: to 2/3 normal at level 1, 1/3 normal at level 2, 5% normal at level 3, and 1% normal at level 4. You get a bonus equal to your level (+1 to +4) to resist the effects of food-borne poisons or diseases not tailored expressly for you, but -3 on reactions from anyone watching you eat! -50%. Food Only: You require less food, but the usual amount of water. -50%. Water Only: You require less water, but the usual amount of food. -50%.</desc>
@@ -1806,9 +1806,9 @@
 			</value>
 		</entry>
 		<entry>
-			<key/>
+			<key>Supernatual Durability</key>
 			<value>
-				<name/>
+				<name>Supernatural Durability</name>
 				<nums>35</nums>
 				<stat>150 points</stat>
 				<desc>Like a vampire or psycho killer from a horror movie, you can “shake off” most wounds. Injury comes off HP as usual, and you suffer knockback, but you are completely immune to shock, physical stun, and knockout. You don’t need High Pain Threshold – this ability includes that one, and is far more potent! As long as you have 0 or more HP, you are also immune to crippling injuries, and have your full Move. Below 0 HP, you are at half Move, and can be crippled, but you won’t die unless you are wounded by an attack to which you are specifically vulnerable (see below). The sole exception to this is a single attack that inflicts an injury of 10¥HP or more. That much damage at once will blow you apart, killing you. To die, you must first be wounded to -HP or worse. After that, one specific item can kill you. You must specify this when you buy Supernatural Durability. Valid categories appear under Limited Defenses (p. 46); the item that can kill you must be of wounds from this item ever reduce your HP to the point where a normal human would have to make HT rolls to survive, you must make those HT rolls or die. If this item wounds you to are already below -5¥HP from other damage, any wound from this item will kill you. Any item to which you have a Vulnerability (p. 161) can also kill you in this way.</desc>
@@ -1833,9 +1833,9 @@
 			</value>
 		</entry>
 		<entry>
-			<key/>
+			<key>Telecommunication</key>
 			<value>
-				<name/>
+				<name>Telecommunication</name>
 				<nums>2/31</nums>
 				<stat>Variable</stat>
 				<desc>You can communicate over long distances without speaking aloud. You can send words at the speed of ordinary speech or pictures at the speed at which you could draw them. To establish contact requires one second of concentration and an IQ roll. After that, no concentration is required. You can maintain multiple contacts, but the IQ roll is at a cumulative -1 per contact after the first. Telecommunication works amid even the loudest noises, although interference and jamming can disrupt your signal. Those with suitable equipment may attempt to locate, intercept, or jam your transmission. This requires an Electronics Operation (Communications) roll for an electromagnetic signal, an Electronics Operation (Psychotronics) roll for a psionic signal, and so forth. Each variety of Telecommunication is a separate advantage with its own benefits and drawbacks. Some forms have limited range, which you can adjust using Increased Range Infrared Communication: You communicate using a modulated infrared beam. Base range is 500 yards in a direct line of sight. The short range and line-of-sight requirement make jamming and eavesdropping almost impossible under normal circumstances. You can only communicate with those who have this advantage or an infrared communicator. 10 points. Laser Communication: You communicate using a modulated laser beam. Base range is 50 miles in a direct line of sight. The narrow beam and line-of-sight requirement make it extremely hard to eavesdrop on you. You can only communicate with people who have this advantage or a laser communicator. 15 points. Radio: You communicate using radio waves. Base range is 10 miles. Your signal is omnidirectional, but because you can shift frequencies, eavesdroppers must still roll vs. Electronics Operation (Communications) to listen in. A side benefit of this ability is that you can receive AM, FM, CB, and other ordinary radio signals on an IQ roll (takes one second). Note that radio-frequency “noise” from lightning and unshielded electronics can interfere with Radio. Radio does not work at all underwater. 10 points. Telesend: You can transmit thoughts directly to others via magic, psi, or other exotic means (be specific!). Your subject receives your thoughts even if he lacks this ability. Range is theoretically unlimited, but the IQ roll to use this ability takes the range penalties given under LongDistance Modifiers (p. 241). If you cannot see or otherwise sense your subject, you have an additional penalty: -1 for family, lovers, or close friends; -3 for casual friends and acquaintances; or -5 for someone met only briefly. 30 points. Special Enhancements Broadcast: This enhancement is only available for Telesend. It lets you send your thoughts to everyone in a radius around you. This requires an IQ roll at the long-distance modifier for the desired radius, plus an additional -4. +50%. Short Wave: This is only available for Radio. You can bounce your signal off a planet’s ionosphere (if the planet has one). This lets you transmit to (or receive from) any point on the planet. Note that solar flares, weather, etc. can disrupt short-wave communications. Universal: Your messages are automatically translated into your subject’s language. The GM may limit this enhancement to individuals from advanced tech levels, or restrict it to Telesend. +50%. Video: You are not limited to simple pictures! You can transmit real-time video of anything you can see. +40%. Special Limitations Racial: Your ability only works on those of your own race or a very similar race, per Mind Reading (p. 69). Receive Only: You can receive but not send. This limitation is not available for Telesend. -50%. Send Only: You can send but not receive. This limitation is not available for Telesend. -50%. Telepathic: Your ability is part of the Telepathy psi power (see p. 257). Vague: You cannot send speech or pictures. You can only send a simple code (e.g., Morse code) – or general concepts and emotions, in the case of Telesend. -50%.</desc>
