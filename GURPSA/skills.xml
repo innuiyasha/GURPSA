@@ -52,7 +52,7 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name>Perfmance</name>
+					<name>Performance</name>
 					<penalty>2</penalty>
 				</skillDefault>
 				<skillDefault>
@@ -732,7 +732,7 @@
 					<name>Housekeeping</name>
 					<penalty>5</penalty>
 				</skillDefault>
-				<desc>This is the skill of being a chef â€“ you do not need it to heat water and open boxes, or to cook rat-on-a-stick over your campfire. A successful skill roll allows you to prepare a pleasing meal. Many chefs have an optional specialty (p. 169), such as baking, beverage making, or a particular variety of ethnic cuisine (e.g., Chinese or Martian).</desc>
+				<desc>This is the skill of being a chef - you do not need it to heat water and open boxes, or to cook rat-on-a-stick over your campfire. A successful skill roll allows you to prepare a pleasing meal. Many chefs have an optional specialty (p. 169), such as baking, beverage making, or a particular variety of ethnic cuisine (e.g., Chinese or Martian).</desc>
 			</value>
 		</entry>
 		<entry>
@@ -1389,12 +1389,12 @@
 					<penalty>4</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name>Esoteric Mediciney</name>
-					<penalty>4</penalty>
+					<name>Esoteric Medicine</name>
+					<penalty>0</penalty>
 				</skillDefault>
 				<skillDefault>
 					<name>Physician</name>
-					<penalty>4</penalty>
+					<penalty>0</penalty>
 				</skillDefault>
 				<skillDefault>
 					<name>Veterinary</name>
@@ -1655,6 +1655,10 @@
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
+				</skillDefault>
+				<skillDefault>
+					<name>Others</name>
+					<penalty>0</penalty>
 				</skillDefault>
 				<desc>This is the study of the physical, political, and economic divisions of a planet, and how they interact. It is part physical science, part social science. You must specialize: Physical: The study of the physical properties of a planetary surface. A physical geographer could answer questions about climate, terrain, and so forth. You must further specialize by planet type; see Planet Types planet type)-4 or Meteorology (same planet type)-4. Political: The study of political regions â€“ their borders, natural resources, industries, etc. A political geographer could answer questions about land claims, overpopulation, regional economic disparities, transportation networks, etc. Default: Economics-4. Regional: The study of all of the above, but specific to a single region: New York, the United States, planet Earth, etc. The depth of knowledge decreases with the size of the region the relevant Area Knowledge skill at -6. These specialties default among themselves at -5.</desc>
 			</value>
@@ -3578,7 +3582,7 @@
 					<penalty>2</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name>Sport</name>
+					<name>Combat Sport</name>
 					<penalty>2</penalty>
 				</skillDefault>
 				<skillDefault>
@@ -3586,7 +3590,7 @@
 					<penalty>3</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name>Perfmance</name>
+					<name>Performance</name>
 					<penalty>3</penalty>
 				</skillDefault>
 				<desc>This skill allows you to perform a choreographed fight safely, yet in an entertaining manner. A critical failure indicates an injury: 1d-2 damage to a random location. Modifiers: -4 for an unfamiliar weapon.</desc>
