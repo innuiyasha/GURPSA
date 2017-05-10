@@ -1,0 +1,347 @@
+<modAndLimManager>
+	<modAndLimList>
+		<entry>
+			<key>Modifiers</key>
+			<value>
+				<desc>MODIFIERS A modifier is a feature that you can add to a trait – usually an advantage – to change the way it works. There are two basic types of modifiers: enhancements and  limitations. Adding an enhancement makes the underlying trait more useful, while applying a limitation attaches additional restrictions to your ability. Modifiers adjust the base cost of a trait in proportion to their effects. Enhancements  increase the cost, while limitations  reduce the cost. This is expressed as a percentage. For instance, a +20% enhancement would increase the point cost of an advantage by 1/5 its base cost, while a -50% limitation would reduce it by half its base cost. You can apply any number of modifiers to a trait. Total them to find the net modifier, and then apply this modifier to the base cost of the trait. Round the resulting cost up to the next-highest whole number. For example, a +10% enhancement, a +40% enhancement, a would give a net modifier of -25%. This would reduce the cost of a 10-point advantage to 7.5 points, which would round up to 8 points. Modifiers can never  reduce cost by more than 80%. Treat a net modifier of ter how many limitations you take, you cannot lower the cost of a trait to less than 1/5 its base cost. The GM has the final say as to which traits you can modify, and in what ways. Some combinations make no sense (imagine Unaging with the Limited Use limitation!), others have potential for abuse, and still others might not suit the campaign. Percentile modifiers can also result in a lot of extra math. GMs who prefer to keep things simple may wish to prohibit modifiers altogether. Special Modifiers Many advantages, and some disadvantages, offer “special enhancements” and “special limitations.” These modifiers are generally applicable only to the specific trait(s) with which they are described. However, the GM may choose to extend the special modifiers of one particular trait to other, very similar traits. Range, Area, and Duration for Advantages When applying modifiers, you occasionally need to know the range, area of effect, or duration of an advantage for which one or more of these quantities is not specified – for instance, when applying an enhancement that gives a range to an ability that normally has none. Assume that range is 100 yards, area is a circle 2 yards in radius (and 12’ high, should volume matter), and duration is 10 seconds, unless the advantage specifies otherwise. Exceptions will be noted. ENHANCEMENTS You can apply enhancements to advantages, and more rarely to basic attributes and secondary characteristics. The GM might even permit specific enhancements on certain skills, but this is difficult to justify unless the skill functions much as an advantage racially innate skills possessed by nonhumans). Accurate 6 Your attack is unusually accurate. Each +1 to Accuracy is a +5% enhancement. Affects Insubstantial Your ability affects insubstantial targets  in addition to normal,  substantial things. Affects Substantial Your ability affects substantial targets even when you are insubstantial. It also affects insubstantial creatures normally. (Do not add this enhancement to magical or psi abilities; these can already affect the substantial world at -3.) Note to GMs: This enhancement is very powerful. It lets insubstantial characters affect the material world with little fear of retribution. Feel free to disallow it, restrict it to NPCs, or to make sure that lots of foes have the Affects Insubstantial enhancement! Area Effect 6 Your ability works as an area power instead of affecting a single target. Everything in the area suffers the attack’s damage or other effects. On a miss, use the scatter rules (p. 414) to see where the area is centered. Active defenses don’t protect against an area attack, but victims may attempt to dive for cover or dodge and retreat to leave the area. For more information, see Area and Spreading Attacks (p. 413). Radius Modifier 2 yards +50% 4 yards +100% 8 yards +150% 16 yards +200% Further levels continue to double the radius. If applied to an advantage that already covers an area, each level doubles the base radius. Area Effect is a prerequisite for Mobile (p. 107), Persistent (p. 107), Selective Area (p. 108), Bombardment</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Armor Divisor</key>
+			<value>
+				<name>Armor Divisor</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>Your attack can pierce more armor than its base damage would indicate. Armor Divisor Modifier Only Innate Attacks and Afflictions can have this enhancement. Armor Divisor is a “penetration modifier”; you cannot combine it with other penetration modifiers, such as Contact Agent (p. 103) and Follow-Up (p. 105). Aura 6 Your attack takes the form of a malefic aura that affects anyone you touch (reach C) or who touches you. If a weapon strikes you, your aura affects the weapon. You can switch the aura on or off at the start of your turn must take Aura in conjunction with Melee Attack (p. 112) at the -30% level extra -5% for “cannot parry” – an aura cannot parry in the first place. The classic example of an Aura is the sheath of flame surrounding a fire elemental. See Body of Fire (p. 262) for how to write this up. Based on (Different Attribute) 6 This enhancement is only available for abilities that allow a resistance roll against ST, DX, IQ, HT, Perception, or Will. It moves the resistance roll from the usual attribute or characteristic to a different one, specified when you buy the ability. This is considered an enhancement because it lets you finetune your ability to be more  effective against targets with known weaknesses. Blood Agent 6 On an attack with Area Effect or Cone, this is an enhancement. See the Blood Agent limitation (p. 110) for details. Attack Enhancements and Limitations Some enhancements and limitations are intended only for Affliction, Binding, and Innate Attack, and for advantages modified with the Ranged enhancement (p. 107). They are called “attack” modifiers. Certain of these have additional restrictions; e.g., Armor Divisor applies only to Affliction and Innate Attack. Attack enhancements and limitations are marked 6. Turning Enhancements Off and On When you use an enhanced trait, you must use all of its enhancements unless a particular enhancement – or the underlying ability itself – explicitly allows you to turn an enhancement “off.” (The extended capabilities that many enhancements provide might have no effect in certain situations, but they are still on.) To be able to pick which enhancements are</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Cone</key>
+			<value>
+				<name>Cone</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>Your attack spreads to affect everyone in a cone-shaped area. Cones use special rules; see Area and Spreading Attacks (p. 413). Decide on the maximum width of the cone, in yards, at the attack’s maximum range. Cone costs +50% plus  +10% per yard of maximum width. You cannot combine Cone with Area Effect, Aura, Jet, Melee Attack, Rapid Fire, or Emanation. Contact Agent 6 On an attack with Area Effect or Cone, this is an enhancement. See the Contact Agent limitation (p. 111) for more information.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Cosmic</key>
+			<value>
+				<name>Cosmic</name>
+				<stat>Variable</stat>
+				<desc>Your ability operates on a “higher level” than is usual in your game world. This allows it to work under all circumstances, and possibly even ignore opposing powers! The value of the enhancement depends on the underlying trait: Ability other than an attack or a defense.  Your ability is not subject to the usual built-in restrictions. For instance, your Healing might cure otherwise “incurable” diseases, your Insubstantiality might allow you to penetrate barriers that would block other insubstantial beings, or your Shapeshifting might be immune to negation by external forces. +50%. Defense or countermeasure. Your defensive trait provides its usual benefits against offensive abilities modified with the Cosmic enhancement. +50%. Attack with a lingering special effect. Your attack has an enduring effect that only another Cosmic power can counteract; e.g., a burning Innate Attack that sets fires that water cannot extinguish, or a toxic Innate Attack that inflicts Cyclic (below) damage that medical technology cannot halt. This does not negate the target’s protection! DR still affects Innate Attack, a HT roll is still allowed for a Resistible (p. 115) attack, etc. +100%. Irresistible attack. Your attack does negate the target’s protection; e.g., an Innate Attack that ignores DR, or Mind Control that ignores Mind Shield. The target may still attempt an active defense against the attack, if applicable. You cannot combine this enhancement with other “penetration modifiers,” such as Follow-Up</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Cyclic</key>
+			<value>
+				<name>Cyclic</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>This enhancement is only available for Innate Attacks that inflict burning, corrosion, fatigue, or toxic damage. It represents an attack that persists on the victim: acid, disease, liquid fire, poison, etc. (For attacks that linger in the environment, see Persistent, p. 107.) A Cyclic attack damages its target normally – but once the target has been exposed, the attack damages him again each time a set interval passes! All penetration modifiers (e.g., Contact or Follow-Up) continue to apply; for instance, a Cyclic attack with Follow-Up continues to ignore DR. Worst of all, the victim cannot recover HP or FP lost to a Cyclic attack until the attack stops damaging him! You must specify a reasonably common set of circumstances that halt any further damage from your attack. For instance, to halt cyclic corrosion or burning damage, the victim might have to wash the acid off or roll on the ground to extinguish the flames, taking one or more seconds and a DX or IQ roll. Fatigue or toxic damage might require drugs or medical care (use Physician skill). Details are up to the GM. The base value of Cyclic depends on the damage interval. Interval Modifier 1 second +100% 10 seconds +50% 1 minute +40% 1 hour +20% 1 day +10% Burning or corrosion attacks shouldn’t have intervals longer than 10 seconds. At the GM’s option, someone taking damage at one-second intervals might have to make a Fright Check! Multiply the base value by the number of cycles after the first. The GM should consider limiting large numbers of cycles to attacks that do less than 1d damage. Cyclic attacks are often Resistible is allowed for each cycle, with a success preventing any further damage. If the attack is Resistible, halve the value of Cyclic. Some Cyclic attacks are contagious. While affected, the victim can inadvertently infect others, per Illness of the enhancement, after all other factors: +20% for a “mildly contagious” attack or +50% for a “highly  contagious” one. These factors are cumulative. For instance, a resistible disease with 31 daily cycles would cost +10% ¥ 30 ¥ 1/2 = +150%. If it were highly  contagious, it would cost +200%.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Damage Modifiers</key>
+			<value>
+				<name>Damage Modifiers</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>You may give an Innate Attack one or more of these modifiers to further qualify the way it does damage. Double Blunt Trauma (dbt) Available for Innate Attacks that do burning, corrosion, cutting, impaling, or piercing damage. Burning and corrosion attacks enhanced this way</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>inflict 1 HP of blunt trauma injury per</key>
+			<value>
+				<name>inflict 1 HP of blunt trauma injury per</name>
+				<stat>10 points of basic damage resisted by</stat>
+				<desc>flexible armor. Cutting, impaling, and piercing attacks with this enhancement inflict the same blunt trauma as a crushing attack: 1 HP of blunt trauma injury per 5 points of basic damage resisted by flexible armor. Double Knockback (dkb) This lets a crushing or cutting attack inflict twice as much knockback as usual; see Knockback (p. 378). Explosion (exp) The attack produces an explosion at the point of impact (on a miss, check for scatter; see p. 414). The target takes damage normally; anything nearby receives “collateral damage” equal to basic damage divided (3 ¥ the distance in yards from the blast). If the attack also has an Armor Divisor lateral damage. You can take up to two additional levels of Explosion if you desire a blast that isn’t as affected by distance. The second level divides basic damage by twice the distance in yards and is by the distance in yards and is +150%. Explosion is usually limited to crushing and burning attacks, but the GM may permit other combinations. For more on explosions, see Explosions (p. 414). Fragmentation (frag) The attack scatters damaging fragments on impact. Decide on the dice of fragmentation damage and note this in brackets after the attack’s basic damage. Everyone within 5 yards per die of fragmentation damage is attacked with effective skill 15, modified by range penalties from the point of impact; see Fragmentation Damage Fragments inflict cutting damage. If you add Fragmentation to a burning attack or one with the Incendiary enhancement (below), the fragments are Incendiary at no extra cost. If you apply it to an attack with Follow-Up fragments automatically hit the victim but no one else. Fragmentation often accompanies Explosion (above), but this is not required. Fragmentation costs +15% per die of fragmentation damage. A damage of [2d] or [3d] is typical of a grenadesized blast. Maximum fragmentation damage is [12d] or the attack’s basic damage, whichever is less. Hot Fragments: The fragments inflict burning damage with the modifiers Cyclic (Six 10-second cycles) and Armor Divisor (0.2) instead of cutting damage. Cost is unchanged.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Hazard</key>
+			<value>
+				<name>Hazard</name>
+				<stat>Variable</stat>
+				<desc>You may give an Innate Attack that inflicts fatigue damage one of these enhancements: Dehydration, +20%; Drowning, +0%; Freezing, +20%; Missed Sleep, +50%; Starvation, lost to the attack identically to FP lost to the relevant hazard for all purposes, notably recovery (see Chapter 14). Traits that protect the target from the hazard in question also shield him from this damage. For instance, a Starvation attack would inflict FP that could only be recovered by eating a meal, but someone with Doesn’t Eat or Drink would be immune. Incendiary (inc) An Innate Attack other than a burning attack may be Incendiary. This gives the damage a secondary flame effect that can ignite volatile material Radiation (rad) The attack irradiates the subject. Roll damage normally, but whether or not the attack penetrates DR, it inflicts 1 rad per point of basic damage rolled. See Radiation (p. 435) for effects. For a toxic attack, this dosage is instead of regular damage, and the enhancement is worth +25%; this is typical of “ordinary” radioactivity. For a burning attack, the radiation dose is as well as regular damage, and the enhancement is +100%; use this for particle beams. Other damage types cannot have this enhancement. Surge (sur) The attack produces an electrical surge or pulse that can disable electronics or anything with the Electrical disadvantage (p. 134).</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Delay</key>
+			<value>
+				<name>Delay</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>This enhancement delays the attack’s effects until sometime after you hit the target. This lets you simulate time bombs and the like. You must specify some way to neutralize the effect before it occurs. Work out this detail with the GM. A  fixed  delay (e.g., 2 seconds) is A variable delay is +10% if you can set it for any time from “no delay” to 10 seconds, or +20% if you can set it for longer (minutes, hours, days . . .). You must select the delay before you roll to hit. Triggered Delay: Instead of a time delay, the effects are triggered by a simple action: a radio signal, touch, pressure, a metal object passing within a yard, etc. Specify the trigger when you buy the attack. +50%. Drifting 6 You may add this enhancement to any attack with Delay (above) or Persistent (p. 107). The initial attack roll places the effect. It then drifts from that point with the wind, water currents, solar wind, etc., as appropriate. Use this for poison gas, ball lightning, floating mines, and so forth.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Extended Duration</key>
+			<value>
+				<name>Extended Duration</name>
+				<stat>Variable</stat>
+				<desc>This enhancement increases the normal duration of your ability. tion (or changes it to permanent). Multiple Modifier 3¥ duration +20% 10¥ duration +40% 30¥ duration +60% 100¥ duration +80% 300¥ duration +100% 1,000¥ duration +120% Permanent* +150% set of conditions that will dispel the effect (or cure it, for abilities such as Affliction and Mind Control). The GM is the judge of what is “reasonable.” If there is no  way to end the effect, the enhancement is +300%.  To keep PCs from granting each other free advantages, the GM may wish  to forbid this level of Extended Duration on Afflictions with the Advantage modifier. To add Extended Duration to an attack, the attack must either  have Aura, Persistent, or Wall, or specifically allow this enhancement. You can also add Extended Duration to any advantage that has the Ranged enhancement (p. 107). If the modified trait has multiple facets with separate durations, you must specify which duration you are extending. For instance, a cloud of sleeping gas could have this enhancement to extend the duration of the sleep it induces or the length of time the cloud persists; to do both, buy this enhancement twice.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Follow-Up</key>
+			<value>
+				<name>Follow-Up</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>Your attack’s effects are delivered by a “carrier.” Use this to represent poison on a dart, an explosive in an armor-piercing shell, etc. Pick a different  attack as the carrier. This can be either body weaponry (e.g., Claws or Teeth) or an Innate Attack (usually one that does cutting, impaling, or piercing damage). A Follow-Up attack need only list its damage amount and type. All other details depend on the carrier attack. The Follow-Up attack only hits if the carrier attack hits. If the carrier attack penetrates the target’s DR, DR has no effect on the Follow-Up attack’s damage or HT rolls. If the carrier attack is a natural weapon, such as Claws or Teeth, Follow-Up is a +0% enhancement. such as Spines, Follow-Up is a -50% limitation.) If the carrier attack is an Innate Attack, the cost of Follow-Up depends on the modifiers on the carrier attack. The cost of Follow-Up equals the sum of the costs of whichever of the following modifiers apply to the carrier attack: Always On, Aura, Cone, Drifting, Emanation, Emergencies Only, Extra Recoil, Guided, Homing, Increased Range, Jet, Limited Use, Malediction, Melee Attack, Preparation Required, Rapid Fire, Reduced Range, Takes Extra Time, Takes Recharge, Unconscious Only, Uncontrollable, or Unreliable. If none of these modifiers apply to the carrier attack, Follow-Up costs +0%. Note that the Follow-Up attack itself cannot take any of these modifiers. Only its carrier attack may have them. Follow-Up is a “penetration modifier”; you cannot combine it with other penetration modifiers (although the carrier attack can have them).</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Guided or Homing</key>
+			<value>
+				<name>Guided or Homing</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>You can guide your attack – or perhaps it “homes in” by itself! Use this enhancement to create guided missiles and supernatural effects such as magical javelins that seek your foes. Guided:  You steer your attack to the target using your own skill. This lets you ignore all range penalties to hit! If the target is so distant that your attack needs multiple turns to reach it Concentrate maneuver each turn. If you lose sight of the target while the attack is en route, your attack automatically misses. +50%. Homing: Your attack steers itself. Decide how it seeks its target: with ordinary vision or a sensory advantage such as Detect (p. 48), Infravision Sense (p. 81), or Vibration Sense the purpose of combat modifiers; e.g., radar ignores darkness but can be jammed. To “lock on,” you must Aim at the target and make an unmodified skill roll. Do not roll against your skill to hit. Instead, use the attack’s skill of 10 – plus Accuracy, if you made your skill roll – and ignore all range penalties. Homing costs a base +50%, plus 1% per point the chosen homing mechanism would cost if bought as an advantage (without any modifiers); e.g., Infravision costs 10 points, making Homing (Infravision) +60%. Ordinary vision uses the base +50%. If a Guided or Homing attack has a 1/2D statistic, read this as the attack’s speed in yards/second. The attack can hit a target at up to its 1/2D range on the turn you launch it. It requires multiple turns to reach more distant targets. Do not  halve damage, but defer the attack roll until the attack reaches its target. For more information, see Guided and Homing Weapons (p. 412). Increased Range You may add this enhancement to any advantage that has a range; e.g., Innate Attack or Scanning Sense. Each level increases range as follows: Range Multiple Modifier 2¥ +10% 5¥ +20% 10¥ +30% 20¥ +40% 50¥ +50% 100¥ +60% Further levels follow the same “2-510” progression. If applied to a ranged attack, each level increases 1/2D and Max. You may increase 1/2D or Max individually at half cost (that is, “Increased 1/2D” and However, you cannot increase 1/2D past Max. At most, you can make 1/2D equal to Max – this means the attack has  no 1/2D range. For attacks that already have no 1/2D range, you can increase Max for +5%/level. Jet 6 Your attack is a continuous stream, like a flamethrower. Treat it as a melee weapon with a very long reach rather than as a ranged weapon. Do not apply penalties for target range and speed. An attack with Jet has no Acc, and has 1/2D 5 and Max 10 instead of its usual range. Increased Range increases range by 100% per level instead of its usual effects. Jet is incompatible with Area Effect, Aura, Cone, Follow-Up, Melee Attack, and Rapid Fire. Link You can use two or more advantages simultaneously, as if they were a single ability. For +10%, your abilities are permanently linked into a single power, and must be used together – you  cannot use them separately. For rately. You must add this enhancement to all the abilities you wish to link. If you link two attacks into one and give them identical Malf., 1/2D, Max, Acc, RoF, Shots, and Recoil, you can treat them as a single attack with one attack roll but separate rolls for damage. This is not the same as the Follow-Up enhancement (p. 105)! Low or No Signature 6 An attack normally has a “signature”: a flash of light, a sound, etc. If left unspecified, this is assumed to be similar to a gunshot or a stroke of lightning – that is, a brilliant flash and a loud report. This enhancement makes your attack less obvious. Low Signature: The attack is no more easily identifiable as an attack than the loud pop of a champagne cork; e.g., a suppressed pistol shot. No Signature: The attack is almost completely unnoticeable; e.g., a blowgun’s dart. Alternatively, it is utterly undetectable by normal means, but leaves a magical or psionic trace.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Malediction</key>
+			<value>
+				<name>Malediction</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>Your attack is not a conventional ranged attack; it works more like a Regular spell (p. 239). It lacks Malf., 1/2D, Max, Acc, RoF, Shots, and Recoil statistics, and cannot have any enhancement or limitation that modifies those statistics. Most importantly, the target’s DR has no effect on the attack’s damage, resistance roll, or other effects! Malediction requires a Concentrate maneuver rather than an Attack maneuver to use. It can target any victim you can see or otherwise clearly perceive. To determine if the attack succeeds, roll against your Will, applying the range penalties detailed below. Your foe may choose to resist; if so, resolve the attack as a Quick Contest of Will. You must win to affect the victim. When enhancing an Affliction, the Quick Contest above replaces the usual resistance roll. You roll against Will, but your target rolls against HT – or other attribute, if the attack has Based on (Different Attribute) – modified as usual for the Affliction. For instance, an Affliction that allows a HT-1 roll to resist would result in a Quick Contest of your Will vs. the target’s HT-1. The value of Malediction depends on the range modifiers it uses. If it takes -1 per yard of range, like a Regular spell, it costs +100%. If it uses the range penalties on the Size and Speed/Range Table (p. 550), it costs given under Long-Distance Modifiers Malediction is a “penetration modifier”; you cannot combine it with other penetration modifiers, nor with modifiers that apply only to  conventional ranged attacks. Mobile 6 You may only add this enhancement to an attack that has both Area Effect (p. 102) and Persistent (below). The area of effect moves under your control. Move equals the level of the enhancement (Move 1 at +40%, Move 2 at +80%, and so on), and cannot exceed the attack’s Max range. To move the area of effect, you must take a Concentrate maneuver. To make the mobile area autonomous, add Homing (which causes it to attack the nearest valid target) and possibly Selective Area (so it only seeks out enemies). Buy these enhancements twice if they’re intended to apply to both the initial attack roll and the autonomous area. Mobile is mutually exclusive with Drifting (p. 105). Overhead 6 Your attack can alter its angle to strike from a different side of the target – usually the top. This bypasses any cover that does not provide overhead protection, and negates attack penalties to hit crouching, kneeling, sitting, or prone targets. (If you are already above or below your target, adjust this appropriately.) Use this to represent a rain of fire, a missile that swoops up and then dives down at the last moment, an airburst grenade, etc. Persistent 6 You may only add this enhancement to an Area Effect (p. 102) attack. This causes the area of effect to remain in place for 10 seconds, continuing to damage (or attack and possibly  damage, if taken with Bombardment, p. 111) anyone entering or passing through it. Use Extended Duration to increase the duration. Ranged This enhancement gives range to an advantage that normally affects your immediate area, or that requires a touch to affect others. By default, it has 1/2D 10, Max 100, Acc 3, RoF 1, Shots N/A, and Recoil 1. Duration is 10 seconds, unless the ability lists another duration (like Neutralize or Possession) or is instantaneous (like Healing), and you cannot use the ability again until all existing effects have worn off. You can apply other modifiers to change the ranged combat statistics and duration. This enhancement is normally restricted to Healing, Mana Damper, Mana Enhancer, Neutralize, Possession, and Psi Static. The GM is free to allow it on other traits, but it should never modify body weaponry (such as Strikers or Vampiric Bite) or abilities that already have a range.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Rapid Fire</key>
+			<value>
+				<name>Rapid Fire</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>An Innate Attack’s base Rate of Fire find the cost for a higher RoF: RoF Cost 2 +40% 3 +50% 4-7 +70% 8-15 +100% 16-30 +150% 31-70 +200% 71-150 +250% 151-300 +300% Two special options are available for attacks with this enhancement: Multiple Projectile: Each shot splits into multiple projectiles after you attack, like a shotgun blast or forked lightning. Express this as a multiplier following RoF; for instance, RoF 3¥4 means each of three shots fired divides into four individual projectiles. Modifier cost is based on the RoF times the multiplier; e.g., RoF 3¥4 costs the same as RoF 12. Selective Fire: You may designate a RoF 5+ attack as Selective Fire, allowing it to fire as if it had RoF 1-3. This costs an extra +10%. Reduced Fatigue Cost You may only take this enhancement for abilities that cost FP, and never in conjunction with the special modifier “Usually On.” You can take it any number of times. Each level cuts the cost to use the ability by 1 FP. If you must “maintain” the ability by spending FP on a regular basis, reduce this maintenance cost by a like amount. Reduced Time You may only add this enhancement to abilities that require time to activate. You can take it any number of times. Each level halves the time required to use the ability (round up). Once time is reduced to one second, a further level of Reduced Time makes the ability instantaneous – using it is a free action. Note that you cannot add Reduced Time to attack powers, to traits that list any kind of special modifier that affects activation time, or to Magery Respiratory Agent 6 Your attack must be inhaled to have any effect, but it ignores all DR. Only Doesn’t Breathe and Filter Lungs protect completely – although a victim who makes a Sense roll to notice the attack in time may hold his breath make your attack less noticeable, take Low Signature (p. 106). You may only add this enhancement to an Affliction or to an Innate Attack that inflicts toxic or fatigue damage, and you must  combine it with one of Area Effect (p. 102), Cone Respiratory Agent is a “penetration modifier”; you cannot combine it with other penetration modifiers, such as Follow-Up (p. 105). Selective Area 6 You may add this enhancement to any Area Effect (p. 102) or Cone which targets within your area are actually affected. Selectivity This enhancement lets you turn a trait’s other enhancements off and on at will. For instance, if you had an attack with Area Effect, you could turn this enhancement off to affect only one other person. You must specify which enhancements you wish to ignore before  you activate the ability. The default assumption is that you are always using all of your enhancements. By allowing you to select which enhancements you use, Selectivity permits you to have multiple versions of the same ability without having to buy the ability multiple times. This can be extremely useful when creating comic-book supers!</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Sense-Based</key>
+			<value>
+				<name>Sense-Based</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>Your attack is channeled through your victim’s senses, allowing it to ignore DR! You must specify the sense(s) affected. Examples include vision, hearing, smell, and exotic senses such as Detect. This is worth after the first; e.g., Vision and Hearing-Based would be +200%. Your attack only affects someone who is using the targeted sense. For instance, a Vision-Based attack cannot affect a blind subject or someone with his eyes closed, while a Smell-Based attack doesn’t work underwater or on a target with a gas mask. Advantages equipment that protect the sense in question either negate the attack completely or, in the case of attacks that allow a roll to resist (such as Afflictions, Maledictions, and Resistible attacks), give a bonus to the resistance roll. The most common Sense-Based attack is an Affliction that knocks out the sense it is based on; for instance, Affliction (Blindness; Vision-Based) for a blinding flash. However, SenseBased attacks can also be deadly, like a banshee’s wail or basilisk’s gaze. Sense-Based is a “penetration modifier”; you cannot combine it with other penetration modifiers, such as Follow-Up (p. 105). Exception: You can combine SenseBased with Malediction (p. 106). In conjunction with Malediction, or when added to an ability that already ignores DR (e.g., Mind Control or Mind Reading), Sense-Based becomes a limitation. It is worth -20% if it works through one sense, -15% if two senses, or -10% if three senses. If it works through more than three senses, it is not a significant limitation.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Side Effect</key>
+			<value>
+				<name>Side Effect</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>You may only add this enhancement to an Innate Attack, and you cannot combine it with penetration modifiers other than Armor Divisor. If any  damage penetrates the target’s DR, he must make a HT roll, at -1 per 2 points of penetrating damage, or suffer a “side effect.” Choose the side effects from the effects described for Affliction (p. 35). Valid choices are stunning, Attribute Penalty, Disadvantage, and Incapacitation. The cost of Side Effect is a base +50%, plus the cost of  the Affliction enhancements. For instance, stunning would be +50%, while Disadvantage (Blindness) would be +100%. You may specify more than one side effect. If the victim gets a single resistance roll against all of them, treat them as a single Side Effect enhancement, totaling their cost. If the victim must resist each effect individually, take a separate Side Effect enhancement for each effect. Stunning wears off normally, while other effects last (20 HT) minutes, minimum 1 minute. If Incapacitation is combined with other effects, the other effects last for another (20 HT) minutes after the Incapacitation wears off.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Symptoms</key>
+			<value>
+				<name>Symptoms</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>Symptoms are effects that occur if the cumulative damage (HP or FP loss) inflicted by the enhanced Innate Attack exceeds a fraction of the victim’s basic HP or FP. The victim does not get a HT roll to resist Symptoms! The GM should consider limiting Symptoms to attacks that inflict 1d damage or less. Choose Symptoms from the following effects described as enhancements for Affliction (p. 35): Advantage, Attribute Penalty, Disadvantage, Irritant, and Negated Advantage. If the threshold for the Symptom is 2/3 the victim’s basic HP, use the cost under Affliction. If the threshold is 1/2 basic HP, double this cost. If it’s 1/3 basic HP, triple this cost. Example: Blindness is worth +50% as an Affliction, but as a Symptom that occurs when the victim has lost half his HP to an Innate Attack, it is a Unlike Afflictions, Symptoms abate only when the damage that caused them is healed. In the example above, the Blindness would only end when the victim’s HP healed past the halfway point. An Innate Attack can have multiple Symptoms, representing different effects that that occur at different damage thresholds. Underwater 6 Attacks are assumed to be usable in air or in vacuum, but ineffective in liquid. This enhancement lets an attack</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>work underwater at 1/10 range.</key>
+			<value>
+				<name>work underwater at 1/10 range.</name>
+				<stat>Variable 6</stat>
+				<desc>You can reduce the level of your attack. For example, if you have an Innate Attack that normally does 3d damage, you could reduce it to 1d or 2d damage. You must indicate this before you make your attack roll. Wall 6 You may only add this enhancement to an attack that has both Area Effect (p. 102) and Persistent (p. 107). For +30%, you can set up your Area Effect as a wall filled with the substance or effect of your ability. This affects anyone or anything passing through it. You get a three-yard-long by one-yard-wide wall per yard of radius in your area. For +60%, your wall works as above, but you can form it into any shape you choose. You must define your wall as either permeable or rigid: Permeable: The wall is composed of liquid, gas, energy, or an amorphous solid (e.g., thorn bushes). It impedes vision, and inflicts damage on anyone who attempts to cross it, but an intruder can traverse it provided he is not stunned, knocked out, killed, etc. by its effects. Anything effective against the substance of the wall will disperse it; e.g., water or a fire extinguisher could extinguish a wall of fire. Rigid: The wall is a material barrier. This is only possible for Innate Attacks that deal crushing, cutting, impaling, or piercing damage. Each yard of wall has DR 3 and 1/2 HP per die of damage wall with DR 18 and 3 HP. The wall does no damage itself, but the damage type applies to the injury inflicted on anyone crashing into it.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Limitations</key>
+			<value>
+				<desc>LIMITATIONS You can apply limitations to almost any  trait (although as with enhancements, skills are normally off-limits). When you apply a limitation to a disadvantage, you reduce its value as a disadvantage; e.g., a -10% limitation on a -25-point disadvantage would make it a -22.5-point trait, which rounds to -22 points. Limited disadvantages are worth fewer points because they affect you under more restricted circumstances. Remember that no matter how many limitations you take, you cannot reduce the cost of a trait by more than 80%. That is, when totaling modifiers, treat net modifiers below -80% as</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Accessibility</key>
+			<value>
+				<name>Accessibility</name>
+				<stat>Variable</stat>
+				<desc>Accessibility is a catchall limitation you can use to cover any restriction not specifically defined elsewhere. Accessibility limitations fall into two broad categories: those that limit the targets  your ability can affect and those that limit the situations in which it works. If your ability can only affect certain targets, the limitation depends on how common the target group is. anything else that covers about half of the population is worth -20%. “Only on Electrical” or “Only on machines” is worth -20% in a technological setting. “Only on sea creatures” is worth world mostly covered with water, in which case it isn’t worth more than or -40%, depending on the world. settings. “Not on redheads” is identical to “On everyone but redheads,” and is worth -10%. The same yardstick applies to limitations based on the situation. “Only at day” or “Only at night” is worth worth -30%. “Only in water” is worth planet and less on an ocean world. ing new moon” is worth -40%. And less in most adventuring situations! You can also link situational Accessibility to your actions. The more unusual, difficult, or obnoxious the required action is, the greater the limitation value. Some examples: Only in altered body form Only while playing trumpet: -20%. Only while flying, Only while swimming, Only in hypnotic trance: Only by one side of split personality: -40%. In all cases, if the ability is only weakened (half power) instead of becoming useless, halve  the value of the limitation. The GM shouldn’t allow meaningless Accessibility limitations. For instance, buying a helpful ability with the limitation “Only on friends” gives no cost break. Buying it with “Only on enemies” would be interesting, though! Likewise, the GM should reject any proposed limitation that is already implicit in the ability. For instance, “Only while flying” is not an acceptable limitation for Enhanced Move (Air).</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Always On</key>
+			<value>
+				<name>Always On</name>
+				<stat>Variable</stat>
+				<desc>You cannot switch your advantage off. You may only add this to an ability that can normally be switched off and that is inconvenient if you can’t turn it off. It is worth -10% if the effects are social or cosmetic, -20% if they are physically inconvenient, and Always On appears as a “special limitation” for most of the traits to which it would apply. The GM can add new costs as appropriate for other abilities.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Armor Divisor</key>
+			<value>
+				<name>Armor Divisor</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>Your attack can pierce less armor than its base damage would indicate. divide. “DR Multiplier” is an equivalent calculation – multiply your opponent’s DR by this number. Divisor DR Multiplier Modifier In addition, if you have any level of this limitation, targets that have DR 0 attack. Only Innate Attacks and Afflictions can have this limitation. Armor Divisor is a “penetration modifier”; you cannot combine it with other penetration modifiers, such as Contact Agent (p. 103) and Follow-Up (p. 105). Blood Agent 6 Your attack must reach a mucous membrane (eyes, open mouth, nose, etc.) or an open wound to have any effect at all. DR always stops it. This limitation is intended for Afflictions, and for Innate Attacks that inflict fatigue or toxic damage. It is especially appropriate for poisonous spit or spray. In conjunction with Aura that is delivered via intimate physical contact. Exception: If the attack also has Area Effect (p. 102) or Cone (p. 103), Blood Agent works as described above and also when inhaled (like Respiratory Agent, p. 108). This lets it ignore  all DR. Only targets with the You can apply limitations to almost any trait. When you apply a limitation to a disadvantage, you reduce its value as a disadvantage. Limited disadvantages are worth fewer points because they affect you under more restricted  circumstances. Sealed advantage (p. 82) – or with one of Doesn’t Breathe (p. 49) or Filter Lungs (p. 55) and one of Nictitating Membrane (p. 71) or Protected Vision ability converts Blood Agent into a with Area Effect or Cone! This is a “penetration modifier”; you cannot combine it with other penetration modifiers, such as Follow-Up</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Bombardment</key>
+			<value>
+				<name>Bombardment</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>You may only take this limitation in conjunction with Area Effect does not automatically hit everyone in the area. Instead, it attacks each potential target in the area at an effective skill, which sets the value of the limitation. Effective Skill Modifier 14 -5% 12 -10% 10 -15% 8 -20% Modify effective skill for target size only – not for range or for any other factor. Determine hit location randomly. If the target is under cover, the cover protects normally against the damage. This limitation is intended for attacks like electrical or ice storms, which could affect some but not all individuals within a given area. Contact Agent 6 Your attack must touch bare skin or porous clothing to have any effect at all. DR always stops it. This enhancement is intended for Afflictions, and for Innate Attacks that inflict fatigue or toxic damage. Taken with Aura (p. 102), it can represent a skin contact. Exception: If the attack also has Area Effect (p. 102) or Cone (p. 103), Contact Agent lets it ignore all  DR. Only targets with the Sealed advantage (p. 82) are immune. This powerful ability converts Contact Agent  into a +150% enhancement  when  combined with Area Effect or Cone! This is a “penetration modifier”; you cannot combine it with other penetration modifiers, such as Follow-Up</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Costs Fatigue</key>
+			<value>
+				<name>Costs Fatigue</name>
+				<stat>Variable</stat>
+				<desc>Your ability costs FP to use. This is worth -5% per FP per use. What constitutes a “use” depends on the underlying trait. For abilities that produce instantaneous effects (e.g., Innate Attack), you must pay this FP cost every time you trigger the ability. For advantages that produce continuing effects (e.g., Flight), you must pay this FP cost to activate the ability for one minute. However, once you have paid this initial cost, you need only pay half  as many FP ability active. If an advantage that produces continuing effects only lasts one second, and you must pay the cost to maintain it every second, this doubles the value of the limitation to -10% per FP.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Damage Limitations</key>
+			<value>
+				<name>Damage Limitations</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>You may add the following  limitations to an Innate Attack: No Blunt Trauma (nbt) An attack that inflicts crushing, cutting, impaling, or piercing damage normally inflicts blunt trauma (see p. 379). Add this limitation if it does not. No Knockback (nkb) An attack that inflicts crushing or cutting damage normally inflicts knockback (see p. 378). Add this  limitation if it does not. No Wounding (nw) The attack inflicts basic damage, and may cause knockback and blunt trauma, but its penetrating damage has no wounding effect (HP or FP loss). Apply this limitation to a crushing attack to represent effects such as a mighty gust of wind or jet of water. Use it with impaling, piercing, or cutting attacks that are carriers for Afflictions or Innate Attacks (usually those that inflict fatigue or toxic damage) with the Follow-Up modifier darts, stings, etc. that can slip through armor without inflicting grievous wounds. Dissipation 6 You may only take this limitation in conjunction with Area Effect the victim is from the center of the area or the apex of the cone, the less effective your attack is. See Area and Spreading Attacks (p. 413) for details. Emanation 6 You may only take this limitation in conjunction with Area Effect range or Accuracy, but radiates from your body (without affecting you, if the effect is a bad one). This is incompatible with Melee Attack and ranged attack modifiers. Emergencies Only Your ability is triggered by your fear or excitement; you cannot use it under “routine” conditions. The GM is the final arbiter. He may rule that multiple successive failures of your power make you angry enough that it begins to work, but this is entirely up to him. Full Power in Emergencies Only: If your ability works at half power under normal conditions, but at full power under stress, this limitation is not worth as much. For traits that come in levels, “half power” means half as many levels. The GM must decide what this means for other traits (half range, duration, bonuses, etc.). -20%. Extra Recoil 6 By default, a ranged attack has Recoil 1, making it virtually recoilless with Rapid Fire (p. 108) a higher Recoil (Rcl) as a limitation. Recoil (Rcl) Modifier 2 -10% 3 -20% 4 -30% 5+ -40% Inaccurate 6 Your attack benefits little from careful aiming. Most attacks start with Accuracy (Acc) 3. Each -1 to Acc is a Acc below 0.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Limited Use</key>
+			<value>
+				<name>Limited Use</name>
+				<stat>Variable</stat>
+				<desc>You can use your ability only a limited number of times in a 24-hour period. For most advantages, each “use” is 1 minute of activation. For an attack, each “use” gives shots equal to your RoF, with a minimum one shot per use; for instance, three uses of an attack with RoF 2 would give six shots. The value depends on the number of uses you get. Uses Per Day Modifier 1 -40% 2 -30% 3-4 -20% 5-10 -10% More than 10 uses per day is not a significant limitation. Two special options are available for attacks (and optionally, other abilities) that have this enhancement: Fast Reload: You can replace all your uses in 3 to 5 seconds simply by replenishing ammunition. The GM determines the weight and cost of the ammunition. This halves the value of the limitation; e.g., three or four uses would be worth only -10%. Slow Reload: As above, except if you have two or more shots (not uses!) you must reload each shot individually you have only one shot, it must take at least 6 seconds to reload – possibly longer, if using this limitation to represent a very slow-firing weapon such as a flintlock. This makes the limitation worth 5% less than usual; e.g., three or four uses would be worth only -15%.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Melee Attack</key>
+			<value>
+				<name>Melee Attack</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>Your attack functions as a melee weapon. It has no range, but allows you to parry, use Rapid Strike, Feint, etc. It lacks Malf., 1/2D, Max, Acc, RoF, Shots, and Recoil statistics, and may not have any enhancement or limitation that modifies these statistics. Instead, it has a Reach statistic. Reach Modifier</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>C -30%</key>
+			<value>
+				<name>C -30%</name>
+				<stat>1 or 2 -25%</stat>
+				<desc>C, 1, or 1, 2, or 2, 3 -20% 1-4 (like a whip) -15% If your attack cannot parry, it is worth an extra -5%.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Mitigator</key>
+			<value>
+				<name>Mitigator</name>
+				<stat>Variable</stat>
+				<desc>You may only apply this limitation to a disadvantage. A particular item or substance – the mitigator – temporarily negates your disadvantage. The more effective the mitigator, the fewer points you get for the disadvantage. Use the following guidelines: Mitigator is vulnerable, and easily stolen, broken, or misplaced (e.g., a pair of glasses). -60%. Mitigator is a drug or other treatment that you must take daily. -60%. Mitigator is a weekly treatment. Mitigator is a monthly  treatment. This assumes your treatments are available at pharmacies. If you require a special (and possibly expensive) prescription, add +5% to the values above; e.g., -70% becomes -65%. If you can only get your treatments from one specific source, such as an experimental drug program, add +10%; e.g., Example 1: Bad Sight is worth -25 points. Glasses cure Bad Sight while worn, but are breakable, for a -60% Mitigator limitation. This reduces Bad Sight to -10 points. Example 2: Jan has AIDS, and would die in a month without treatment. This level of Terminally Ill is normally worth -100 points. Fortunately, Jan is on an experimental drug plan that is holding him in remission. The treatments are weekly (-65%) but impossible to find outside his program (+10%), for a -55% Mitigator limitation. This reduces Terminally Ill to -45 points. As long as Jan stays with the program, his countdown to death is halted.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Nuisance Effect</key>
+			<value>
+				<name>Nuisance Effect</name>
+				<stat>Variable</stat>
+				<desc>Your ability has a “side effect” that causes you serious inconvenience. The GM must approve this limitation and determine its value in each case, and should ruthlessly forbid effects that are abusive or that do not genuinely limit the ability’s value. A few  guidelines (a given trait can have more than one of these drawbacks): penalty from those around you. Perhaps it makes you look disgusting, or requires you to perform some sort of distressing ritual. -5% per -1 to reactions (maximum -4). limiting stealth and attracting enemies. -5%. iences you – it attracts stinging insects, causes your armor to rust, makes you ravenously hungry, etc. You cannot take a valuable power as a Nuisance Effect. For instance, an acceptable Nuisance Effect! Neither can you claim a limitation for a  harmless nuisance. If your Terror advantage attracts gerbils instead of frightening them, this is amusing but not a limitation.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Onset</key>
+			<value>
+				<name>Onset</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>You must “stack” this limitation with one of Blood Agent, Contact Agent, Follow-Up, Malediction, or Respiratory Agent. It delays the damage or affliction caused by the attack until some time after exposure. The delay determines the value of the limitation. Delay Modifier 1 minute -10% 1 hour -20% 1 day -30% 1 week (or more) -40% Delays that fall between two values use the smaller limitation; e.g., 30 minutes is -10%. If you can control the onset time, take Delay (p. 105) instead. A variant limitation is Exposure Time,  which is only available for attacks with Aura or Persistent. Use it to represent radioactivity, mildly toxic gases, etc. It works just like Onset, except that the victim must be exposed for the entire period to suffer the effect (or repeat it, if you continue exposure). This is worth an extra</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Pact</key>
+			<value>
+				<name>Pact</name>
+				<stat>Variable</stat>
+				<desc>A Higher Power – god, spirit, etc. – grants your ability under the condition that you follow a strict moral code. This code must take the form of one or more of the traits listed under Self-Imposed Mental Disadvantages the usual number of points. Should you ever stray from the path, your ability immediately ceases to function until you repent. The limitation value is numerically equivalent to the point cost of the required disadvantages; e.g., a -10-point Vow gives a -10% Pact limitation.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Preparation Required</key>
+			<value>
+				<name>Preparation Required</name>
+				<stat>Variable</stat>
+				<desc>Your ability requires special preparation before you can use it. Perhaps you have to meditate first, or perform some ritual to focus concentration. This limitation is particularly appropriate for supernatural traits such as Channeling (p. 41) and Medium You cannot use an unprepared ability. To prepare, take the Concentrate maneuver for the required amount of time. You need not specify how you plan to use your ability while you are preparing it, but you must specify which ability you are preparing if you have more than one trait with this limitation. You can use a prepared ability normally – either immediately or at a later time. However, you can only have one advantage with this limitation prepared at a time, and it becomes unprepared immediately after use, regardless of success or failure (but if your ability has continuing effects, you can maintain them once activated). The value of this limitation depends on the time required to prepare the ability. Preparation Time Modifier 1 minute -20% 10 minutes -30% 1 hour -50% 8 hours -60% Weakened Without Preparation: Your ability works if you do not prepare it beforehand, but at half duration, range, effect, etc. This does not make sense for all advantages (GM’s decision as to when it does). Weakened Without Preparation is worth exactly half as much as listed above. Reduced Range You may add this limitation to any advantage that has a range; e.g., Innate Attack or Scanning Sense. It comes in three levels, depending on the range divisor. Range Divisor Modifier 2 -10% 5 -20% 10 -30% If applied to a ranged attack that has a 1/2D range, each level reduces both 1/2D and  Max. You may reduce 1/2D only at half value (that is, not reduce Max independently.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Resistible</key>
+			<value>
+				<name>Resistible</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>This limitation is only available for Innate Attacks that inflict fatigue or toxic damage. You must combine it with one of Blood Agent, Contact Agent, Follow-Up, Respiratory Agent, or Sense-Based. It represents poison, disease, or a similar effect that a sufficiently healthy victim can resist or The victim gets a HT roll to avoid the effect. A resistance roll against HT5 is worth -5%. Each +1 to the roll is a worth another -5% (e.g., HT-4 is -10%, and HT+4 is -50%). If the attack is also Cyclic (p. 103), the victim rolls before each cycle the attack ends without further injury; failure means the target takes damage normally and the attack continues.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Sense-Based</key>
+			<value>
+				<name>Sense-Based</name>
+				<nums>6</nums>
+				<stat>Variable</stat>
+				<desc>On an attack with Malediction or an ability that normally ignores DR tion. See the Sense-Based enhancement (p. 109) for details. Takes Extra Time You can only apply this limitation to abilities that require time to activate and  that work fast enough to be useful in an emergency (e.g., combat). This is up to the GM, who is free to restrict this limitation to advantages that take only 1 or 2 seconds to  activate. For abilities that require a Ready or Concentrate maneuver, each level of Takes Extra Time doubles the time required. Activation occurs at the end of this time. For instance, Takes Extra Time 1 on an advantage that usually requires a one-second Ready maneuver would increase the Ready time to 2 seconds. For attacks, the first level of Takes Extra Time results in a one-second Ready maneuver before you can make your Attack maneuver. Successive levels double the Ready time.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Takes Recharge</key>
+			<value>
+				<name>Takes Recharge</name>
+				<stat>Variable</stat>
+				<desc>Your ability requires “recharging” after each use. It is unavailable during the recharge period. Value depends on the time between uses: five seconds ability, if longer) is -10%, 15 seconds the ability, if longer) is -20%, and one hour (or 10 times the time required to use the ability, if longer) is -30%. Longer recharge times are not valid as limitations (but see Limited Use, p. 112). Temporary</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Disadvantage</key>
+			<value>
+				<name>Disadvantage</name>
+				<stat>Variable</stat>
+				<desc>You may add this limitation to any advantage that can be switched off and on at will, and that takes at least one second to switch. When you switch on the advantage, you suffer one or more disadvantages until you switch it off again. This limitation is worth -1% per point the temporary disadvantages are worth, to a maximum of -80%. Example: You can use your feet as hands, but can’t walk while doing so. This is Extra Arms 2 (20 points) with Temporary Disadvantage: Legless The point break due to Temporary Disadvantage cannot exceed 80% of the value of the original disadvantage. Example: You have Altered Time Rate 1 (100 points) with Temporary Disadvantage: Hemophilia (-30%) – you  bleed faster, too! Since Hemophilia is worth -30 points normally, the most it can be worth as a Nuisance Effect is -24 points;  therefore, it reduces the cost of Altered Time Rate by 24 points (to 76 points) and not by 30 points (to 70 points). You may only take Temporary Disadvantages that could logically inconvenience you for the period of time the advantage is normally on. In the case of mental disadvantages failed self-control roll indicates that you give in to the disadvantage, you will suffer the disadvantage’s effects until the GM rules you have regained your composure – which might be long after you deactivate the advantage with this limitation! You can also use this limitation to remove an advantage temporarily. This is worth -1% per point the negated advantage is worth, and the point break cannot exceed 80% of the deactivated advantage’s cost. Only one of the involved advantages can take this limitation – you cannot take two advantages, both with this limitation, each of which negates the other when used.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Trigger</key>
+			<value>
+				<name>Trigger</name>
+				<stat>Variable</stat>
+				<desc>Your advantage requires exposure to a specific substance or condition One dose or exposure is required per one-minute “use.” Cost depends on the rarity of the Trigger: Very Common (available almost anywhere): -10%. Common  (expensive, somewhat hard to find): -20%. Occasional  (very expensive and hard to find): -30%. Rare  (cannot be bought; must be found or made): -40%. Multiply the limitation value by 1.5 if the Trigger is illegal, addictive, or otherwise dangerous. Unconscious Only You may only take this limitation in conjunction with Uncontrollable vate your ability at all; it can only come into play under GM control, as a result of stress. Like Uncontrollable, you may buy this off later on, as you gain control over your ability. Uncontrollable Your ability tends to manifest itself at undesirable or inappropriate times. Whenever the GM rules that you are in a stressful situation – including any situation that requires a Fright Check or a self-control roll for a mental disadvantage – you must make a Will roll to keep your ability under control, even if you did not intend to use it! You need only roll once per stressful situation, but a roll of 14+ always fails, regardless of Will. On a failure, the GM takes over your ability, playing it as though it were an entity of a prankish or hostile nature. The actions of your ability will often reflect your “suppressed desires,” as reflected in your quirks and mental disadvantages. An ability that cannot inflict damage – for instance, Flight or Jumper – will activate unexpectedly. This is inconvenient and embarrassing, but not overly dangerous. After each uncontrolled act, you get another Will roll to control your power. This goes on until you make a Will roll. In this case, Uncontrollable is worth -10%. A harmful ability goes after obvious foes first, and will never turn on you . . . but nobody else is safe! After each uncontrolled act (or before an attack on a Dependent or other loved one), you get another Will roll to control your power. This continues until you make a Will roll or destroy everything around you! For destructive powers, Uncontrollable is worth -30%. You may buy this limitation off later on, as you gain control over your ability.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Unreliable</key>
+			<value>
+				<name>Unreliable</name>
+				<stat>Variable</stat>
+				<desc>Sometimes your ability works and sometimes it doesn’t! It just comes and goes, and you’ve never identified why. This is completely separate from any roll  normally needed to activate the ability. You can have skill 20 and still have problems making it work! Every time you want to use the power, you must roll the activation number (see below) or less on 3d. Once you succeed, the ability will work for that particular use. When you cease to use it, you must make another activation roll to start it again. If you cannot activate your ability on your first attempt, you may try again once per second after that, at no penalty. Each successive attempt costs one FP. If you are reduced to three or fewer FP, you must rest until all FP are regained before you can attempt to use your ability again. Activation Number Modifier 5 -80% 8 -40% 11 -20% 14 -10% Unreliable works differently when applied to attacks which are also gadgets or built-in firearms. Instead of requiring an activation roll, it gives a Malfunction number worse than 17. Malf. Modifier 12 -25% 13 -20% 14 -15% 15 -10% 16 -5% Untrainable You may only apply this limitation to abilities that normally require a skill to use. You can’t learn to control your power well. You learn all skills associated with it as though the relevant attribute were only 8 (or at one less than its usual value, if already at 8 or worse), and your maximum skill level is 10. GADGET LIMITATIONS The GM may require you to pay points for any “gadget” that grants traits that usually cost points (attribute levels, advantages, etc.). However, he should charge points only for items that even the most advanced technology could not produce (e.g., a ring that bestows Luck) – and even then, only if those items are not for sale at any price in the game world. In particular, the GM should never charge points for ordinary, manufactured equipment – or even for special equipment, if it is for sale – unless it happens to be Signature Gear (p. 85). Body armor, a rifle, and night-vision goggles effectively bestow Damage Resistance, Innate Attack, and Infravision, respectively . . . but since anyone could buy these items, they have a cash cost, not a point cost. Traits bestowed by items have their usual point cost. You can give them any logical combination of modifiers, plus one or more of the special limitations below.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Breakable</key>
+			<value>
+				<name>Breakable</name>
+				<stat>Variable</stat>
+				<desc>Your foes can destroy the item. Once destroyed, it will cease to grant you its benefits until repaired. Add the following elements together to find the final limitation value. Durability: The easier the object is to break, the greater the limitation. Decide on the gadget’s weight and DR. DR Modifier 2 or less -20% 3-5 -15% 6-15 -10% 16-25 -5% 26 or higher 0% If the object is a machine that can break down (as opposed to a simple artifact, like a ring or a hat), add another -5%. See Damage to Objects effects of damage. Reparability:  You can normally repair your gadget if it breaks; the GM chooses the skill(s) needed to make repairs. If you cannot repair it, and it requires inconvenient time, effort, or expense to replace (GM’s decision), it is worth an additional -15%. Size: The item’s Size Modifier affects Vision rolls to identify it out of combat and rolls to hit it in combat. SM Modifier 0 or more -25%</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Can Be Stolen</key>
+			<value>
+				<name>Can Be Stolen</name>
+				<stat>Variable</stat>
+				<desc>Your foes can take this item from you, depriving you of its benefits. This is only a limitation if the item is obviously powerful and likely to be the target of theft! The value of the limitation depends on how hard it is to steal: Easily snatched with an unopposed DX roll (e.g., a hat): -40%. Thief must win a Quick Contest of DX (e.g., a bracelet) or ST (e.g., a wand) with you: -30%. Can only by taken by stealth or trickery (e.g., a coin in a pocket): Must be forcefully removed (e.g., a suit of armor): -10%. Halve the value of the limitation if the gadget will not immediately work for the thief. Unique You may only take this limitation in conjunction with Breakable or Can Be Stolen. Normally, you can replace a broken or stolen gadget – although this might require significant time and effort (GM’s decision). If the item is Unique,  you cannot replace it! Character points spent for the item are lost for good if it is broken or stolen. The GM (no doubt with the enthusiastic advice of the players!) is free to add as many new advantages as he can think of. What follows are some guidelines on how to balance the costs of such advantages in light of the traits in this chapter. Players take note: these rules are for GMs. You may invent new advantages only with the GM’s permission. MODIFYING EXISTING GURPS  has a lot  of advantages. Often, one of these is similar to what you had in mind, in which case you can inventing a new one. Rename The advantage you’re looking for might already exist, but under a moniker you dislike or find unintuitive. In this case, creating a “new” advantage is just a matter of changing the name! For instance, if you want a Light Intensification advantage that lets those who have it see in the dark, just rename “Night Vision” to “Light Intensification.” Redefine Many “new” advantages amount to existing advantages with revised special effects. If an existing advantage provides the right ability with the wrong justification, use the game mechanics and point cost of the existing trait but come up with a new explanation for how it works. For instance, Night Vision assumes natural, dark-adapted eyes, but you are free to explain it as ultra-tech implants, if that suits your campaign better. Combine Still other “new” advantages are combinations of existing traits. If a mix of advantages (possibly with a few disadvantages, to bring the cost down) collectively provide the effects you want, just group them together, add their costs, and rename the whole thing. For instance, you might lump together Acute Vision 5 [10], Night Vision 5 [5], and Colorblindness [-10] as the “Cat’s Eye Mk. V” implant. Players would just list “Cat’s Eye Mk. V Note that this is identical to the way meta-traits work in Chapter 7.</desc>
+			</value>
+		</entry>
+	</modAndLimList>
+</modAndLimManager>
