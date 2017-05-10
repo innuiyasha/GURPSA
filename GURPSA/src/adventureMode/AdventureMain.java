@@ -11,8 +11,8 @@ public class AdventureMain {
 
 	//This is a toggle for read/write XML
 	static boolean MakeXML = false;
-	static boolean Characters = false;
-	static boolean Skill = true;
+	static boolean Characters = true;
+	static boolean Skill = false;
 	static boolean Interactive = true;
 
 	public static void main(String[] args) {
@@ -22,10 +22,29 @@ public class AdventureMain {
 			CharacterManager playerManager = new CharacterManager(MakeXML);
 			if(MakeXML == true)
 				playerManager.toXMLFile(playerManager.getCharacter(0));
-			else
+			else if(Interactive == true)
 			{
+				//SkillManager skillManager = new SkillManager(MakeXML);
+				//skillManager.GenerateSkills(new File("skills.xml"));
+				
 				playerManager.AddCharacter(new File("defaultCharacter.xml"));
+				
+				System.out.println("Please enter each skill you want Teresa to have, one at a time. Type 'exit' when you're done.\n"
+						+ "The format is: 'skillname relativeLevel', and use periods instead of spaces in skill name.");
+				Scanner in = new Scanner(System.in);
+				
+				String line;
+				while(!(line = in.nextLine()).equals("exit")) {
+					String[] parts = line.split(" ");
+					String name = parts[0].replace(".", " ");
+					if(parts.length > 1)
+					{
+						playerManager.getCharacter(0).addSkill(name, Integer.parseInt(parts[1]));
+					}
+				}
+				in.close();
 				playerManager.displayCharacters();
+				playerManager.toXMLFile(playerManager.getCharacter(0));
 			}
 		}
 		if(Skill)

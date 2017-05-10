@@ -77,10 +77,6 @@ public class Character {
 		move = 7;
 
 		playerSkills = new Vector<CharactersSkill>();
-		playerSkills.add(new CharactersSkill("Acrobatics", "DX", "Hard", 3));
-		playerSkills.add(new CharactersSkill("Bow", "DX", "Average", 1));
-		playerSkills.add(new CharactersSkill("Brawling", "DX", "Easy", 0));
-		playerSkills.add(new CharactersSkill("Running", "HT", "Average", 0));
 		
 		playerAdvantages = new Vector<Advantage>();
 		playerAdvantages.add(new Advantage("Very Fit", "15 Points", "Placeholder for Very Fit description."));
@@ -195,6 +191,11 @@ public class Character {
 		return playerSkills;
 	}
 	
+	public void addSkill(String skillName, int relativeLevel)
+	{
+		this.playerSkills.addElement(new CharactersSkill(skillName, relativeLevel));
+	}
+	
 	private void setSkills(Vector<CharactersSkill> newSkills)
 	{
 		this.playerSkills = newSkills;
@@ -303,7 +304,7 @@ public class Character {
 		output += "Basic Speed: " + speed + "\r\n";
 		output += "Basic Move: " + move + "\r\n";
 		for(int i = 0 ; i < playerSkills.size() ; i++)
-			output += playerSkills.get(i).getName() + " at " + playerSkills.get(i).getLevel() + "\r\n";
+			output += playerSkills.get(i).getSkillName() + " at " + playerSkills.get(i).getLevel() + "\r\n";
 
 		for(int i = 0 ; i < playerAdvantages.size() ; i++)
 			output += playerAdvantages.get(i).toString() + "\r\n";
