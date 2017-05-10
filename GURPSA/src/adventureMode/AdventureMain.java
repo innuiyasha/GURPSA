@@ -42,10 +42,13 @@ public class AdventureMain {
 			switch(line) {
 			case "1":
 				SkillMenu(in);
+				break;
 			case "2": 
 				CharacterMenu(in);
+				break;
 			case "3": 
 				CharacterMaker(in);
+				break;
 			}
 			
 			System.out.println("MAIN MENU\n\n"
@@ -148,12 +151,16 @@ public class AdventureMain {
 
 	private static void CharacterMenu(Scanner in)
 	{
-		System.out.println("Enter the character's name, and we'll look for their file.");
+		System.out.println("CHARACTER MENU\n");
+		System.out.println("Enter the character's name, and we'll look for their file. Type 'exit' to leave.");
 		
 		String line;
-		if(!(line = in.nextLine()).equals("exit")) {
+		while(!(line = in.nextLine()).equals("exit")) {
 			playerManager.AddCharacter(new File(line + ".xml"));
 			playerManager.displayCharacters();
+			
+			System.out.println("CHARACTER MENU\n");
+			System.out.println("Enter the character's name, and we'll look for their file. Type 'exit' to leave.");
 		}
 	}
 
