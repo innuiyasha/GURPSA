@@ -1,30 +1,33 @@
 package dataContainers.CharacterFields;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Advantage {
 
-	@XmlAttribute
 	String name;
-	@XmlAttribute
-	String description;
-	@XmlAttribute
-	String cost; //String isn't a useful data type for us. ENUM perhaps?
+	String desc;
+	String stat/*cost*/; //String isn't a useful data type for us. ENUM perhaps?
 	//This is also likely where we're going to deal with archetypes.
 	//This might need to be abstract or an interface or something
+	String nums; //Identifying nums
 	
 	public Advantage()
 	{
 		name = "NaA";
-		description = "";
-		cost = "";
+		desc = "";
+		stat = "";
+		nums = "0";
 	}
 	
-	public Advantage(String name, String cost, String description)
+	public Advantage(String name, String stat, String description, String nums)
 	{
 		this.name = name;
-		this.cost = cost;
-		this.description = description;
+		this.stat = stat;
+		this.desc = description;
+		this.nums = nums;
 	}
 	
 	public String getName()
@@ -34,12 +37,37 @@ public class Advantage {
 	
 	public String getDescription()
 	{
-		return description;
+		return desc;
 	}
 	
 	public String getCost()
 	{
-		return cost;
+		return stat;
+	}
+	
+	public String getNums()
+	{
+		return nums;
+	}
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public void setDescription(String desc)
+	{
+		this.name = desc;
+	}
+	
+	public void setCost(String stat)
+	{
+		this.stat = stat;
+	}
+	
+	public void setNums(String nums)
+	{
+		this.nums = nums;
 	}
 	
 	public String toString()
