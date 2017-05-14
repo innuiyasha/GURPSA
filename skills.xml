@@ -1,42 +1,5 @@
-<!--
-
-A skill specialty is as follows
-
-<entry>
-	<key>MASTERSKILLNAME (!)</key>		If one must specialised use an explimation mark
-	<value>
-		<name>MASTERSKILLNAME (!)</name>
-		<TL></TL>
-		<attr></attr>
-		<diff></diff>
-		<skillDefault>
-			<name></name>
-			<penalty></penalty>
-			<TLMin></TLMin>
-			<TLMax></TLMax>
-		</skillDefault>
-		<prerequisite>
-			<name></name>
-			<minimum></minimum>
-			<TL></TL>
-		</prerequisite>
-	</value>
-</entry>
-
-
-A specialization is as follows
-
-<entry>
-	<key>SKILLNAME | SPECIALTY</key>
-	<value>
-		<name>SKILLNAME | SPECIALTY</name>
-		// List anything about the specialty that differs from the master skill here
-	</value>
-</entry>
-
--->
-
-
+<!--An exclimation mark next to a skill name with specializations indicates that one MUST specialize-->
+<!--All references to specializations (including their own name should be formatted as such: "ORIGINAL SKILL | SPECIALIZATION NAME"-->
 
 
 <skillManager>
@@ -255,7 +218,6 @@ A specialization is as follows
 				</default>
 			</value>
 		</entry>
-		
 		<!--Specs are weird-->
 		<entry>
 			<key>Anthropology</key>
@@ -754,49 +716,37 @@ A specialization is as follows
 		<entry>
 			<key>Artillery | Bombs</key>
 			<value>
-				<desc>All kinds of unpowered,
-
-free-falling munitions.</desc>
+				<desc>All kinds of unpowered, free-falling munitions.</desc>
 			</value>
 		</entry>
 		<entry>
 			<key>Artillery | Cannon</key>
 			<value>
-				<desc>Any kind of heavy projec-
-tile weapon – bombard, howitzer,
-
-naval gun, etc.</desc>
+				<desc>Any kind of heavy projec- tile weapon – bombard, howitzer, naval gun, etc.</desc>
 			</value>
 		</entry>
 		<entry>
 			<key>Artillery | Catapult</key>
 			<value>
-				<desc>Any kind of indirect-fire
-
-mechanical siege engine, such as a tre-
-buchet.</desc>
+				<desc>Any kind of indirect-fire mechanical siege engine, such as a tre- buchet.</desc>
 			</value>
 		</entry>
 		<entry>
 			<key>Artillery | Guided Missile</key>
 			<value>
-				<desc>Any kind of seeking
-
-or remotely piloted missile.</desc>
+				<desc>Any kind of seeking or remotely piloted missile.</desc>
 			</value>
 		</entry>
 		<entry>
 			<key>Artillery | Torpedoes</key>
 			<value>
-				<desc>Any kind of powered
-
-underwater projectile.</desc>
+				<desc>Any kind of powered underwater projectile.</desc>
 			</value>
-		</entry>	
+		</entry>
 		<entry>
-			<key>Artist</key>
+			<key>Artist !</key>
 			<value>
-				<name>Artist</name>
+				<name>Artist !</name>
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
@@ -804,11 +754,505 @@ underwater projectile.</desc>
 					<name>IQ</name>
 					<penalty>6</penalty>
 				</skillDefault>
-				<desc>This skill represents talent at a visual art. A successful roll might let you create a recognizable likeness of a person or an object, or a work beautiful enough to sell (the GM should not allow a default roll for this use!). Time required is up to the GM. Artist is based on IQ, but there are many situations in which the GM could logically ask for a DX-based roll, in which case modifiers for High Manual Dexterity (p. 59) or HamFisted (p. 138) would apply. In rare cases, even a ST-based Artist roll might make sense â€“ for instance, to work with a physically tough material. You must specialize in an art form. Common specialties include: Body Art: Tattooing, piercing, and scarification. Both this specialty and Painting suffice for henna or temporary tattoos, but cosmetic surgery requires Surgery skill (p. 223). Calligraphy: Beautiful and decorative handwriting. You need not be literate! Drawing: All forms of charcoal, ink, pastel, and pencil work. Illumination: Decorating written text with miniature paintings and pictures. Illusion: Creating believable or evocative illusions. Prerequisite: magical or psionic illusion ability of some kind. Interior Decorating: Creating pleasing building interiors by selecting appropriate paints, fixtures, and furniture. Default: Architecture-3. Painting: All forms of painting, whether on paper, canvas, or a wall, and whether with tempera, oil-based paint, or something more exotic (like blood). Pottery: Working with various sorts of ceramics â€“ especially clay. Scene Design: Designing sets for the stage. Default: Architecture-3. Sculpting: Creating three-dimensional art from ivory, stone, metal, etc. Woodworking: All forms of fine woodwork, including cabinet-making and decorative carving. Default: Carpentry-3. Calligraphy, Drawing, Illumination, and Painting default to one another at -2, and to or from Body Art at -4. Interior Decorating, Scene Design, and Woodworking default among themselves at -4. All other Artist specialties default to one another at -6. An artist of any kind can take a further optional specialty (p. 169) in a particular medium or technique. Many Artist specialties are used to earn a living rather than to create fine art, and some people regard them as you whether you focus on beauty, realism, or functionality. Modifiers: Equipment modifiers (p. 345); -2 if the medium is unfamiliar oils); -5 if the medium is difficult (e.g., marble, for a sculptor).</desc>
+				<desc>This skill represents talent at a visual art. A successful roll might let you create a recognizable likeness of a person or an object, or a work beautiful enough to sell (the GM should not allow a default roll for this use!). Time required is up to the GM. Artist is based on IQ, but there are many situations in which the GM could logically ask for a DX-based roll, in which case modifiers for High Manual Dexterity (p. 59) or HamFisted (p. 138) would apply. In rare cases, even a ST-based Artist roll might make sense â€“ for instance, to work with a physically tough material. You must specialize in an art form. An artist of any kind can take a further optional specialty (p. 169) in a particular medium or technique. Many Artist specialties are used to earn a living rather than to create fine art, and some people regard them as you whether you focus on beauty, realism, or functionality. Modifiers: Equipment modifiers (p. 345); -2 if the medium is unfamiliar oils); -5 if the medium is difficult (e.g., marble, for a sculptor).</desc>
 			</value>
 		</entry>
 		<entry>
-			
+			<key>Artist | Body Art</key>
+			<value>
+				<name>Artist | Body Art</name>
+				<desc>Tattooing, piercing, and scarification. Both this specialty and Painting suffice for henna or temporary tattoos, but cosmetic surgery requires Surgery skill (p. 223).</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Calligraphy</key>
+			<value>
+				<name>Artist | Calligraphy</name>
+				<desc>Beautiful and decora- tive handwriting. You need not be lit- erate!</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Drawing</key>
+			<value>
+				<name>Artist | Drawing</name>
+				<desc>All forms of charcoal, ink, pastel, and pencil work.</desc>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Illumination</key>
+			<value>
+				<name>Artist | Illumination</name>
+				<desc>Decorating written text with miniature paintings and pic- tures.</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Illusion</key>
+			<value>
+				<name>Artist | Illusion</name>
+				<desc>Creating believable or evocative illusions. Prerequisite: magi- cal or psionic illusion ability of some kind.</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Interior Decorating</key>
+			<value>
+				<name>Artist | Interior Decorating</name>
+				<desc>Creating pleas- ing building interiors by selecting appropriate paints, fixtures, and furniture.</desc>
+				<default>
+					<name>Architecture</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Painting</key>
+			<value>
+				<name>Artist | Painting</name>
+				<desc>All forms of painting, whether on paper, canvas, or a wall, and whether with tempera, oil-based paint, or something more exotic (like blood).</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Pottery</key>
+			<value>
+				<name>Artist | Pottery</name>
+				<desc>Working with various sorts of ceramics – especially clay.</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Scene Design</key>
+			<value>
+				<name>Artist | Scene Design</name>
+				<desc>Designing sets for the stage.</desc>
+				<default>
+					<name>Architecture</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Sculpting</key>
+			<value>
+				<name>Artist | Sculpting</name>
+				<desc>Creating three-dimen- sional art from ivory, stone, metal, etc.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Woodworking</key>
+			<value>
+				<name>Artist | Woodworking</name>
+				<desc>All forms of fine woodwork, including cabinet-making and decorative carving.</desc>
+				<default>
+					<name>Carpentry</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
 		</entry>
 		<entry>
 			<key>Astronomy</key>
@@ -869,9 +1313,9 @@ underwater projectile.</desc>
 			</value>
 		</entry>
 		<entry>
-			<key>Beam Weapons</key>
+			<key>Beam Weapons !</key>
 			<value>
-				<name>Beam Weapons</name>
+				<name>Beam Weapons !</name>
 				<TL>true</TL>
 				<attr>DX</attr>
 				<diff>Easy</diff>
@@ -879,7 +1323,52 @@ underwater projectile.</desc>
 					<name>DX</name>
 					<penalty>4</penalty>
 				</skillDefault>
-				<desc>This is the ability to use beam small arms. You must specialize by weapon type: Pistol: Any handgun that fires an energy or particle beam. Projector: Any energy weapon that emits an area-effect cone or field. Rifle: Any long arm that fires an energy or particle beam. These specialties default to one another at -4. Treat specific beam types (blaster, laser, stunner, etc.) as familiarities. Other modifiers are as per Guns (p. 198). In settings with both beam and projectile weapons, the Pistol and Rifle specialties of Beam Weapons default to the similarly named Guns specialties at -4, and vice versa. See Artillery (p. 178) and Gunner (p. 198) for heavier beam weapons.</desc>
+				<desc>This is the ability to use beam small arms. You must specialize by weapon type. Treat specific beam types (blaster, laser, stunner, etc.) as familiarities. Other modifiers are as per Guns (p. 198). In settings with both beam and projectile weapons, the Pistol and Rifle specialties of Beam Weapons default to the similarly named Guns specialties at -4, and vice versa. See Artillery (p. 178) and Gunner (p. 198) for heavier beam weapons.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Beam Weapons | Pistol</key>
+			<value>
+				<name>Beam Weapons | Pistol</name>
+				<desc>Any handgun that fires an energy or particle beam.</desc>
+				<default>
+					<name>Beam Weapons | Projector</name>
+					<penaltry>4</penaltry>
+				</default>
+				<default>
+					<name>Beam Weapons | Rifle</name>
+					<penaltry>4</penaltry>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Beam Weapons | Projector</key>
+			<value>
+				<name>Beam Weapons | Projector</name>
+				<desc>Any energy weapon that emits an area-effect cone or field.</desc>
+				<default>
+					<name>Beam Weapons | Pistol</name>
+					<penaltry>4</penaltry>
+				</default>
+				<default>
+					<name>Beam Weapons | Rifle</name>
+					<penaltry>4</penaltry>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Beam Weapons | Rifle</key>
+			<value>
+				<name>Beam Weapons | Rifle</name>
+				<desc>Any long arm that fires an energy or particle beam.</desc>
+				<default>
+					<name>Beam Weapons | Projector</name>
+					<penaltry>4</penaltry>
+				</default>
+				<default>
+					<name>Beam Weapons | Pistol</name>
+					<penaltry>4</penaltry>
+				</default>
 			</value>
 		</entry>
 		<entry>
@@ -2080,7 +2569,8 @@ underwater projectile.</desc>
 					<penalty>5</penalty>
 				</skillDefault>
 				<prerequisite>
-					<name>Flight</name> <!--Advantage-->
+					<name>Flight</name>
+					<!--Advantage-->
 					<minimum>0</minimum>
 				</prerequisite>
 				<desc>This skill represents training for endurance flying. Use the better of Flight or HT when rolling to avoid fatigue due to flying. When traveling long distances, a successful Flight roll increases the distance traveled by 20%. If a group of fliers is traveling together, all must make the Flight roll in order to get the increased distance.</desc>
