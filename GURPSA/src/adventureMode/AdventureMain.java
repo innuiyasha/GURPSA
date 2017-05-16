@@ -3,11 +3,11 @@ package adventureMode;
 import java.io.File;
 import java.util.Scanner;
 
+import advantageManager.AdvantageManager;
 import characterManager.*;
 import characterManager.Character;
 import skillManager.SkillManager;
 
-//This will one day be one of our most important classes, but for now I'm using this as a test main.
 public class AdventureMain {
 	
 	
@@ -19,19 +19,24 @@ public class AdventureMain {
 	
 	static CharacterManager playerManager;
 	static SkillManager skillManager;
+	static AdvantageManager advantageManager;
 
 	public static void main(String[] args) {
 
 		//Eventually I'll just get rid of the argument of these- it isn't doing anything atm
-		playerManager = new CharacterManager(false);
+		playerManager = new CharacterManager();
 		
-		skillManager = new SkillManager(false);
+		skillManager = new SkillManager();
 		skillManager.GenerateSkills(new File("skills.xml"));
+		
+		advantageManager = new AdvantageManager();
+		advantageManager.GenerateAdvantages(new File("advantages.xml"));
 		
 		System.out.println("MAIN MENU\n\n"
 				+ "1. Look up Skills\n"
-				+ "2. Load Characters\n"
-				+ "3. Make Characters\n\n"
+				+ "2. Look up Advantages\n"
+				+ "3. Load Characters\n"
+				+ "4. Make Characters\n\n"
 				+ "Type 'exit' to close.\n");
 		
 		Scanner in = new Scanner(System.in);
@@ -43,18 +48,22 @@ public class AdventureMain {
 			case "1":
 				SkillMenu(in);
 				break;
-			case "2": 
-				CharacterMenu(in);
+			case "2":
+				AdvantageMenu(in);
 				break;
 			case "3": 
+				CharacterMenu(in);
+				break;
+			case "4": 
 				CharacterMaker(in);
 				break;
 			}
 			
 			System.out.println("MAIN MENU\n\n"
 					+ "1. Look up Skills\n"
-					+ "2. Load Characters\n"
-					+ "3. Make Characters\n\n"
+					+ "2. Look up Advantages\n"
+					+ "3. Load Characters\n"
+					+ "4. Make Characters\n\n"
 					+ "Type 'exit' to close.\n");
 		}
 		in.close();
@@ -146,6 +155,26 @@ public class AdventureMain {
 			System.out.println(name + ":");
 			for (int i = 1; i < parts.length; i++) {
 				System.out.println("\t" + parts[i] + ": " + skillManager.request(name, parts[i]));
+			}
+		}
+	}
+	
+	private static void AdvantageMenu(Scanner in)
+	{
+		System.out.println("ADVANTAGE MENU\n");
+		
+		System.out.println("Please enter advantage of interest and field(s) of interest OR type 'exit' to leave\n"
+				+ "If a multi-word skill, use periods rather than spaces\n"
+				+ "Valid fields are: 'cost' 'description' 'nums'\n"
+				+ "'AdvantageName' Field1 Field2 . . . FieldN");
+		
+		String line;
+		while(!(line = in.nextLine()).equals("exit")) {
+			String[] parts = line.split(" ");
+			String name = parts[0].replace(".", " ");
+			System.out.println(name + ":");
+			for (int i = 1; i < parts.length; i++) {
+				System.out.println("\t" + parts[i] + ": " + advantageManager.request(name, parts[i]));
 			}
 		}
 	}

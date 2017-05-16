@@ -16,11 +16,9 @@ public class CharacterManager {
 	Vector<Character> players;
 	
 	//This needs to be changed later. Right now, it's a toggle between read/write the XML file.
-	public CharacterManager(boolean MakeXML)
+	public CharacterManager()
 	{
 		players = new Vector<Character>();
-		if(MakeXML)
-			players.add(new Character());
 	}
 	
 	//Generates a character from an XML file.
