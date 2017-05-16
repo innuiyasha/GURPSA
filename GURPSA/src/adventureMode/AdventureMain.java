@@ -6,6 +6,7 @@ import java.util.Scanner;
 import characterManager.*;
 import characterManager.Character;
 import skillManager.SkillManager;
+import utilities.Utilities;
 
 //This will one day be one of our most important classes, but for now I'm using this as a test main.
 public class AdventureMain {
@@ -136,14 +137,14 @@ public class AdventureMain {
 		
 		System.out.println("Please enter skill of interest and field(s) of interest OR type 'exit' to leave\n"
 				+ "If a multi-word skill, use periods rather than spaces\n"
-				+ "Valid fields are: 'difficulty' 'description' 'attribute' 'default' 'TL'\n"
+				+ "Valid fields are: 'difficulty' 'description' 'attribute' 'default' 'TL' 'specialize'\n"
 				+ "'SkillName' Field1 Field2 . . . FieldN");
 		
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
 			String name = parts[0].replace(".", " ");
-			System.out.println(name + ":");
+			name = Utilities.formatSkillName(name);
 			for (int i = 1; i < parts.length; i++) {
 				System.out.println("\t" + parts[i] + ": " + skillManager.request(name, parts[i]));
 			}
@@ -242,10 +243,43 @@ public class AdventureMain {
 		while(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
 			String name = parts[0].replace(".", " ");
+			name = Utilities.formatSkillName(name);
 			if(parts.length > 1)
 			{
 				if(skillManager.isSkill(name)) {
-					newChara.addSkill(name, Integer.parseInt(parts[1]));
+					if(skillManager.canSpec(name) && skillManager.mustSpec(name)) {
+						System.out.println("You must specialize in one of the following. Enter the index of the desired specialty.");
+						String[] specs = skillManager.getSpecialties(name);
+						for(int i = 0; i < specs.length; i++) {
+							// People don't like zeroes so I'll increment the index just for display
+							System.out.println("\t" + (i + 1) + ": " + specs[i]);
+						}
+						
+						int choice;
+						
+						while(true) {
+							line = in.nextLine();
+							choice = Integer.parseInt(line);
+							if (choice > 0 && choice <= specs.length) {
+								// Then I'll decrement it back to proper index
+								choice--;
+								break;
+							} else {
+								System.out.println("Invalid. Please try again.");
+							}
+						}
+						
+						
+						int level = Integer.parseInt(parts[1]);
+						
+						System.out.println("Adding skill: " + name + " (" + specs[choice] + ") at: +" + level);
+						newChara.addSkill(name + " | " + specs[choice], level);
+						
+						
+						
+					} else {
+						newChara.addSkill(name, Integer.parseInt(parts[1]));						
+					}
 				} else {
 					System.out.println(name + " is not a skill");
 				}

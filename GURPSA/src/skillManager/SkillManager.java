@@ -14,10 +14,11 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.*;
 
-import org.apache.commons.lang3.text.WordUtils;
 
 import dataContainers.CharacterFields.Skill;
 import dataContainers.CharacterFields.SkillDefault;
+import dataContainers.CharacterFields.Specialty;
+import utilities.Utilities;
 
 @XmlRootElement
 public class SkillManager {
@@ -144,8 +145,50 @@ public class SkillManager {
 		}
 	}
 	
+	private String getSpec(String skillName) {
+		Skill skill = skillMap.get(skillName);
+		List<Specialty> ls = skill.getSpecialties();
+		
+		if( !ls.isEmpty()) {
+			String returning;
+			if(skill.getSpecFlag()) {
+				returning = "Must Specialize";
+			} else {
+				returning = "May Specialize";
+			}
+			
+			for(Specialty spec : ls) {
+				returning += "\n\t" + spec.getName();
+			}
+			
+			return returning;
+			
+		} else {
+			return "Cannot Specialize";
+		}
+	}
+	
+	public String[] getSpecialties(String skillName) {
+		List<Specialty> ls = skillMap.get(skillName).getSpecialties();
+		
+		String[] specs = new String[ls.size()];
+	
+		for(int i = 0; i < ls.size(); i++) {
+			specs[i] = ls.get(i).getName();
+		}
+		
+		return specs;
+	}
+	
+	public Boolean canSpec(String skillName) {
+		return ! skillMap.get(skillName).getSpecialties().isEmpty();
+	}
+	
+	public Boolean mustSpec(String skillName) {
+		return skillMap.get(skillName).getSpecFlag();
+	}
+	
 	public String request(String skillName, String element) {
-		skillName = formatSkillName(skillName);
 		element = element.toLowerCase();
 		
 		switch(element) {
@@ -159,27 +202,17 @@ public class SkillManager {
 			return getDefault(skillName);
 		case "TL":
 			return getTL(skillName);
+		case "specialize":
+			return getSpec(skillName);
 		default:
 			return "Invalid Entry: " + element;
 		}
 	}
 	
 	public Boolean isSkill(String skillName) {
-		skillName = formatSkillName(skillName);
-		
 		return skillMap.containsKey(skillName);
 	}
 	
-	private String formatSkillName(String unformated) {
-		String[] components = unformated.split("-");
-		String skillName = WordUtils.capitalizeFully(components[0]);
-		
-		for(int i = 1; i < components.length; i++) {
-			skillName += "-" + WordUtils.capitalizeFully(components[i]);
-		}
-		
-		System.out.println(skillName);
-		return skillName;
-		
-	}
+	
+	
 }
