@@ -3,10 +3,12 @@ package adventureMode;
 import java.io.File;
 import java.util.Scanner;
 
+import actionManager.ActionManager;
 import advantageManager.AdvantageManager;
 import characterManager.*;
 import characterManager.Character;
 import skillManager.SkillManager;
+import turnManager.TurnManager;
 
 public class AdventureMain {
 	
@@ -17,13 +19,15 @@ public class AdventureMain {
 	static boolean Skill = false;
 	static boolean Interactive = true;
 	
+	static ActionManager actionManager;
 	static CharacterManager playerManager;
 	static SkillManager skillManager;
 	static AdvantageManager advantageManager;
+	static TurnManager turnManager;
 
 	public static void main(String[] args) {
 
-		//Eventually I'll just get rid of the argument of these- it isn't doing anything atm
+		
 		playerManager = new CharacterManager();
 		
 		skillManager = new SkillManager();
@@ -31,12 +35,17 @@ public class AdventureMain {
 		
 		advantageManager = new AdvantageManager();
 		advantageManager.GenerateAdvantages(new File("advantages.xml"));
+
+		actionManager = new ActionManager(skillManager, advantageManager);
+		
+		turnManager = new TurnManager(actionManager);
 		
 		System.out.println("MAIN MENU\n\n"
 				+ "1. Look up Skills\n"
 				+ "2. Look up Advantages\n"
 				+ "3. Load Characters\n"
-				+ "4. Make Characters\n\n"
+				+ "4. Make Characters\n"
+				+ "5. Begin play\n\n"
 				+ "Type 'exit' to close.\n");
 		
 		Scanner in = new Scanner(System.in);
@@ -57,13 +66,17 @@ public class AdventureMain {
 			case "4": 
 				CharacterMaker(in);
 				break;
+			case "5":
+				PrototypeSkillCheck(in);
+				break;
 			}
 			
 			System.out.println("MAIN MENU\n\n"
 					+ "1. Look up Skills\n"
 					+ "2. Look up Advantages\n"
 					+ "3. Load Characters\n"
-					+ "4. Make Characters\n\n"
+					+ "4. Make Characters\n"
+					+ "5. Begin play\n\n"
 					+ "Type 'exit' to close.\n");
 		}
 		in.close();
@@ -283,6 +296,28 @@ public class AdventureMain {
 		
 		playerManager.AddCharacter(newChara);
 		playerManager.toXMLFile(newChara);
+	}
+	
+	private static void PrototypeSkillCheck(Scanner in)
+	{
+		System.out.println("SKILL CHECK\n");
+		
+		System.out.println("Which character do you want to do a skill check on?");
+		
+		String line;
+		
+		if(!(line = in.nextLine()).equals("exit")) {
+			String[] parts = line.split(" ");
+			Character characterUnderTest = playerManager.getCharacter(parts[0]);
+			
+			turnManager.addTurn(characterUnderTest);
+
+			turnManager.runTurn(characterUnderTest);
+			
+			turnManager.clearTurnList();
+		}
+		else
+			return;
 	}
 	
 }

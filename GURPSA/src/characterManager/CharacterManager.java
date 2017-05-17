@@ -51,6 +51,16 @@ public class CharacterManager {
 		return players.get(i);
 	}
 	
+	public Character getCharacter(String name)
+	{
+		for(int i = 0 ; i < players.size() ; i++)
+		{
+			if(players.get(i).getName().equals(name))
+				return players.get(i);
+		}
+		return null;
+	}
+	
 	//Turns a character into an XML file. Currently overwrites a single file.
 	public void toXMLFile(Character character)
 	{
