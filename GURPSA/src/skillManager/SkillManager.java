@@ -138,6 +138,11 @@ public class SkillManager {
 		return skillMap.containsKey(skillName);
 	}
 	
+	public Skill getSkill(String skillName)
+	{
+		return skillMap.get(skillName);
+	}
+	
 	private String formatSkillName(String unformated) {
 		String[] components = unformated.split("-");
 		String skillName = WordUtils.capitalizeFully(components[0]);

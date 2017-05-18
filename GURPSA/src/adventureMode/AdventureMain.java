@@ -3,47 +3,56 @@ package adventureMode;
 import java.io.File;
 import java.util.Scanner;
 
+import actionManager.ActionManager;
 import advantageManager.AdvantageManager;
 import characterManager.*;
 import characterManager.Character;
 import skillManager.SkillManager;
+import turnManager.TurnManager;
 
 public class AdventureMain {
-	
-	
+
+
 	//This is a toggle for read/write XML
 	static boolean MakeXML = false;
 	static boolean Characters = true;
 	static boolean Skill = false;
 	static boolean Interactive = true;
-	
+
+	static ActionManager actionManager;
 	static CharacterManager playerManager;
 	static SkillManager skillManager;
 	static AdvantageManager advantageManager;
+	static TurnManager turnManager;
 
 	public static void main(String[] args) {
 
-		//Eventually I'll just get rid of the argument of these- it isn't doing anything atm
+
 		playerManager = new CharacterManager();
-		
+
 		skillManager = new SkillManager();
 		skillManager.GenerateSkills(new File("skills.xml"));
-		
+
 		advantageManager = new AdvantageManager();
 		advantageManager.GenerateAdvantages(new File("advantages.xml"));
-		
+
+		actionManager = new ActionManager(skillManager, advantageManager);
+
+		turnManager = new TurnManager(actionManager);
+
 		System.out.println("MAIN MENU\n\n"
 				+ "1. Look up Skills\n"
 				+ "2. Look up Advantages\n"
 				+ "3. Load Characters\n"
-				+ "4. Make Characters\n\n"
+				+ "4. Make Characters\n"
+				+ "5. Begin play\n\n"
 				+ "Type 'exit' to close.\n");
-		
+
 		Scanner in = new Scanner(System.in);
-		
+
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
-			
+
 			switch(line) {
 			case "1":
 				SkillMenu(in);
@@ -57,17 +66,21 @@ public class AdventureMain {
 			case "4": 
 				CharacterMaker(in);
 				break;
+			case "5":
+				PrototypeSkillCheck(in);
+				break;
 			}
-			
+
 			System.out.println("MAIN MENU\n\n"
 					+ "1. Look up Skills\n"
 					+ "2. Look up Advantages\n"
 					+ "3. Load Characters\n"
-					+ "4. Make Characters\n\n"
+					+ "4. Make Characters\n"
+					+ "5. Begin play\n\n"
 					+ "Type 'exit' to close.\n");
 		}
 		in.close();
-		
+
 		/*
 		if(Characters)
 		{
@@ -78,13 +91,13 @@ public class AdventureMain {
 			{
 				//SkillManager skillManager = new SkillManager(MakeXML);
 				//skillManager.GenerateSkills(new File("skills.xml"));
-				
+
 				playerManager.AddCharacter(new File("defaultCharacter.xml"));
-				
+
 				System.out.println("Please enter each skill you want Teresa to have, one at a time. Type 'exit' when you're done.\n"
 						+ "The format is: 'skillname relativeLevel', and use periods instead of spaces in skill name.");
 				Scanner in = new Scanner(System.in);
-				
+
 				String line;
 				while(!(line = in.nextLine()).equals("exit")) {
 					String[] parts = line.split(" ");
@@ -110,13 +123,13 @@ public class AdventureMain {
 				// Format of a command looks like the following:
 				// SkillName FieldOfInterest FieldOfInterest . . .
 				// Valid fields are: 'difficulty' 'description' 'attribute' 'default' 'TL'
-				
+
 				skillManager.GenerateSkills(new File("skills.xml"));
 				System.out.println("Please enter skill of interest and feild(s) of interest OR type 'exit' to leave\n"
 						+ "If a multi-word skill, use periods rather than spaces\n"
 						+ "'SkillName' Field1 Field2 . . . FieldN");
 				Scanner in = new Scanner(System.in);
-				
+
 				String line;
 				while(!(line = in.nextLine()).equals("exit")) {
 					String[] parts = line.split(" ");
@@ -142,12 +155,12 @@ public class AdventureMain {
 		// Format of a command looks like the following:
 		// SkillName FieldOfInterest FieldOfInterest . . .
 		// Valid fields are: 'difficulty' 'description' 'attribute' 'default' 'TL'
-		
+
 		System.out.println("Please enter skill of interest and field(s) of interest OR type 'exit' to leave\n"
 				+ "If a multi-word skill, use periods rather than spaces\n"
 				+ "Valid fields are: 'difficulty' 'description' 'attribute' 'default' 'TL'\n"
 				+ "'SkillName' Field1 Field2 . . . FieldN");
-		
+
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -158,16 +171,16 @@ public class AdventureMain {
 			}
 		}
 	}
-	
+
 	private static void AdvantageMenu(Scanner in)
 	{
 		System.out.println("ADVANTAGE MENU\n");
-		
+
 		System.out.println("Please enter advantage of interest and field(s) of interest OR type 'exit' to leave\n"
 				+ "If a multi-word skill, use periods rather than spaces\n"
 				+ "Valid fields are: 'cost' 'description' 'nums'\n"
 				+ "'AdvantageName' Field1 Field2 . . . FieldN");
-		
+
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -183,12 +196,12 @@ public class AdventureMain {
 	{
 		System.out.println("CHARACTER MENU\n");
 		System.out.println("Enter the character's name, and we'll look for their file. Type 'exit' to leave.");
-		
+
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
 			playerManager.AddCharacter(new File(line + ".xml"));
 			playerManager.displayCharacters();
-			
+
 			System.out.println("CHARACTER MENU\n");
 			System.out.println("Enter the character's name, and we'll look for their file. Type 'exit' to leave.");
 		}
@@ -201,21 +214,21 @@ public class AdventureMain {
 
 		Character newChara = new Character();
 		String line;
-		
+
 		System.out.println("What is the character's name?");
 		if(!(line = in.nextLine()).equals("exit")) {
 			newChara.setName(line);
 		}
 		else
 			return;
-		
+
 		System.out.println("What is the player's name?");
 		if(!(line = in.nextLine()).equals("exit")) {
 			newChara.setPlayer(line);
 		}
 		else
 			return;
-		
+
 		System.out.println("What is the character's height and weight? Only use a space to separate the two.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -224,7 +237,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter their ST, DX, IQ, and HT, all separated by spaces.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -235,7 +248,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter their HP, Will, Per, and FP, all separated by spaces.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -246,7 +259,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter their basic speed and basic move, separated by a space.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -255,7 +268,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter their TL, SM, and age, separated by spaces.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -265,7 +278,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Now enter their skills and their relative level in that skill, one at a time.\n"
 				+ "As an example, 'First.Aid -1'. Type 'exit' to finish character creation.");
 		while(!(line = in.nextLine()).equals("exit")) {
@@ -280,9 +293,31 @@ public class AdventureMain {
 				}
 			}
 		}
-		
+
 		playerManager.AddCharacter(newChara);
 		playerManager.toXMLFile(newChara);
 	}
-	
+
+	private static void PrototypeSkillCheck(Scanner in)
+	{
+		System.out.println("SKILL CHECK\n");
+
+		System.out.println("Which character do you want to do a skill check on?");
+
+		String line;
+
+		if(!(line = in.nextLine()).equals("exit")) {
+			String[] parts = line.split(" ");
+			Character characterUnderTest = playerManager.getCharacter(parts[0]);
+
+			turnManager.addTurn(characterUnderTest);
+
+			turnManager.runTurn(characterUnderTest);
+
+			turnManager.clearTurnList();
+		}
+		else
+			return;
+	}
+
 }
