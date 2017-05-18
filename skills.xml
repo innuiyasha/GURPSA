@@ -1,3 +1,7 @@
+<!--An exclimation mark next to a skill name with specializations indicates that one MUST specialize-->
+<!--All references to specializations (including their own name should be formatted as such: "ORIGINAL SKILL | SPECIALIZATION NAME"-->
+
+
 <skillManager>
 	<skillList>
 		<entry>
@@ -16,7 +20,7 @@
 					<penalty>4</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name>Mathematics (Statistics)</name>
+					<name>Mathematics | Statistics</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
@@ -33,11 +37,20 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
-				<skillDefault>
+				<!--Gets +1 from perfect balance-->
+				<default>
+					<name>Aquabatics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Aerobatics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
 					<name>DX</name>
 					<penalty>6</penalty>
-				</skillDefault>
-				<desc>This is the ability to perform gymnastic stunts, roll, take falls, etc. This can be handy on an adventure, as tightrope walking, human pyramids, and trapeze swinging all have useful applications. Each trick requires a separate skill roll, at whatever penalties the GM sees fit. If you are performing stunts on a moving vehicle or mount, roll against the lower of Acrobatics and the appropriate Driving or Riding skill. You may substitute an Acrobatics roll for a DX roll in any attempt to jump, roll, avoid falling down, etc. As well, you may attempt an Acrobatic Dodge in combat â€“ a jump or roll that avoids an attack in a flashy way (see Acrobatic Dodge, p. 375). Finally, a successful Acrobatics roll will reduce the effective distance of any fall by five yards (see Falling, p. 431). Two special versions of Acrobatics are also available: Aerobatics: The ability to execute tight turns, loops, power dives, etc. in flight. You must be able to fly to learn this skill â€“ although how you fly (magic, wings, jet pack, etc.) is irrelevant. Natural fliers might find flight to be as effortless as humans find walking, but they must still learn Aerobatics in order to engage in complex acrobatics. Add Aquabatics: The ability to engage in underwater acrobatics. Prerequisites: Swimming, or the Amphibious advantage (p. 40) or the Aquatic disadvantage Acrobatics, Aerobatics, and Aquabatics default to one another at -4. Add +1 to these three skills if you have Perfect Balance (p. 74).</desc>
+				</default>
+				<desc>This is the ability to perform gymnastic stunts, roll, take falls, etc. This can be handy on an adventure, as tightrope walking, human pyramids, and trapeze swinging all have useful applications. Each trick requires a separate skill roll, at whatever penalties the GM sees fit. If you are performing stunts on a moving vehicle or mount, roll against the lower of Acrobatics and the appropriate Driving or Riding skill. You may substitute an Acrobatics roll for a DX roll in any attempt to jump, roll, avoid falling down, etc. As well, you may attempt an Acrobatic Dodge in combat â€“ a jump or roll that avoids an attack in a flashy way (see Acrobatic Dodge, p. 375). Finally, a successful Acrobatics roll will reduce the effective distance of any fall by five yards (see Falling, p. 431).</desc>
 			</value>
 		</entry>
 		<entry>
@@ -83,7 +96,24 @@
 		<entry>
 			<key>Aerobatics</key>
 			<value>
-				<ref>see Acrobatics, above</ref>
+				<name>Aerobatics</name>
+				<!--Gets +1 from perfect balance-->
+				<TL>false</TL>
+				<attr>DX</attr>
+				<diff>Hard</diff>
+				<desc>The ability to execute tight turns, loops, power dives, etc. in flight. You must be able to fly to learn this skill – although how you fly (magic, wings, jet pack, etc.) is irrelevant. Natural fliers might find flight to be as effortless as humans find walking, but they must still learn Aerobatics in order to engage in complex acrobatics. Add +2 to skill if you have 3D Spatial Sense (p. 34).</desc>
+				<default>
+					<name>Acrobatics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Aquabatics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>DX</name>
+					<penalty>6</penalty>
+				</default>
 			</value>
 		</entry>
 		<entry>
@@ -103,7 +133,7 @@
 			</value>
 		</entry>
 		<entry>
-			<key>Animal Handling</key>
+			<key>Animal Handling !</key>
 			<value>
 				<name>Animal Handling</name>
 				<TL>false</TL>
@@ -117,6 +147,79 @@
 			</value>
 		</entry>
 		<entry>
+			<key>Animal Handling | Big Cats</key>
+			<value>
+				<name>Animal Handling | Big Cats</name>
+				<default>
+					<name>Animal Handling | Dogs</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Animal Handling | Equines</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Animal Handling | Raptors</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Animal Handling | Dogs</key>
+			<value>
+				<name>Animal Handling | Dogs</name>
+				<default>
+					<name>Animal Handling | Big Cats</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Animal Handling | Equines</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Animal Handling | Raptors</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Animal Handling | Equines</key>
+			<value>
+				<name>Animal Handling | Equines</name>
+				<default>
+					<name>Animal Handling | Dogs</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Animal Handling | Big Cats</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Animal Handling | Raptors</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Animal Handling | Raptors</key>
+			<value>
+				<name>Animal Handling | Raptors</name>
+				<default>
+					<name>Animal Handling | Dogs</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Animal Handling | Equines</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Animal Handling | Big Cats</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<!--Specs are weird-->
+		<entry>
 			<key>Anthropology</key>
 			<value>
 				<name>Anthropology</name>
@@ -128,20 +231,50 @@
 					<penalty>6</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name>Paleontology (Paleoanthropology)</name>
+					<name>Paleontology | Paleoanthropology</name>
 					<penalty>2</penalty>
 				</skillDefault>
 				<skillDefault>
 					<name>Sociology</name>
 					<penalty>3</penalty>
 				</skillDefault>
-				<desc>This is the science of evolution and culture. An anthropologist is knowl- edgeable in the ways of primitive (and not-so-primitive) societies. An Anthropology roll might explain, or even predict, unusual rituals and folk customs. This skill requires specialization by species (if left unspecified, assume the anthropolo- gist’s own species). Specialties usually default to one another at -2 to -5, although there may be no default for completely alien species.</desc>
+				<desc>This is the science of evolution and culture. An anthropologist is knowl- edgeable in the ways of primitive (and not-so-primitive) societies. An Anthropology roll might explain, or even predict, unusual rituals and folk customs. This skill requires specialization by species (if left unspecified, assume the anthropologist’s own species). Specialties usually default to one another at -2 to -5, although there may be no default for completely alien species.</desc>
 			</value>
 		</entry>
 		<entry>
 			<key>Aquabatics</key>
 			<value>
-				<ref>see Acrobatics, p. 174</ref>
+				<name>Aquabatics</name>
+				<!--Gets +1 from perfect balance-->
+				<TL>false</TL>
+				<attr>DX</attr>
+				<diff>Hard</diff>
+				<desc>The ability to engage in underwater acrobatics.</desc>
+				<prerequisite>
+					<name>Swimming</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Amphibious</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Aquatic</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<default>
+					<name>Acrobatics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Aerobatics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>DX</name>
+					<penalty>6</penalty>
+				</default>
+				<!--OR Amphibious Advantage or Aquatic Disadvantage-->
 			</value>
 		</entry>
 		<entry>
@@ -210,7 +343,354 @@
 					<name>Engineer (same)</name>
 					<penalty>4</penalty>
 				</skillDefault>
-				<desc>This is the ability to build, modify, and repair a specific class of weapons or armor. (It does not include skill at design; for that, see Engineer, p. 190.) A successful roll lets you find a problem, if it isn't obvious; a second roll lets you repair it. Time required is up to the GM. You must specialize in one of the following fields: Battlesuits: All kinds of powered armor, along with any built-in weaponry. Body Armor: Any kind of unpowered personal armor (but not shields). Also defaults to Smith (Bronze)-3 at TL1, to Smith (Iron)-3 at TL2-4, and to Machinist-3 at TL5+. Force Shields: Any kind of force screen or deflector â€“ be it personal or vehicular. This is the same skill as Electronics Repair (Force Shields). Heavy Weapons: All weapons used with the Artillery and Gunner skills. Melee Weapons: Any weapon used with a Melee Weapon or Thrown Weapon skill, as well as all kinds of shields. Also defaults to Smith TL2-4, and to Machinist-3 at TL5+. Missile Weapons: Man-portable, pre-gunpowder projectile weapons of all kinds â€“ bows, crossbows, slings, etc. Small Arms: All weapons used with the Beam Weapons and Guns skills. Also defaults to Machinist-5 at TL5+. Vehicular Armor: All kinds of armored vehicle hulls. Most specialties default to one another at -4 â€“ but above TL4, there is no default between Armoury specialties dealing with armor and Armoury specialties dealing with weapons. The technologies covered by each specialty vary with TL. For instance, Armoury small arms at TL4, repeating small arms that fire cartridges at TL6, portable beam weapons at TL10. The GM should strictly enforce penalties for unfamiliarity. Armoury/TL10 (Small Arms) might cover both beam weapons and portable railguns, but going from one to the other gives you -2 to skill until you familiarize yourself with all the differences. Modifiers: -2 for an unfamiliar item within your specialty (e.g., plate armor when you're used to mail); equipment modifiers (p. 345).</desc>
+				<desc>This is the ability to build, modify, and repair a specific class of weapons or armor. (It does not include skill at design; for that, see Engineer, p. 190.) A successful roll lets you find a problem, if it isn't obvious; a second roll lets you repair it. Time required is up to the GM. You must specialize. The technologies covered by each specialty vary with TL. For instance, Armoury small arms at TL4, repeating small arms that fire cartridges at TL6, portable beam weapons at TL10. The GM should strictly enforce penalties for unfamiliarity. Armoury/TL10 (Small Arms) might cover both beam weapons and portable railguns, but going from one to the other gives you -2 to skill until you familiarize yourself with all the differences. Modifiers: -2 for an unfamiliar item within your specialty (e.g., plate armor when you're used to mail); equipment modifiers (p. 345).</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Armoury | Battlesuits</key>
+			<value>
+				<name>Armoury | Battlesuits</name>
+				<default>
+					<name>Armoury | Body Armor</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Vehicular Armor</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Heavy Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Melee Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Missile Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Small Arms</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<desc>All kinds of powered armor, along with any built-in weaponry.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Armoury | Body Armor</key>
+			<value>
+				<name>Armoury | Body Armor</name>
+				<desc>Any kind of unpowered personal armor (but not shields).</desc>
+				<default>
+					<name>Smith | Bronze</name>
+					<penalty>3</penalty>
+					<TLMin>1</TLMin>
+					<TLMax>1</TLMax>
+				</default>
+				<default>
+					<name>Smith | Iron</name>
+					<penalty>3</penalty>
+					<TLMin>2</TLMin>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Mechanist</name>
+					<penalty>3</penalty>
+					<TLMin>5</TLMin>
+				</default>
+				<default>
+					<name>Armoury | Battlesuits</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Vehicular Armor</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Heavy Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Melee Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Missile Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Small Arms</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Armoury | Force Shields</key>
+			<value>
+				<name>Armoury | Force Shields</name>
+				<default>
+					<name>Armoury | Battlesuits</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Body Armor</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Vehicular Armor</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Heavy Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Melee Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Missile Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Small Arms</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<desc>Any kind of force screen or deflector – be it personal or vehicular.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Armoury | Heavy Weapons</key>
+			<value>
+				<name>Armoury | Heavy Weapons</name>
+				<default>
+					<name>Armoury | Battlesuits</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Force Shields</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Vehicular Armor</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Body Armor</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Melee Weapons</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Missile Weapons</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Small Arms</name>
+					<penalty>4</penalty>
+				</default>
+				<desc>All weapons used with the Artillery and Gunner skills.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Armoury | Melee Weapons</key>
+			<value>
+				<name>Armoury | Melee Weapons</name>
+				<default>
+					<name>Smith | Bronze</name>
+					<penalty>3</penalty>
+					<TLMin>1</TLMin>
+					<TLMax>1</TLMax>
+				</default>
+				<default>
+					<name>Smith | Iron</name>
+					<penalty>3</penalty>
+					<TLMin>2</TLMin>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Mechanist</name>
+					<penalty>3</penalty>
+					<TLMin>5</TLMin>
+				</default>
+				<default>
+					<name>Armoury | Battlesuits</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Force Shields</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Vehicular Armor</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Body Armor</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Heavy Weapons</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Missile Weapons</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Small Arms</name>
+					<penalty>4</penalty>
+				</default>
+				<desc>Any weapon used with a Melee Weapon or Thrown Weapon skill, as well as all kinds of shields.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Armoury | Missile Weapons</key>
+			<value>
+				<name>Armoury | Missile Weapons</name>
+				<default>
+					<name>Armoury | Battlesuits</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Force Shields</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Vehicular Armor</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Body Armor</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Melee Weapons</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Heavy Weapons</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Small Arms</name>
+					<penalty>4</penalty>
+				</default>
+				<desc>Man-portable, pre-gunpowder projectile weapons of all kinds – bows, crossbows, slings, etc.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Armoury | Small Arms</key>
+			<value>
+				<name>Armoury | Small Arms</name>
+				<default>
+					<name>Mechanist</name>
+					<penalty>5</penalty>
+					<TLMin>5</TLMin>
+				</default>
+				<default>
+					<name>Armoury | Battlesuits</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Force Shields</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Vehicular Armor</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Body Armor</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Melee Weapons</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Missile Weapons</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Heavy Weapons</name>
+					<penalty>4</penalty>
+				</default>
+				<desc>Arms: All weapons used with the Beam Weapons and Guns skills.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Armoury | Vehicular Armor</key>
+			<value>
+				<name>Armoury | Vehicular Armor</name>
+				<default>
+					<name>Armoury | Battlesuits</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Small Arms</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Body Armor</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Armoury | Melee Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Missile Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<default>
+					<name>Armoury | Heavy Weapons</name>
+					<penalty>4</penalty>
+					<TLMax>4</TLMax>
+				</default>
+				<desc>All kinds of armored vehicle hulls.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -224,13 +704,49 @@
 					<name>IQ</name>
 					<penalty>5</penalty>
 				</skillDefault>
-				<desc>This is the ability to use a heavy weapon, such as a trebuchet or a howitzer, for indirect fire â€“ that is, to put fire onto a target area via a high ballistic arc or similar path. For direct fire, use Gunner skill (p. 198). Roll against Artillery skill to bombard the target. Loaders can make ST-based Artillery rolls to improve the rate of fire of certain crew-served heavy weapons. See the appropriate weapon description for details. You must specialize by weapon type. The available specialties vary by TL, but include one or more of: Beams: Any kind of heavy energy weapon that is fired from orbit, bounced off a mirror, or otherwise used against targets you cannot see. Bombs: All kinds of unpowered, free-falling munitions. Cannon: Any kind of heavy projectile weapon â€“ bombard, howitzer, naval gun, etc. Catapult: Any kind of indirect-fire mechanical siege engine, such as a trebuchet. Guided Missile: Any kind of seeking or remotely piloted missile. Torpedoes: Any kind of powered underwater projectile. There is no default between specialties, some of which (e.g., Torpedoes) cover weapons that bear little or no resemblance to true artillery. Artillery is a single skill only because all the weapons it covers use the same rules. The weapons covered by each specialty will vary by TL. For instance, Artillery (Cannon) would cover primitive bombards at TL3, brass cannon at TL4, breech-loading howitzers at TL6, and orbital railguns at TL9+. Familiarity is crucial here! Artillery mortars and 406mm naval guns, but going from one to the other will give -2 for weapon type (81mm vs. 406mm), fire-direction center), and -2 for mount (bipod vs. naval turret), for a total of -6 to skill until you familiarize yourself with all the differences. Note that Forward Observer skill nate targets for Artillery skill. Modifiers: All relevant combat modifiers; -2 for an unfamiliar firecontrol system (e.g., map coordinates when you're used to satellite imagery) or mount (e.g., a naval turret when you're used to emplaced guns), or for an unfamiliar weapon of a known type 203mm); -4 or more for a weapon in bad repair.</desc>
+				<desc>This is the ability to use a heavy weapon, such as a trebuchet or a howitzer, for indirect fire â€“ that is, to put fire onto a target area via a high ballistic arc or similar path. For direct fire, use Gunner skill (p. 198). Roll against Artillery skill to bombard the target. Loaders can make ST-based Artillery rolls to improve the rate of fire of certain crew-served heavy weapons. See the appropriate weapon description for details. You must specialize by weapon type. Artillery is a single skill only because all the weapons it covers use the same rules. The weapons covered by each specialty will vary by TL. For instance, Artillery (Cannon) would cover primitive bombards at TL3, brass cannon at TL4, breech-loading howitzers at TL6, and orbital railguns at TL9+. Familiarity is crucial here! Artillery mortars and 406mm naval guns, but going from one to the other will give -2 for weapon type (81mm vs. 406mm), fire-direction center), and -2 for mount (bipod vs. naval turret), for a total of -6 to skill until you familiarize yourself with all the differences. Note that Forward Observer skill nate targets for Artillery skill. Modifiers: All relevant combat modifiers; -2 for an unfamiliar firecontrol system (e.g., map coordinates when you're used to satellite imagery) or mount (e.g., a naval turret when you're used to emplaced guns), or for an unfamiliar weapon of a known type 203mm); -4 or more for a weapon in bad repair.</desc>
 			</value>
 		</entry>
 		<entry>
-			<key>Artist</key>
+			<key>Artillery | Beams</key>
 			<value>
-				<name>Artist</name>
+				<desc>Any kind of heavy energy weapon that is fired from orbit, bounced off a mirror, or otherwise used against target you cannot see.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Artillery | Bombs</key>
+			<value>
+				<desc>All kinds of unpowered, free-falling munitions.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Artillery | Cannon</key>
+			<value>
+				<desc>Any kind of heavy projec- tile weapon – bombard, howitzer, naval gun, etc.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Artillery | Catapult</key>
+			<value>
+				<desc>Any kind of indirect-fire mechanical siege engine, such as a tre- buchet.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Artillery | Guided Missile</key>
+			<value>
+				<desc>Any kind of seeking or remotely piloted missile.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Artillery | Torpedoes</key>
+			<value>
+				<desc>Any kind of powered underwater projectile.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist !</key>
+			<value>
+				<name>Artist !</name>
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
@@ -238,7 +754,504 @@
 					<name>IQ</name>
 					<penalty>6</penalty>
 				</skillDefault>
-				<desc>This skill represents talent at a visual art. A successful roll might let you create a recognizable likeness of a person or an object, or a work beautiful enough to sell (the GM should not allow a default roll for this use!). Time required is up to the GM. Artist is based on IQ, but there are many situations in which the GM could logically ask for a DX-based roll, in which case modifiers for High Manual Dexterity (p. 59) or HamFisted (p. 138) would apply. In rare cases, even a ST-based Artist roll might make sense â€“ for instance, to work with a physically tough material. You must specialize in an art form. Common specialties include: Body Art: Tattooing, piercing, and scarification. Both this specialty and Painting suffice for henna or temporary tattoos, but cosmetic surgery requires Surgery skill (p. 223). Calligraphy: Beautiful and decorative handwriting. You need not be literate! Drawing: All forms of charcoal, ink, pastel, and pencil work. Illumination: Decorating written text with miniature paintings and pictures. Illusion: Creating believable or evocative illusions. Prerequisite: magical or psionic illusion ability of some kind. Interior Decorating: Creating pleasing building interiors by selecting appropriate paints, fixtures, and furniture. Default: Architecture-3. Painting: All forms of painting, whether on paper, canvas, or a wall, and whether with tempera, oil-based paint, or something more exotic (like blood). Pottery: Working with various sorts of ceramics â€“ especially clay. Scene Design: Designing sets for the stage. Default: Architecture-3. Sculpting: Creating three-dimensional art from ivory, stone, metal, etc. Woodworking: All forms of fine woodwork, including cabinet-making and decorative carving. Default: Carpentry-3. Calligraphy, Drawing, Illumination, and Painting default to one another at -2, and to or from Body Art at -4. Interior Decorating, Scene Design, and Woodworking default among themselves at -4. All other Artist specialties default to one another at -6. An artist of any kind can take a further optional specialty (p. 169) in a particular medium or technique. Many Artist specialties are used to earn a living rather than to create fine art, and some people regard them as you whether you focus on beauty, realism, or functionality. Modifiers: Equipment modifiers (p. 345); -2 if the medium is unfamiliar oils); -5 if the medium is difficult (e.g., marble, for a sculptor).</desc>
+				<desc>This skill represents talent at a visual art. A successful roll might let you create a recognizable likeness of a person or an object, or a work beautiful enough to sell (the GM should not allow a default roll for this use!). Time required is up to the GM. Artist is based on IQ, but there are many situations in which the GM could logically ask for a DX-based roll, in which case modifiers for High Manual Dexterity (p. 59) or HamFisted (p. 138) would apply. In rare cases, even a ST-based Artist roll might make sense â€“ for instance, to work with a physically tough material. You must specialize in an art form. An artist of any kind can take a further optional specialty (p. 169) in a particular medium or technique. Many Artist specialties are used to earn a living rather than to create fine art, and some people regard them as you whether you focus on beauty, realism, or functionality. Modifiers: Equipment modifiers (p. 345); -2 if the medium is unfamiliar oils); -5 if the medium is difficult (e.g., marble, for a sculptor).</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Body Art</key>
+			<value>
+				<name>Artist | Body Art</name>
+				<desc>Tattooing, piercing, and scarification. Both this specialty and Painting suffice for henna or temporary tattoos, but cosmetic surgery requires Surgery skill (p. 223).</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Calligraphy</key>
+			<value>
+				<name>Artist | Calligraphy</name>
+				<desc>Beautiful and decora- tive handwriting. You need not be lit- erate!</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Drawing</key>
+			<value>
+				<name>Artist | Drawing</name>
+				<desc>All forms of charcoal, ink, pastel, and pencil work.</desc>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Illumination</key>
+			<value>
+				<name>Artist | Illumination</name>
+				<desc>Decorating written text with miniature paintings and pic- tures.</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Illusion</key>
+			<value>
+				<name>Artist | Illusion</name>
+				<desc>Creating believable or evocative illusions. Prerequisite: magi- cal or psionic illusion ability of some kind.</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Interior Decorating</key>
+			<value>
+				<name>Artist | Interior Decorating</name>
+				<desc>Creating pleas- ing building interiors by selecting appropriate paints, fixtures, and furniture.</desc>
+				<default>
+					<name>Architecture</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Painting</key>
+			<value>
+				<name>Artist | Painting</name>
+				<desc>All forms of painting, whether on paper, canvas, or a wall, and whether with tempera, oil-based paint, or something more exotic (like blood).</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Pottery</key>
+			<value>
+				<name>Artist | Pottery</name>
+				<desc>Working with various sorts of ceramics – especially clay.</desc>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Scene Design</key>
+			<value>
+				<name>Artist | Scene Design</name>
+				<desc>Designing sets for the stage.</desc>
+				<default>
+					<name>Architecture</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Woodworking</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>6</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Sculpting</key>
+			<value>
+				<name>Artist | Sculpting</name>
+				<desc>Creating three-dimen- sional art from ivory, stone, metal, etc.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Artist | Woodworking</key>
+			<value>
+				<name>Artist | Woodworking</name>
+				<desc>All forms of fine woodwork, including cabinet-making and decorative carving.</desc>
+				<default>
+					<name>Carpentry</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Artist | Scene Design</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Interior Decorating</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Drawing</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Illumination</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Calligraphy</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Artist | Body Art</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Artist | Illusion</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Potery</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Sculpting</name>
+					<penalty>6</penalty>
+				</default>
+				<default>
+					<name>Artist | Painting</name>
+					<penalty>6</penalty>
+				</default>
 			</value>
 		</entry>
 		<entry>
@@ -252,7 +1265,25 @@
 					<name>IQ</name>
 					<penalty>6</penalty>
 				</skillDefault>
-				<desc>Prerequisite: Mathematics This is the study of stars and other extraplanetary objects. An astronomer could answer questions about the Sun, the planets of the solar system, etc. An amateur who can locate stars and use a telescope, but not perform involved calculations, has an optional specialty (p. 169): Astronomy not require Mathematics as a prerequisite.</desc>
+				<prerequisite>
+					<name>Mathematics | Applied</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This is the study of stars and other extraplanetary objects. An astronomer could answer questions about the Sun, the planets of the solar system, etc.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Astronomy (Observational)</key>
+			<value>
+				<name>Astronomy (Observational)</name>
+				<TL>true</TL>
+				<attr>IQ</attr>
+				<diff>Hard</diff>
+				<skillDefault>
+					<name>IQ</name>
+					<penalty>6</penalty>
+				</skillDefault>
+				<desc>An amateur who can locate stars and use a telescope, but not perform involved calculations.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -282,9 +1313,9 @@
 			</value>
 		</entry>
 		<entry>
-			<key>Beam Weapons</key>
+			<key>Beam Weapons !</key>
 			<value>
-				<name>Beam Weapons</name>
+				<name>Beam Weapons !</name>
 				<TL>true</TL>
 				<attr>DX</attr>
 				<diff>Easy</diff>
@@ -292,7 +1323,52 @@
 					<name>DX</name>
 					<penalty>4</penalty>
 				</skillDefault>
-				<desc>This is the ability to use beam small arms. You must specialize by weapon type: Pistol: Any handgun that fires an energy or particle beam. Projector: Any energy weapon that emits an area-effect cone or field. Rifle: Any long arm that fires an energy or particle beam. These specialties default to one another at -4. Treat specific beam types (blaster, laser, stunner, etc.) as familiarities. Other modifiers are as per Guns (p. 198). In settings with both beam and projectile weapons, the Pistol and Rifle specialties of Beam Weapons default to the similarly named Guns specialties at -4, and vice versa. See Artillery (p. 178) and Gunner (p. 198) for heavier beam weapons.</desc>
+				<desc>This is the ability to use beam small arms. You must specialize by weapon type. Treat specific beam types (blaster, laser, stunner, etc.) as familiarities. Other modifiers are as per Guns (p. 198). In settings with both beam and projectile weapons, the Pistol and Rifle specialties of Beam Weapons default to the similarly named Guns specialties at -4, and vice versa. See Artillery (p. 178) and Gunner (p. 198) for heavier beam weapons.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Beam Weapons | Pistol</key>
+			<value>
+				<name>Beam Weapons | Pistol</name>
+				<desc>Any handgun that fires an energy or particle beam.</desc>
+				<default>
+					<name>Beam Weapons | Projector</name>
+					<penaltry>4</penaltry>
+				</default>
+				<default>
+					<name>Beam Weapons | Rifle</name>
+					<penaltry>4</penaltry>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Beam Weapons | Projector</key>
+			<value>
+				<name>Beam Weapons | Projector</name>
+				<desc>Any energy weapon that emits an area-effect cone or field.</desc>
+				<default>
+					<name>Beam Weapons | Pistol</name>
+					<penaltry>4</penaltry>
+				</default>
+				<default>
+					<name>Beam Weapons | Rifle</name>
+					<penaltry>4</penaltry>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Beam Weapons | Rifle</key>
+			<value>
+				<name>Beam Weapons | Rifle</name>
+				<desc>Any long arm that fires an energy or particle beam.</desc>
+				<default>
+					<name>Beam Weapons | Projector</name>
+					<penaltry>4</penaltry>
+				</default>
+				<default>
+					<name>Beam Weapons | Pistol</name>
+					<penaltry>4</penaltry>
+				</default>
 			</value>
 		</entry>
 		<entry>
@@ -352,7 +1428,15 @@
 				<TL>false</TL>
 				<attr>Per</attr>
 				<diff>Very Hard</diff>
-				<desc>Prerequisites: Trained By A Master or Weapon Master. You have learned to fight blindfolded or in absolute darkness. As a result, you can "sense" your targets without having to see them. This skill enables you to use senses other than vision â€“ mainly hearing, but also touch and even smell â€“ to pinpoint exactly where your opponents are. A successful roll allows one melee attack or active defense without any penalties for lighting (even total darkness), blindness (temporary or permanent), or an invisible foe. However, attacks made in total darkness, while blind, or against invisible enemies have an extra. If you also know Zen Archery (p. 228), you can shoot targets without seeing them by making rolls on both skills at -6. An opponent who knows you possess this ability can foil it by winning a Quick Contest of Stealth-4 vs. your Blind Fighting each turn. If he wins, you cannot detect him. However, Invisibility Art (p. 202) never works on you; it is completely useless against this skill. Modifiers: Background noise gives a penalty: -1 for rain, -2 for heavy rain or a storm, -3 for a crowded, noisy area or heavy machinery, -4 for a full football stadium, or -5 in the middle of an artillery barrage. If you cannot hear at all, the roll is at -7, but you may still attempt a roll, as the skill is not completely based on hearing. Add your level of Acute Hearing to the roll. Add the higher of your ESP Talent (p. 256) or Telepathy Talent (p. 257).</desc>
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Weapon Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>You have learned to fight blindfolded or in absolute darkness. As a result, you can "sense" your targets without having to see them. This skill enables you to use senses other than vision â€“ mainly hearing, but also touch and even smell â€“ to pinpoint exactly where your opponents are. A successful roll allows one melee attack or active defense without any penalties for lighting (even total darkness), blindness (temporary or permanent), or an invisible foe. However, attacks made in total darkness, while blind, or against invisible enemies have an extra. If you also know Zen Archery (p. 228), you can shoot targets without seeing them by making rolls on both skills at -6. An opponent who knows you possess this ability can foil it by winning a Quick Contest of Stealth-4 vs. your Blind Fighting each turn. If he wins, you cannot detect him. However, Invisibility Art (p. 202) never works on you; it is completely useless against this skill. Modifiers: Background noise gives a penalty: -1 for rain, -2 for heavy rain or a storm, -3 for a crowded, noisy area or heavy machinery, -4 for a full football stadium, or -5 in the middle of an artillery barrage. If you cannot hear at all, the roll is at -7, but you may still attempt a roll, as the skill is not completely based on hearing. Add your level of Acute Hearing to the roll. Add the higher of your ESP Talent (p. 256) or Telepathy Talent (p. 257).</desc>
 			</value>
 		</entry>
 		<entry>
@@ -394,7 +1478,20 @@
 				<TL>false</TL>
 				<attr>HT</attr>
 				<diff>Very Hard</diff>
-				<desc>Prerequisites: Trained By A Master, Breath Control, and Meditation. This ability lets you affect involuntary bodily functions such as heart rate, blood flow, and digestion. One use of this skill is to enter a deathlike trance, during which only those who can win a Quick Contest of Diagnosis vs. your Body Control skill even realize that you are alive. This requires (30 imum one second. You can also use this skill to flush poisons from your body. To do so, you must first roll against Poisons (or Alchemy, Pharmacy, etc., as appropriate) to identify the poison. You cannot attempt this roll until you know you have been poisoned. In most cases, you only discover this when the first symptoms show! A successful Body Control roll â€“ adjusted by any modifier to the HT roll to resist the poison â€“ flushes the poison in 1d hours, after which it has no further effect. Finally, you may use the higher of this skill and basic HT to resist any Affliction, magic spell, or psionic attack that is normally resisted by HT.</desc>
+				<!--a & b & c-->
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Breath Control</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Meditation</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This ability lets you affect involuntary bodily functions such as heart rate, blood flow, and digestion. One use of this skill is to enter a deathlike trance, during which only those who can win a Quick Contest of Diagnosis vs. your Body Control skill even realize that you are alive. This requires (30 imum one second. You can also use this skill to flush poisons from your body. To do so, you must first roll against Poisons (or Alchemy, Pharmacy, etc., as appropriate) to identify the poison. You cannot attempt this roll until you know you have been poisoned. In most cases, you only discover this when the first symptoms show! A successful Body Control roll â€“ adjusted by any modifier to the HT roll to resist the poison â€“ flushes the poison in 1d hours, after which it has no further effect. Finally, you may use the higher of this skill and basic HT to resist any Affliction, magic spell, or psionic attack that is normally resisted by HT.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -484,7 +1581,11 @@
 					<name>Special</name>
 					<penalty>0</penalty>
 				</skillDefault>
-				<desc>Prerequisite: Psychology. This is the "black arts" of technological personality alteration and mind control. Only intelligence, military, and security services teach it â€“ and only to individuals with suitable Rank or Security Clearance. Even then, it is rare outside police states (except perhaps during wartime). Brainwashing encompasses many techniques â€“ some proven, others little better than witchcraft. Depending on the setting, these might include drugs, electroshock, hypnotism, sensory deprivation, sleep deprivation, social pressure, subliminal messages, or surgery . . . and most likely a combination of several of these. Regardless of the techniques employed, brainwashing is handled as a Regular Contest (not a Quick Contest) between Brainwashing skill and the victim's Will. Roll once per day. Obviously, the brainwasher has a tremendous advantage: even if the victim wins this time, it is only a matter of time before he slips. Results depend on how effective the GM deems brainwashing to be, but might include insanity, personality alteration, or suggestions that can be triggered by future events. In game terms, the victim can acquire almost any mental quirk or disadvantage. In settings where neural interfaces exist, it might be possible to "hack" the victim's brain using a computer. This takes only a fraction of a second per attempt! Brain Hacking should be treated as its own skill, with Computer Hacking instead of Psychology as a prerequisite. This skill normally has no default. However, GMs who wish to explore the gory details can specify the techniques used in their campaign and have Brainwashing default to one or more of Electronics Operation (Medical)-6, Hypnotism-6, Interrogation-6, Pharmacy-6, Psychology-6, or Surgery6, as appropriate.</desc>
+				<prerequisite>
+					<name>Psychology</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This is the "black arts" of technological personality alteration and mind control. Only intelligence, military, and security services teach it â€“ and only to individuals with suitable Rank or Security Clearance. Even then, it is rare outside police states (except perhaps during wartime). Brainwashing encompasses many techniques â€“ some proven, others little better than witchcraft. Depending on the setting, these might include drugs, electroshock, hypnotism, sensory deprivation, sleep deprivation, social pressure, subliminal messages, or surgery . . . and most likely a combination of several of these. Regardless of the techniques employed, brainwashing is handled as a Regular Contest (not a Quick Contest) between Brainwashing skill and the victim's Will. Roll once per day. Obviously, the brainwasher has a tremendous advantage: even if the victim wins this time, it is only a matter of time before he slips. Results depend on how effective the GM deems brainwashing to be, but might include insanity, personality alteration, or suggestions that can be triggered by future events. In game terms, the victim can acquire almost any mental quirk or disadvantage. In settings where neural interfaces exist, it might be possible to "hack" the victim's brain using a computer. This takes only a fraction of a second per attempt! Brain Hacking should be treated as its own skill, with Computer Hacking instead of Psychology as a prerequisite. This skill normally has no default. However, GMs who wish to explore the gory details can specify the techniques used in their campaign and have Brainwashing default to one or more of Electronics Operation (Medical)-6, Hypnotism-6, Interrogation-6, Pharmacy-6, Psychology-6, or Surgery6, as appropriate.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -504,7 +1605,11 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisite: Trained By A Master. This skill allows you to find the weakest spot in any object when making a barehanded attack. Each attack requires a separate Breaking Blow roll. Roll against skill after you hit. Breaking Blow costs 1 FP per attempt, whether or not you hit. On a success, your attack gains an armor divisor of (5) against any braced, inanimate, homogenous target (see Injury to Unliving, Homogenous, and Diffuse Targets, p. 380), and you may treat the target as if it were Fragile (Brittle) (p. 136) for this one attack. In a cinematic game, you are not limited to inanimate targets. Your armor divisor affects any artificial armor or force field (not natural DR), and you may treat homogenous opponents as if they were Fragile (Brittle)! On a failure, your attack gains no special benefits. On a critical failure, you do the damage to your own hand or foot. Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns. -1 if your target is wood or plastic, -3 if brick or stone, or -5 if metal or hightech composites.</desc>
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This skill allows you to find the weakest spot in any object when making a barehanded attack. Each attack requires a separate Breaking Blow roll. Roll against skill after you hit. Breaking Blow costs 1 FP per attempt, whether or not you hit. On a success, your attack gains an armor divisor of (5) against any braced, inanimate, homogenous target (see Injury to Unliving, Homogenous, and Diffuse Targets, p. 380), and you may treat the target as if it were Fragile (Brittle) (p. 136) for this one attack. In a cinematic game, you are not limited to inanimate targets. Your armor divisor affects any artificial armor or force field (not natural DR), and you may treat homogenous opponents as if they were Fragile (Brittle)! On a failure, your attack gains no special benefits. On a critical failure, you do the damage to your own hand or foot. Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns. -1 if your target is wood or plastic, -3 if brick or stone, or -5 if metal or hightech composites.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -591,7 +1696,7 @@
 					<penalty>2</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name>Mathematics (Surveying)</name>
+					<name>Mathematics | Surveying</name>
 					<penalty>2</penalty>
 				</skillDefault>
 				<skillDefault>
@@ -676,7 +1781,11 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
-				<desc>Prerequisite: Computer Programming. This is the skill of gaining illegal access to a computer system â€“ usually using another computer over a communications network. A successful Computer Hacking roll allows you to gain surreptitious access to a system, or to find (or change) information on a system you have already broken into. On a critical failure, you fail to gain access and leave some sort of incriminating evidence of your attempt. This skill is cinematic, and simulates the way computer intrusion works in many movies and novels. It does not exist in realistic settings! Realistic "hackers" should learn a combination of Computer Operation intrusion software), Computer Programming (to write intrusion software), Cryptography, Electronics Operation (Communications or Surveillance), Electronics Repair legitimate users to reveal passwords), Research (to find documented security holes), and Scrounging (to words on discarded sticky notes, etc.). Modifiers: Equipment modifiers away from the field for a long time and have not had a chance to become familiar with the changes. Security measures give a penalty, from -1 for the cheapest commercial security software to -15 for the latest technology. Some measures resist your intrusion attempt; treat this as a Quick Contest of Hacking vs. the effective skill of the defenses.</desc>
+				<prerequisite>
+					<name>Computer Hacking</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This is the skill of gaining illegal access to a computer system â€“ usually using another computer over a communications network. A successful Computer Hacking roll allows you to gain surreptitious access to a system, or to find (or change) information on a system you have already broken into. On a critical failure, you fail to gain access and leave some sort of incriminating evidence of your attempt. This skill is cinematic, and simulates the way computer intrusion works in many movies and novels. It does not exist in realistic settings! Realistic "hackers" should learn a combination of Computer Operation intrusion software), Computer Programming (to write intrusion software), Cryptography, Electronics Operation (Communications or Surveillance), Electronics Repair legitimate users to reveal passwords), Research (to find documented security holes), and Scrounging (to words on discarded sticky notes, etc.). Modifiers: Equipment modifiers away from the field for a long time and have not had a chance to become familiar with the changes. Security measures give a penalty, from -1 for the cheapest commercial security software to -15 for the latest technology. Some measures resist your intrusion attempt; treat this as a Quick Contest of Hacking vs. the effective skill of the defenses.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -807,7 +1916,7 @@
 				<attr>IQ</attr>
 				<diff>Hard</diff>
 				<skillDefault>
-					<name>Mathematics (Cryptology)</name>
+					<name>Mathematics | Cryptology</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<desc>This is the ability to create and defeat encryption systems, codes, and ciphers. It is of use in wartime, espionage, and even business dealings. It covers all the techniques of your TL, which can range from unsophisticated substitution ciphers to state-of-theart tactical encryption schemes. Knowledge of a specific system, code, or cipher depends on your Security Clearance (p. 82) and allegiances many settings, some level of Security Clearance is a prerequisite to learning this skill at all. Treat an attempt to break an unknown code as a Quick Contest of Cryptography skill between the codebreaker and code-maker. The codebreaker must win to break the code. Repeated attempts are possible, but each attempt takes a day. The codemaker rolls only once, when he first creates the code. Those with Cryptography skill may take an optional specialty (p. 169) in making or breaking codes. (The codebreaking specialty is often called Cryptography normally has no IQ default, with two exceptions. Anyone can devise a trivial code or cipher by making an IQ-5 roll. This won't stall a professional for long, of course. Likewise, anyone can make an IQ-5 roll to attempt to break such a trivial code (but not a code devised by someone with Cryptography skill), using the Quick Contest system described above. Modifiers: Mathematical Ability software gives a bonus (provided you know Computer Operation skill): +1 for a home computer, +2 for a minicomputer, +3 or +4 for a mainframe, and +5 or more for a supercomputer. The code-breaker is at +5 if he has a sample of the code with translation, and -5 if the message to be decoded is shorter than 25 words. The codemaker receives a bonus for the time taken to create the code: consult the Size and Speed/Range Table (p. 550), look up the time in days in the Range/Speed column (substituting sponding bonus.</desc>
@@ -1084,7 +2193,12 @@
 					<name>Special</name>
 					<penalty>0</penalty>
 				</skillDefault>
-				<desc>Prerequisites: Mathematics noted. This is the ability to design and build technological devices and systems. A successful roll lets you design a new system, diagnose a glitch, identify the purpose of a strange device, or improvise a gadget to solve a problem. Time required for each attempt is up to the GM. Note that engineers are designers and inventors; they are not necessarily skilled at the routine operation or maintenance of the things they design! For instance, Engineer (Small Arms) lets you design a new assault rifle, but you need Armoury skill to maintain it and Guns skill to shoot it. You must specialize. Possible fields include: Artillery: Designing whatever passes for artillery at your TL, from trebuchets to smart missiles. Default: Armoury (Heavy Weapons)-6. Civil: Planning highways, aqueducts, buildings, etc. Default: Architecture-6. Clockwork: Designing wind-up gadgetry â€“ watches, mechanical men, and the like. Default: Mechanic Combat: Building or removing fortifications, trenches, etc. Default: Explosives (Demolition)-6. Electrical: Designing electrical systems, such as power cells and transmission lines. Default: Electrician-6. Electronics: Designing and building electronic apparatus, from computers to starship sensor arrays. (The specific technologies involved â€“ vacuum tubes, transistors, photonics, etc. â€“ will depend on the tech level.) Default: Electronics Repair (any)-6. Materials: Concocting new structural materials. Prerequisites: Chemistry or Metallurgy. Defaults: Chemistry-6 or Metallurgy-6. Microtechnology: Designing micromachines. Default: Mechanic Mining: Designing underground structures. Defaults: Explosives Nanotechnology: Designing nanomachines. Default: Mechanic Parachronic: Designing apparatus for crossing dimensions or timelines. Prerequisite: Physics. Default: Electronics Operation (Parachronic)6, but there is no default if your society has not discovered dimensional travel. Psychotronics: Designing psionic technology, such as telepathic shields and amplifiers. Default: Electronics Operation (Psychotronics)-6, but there is no default for individuals from backgrounds where psionics do not exist. Robotics: Designing robotics and cybernetics. Default: Mechanic Small Arms: Designing personal firearms, such as guns and portable rocket launchers. Default: Armoury Temporal: Designing time machines. Prerequisite: Physics. Default: Electronics Operation for individuals from backgrounds without time travel! Vehicle Type: Designing a single, broad class of vehicle. Examples include Engineer (Automobiles), Engineer (Ships), and Engineer vehicle type)-6. Engineer specialties normally default to one another at -4; however, the GM is free to rule that in his campaign, there is no default between exotic specialties (Nanotechnology, Parachronic, Psychotronics, etc.) and more mundane ones (Civil, Combat, Mining, etc.). Modifiers: Equipment modifiers you can give the GM a good description of what you want it to do.</desc>
+				<prerequisite>
+					<name>Mathematics | Applied</name>
+					<TL>5</TL>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This is the ability to design and build technological devices and systems. A successful roll lets you design a new system, diagnose a glitch, identify the purpose of a strange device, or improvise a gadget to solve a problem. Time required for each attempt is up to the GM. Note that engineers are designers and inventors; they are not necessarily skilled at the routine operation or maintenance of the things they design! For instance, Engineer (Small Arms) lets you design a new assault rifle, but you need Armoury skill to maintain it and Guns skill to shoot it. You must specialize. Possible fields include: Artillery: Designing whatever passes for artillery at your TL, from trebuchets to smart missiles. Default: Armoury (Heavy Weapons)-6. Civil: Planning highways, aqueducts, buildings, etc. Default: Architecture-6. Clockwork: Designing wind-up gadgetry â€“ watches, mechanical men, and the like. Default: Mechanic Combat: Building or removing fortifications, trenches, etc. Default: Explosives (Demolition)-6. Electrical: Designing electrical systems, such as power cells and transmission lines. Default: Electrician-6. Electronics: Designing and building electronic apparatus, from computers to starship sensor arrays. (The specific technologies involved â€“ vacuum tubes, transistors, photonics, etc. â€“ will depend on the tech level.) Default: Electronics Repair (any)-6. Materials: Concocting new structural materials. Prerequisites: Chemistry or Metallurgy. Defaults: Chemistry-6 or Metallurgy-6. Microtechnology: Designing micromachines. Default: Mechanic Mining: Designing underground structures. Defaults: Explosives Nanotechnology: Designing nanomachines. Default: Mechanic Parachronic: Designing apparatus for crossing dimensions or timelines. Prerequisite: Physics. Default: Electronics Operation (Parachronic)6, but there is no default if your society has not discovered dimensional travel. Psychotronics: Designing psionic technology, such as telepathic shields and amplifiers. Default: Electronics Operation (Psychotronics)-6, but there is no default for individuals from backgrounds where psionics do not exist. Robotics: Designing robotics and cybernetics. Default: Mechanic Small Arms: Designing personal firearms, such as guns and portable rocket launchers. Default: Armoury Temporal: Designing time machines. Prerequisite: Physics. Default: Electronics Operation for individuals from backgrounds without time travel! Vehicle Type: Designing a single, broad class of vehicle. Examples include Engineer (Automobiles), Engineer (Ships), and Engineer vehicle type)-6. Engineer specialties normally default to one another at -4; however, the GM is free to rule that in his campaign, there is no default between exotic specialties (Nanotechnology, Parachronic, Psychotronics, etc.) and more mundane ones (Civil, Combat, Mining, etc.). Modifiers: Equipment modifiers you can give the GM a good description of what you want it to do.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -1094,7 +2208,15 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisites: Charisma 1 and Public Speaking at 12+. Bards in fantasy can often influence others through storytelling. The GM may choose to represent this ability using the four Enthrallment skills described below. Depending on the setting, these skills might be magical, psionic, or a cinematic form of hypnotism. Each has a time requirement, FP cost, and duration, and requires two skill rolls to use. At the outset of the tale, roll vs. Public Speaking skill; if you can't grab your audience's attention early on, you won't have much of a chance of controlling them by the end. On a success, proceed to the Enthrallment skill roll; critical success gives +1 on that roll. On a failure, you may still attempt the Enthrallment roll, but at a penalty equal to your margin of failure. Critical failure means your Enthrallment attempt fails automatically. After the time required to enthrall has passed, roll a Quick Contest of your Enthrallment skill vs. the Will of each audience member. If you win, you affect your audience â€“ see the individual skill description for effects. If you lose or tie, there is no effect. However, if you critically fail, your audience instantly turns hostile! You may never learn these skills at a skill level higher than your Public Speaking skill. Audience Size: An "audience" can be one listener or a hundred â€“ as many as can hear the tale. However, the number of audience members that you can enthrall at one sitting is limited to your Charisma level squared, to a maximum of 25 people at Charisma 5. Modifiers: All four Enthrallment skills are at -3 for Low Empathy good tale, the GM should reward him with +1 to +3 to the Public Speaking and Enthrallment rolls!</desc>
+				<prerequisite>
+					<name>Charisma</name>
+					<minimum>1</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Public Speaking</name>
+					<minimum>12</minimum>
+				</prerequisite>
+				<desc>Bards in fantasy can often influence others through storytelling. The GM may choose to represent this ability using the four Enthrallment skills described below. Depending on the setting, these skills might be magical, psionic, or a cinematic form of hypnotism. Each has a time requirement, FP cost, and duration, and requires two skill rolls to use. At the outset of the tale, roll vs. Public Speaking skill; if you can't grab your audience's attention early on, you won't have much of a chance of controlling them by the end. On a success, proceed to the Enthrallment skill roll; critical success gives +1 on that roll. On a failure, you may still attempt the Enthrallment roll, but at a penalty equal to your margin of failure. Critical failure means your Enthrallment attempt fails automatically. After the time required to enthrall has passed, roll a Quick Contest of your Enthrallment skill vs. the Will of each audience member. If you win, you affect your audience â€“ see the individual skill description for effects. If you lose or tie, there is no effect. However, if you critically fail, your audience instantly turns hostile! You may never learn these skills at a skill level higher than your Public Speaking skill. Audience Size: An "audience" can be one listener or a hundred â€“ as many as can hear the tale. However, the number of audience members that you can enthrall at one sitting is limited to your Charisma level squared, to a maximum of 25 people at Charisma 5. Modifiers: All four Enthrallment skills are at -3 for Low Empathy good tale, the GM should reward him with +1 to +3 to the Public Speaking and Enthrallment rolls!</desc>
 			</value>
 		</entry>
 		<entry>
@@ -1104,7 +2226,11 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisite: Suggest at 12+. This skill allows you to tell a story so skillfully that those listening lose their will and do whatever you want them to do. In effect, they believe themselves to be in the tale, and are vulnerable to being manipulated by you, the teller of the tale. If you win the Quick Contest, the audience becomes intensely loyal to you. They follow any direct order you give. In the absence of a direct order, they act in your best interest, as they understand it. If you tell someone to do something very hazardous, or that goes against his usual code of behavior (GM's decision), he gets a Will-5 roll to break the captivation. Otherwise, he is your loyal supporter for all intents and purposes. Time: 30 minutes of uninterrupted storytelling. Fatigue Cost: 8 FP, whether successful or not. Duration: Captivation lasts until the subject becomes unconscious or falls asleep, you become unconscious or fall asleep, you attack the subject, or the subject loses half his HP to injury.</desc>
+				<prerequisite>
+					<name>Suggest</name>
+					<minimum>12</minimum>
+				</prerequisite>
+				<desc>This skill allows you to tell a story so skillfully that those listening lose their will and do whatever you want them to do. In effect, they believe themselves to be in the tale, and are vulnerable to being manipulated by you, the teller of the tale. If you win the Quick Contest, the audience becomes intensely loyal to you. They follow any direct order you give. In the absence of a direct order, they act in your best interest, as they understand it. If you tell someone to do something very hazardous, or that goes against his usual code of behavior (GM's decision), he gets a Will-5 roll to break the captivation. Otherwise, he is your loyal supporter for all intents and purposes. Time: 30 minutes of uninterrupted storytelling. Fatigue Cost: 8 FP, whether successful or not. Duration: Captivation lasts until the subject becomes unconscious or falls asleep, you become unconscious or fall asleep, you attack the subject, or the subject loses half his HP to injury.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -1124,7 +2250,11 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisite: Persuade at 12+. This ability lets you give your audience a single, simple suggestion. A suggestion should have no complex grammatical clauses â€“ just a subject, verb, object, and at most two modifiers. A given subject gets +5 to resist if your suggestion goes against his personal safety, and tions, or knowledge. If you win the Quick Contest, the audience members try to act on the suggestion to the best of their abilities own. Time: 20 minutes of uninterrupted storytelling. Fatigue Cost: 6 FP, whether successful or not. Duration: 10 minutes â€“ or longer, if you continue to talk to the audience and can make a successful Suggest roll every 10 minutes! Once the suggestion lapses, audience members only wonder why they acted the way they did if the suggestion was something they would never have done normally. he doesn't accede to our demands!" is not.</desc>
+				<prerequisite>
+					<name>Persuade</name>
+					<minimum>12</minimum>
+				</prerequisite>
+				<desc>This ability lets you give your audience a single, simple suggestion. A suggestion should have no complex grammatical clauses â€“ just a subject, verb, object, and at most two modifiers. A given subject gets +5 to resist if your suggestion goes against his personal safety, and tions, or knowledge. If you win the Quick Contest, the audience members try to act on the suggestion to the best of their abilities own. Time: 20 minutes of uninterrupted storytelling. Fatigue Cost: 6 FP, whether successful or not. Duration: 10 minutes â€“ or longer, if you continue to talk to the audience and can make a successful Suggest roll every 10 minutes! Once the suggestion lapses, audience members only wonder why they acted the way they did if the suggestion was something they would never have done normally. he doesn't accede to our demands!" is not.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -1134,7 +2264,11 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisite: Persuade at 12+. This ability allows you to instill the audience with any one emotion. Allowed emotions include anger, boredom, depression, disgust, fear, greed, hate, jealousy, joy, love, lust, patriotism, peace, sadness, and unrest. If you win the Quick Contest, your audience experiences the emotion you select. How they act as a result is up to the GM. Time: 10 minutes of uninterrupted storytelling. Fatigue Cost: 4 FP, whether successful or not. Duration: One hour.</desc>
+				<prerequisite>
+					<name>Persuade</name>
+					<minimum>12</minimum>
+				</prerequisite>
+				<desc>This ability allows you to instill the audience with any one emotion. Allowed emotions include anger, boredom, depression, disgust, fear, greed, hate, jealousy, joy, love, lust, patriotism, peace, sadness, and unrest. If you win the Quick Contest, your audience experiences the emotion you select. How they act as a result is up to the GM. Time: 10 minutes of uninterrupted storytelling. Fatigue Cost: 4 FP, whether successful or not. Duration: One hour.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -1434,7 +2568,12 @@
 					<name>HT</name>
 					<penalty>5</penalty>
 				</skillDefault>
-				<desc>Prerequisite: Flight advantage This skill represents training for endurance flying. Use the better of Flight or HT when rolling to avoid fatigue due to flying. When traveling long distances, a successful Flight roll increases the distance traveled by 20%. If a group of fliers is traveling together, all must make the Flight roll in order to get the increased distance.</desc>
+				<prerequisite>
+					<name>Flight</name>
+					<!--Advantage-->
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This skill represents training for endurance flying. Use the better of Flight or HT when rolling to avoid fatigue due to flying. When traveling long distances, a successful Flight roll increases the distance traveled by 20%. If a group of fliers is traveling together, all must make the Flight roll in order to get the increased distance.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -1444,7 +2583,23 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisites: Trained By A Master or Weapon Master, and both Jumping and Power Blow. This skill allows you to make incredible leaps. It costs 1 FP per attempt, successful or not. On a success, you may immediately attempt a jump. Use the standard jumping rules (see Jumping, p. 352), but triple your jumping distance. On a failure, you may still attempt the jump, but you receive no bonus and make all jumping-related rolls at -5. On a critical failure, you fall down! You may use Flying Leap to jump into someone as part of an attack. Such attacks are at an extra -2 to hit, but if you do hit, triple your ST for damage and knockback purposes. In a slam or collision, calculate Move from jumping distance as described for Super Jump (p. 89), and use this velocity to calculate damage. Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns.</desc>
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Weapon Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Jumping</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Power Blow</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This skill allows you to make incredible leaps. It costs 1 FP per attempt, successful or not. On a success, you may immediately attempt a jump. Use the standard jumping rules (see Jumping, p. 352), but triple your jumping distance. On a failure, you may still attempt the jump, but you receive no bonus and make all jumping-related rolls at -5. On a critical failure, you fall down! You may use Flying Leap to jump into someone as part of an attack. Such attacks are at an extra -2 to hit, but if you do hit, triple your ST for damage and knockback purposes. In a slam or collision, calculate Move from jumping distance as described for Super Jump (p. 89), and use this velocity to calculate damage. Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -1593,7 +2748,7 @@
 					<penalty>5</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name>Mathematics (Statistics)</name>
+					<name>Mathematics | Statistics</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<desc>This is skill at playing games of chance. A successful Gambling roll can (among other things) tell you if a game is rigged, identify a fellow gam- bler in a group of strangers, or “esti- mate the odds” in any tricky situation. When you gamble against the house, make a skill roll (the GM will secretly modify this roll if the odds are poor!). When you gamble against someone else, roll a Regular Contest of Gambling (p. 197) until one of you wins. Sleight of Hand skill (p. 221) is helpful if you want to cheat! To spot a cheater, roll a Quick Contest of your Gambling or Vision roll, whichever is higher, vs. your opponent’s Sleight of Hand skill (for card or dice tricks) or IQ (for other kinds of cheating). Modifiers: +1 to +5 for familiarity with the game being played; -1 to -5 if the game is rigged against you; -3 for Killjoy (p. 140), since you don’t care if you win or lose.</desc>
@@ -1780,7 +2935,11 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
-				<desc>Prerequisite: Naturalist. This is the ability to manufacture herbal concoctions that have magical effects â€“ healing balms, love potions, etc. It only exists in magical game worlds, where it functions much as Alchemy skill (p. 174). Unlike Alchemy, Herb Lore does not include the ability to analyze "elixirs." On the other hand, an expert at this skill can locate magical ingredients for free in the wild by making a few Naturalist rolls, while an alchemist requires rare and expensive materials (such as alkahest, dragon's blood, gemstones, and gold) to do his work.</desc>
+				<prerequisite>
+					<name>Naturalist</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This is the ability to manufacture herbal concoctions that have magical effects â€“ healing balms, love potions, etc. It only exists in magical game worlds, where it functions much as Alchemy skill (p. 174). Unlike Alchemy, Herb Lore does not include the ability to analyze "elixirs." On the other hand, an expert at this skill can locate magical ingredients for free in the wild by making a few Naturalist rolls, while an alchemist requires rare and expensive materials (such as alkahest, dragon's blood, gemstones, and gold) to do his work.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -1889,7 +3048,11 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisite: Trained By A Master. This skill allows you to anchor yourself to the ground by properly channeling your chi, using secret balancing techniques, etc. Make a skill roll whenever an attack (e.g., a shove or the Push skill, p. 216) would result in knockback or a fall. On a success, you neither experience knockback nor fall down. On a failure, you are knocked back but still get the usual DX roll to avoid falling down. On a critical failure, you automatically suffer full knockback and you fall down. This skill also helps against attacks with the Judo skill (p. 203). If you fail your active defense (or choose not to defend) against a Judo throw, your attacker must win a Quick Contest of Judo vs. your Immovable Stance skill, or his throw fails. Modifiers: -1 per yard of potential knockback; +4 for Perfect Balance</desc>
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This skill allows you to anchor yourself to the ground by properly channeling your chi, using secret balancing techniques, etc. Make a skill roll whenever an attack (e.g., a shove or the Push skill, p. 216) would result in knockback or a fall. On a success, you neither experience knockback nor fall down. On a failure, you are knocked back but still get the usual DX roll to avoid falling down. On a critical failure, you automatically suffer full knockback and you fall down. This skill also helps against attacks with the Judo skill (p. 203). If you fail your active defense (or choose not to defend) against a Judo throw, your attacker must win a Quick Contest of Judo vs. your Immovable Stance skill, or his throw fails. Modifiers: -1 per yard of potential knockback; +4 for Perfect Balance</desc>
 			</value>
 		</entry>
 		<entry>
@@ -2039,7 +3202,15 @@
 				<TL>false</TL>
 				<attr>HT</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisites: Trained By A Master or Weapon Master. You can channel your chi outward in a mighty shout (kiai) that freezes lesser foes. This counts as an attack, and costs 1 FP per attempt, successful or not. Roll a Quick Contest: your Kiai skill vs. your target's Will. You are at -1 for every full two yards of distance. Your victim resists at +1 if he is Hard of Hearing, at +2 if Deaf! If you win, your target is mentally stunned (see Effects of Stun, p. 420). This skill only works against a single victim; everyone can hear the shout, but your chi is focused on that one foe. However, a successful Kiai roll gives you +2 to Intimidation rolls vs. everyone within earshot.</desc>
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Weapon Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>You can channel your chi outward in a mighty shout (kiai) that freezes lesser foes. This counts as an attack, and costs 1 FP per attempt, successful or not. Roll a Quick Contest: your Kiai skill vs. your target's Will. You are at -1 for every full two yards of distance. Your victim resists at +1 if he is Hard of Hearing, at +2 if Deaf! If you win, your target is mentally stunned (see Effects of Stun, p. 420). This skill only works against a single victim; everyone can hear the shout, but your chi is focused on that one foe. However, a successful Kiai roll gives you +2 to Intimidation rolls vs. everyone within earshot.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -2091,7 +3262,11 @@
 					<name>Spear</name>
 					<penalty>3</penalty>
 				</skillDefault>
-				<desc>Prerequisite: Riding. The ability to use the lance: a long, spear-like weapon wielded from horseback. This is not a Melee Weapon skill (see p. 208). You may not use a lance to parry â€“ you must block or dodge enemy attacks.</desc>
+				<prerequisite>
+					<name>Riding</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>The ability to use the lance: a long, spear-like weapon wielded from horseback. This is not a Melee Weapon skill (see p. 208). You may not use a lance to parry â€“ you must block or dodge enemy attacks.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -2163,7 +3338,19 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisites: Trained By A Master, and both Acrobatics and Stealth at 14+. This skill allows you to exert very little pressure when you walk. On a successful Light Walk roll, you leave no visible tracks. Tracking rolls to follow you automatically fail unless they rely on something more than sight; thus, a human tracker would be baffled, but bloodhounds would suffer no penalty at all. You can also attempt to walk over fragile surfaces without falling through. Maximum Move under such circumstances is 1/3 normal (GM's decision). Thin ice would require an unmodified Light Walk roll, while rice paper would require a roll at -8! Finally, a successful Light Walk roll can give a bonus to Stealth when your intention is to move quietly. This bonus equals half your margin of success, rounded down. Minimum bonus is +1.</desc>
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Acrobatics</name>
+					<minimum>14</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Stealth</name>
+					<minimum>14</minimum>
+				</prerequisite>
+				<desc>This skill allows you to exert very little pressure when you walk. On a successful Light Walk roll, you leave no visible tracks. Tracking rolls to follow you automatically fail unless they rely on something more than sight; thus, a human tracker would be baffled, but bloodhounds would suffer no penalty at all. You can also attempt to walk over fragile surfaces without falling through. Maximum Move under such circumstances is 1/3 normal (GM's decision). Thin ice would require an unmodified Light Walk roll, while rice paper would require a roll at -8! Finally, a successful Light Walk roll can give a bonus to Stealth when your intention is to move quietly. This bonus equals half your margin of success, rounded down. Minimum bonus is +1.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -2389,7 +3576,16 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Easy</diff>
-				<desc>Prerequisites: Trained By A Master or Weapon Master*. may also learn this skill. You can actively focus your mind to resist mental attacks. This skill replaces Will when you resist magic spells, psi powers, Hypnotism, Invisibility Art, Kiai, and similar abilities. Mental Strength does not replace most normal Will rolls. Furthermore, it does not work if you are stunned, asleep, or unconscious â€“ for that, buy the Mind Shield advantage (p. 70).</desc>
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Weapon Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<!--A mage of psi can also learn this at GM discretion-->
+				<desc>You can actively focus your mind to resist mental attacks. This skill replaces Will when you resist magic spells, psi powers, Hypnotism, Invisibility Art, Kiai, and similar abilities. Mental Strength does not replace most normal Will rolls. Furthermore, it does not work if you are stunned, asleep, or unconscious â€“ for that, buy the Mind Shield advantage (p. 70).</desc>
 			</value>
 		</entry>
 		<entry>
@@ -2532,7 +3728,19 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
-				<desc>Prerequisites: Musical Ability 1 and either Musical Instrument or Singing at 12+. This cinematic skill allows you to influence the emotions of others by playing a musical instrument or singing. In some settings, this is a magical or psionic talent, or a special form of hypnotism, and works with any instrument, as well as with voice. In other settings, this skill is associated with a specific type of magical or ultra-tech instrument. To attempt Musical Influence, you must first get your audience to sit and listen to your performance. You must also make a successful Musical Instrument or Singing roll. You may then roll against your Musical Influence skill. On a success, you can adjust the reaction roll of your audience â€“ to you or to anyone present â€“ up or down by an amount equal to your margin of success, to a maximum of +3 (+4 for critical success). If you have only a few seconds, or if the audience is not paying full attention to your performance, you may adjust reaction rolls by Â±1 at most, regardless of your margin of success. Listeners who do not wish to be influenced may resist with Will. Hard of Hearing (p. 138) gives +4 to resist, and those with Deafness (p. 129) are completely immune. However, some science-fiction devices generate vibrations that affect the body, in which case a listener's sense of hearing is irrelevant. It is up to the GM to determine whether this skill works on animals as well as sapient beings. In classic fantasy, it just might!</desc>
+				<prerequisite>
+					<name>Musical Ability</name>
+					<minimum>1</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Musical Instrument</name>
+					<minimum>12</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Singing</name>
+					<minimum>12</minimum>
+				</prerequisite>
+				<desc>This cinematic skill allows you to influence the emotions of others by playing a musical instrument or singing. In some settings, this is a magical or psionic talent, or a special form of hypnotism, and works with any instrument, as well as with voice. In other settings, this skill is associated with a specific type of magical or ultra-tech instrument. To attempt Musical Influence, you must first get your audience to sit and listen to your performance. You must also make a successful Musical Instrument or Singing roll. You may then roll against your Musical Influence skill. On a success, you can adjust the reaction roll of your audience â€“ to you or to anyone present â€“ up or down by an amount equal to your margin of success, to a maximum of +3 (+4 for critical success). If you have only a few seconds, or if the audience is not paying full attention to your performance, you may adjust reaction rolls by Â±1 at most, regardless of your margin of success. Listeners who do not wish to be influenced may resist with Will. Hard of Hearing (p. 138) gives +4 to resist, and those with Deafness (p. 129) are completely immune. However, some science-fiction devices generate vibrations that affect the body, in which case a listener's sense of hearing is irrelevant. It is up to the GM to determine whether this skill works on animals as well as sapient beings. In classic fantasy, it just might!</desc>
 			</value>
 		</entry>
 		<entry>
@@ -2826,7 +4034,12 @@
 					<name>IQ</name>
 					<penalty>6</penalty>
 				</skillDefault>
-				<desc>Prerequisite: Mathematics (Applied) at TL5+. This is the science dealing with the properties and interactions of matter and energy. Beyond the basics (such as the behavior of moving bodies), a physicist's knowledge includes whatever is understood about electricity, gravity, heat, light, magnetism, radiation, and sound at his tech level. At TL6+, most physicists have an optional specialty (p. 169): acoustics, astrophysics, geophysics, nuclear physics, optics, particle physics, quantum physics, relativity, solid-state physics, etc. Some settings offer exotic options, such as hyperspace physics points), parachronic physics (the study of other realities and timelines), paraphysics (the physics of psi phenomena), probability physics (the study of probability manipulation), and temporal physics (the science of time travel).</desc>
+				<prerequisite>
+					<name>Mathematics | Applied</name>
+					<TL>5</TL>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This is the science dealing with the properties and interactions of matter and energy. Beyond the basics (such as the behavior of moving bodies), a physicist's knowledge includes whatever is understood about electricity, gravity, heat, light, magnetism, radiation, and sound at his tech level. At TL6+, most physicists have an optional specialty (p. 169): acoustics, astrophysics, geophysics, nuclear physics, optics, particle physics, quantum physics, relativity, solid-state physics, etc. Some settings offer exotic options, such as hyperspace physics points), parachronic physics (the study of other realities and timelines), paraphysics (the physics of psi phenomena), probability physics (the study of probability manipulation), and temporal physics (the science of time travel).</desc>
 			</value>
 		</entry>
 		<entry>
@@ -2966,7 +4179,15 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisites: Trained By A Master or Weapon Master. This is the ability to draw on your inner strength to deliver a devastating blow in melee combat. Roll once per attack. Power Blow costs 1 FP per attempt, successful or not. If successful, double your ST for damage purposes for the next attack only. This attack takes all normal modifiers, and must occur immediately after the Power Blow roll. If you know Power Blow at better than skill 20, you can triple your ST by accepting an extra -10 to the skill roll. You can also use this skill in noncombat situations. For instance, you could use Power Blow to double or triple your ST momentarily in order to move a heavy object. Such feats cost 1 FP and require a skill roll, as described above. Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns.</desc>
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Weapon Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This is the ability to draw on your inner strength to deliver a devastating blow in melee combat. Roll once per attack. Power Blow costs 1 FP per attempt, successful or not. If successful, double your ST for damage purposes for the next attack only. This attack takes all normal modifiers, and must occur immediately after the Power Blow roll. If you know Power Blow at better than skill 20, you can triple your ST by accepting an extra -10 to the skill roll. You can also use this skill in noncombat situations. For instance, you could use Power Blow to double or triple your ST momentarily in order to move a heavy object. Such feats cost 1 FP and require a skill roll, as described above. Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -2991,7 +4212,15 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
-				<desc>Prerequisites: Trained By A Master and Pressure Points at 16+. This skill represents knowledge of the most vulnerable vital points of the human body. It allows you to maim and kill by crushing and tearing vital organs and nerve clusters with deadly precision. To use this ability, you must make a successful unarmed attack. This attack is at -2 in addition to any hit location modifier (see Hit Location, p. 398). If you hit, make a Pressure Secrets roll. On a success, any damage that penetrates DR is doubled – or tripled if you targeted the vital organs. In effect, your hands and feet have become impaling weapons! You can also use this ability with locks and similar grappling attacks. This represents knowledge of exactly where to apply pressure to tear or sprain joints and ligaments. After applying the lock, make a Pressure Secrets roll. On a success, double the damage, shock, or harmful effects of the lock for that turn. This skill is unrealistic and potentially unbalancing. The GM should carefully weigh its impact before allowing it, and may wish to make it very difficult for PCs to learn – or even restrict it to deadly NPC opponents. Modifiers: Physiology modifiers (p. 181).</desc>
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Pressure Points</name>
+					<minimum>16</minimum>
+				</prerequisite>
+				<desc>This skill represents knowledge of the most vulnerable vital points of the human body. It allows you to maim and kill by crushing and tearing vital organs and nerve clusters with deadly precision. To use this ability, you must make a successful unarmed attack. This attack is at -2 in addition to any hit location modifier (see Hit Location, p. 398). If you hit, make a Pressure Secrets roll. On a success, any damage that penetrates DR is doubled – or tripled if you targeted the vital organs. In effect, your hands and feet have become impaling weapons! You can also use this ability with locks and similar grappling attacks. This represents knowledge of exactly where to apply pressure to tear or sprain joints and ligaments. After applying the lock, make a Pressure Secrets roll. On a success, double the damage, shock, or harmful effects of the lock for that turn. This skill is unrealistic and potentially unbalancing. The GM should carefully weigh its impact before allowing it, and may wish to make it very difficult for PCs to learn – or even restrict it to deadly NPC opponents. Modifiers: Physiology modifiers (p. 181).</desc>
 			</value>
 		</entry>
 		<entry>
@@ -3099,7 +4328,11 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisite: Trained By A Master. This skill allows you to channel your chi in order to "gently" push away an adversary or cause him to lose his balance. Roll against Push skill to hit. This counts as a barehanded attack (see Shove, p. 372), and your target may attempt any legal active defense. If you hit, use the higher of your ST or your Push skill as your effective ST. Roll swing damage for that ST, and double the result. For instance, if you had ST 10 and Push-15, you would roll swing damage for ST 15 (2d+1), and double it. This damage inflicts knockback (see Knockback, p. 378) but never actual physical injury.</desc>
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This skill allows you to channel your chi in order to "gently" push away an adversary or cause him to lose his balance. Roll against Push skill to hit. This counts as a barehanded attack (see Shove, p. 372), and your target may attempt any legal active defense. If you hit, use the higher of your ST or your Push skill as your effective ST. Roll swing damage for that ST, and double the result. For instance, if you had ST 10 and Push-15, you would roll swing damage for ST 15 (2d+1), and double it. This damage inflicts knockback (see Knockback, p. 378) but never actual physical injury.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -3141,7 +4374,8 @@
 					<name>Writing</name>
 					<penalty>3</penalty>
 				</skillDefault>
-				<desc>Prerequisite: literacy in at least one language (see p. 24)*. also a prerequisite. This is the ability to do library and file research. Roll against skill to find a useful piece of data in an appropriate place of research . . . if the information is there to be found. At the GM's option, when researching material connected with a "booklearned" skill such as Forensics, Literature, or Physics, you may roll against that skill at -2 instead, if that would be better than your Research skill or default (but this is not a general default level). Modifiers: Language modifiers eign tongue.</desc>
+				<!--Literacy in one language. At TL 8+ Computer Operations is a prerequisite-->
+				<desc> This is the ability to do library and file research. Roll against skill to find a useful piece of data in an appropriate place of research . . . if the information is there to be found. At the GM's option, when researching material connected with a "booklearned" skill such as Forensics, Literature, or Physics, you may roll against that skill at -2 instead, if that would be better than your Research skill or default (but this is not a general default level). Modifiers: Language modifiers eign tongue.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -3243,7 +4477,11 @@
 					<name>Diving Suit</name>
 					<penalty>2</penalty>
 				</skillDefault>
-				<desc>Prerequisite: Swimming. This is the ability to use self-contained underwater breathing apparatus (scuba). Roll when you first enter the water, and again every 30 minutes thereafter, to avoid inhaling water p. 436). If you know this skill above default level, a successful roll also lets you spot problems with the equipment before you put it on. Modifiers: -2 to -4 for unfamiliar scuba rigs; e.g., closed-circuit gear when you're used to open-circuit.</desc>
+				<prerequisite>
+					<name>Swimming</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This is the ability to use self-contained underwater breathing apparatus (scuba). Roll when you first enter the water, and again every 30 minutes thereafter, to avoid inhaling water p. 436). If you know this skill above default level, a successful roll also lets you spot problems with the equipment before you put it on. Modifiers: -2 to -4 for unfamiliar scuba rigs; e.g., closed-circuit gear when you're used to open-circuit.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -3705,7 +4943,15 @@
 					<name>Veterinary</name>
 					<penalty>5</penalty>
 				</skillDefault>
-				<desc>Prerequisites: First Aid or Physician. This is skill at using invasive medical techniques to treat sickness or injury. Roll once per operation. On a success, the operation proceeded without complications. On a failure, the patient took damage â€“ 2d for a simple amputation, 3d for other procedures. Surgery rolls can also facilitate recovery from wounds; see Surgery (p. 424). This skill represents general surgical expertise, which is relatively rare in real life. Most surgeons have an optional specialty (p. 169) in a certain part of the body (brain, heart, etc.) or a specific type of surgery (cosmetic surgery, microsurgery, transplant surgery, etc.). Modifiers: Equipment modifiers properly cleaned and sterilized; -3 for head or chest surgery; -5 for undiagnosed problems. If you lack Physician skill, you are at -5 to do anything but wounds or extract arrowheads, bullets, and shrapnel).</desc>
+				<prerequisite>
+					<name>First Aid</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Physician</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This is skill at using invasive medical techniques to treat sickness or injury. Roll once per operation. On a success, the operation proceeded without complications. On a failure, the patient took damage â€“ 2d for a simple amputation, 3d for other procedures. Surgery rolls can also facilitate recovery from wounds; see Surgery (p. 424). This skill represents general surgical expertise, which is relatively rare in real life. Most surgeons have an optional specialty (p. 169) in a certain part of the body (brain, heart, etc.) or a specific type of surgery (cosmetic surgery, microsurgery, transplant surgery, etc.). Modifiers: Equipment modifiers properly cleaned and sterilized; -3 for head or chest surgery; -5 for undiagnosed problems. If you lack Physician skill, you are at -5 to do anything but wounds or extract arrowheads, bullets, and shrapnel).</desc>
 			</value>
 		</entry>
 		<entry>
@@ -3872,7 +5118,15 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
-				<desc>Prerequisites: Trained By A Master or Weapon Master. This is the cinematic ability to throw anything you are strong enough to lift: knives, medicine balls, televisions . . . anything! Roll against skill to hit. Furthermore, if you know Throwing Art at DX level, add +1 to ST when figuring throwing distance, and weapons. These bonuses increase to or better. If you are a Weapon Master, this bonus is instead of the usual damage bonus for your weapon. You can use the items you throw as improvised weapons. Treat forks, kitchen knives, and other long, sharp objects as daggers. Any small, blunt object does thrust+1 crushing damage. Baseball bats do swing+1 crushing. Pencils do thrust-3 impaling. Playing cards do thrust-3 cutting. Throwing Art lets you throw anything covered by the Throwing and Thrown Weapon skills. If you have Throwing Art, you do not need those skills.</desc>
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Weapon Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This is the cinematic ability to throw anything you are strong enough to lift: knives, medicine balls, televisions . . . anything! Roll against skill to hit. Furthermore, if you know Throwing Art at DX level, add +1 to ST when figuring throwing distance, and weapons. These bonuses increase to or better. If you are a Weapon Master, this bonus is instead of the usual damage bonus for your weapon. You can use the items you throw as improvised weapons. Treat forks, kitchen knives, and other long, sharp objects as daggers. Any small, blunt object does thrust+1 crushing damage. Baseball bats do swing+1 crushing. Pencils do thrust-3 impaling. Playing cards do thrust-3 cutting. Throwing Art lets you throw anything covered by the Throwing and Thrown Weapon skills. If you have Throwing Art, you do not need those skills.</desc>
 			</value>
 		</entry>
 		<entry>
@@ -4081,7 +5335,24 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
-				<desc>Prerequisites: Trained By A Master or Weapon Master, Bow at 18+, and Meditation. This skill allows you to strike difficult targets with ease when using a bow. On a success, add up the penalties for size and speed/range, and then divide them by three (round down). Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns.</desc>
+				<!--Requires (a | b) & c & d-->
+				<prerequisite>
+					<name>Trained By A Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Weapon Master</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Bow</name>
+					<minimum>18</minimum>
+				</prerequisite>
+				<prerequisite>
+					<name>Meditation</name>
+					<minimum>0</minimum>
+				</prerequisite>
+				<desc>This skill allows you to strike difficult targets with ease when using a bow. On a success, add up the penalties for size and speed/range, and then divide them by three (round down). Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns.</desc>
 			</value>
 		</entry>
 	</skillList>
