@@ -252,10 +252,10 @@ public class SkillManager {
 	
 	private String formatSkillName(String unformated) {
 		String[] components = unformated.split("-");
-		String skillName = WordUtils.capitalizeFully(components[0]);
+		String skillName = utilities.Utilities.capitalizeFully(components[0]);
 		
 		for(int i = 1; i < components.length; i++) {
-			skillName += "-" + WordUtils.capitalizeFully(components[i]);
+			skillName += "-" + utilities.Utilities.capitalizeFully(components[i]);
 		}
 		
 		System.out.println(skillName);

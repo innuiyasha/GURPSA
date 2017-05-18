@@ -246,6 +246,26 @@ public class AdventureMain {
 		playerManager.AddCharacter(newChara);
 		playerManager.toXMLFile(newChara);
 	}
+	
+	private static void AdvantageMenu(Scanner in)
+		{
+			System.out.println("ADVANTAGE MENU\n");
+	
+			System.out.println("Please enter advantage of interest and field(s) of interest OR type 'exit' to leave\n"
+					+ "If a multi-word skill, use periods rather than spaces\n"
+					+ "Valid fields are: 'cost' 'description' 'nums'\n"
+					+ "'AdvantageName' Field1 Field2 . . . FieldN");
+	
+			String line;
+			while(!(line = in.nextLine()).equals("exit")) {
+				String[] parts = line.split(" ");
+				String name = parts[0].replace(".", " ");
+				System.out.println(name + ":");
+				for (int i = 1; i < parts.length; i++) {
+					System.out.println("\t" + parts[i] + ": " + advantageManager.request(name, parts[i]));
+				}
+			}
+		}
 
 	private static void PrototypeSkillCheck(Scanner in)
 	{

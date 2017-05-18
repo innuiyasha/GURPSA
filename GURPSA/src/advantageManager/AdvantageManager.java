@@ -13,8 +13,6 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.apache.commons.lang3.text.WordUtils;
-
 import dataContainers.CharacterFields.Advantage;
 
 @XmlRootElement
@@ -107,10 +105,10 @@ public class AdvantageManager {
 	
 	private String formatAdvantageName(String unformated) {
 		String[] components = unformated.split("-");
-		String advantageName = WordUtils.capitalizeFully(components[0]);
+		String advantageName = utilities.Utilities.capitalizeFully(components[0]);
 		
 		for(int i = 1; i < components.length; i++) {
-			advantageName += "-" + WordUtils.capitalizeFully(components[i]);
+			advantageName += "-" + utilities.Utilities.capitalizeFully(components[i]);
 		}
 		
 		System.out.println(advantageName);
