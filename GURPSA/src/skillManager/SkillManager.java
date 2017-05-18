@@ -216,7 +216,6 @@ public class SkillManager {
 	
 	
 	public String request(String skillName, String element) {
-		skillName = formatSkillName(skillName);
 		element = element.toLowerCase();
 		
 		switch(element) {
@@ -240,7 +239,6 @@ public class SkillManager {
 	}
 	
 	public Boolean isSkill(String skillName) {
-		skillName = formatSkillName(skillName);
 		
 		return skillMap.containsKey(skillName);
 	}
@@ -248,18 +246,5 @@ public class SkillManager {
 	public Skill getSkill(String skillName)
 	{
 		return skillMap.get(skillName);
-	}
-	
-	private String formatSkillName(String unformated) {
-		String[] components = unformated.split("-");
-		String skillName = utilities.Utilities.capitalizeFully(components[0]);
-		
-		for(int i = 1; i < components.length; i++) {
-			skillName += "-" + utilities.Utilities.capitalizeFully(components[i]);
-		}
-		
-		System.out.println(skillName);
-		return skillName;
-		
 	}
 }

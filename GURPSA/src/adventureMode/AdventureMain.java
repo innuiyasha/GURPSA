@@ -100,7 +100,7 @@ public class AdventureMain {
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
-			String name = parts[0].replace(".", " ");
+			String name = utilities.Utilities.formatSkillName(parts[0]);
 			System.out.println(name + ":");
 			for (int i = 1; i < parts.length; i++) {
 				System.out.println("\t" + parts[i] + ": " + skillManager.request(name, parts[i]));
@@ -199,8 +199,7 @@ public class AdventureMain {
 				+ "As an example, 'First.Aid -1'. Type 'exit' to finish character creation.");
 		while(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
-			String name = parts[0].replace(".", " ");
-			name = Utilities.formatSkillName(name);
+			String name = utilities.Utilities.formatSkillName(parts[0]);
 			if(parts.length > 1)
 			{
 				if(skillManager.isSkill(name)) {
@@ -259,7 +258,7 @@ public class AdventureMain {
 			String line;
 			while(!(line = in.nextLine()).equals("exit")) {
 				String[] parts = line.split(" ");
-				String name = parts[0].replace(".", " ");
+				String name = utilities.Utilities.formatSkillName(parts[0]);
 				System.out.println(name + ":");
 				for (int i = 1; i < parts.length; i++) {
 					System.out.println("\t" + parts[i] + ": " + advantageManager.request(name, parts[i]));

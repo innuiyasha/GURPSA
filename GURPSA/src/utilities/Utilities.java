@@ -104,14 +104,13 @@ public class Utilities {
 	}
 	
 	public static String formatSkillName(String unformated) {
+		unformated = unformated.replace('.', ' ');
 		String[] components = unformated.split("-");
 		String skillName = capitalizeFully(components[0]);
 		
 		for(int i = 1; i < components.length; i++) {
 			skillName += "-" + Utilities.capitalizeFully(components[i]);
 		}
-		
-		System.out.println(skillName);
 		return skillName;
 	}
 }

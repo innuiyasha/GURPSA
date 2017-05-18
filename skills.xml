@@ -1,7 +1,5 @@
 <!--An exclimation mark next to a skill name with specializations indicates that one MUST specialize-->
 <!--All references to specializations (including their own name should be formatted as such: "ORIGINAL SKILL | SPECIALIZATION NAME"-->
-
-
 <skillManager>
 	<skillList>
 		<entry>
@@ -11,6 +9,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
@@ -38,6 +37,7 @@
 				<attr>DX</attr>
 				<diff>Hard</diff>
 				<!--Gets +1 from perfect balance-->
+				<mustSpec>False</mustSpec>
 				<default>
 					<name>Aquabatics</name>
 					<penalty>4</penalty>
@@ -60,6 +60,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -82,6 +83,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -101,6 +103,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<desc>The ability to execute tight turns, loops, power dives, etc. in flight. You must be able to fly to learn this skill – although how you fly (magic, wings, jet pack, etc.) is irrelevant. Natural fliers might find flight to be as effortless as humans find walking, but they must still learn Aerobatics in order to engage in complex acrobatics. Add +2 to skill if you have 3D Spatial Sense (p. 34).</desc>
 				<default>
 					<name>Acrobatics</name>
@@ -129,20 +132,34 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
+				<mustSpec>False</mustSpec>
 				<desc>This is the study of magical transformations and transmutations. In a magical game world, an alchemist would be able to identify concoctions with magical effects ("elixirs"), such as love potions and healing unguents, and prepare them from suitable ingredients. This is a mechanical process, using the mana inherent in certain things; therefore, those without Magery can learn and use Alchemy, and Magery confers no benefit.</desc>
 			</value>
 		</entry>
 		<entry>
-			<key>Animal Handling !</key>
+			<key>Animal Handling</key>
 			<value>
 				<name>Animal Handling</name>
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
 				</skillDefault>
+				<skillSpecialty>
+					<name>Big Cats</name>
+				</skillSpecialty>
+				<skillSpecialty>
+					<name>Dogs</name>
+				</skillSpecialty>
+				<skillSpecialty>
+					<name>Equines</name>
+				</skillSpecialty>
+				<skillSpecialty>
+					<name>Raptors</name>
+				</skillSpecialty>
 				<desc>This is the ability to train and work with animals. You must specialize in a category of animals â€“ the more intelligent the animals, the narrower the category. Examples of interest to adventurers: Big Cats (jaguars, lions, tigers, etc.), Dogs, Equines (horses and donkeys), and Raptors (eagles, falcons, and hawks). The default between specialties is -2 within the same order (e.g., Dogs to Big Cats), -4 across orders (e.g., Dogs to Equines), and -6 for larger differences (e.g., Dogs to Raptors). To train an animal, make an Animal Handling roll once per day of training. A failed roll means the animal learned nothing; a badly failed roll means you are attacked. The time it takes to train an animal depends on the beast's intelligence and tractability When working with a trained animal, roll against skill for each task you set the animal. This roll is at -5 if the animal is not familiar with you, -5 if the circumstances are stressful to the animal, and -3 or more if the task is a complex one. To put on an entertaining circus act, snake-charming show, etc., you must make a separate Performance roll! This skill can also (sometimes) be used to quiet a wild, dangerous, or untrained animal. This roll is at -5 if the creature is wild or very frightened, or -10 if it is a man-eater or man-killer. Finally, this skill gives an advantage in combat against animals within your specialty. If you have Animal Handling at level 15, an animal's attack and defense rolls are at -1 against you, because you can predict its behavior. At skill 20, the animal's rolls are at -2.</desc>
 			</value>
 		</entry>
@@ -250,18 +267,18 @@
 				<attr>DX</attr>
 				<diff>Hard</diff>
 				<desc>The ability to engage in underwater acrobatics.</desc>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Swimming</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Amphibious</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Aquatic</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<default>
 					<name>Acrobatics</name>
 					<penalty>4</penalty>
@@ -284,6 +301,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>False</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
@@ -298,6 +316,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>False</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -335,6 +354,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -343,6 +363,27 @@
 					<name>Engineer (same)</name>
 					<penalty>4</penalty>
 				</skillDefault>
+				<skillSpecialty>
+					<name>Battlesuits</name>
+				</skillSpecialty>
+				<skillSpecialty>
+					<name>Body Armor</name>
+				</skillSpecialty>
+				<skillSpecialty>
+					<name>Force Shields</name>
+				</skillSpecialty>
+				<skillSpecialty>
+					<name>Heavy Weapons</name>
+				</skillSpecialty>
+				<skillSpecialty>
+					<name>Missile Weapons</name>
+				</skillSpecialty>
+				<skillSpecialty>
+					<name>Small Arms</name>
+				</skillSpecialty>
+				<skillSpecialty>
+					<name>Vehicular Armor</name>
+				</skillSpecialty>
 				<desc>This is the ability to build, modify, and repair a specific class of weapons or armor. (It does not include skill at design; for that, see Engineer, p. 190.) A successful roll lets you find a problem, if it isn't obvious; a second roll lets you repair it. Time required is up to the GM. You must specialize. The technologies covered by each specialty vary with TL. For instance, Armoury small arms at TL4, repeating small arms that fire cartridges at TL6, portable beam weapons at TL10. The GM should strictly enforce penalties for unfamiliarity. Armoury/TL10 (Small Arms) might cover both beam weapons and portable railguns, but going from one to the other gives you -2 to skill until you familiarize yourself with all the differences. Modifiers: -2 for an unfamiliar item within your specialty (e.g., plate armor when you're used to mail); equipment modifiers (p. 345).</desc>
 			</value>
 		</entry>
@@ -700,6 +741,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -744,12 +786,13 @@
 			</value>
 		</entry>
 		<entry>
-			<key>Artist !</key>
+			<key>Artist</key>
 			<value>
-				<name>Artist !</name>
+				<name>Artist</name>
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
@@ -1261,14 +1304,15 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
 				</skillDefault>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Mathematics | Applied</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This is the study of stars and other extraplanetary objects. An astronomer could answer questions about the Sun, the planets of the solar system, etc.</desc>
 			</value>
 		</entry>
@@ -1293,6 +1337,7 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>Meditation</name>
 					<penalty>4</penalty>
@@ -1313,12 +1358,13 @@
 			</value>
 		</entry>
 		<entry>
-			<key>Beam Weapons !</key>
+			<key>Beam Weapons</key>
 			<value>
-				<name>Beam Weapons !</name>
+				<name>Beam Weapons</name>
 				<TL>true</TL>
 				<attr>DX</attr>
 				<diff>Easy</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>4</penalty>
@@ -1348,11 +1394,11 @@
 				<desc>Any energy weapon that emits an area-effect cone or field.</desc>
 				<default>
 					<name>Beam Weapons | Pistol</name>
-					<penaltry>4</penaltry>
+					<penalty>4</penalty>
 				</default>
 				<default>
 					<name>Beam Weapons | Rifle</name>
-					<penaltry>4</penaltry>
+					<penalty>4</penalty>
 				</default>
 			</value>
 		</entry>
@@ -1363,11 +1409,11 @@
 				<desc>Any long arm that fires an energy or particle beam.</desc>
 				<default>
 					<name>Beam Weapons | Projector</name>
-					<penaltry>4</penaltry>
+					<penalty>4</penalty>
 				</default>
 				<default>
 					<name>Beam Weapons | Pistol</name>
-					<penaltry>4</penaltry>
+					<penalty>4</penalty>
 				</default>
 			</value>
 		</entry>
@@ -1396,11 +1442,57 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>Biology</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<desc>This is the ability to engineer living organisms with specific characteristics, or to create biotechnological products. You must specialize: Cloning: The creation and growth of clones. Genetic Engineering: The manipulation and modification of genes. Tissue Engineering: The manufacture of organs and tissues. These specialties default to each other at -4.</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Bioengineering | Cloning</key>
+			<value>
+				<name>Bioengineering | Cloning</name>
+				<desc>The creation and growth of clones</desc>
+				<default>
+					<name>Bioengineering | Genetic Engineering</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Bioengineering | Tissue Engineering</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Bioengineering | Genetic Engineering</key>
+			<value>
+				<name>Bioengineering | Genetic Engineering</name>
+				<desc>The manipulation and modification of genes.</desc>
+				<default>
+					<name>Bioengineering | Cloning</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Bioengineering | Tissue Engineering</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Bioengineering | Tissue Engineering</key>
+			<value>
+				<name>Bioengineering | Tissue Engineering</name>
+				<desc>The manufacture of organs and tissues</desc>
+				<default>
+					<name>Bioengineering | Cloning</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Bioengineering | Genetic Engineering</name>
+					<penalty>4</penalty>
+				</default>
 			</value>
 		</entry>
 		<entry>
@@ -1410,6 +1502,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
@@ -1428,14 +1521,15 @@
 				<TL>false</TL>
 				<attr>Per</attr>
 				<diff>Very Hard</diff>
-				<prerequisite>
+				<mustSpec>false</mustSpec>
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Weapon Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>You have learned to fight blindfolded or in absolute darkness. As a result, you can "sense" your targets without having to see them. This skill enables you to use senses other than vision â€“ mainly hearing, but also touch and even smell â€“ to pinpoint exactly where your opponents are. A successful roll allows one melee attack or active defense without any penalties for lighting (even total darkness), blindness (temporary or permanent), or an invisible foe. However, attacks made in total darkness, while blind, or against invisible enemies have an extra. If you also know Zen Archery (p. 228), you can shoot targets without seeing them by making rolls on both skills at -6. An opponent who knows you possess this ability can foil it by winning a Quick Contest of Stealth-4 vs. your Blind Fighting each turn. If he wins, you cannot detect him. However, Invisibility Art (p. 202) never works on you; it is completely useless against this skill. Modifiers: Background noise gives a penalty: -1 for rain, -2 for heavy rain or a storm, -3 for a crowded, noisy area or heavy machinery, -4 for a full football stadium, or -5 in the middle of an artillery barrage. If you cannot hear at all, the roll is at -7, but you may still attempt a roll, as the skill is not completely based on hearing. Add your level of Acute Hearing to the roll. Add the higher of your ESP Talent (p. 256) or Telepathy Talent (p. 257).</desc>
 			</value>
 		</entry>
@@ -1446,6 +1540,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>6</penalty>
@@ -1460,6 +1555,7 @@
 				<TL>true</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>5</penalty>
@@ -1472,25 +1568,102 @@
 			</value>
 		</entry>
 		<entry>
+			<key>Boating | Large Powerboat</key>
+			<value>
+				<name>>Boating | Large Powerboat</name>
+				<desc>Any boat with an enclosed cabin and an inboard motor.  Inclues cabin cruisers, houseboats and patrol boats.</desc>
+				<default>
+					<name>>Boating | Motorboat</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>>Boating | Sailboat</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>>Boating | Unpowered</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Boating | Motorboat</key>
+			<value>
+				<name>>Boating | Large Powerboat</name>
+				<desc>Any open powerboat notably speedboats and any of the boats used with the sailboat or unpowered specialty with outfitted with an outboard motor.</desc>
+				<default>
+					<name>>Boating | Large Powerboat</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>>Boating | Sailboat</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>>Boating | Unpowered</name>
+					<penalty>3</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Boating | Sailboat</key>
+			<value>
+				<name>Boating | Sailboat</name>
+				<desc>Any small watercraft moving under sail.</desc>
+				<default>
+					<name>Boating | Large Powerboat</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Boating | Sailboat</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Boating | Unpowered</name>
+					<penalty>3</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Boating | Unpowered</key>
+			<value>
+				<name>>Boating | Unpowered</name>
+				<desc>Any small watercraft that relies on muscle power wheter it is paddled, rowed, or poled.  Includes canoes, rowboats, and rafts.</desc>
+				<default>
+					<name>Boating | Large Powerboat</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Boating | Motorboat</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Boating | Sailboat</name>
+					<penalty>3</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
 			<key>Body Control</key>
 			<value>
 				<name>Body Control</name>
 				<TL>false</TL>
 				<attr>HT</attr>
 				<diff>Very Hard</diff>
-				<!--a & b & c-->
-				<prerequisite>
+				<mustSpec>false</mustSpec>
+				<!--a and b and c-->
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Breath Control</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Meditation</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This ability lets you affect involuntary bodily functions such as heart rate, blood flow, and digestion. One use of this skill is to enter a deathlike trance, during which only those who can win a Quick Contest of Diagnosis vs. your Body Control skill even realize that you are alive. This requires (30 imum one second. You can also use this skill to flush poisons from your body. To do so, you must first roll against Poisons (or Alchemy, Pharmacy, etc., as appropriate) to identify the poison. You cannot attempt this roll until you know you have been poisoned. In most cases, you only discover this when the first symptoms show! A successful Body Control roll â€“ adjusted by any modifier to the HT roll to resist the poison â€“ flushes the poison in 1d hours, after which it has no further effect. Finally, you may use the higher of this skill and basic HT to resist any Affliction, magic spell, or psionic attack that is normally resisted by HT.</desc>
 			</value>
 		</entry>
@@ -1501,6 +1674,7 @@
 				<TL>false</TL>
 				<attr>Per</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>Detect Lies</name>
 					<penalty>4</penalty>
@@ -1519,6 +1693,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>6</penalty>
@@ -1537,6 +1712,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<desc>This is the ability to throw the bolas: a length of cord with two or more weights attached. Its primary uses are to stop herd animals and to hunt small game, but it can also entangle opponents in combat. See Special Ranged Weapons (p. 410) for bolas rules.</desc>
 			</value>
 		</entry>
@@ -1547,6 +1723,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>5</penalty>
@@ -1561,6 +1738,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<desc>This is the skill of trained punching. Roll against Boxing to hit with a punch. Boxing does not improve kicking ability â€“ use Brawling (p. 182) or Karate (p. 203) for that. Boxing improves damage: if you know Boxing at DX+1 level, add +1 per die to basic thrust damage when you calculate punching damage. Add +2 per die if you know Boxing at DX+2 or better! Work out damage ahead of time and record it on your character sheet. When you defend with bare hands, Boxing allows you to parry two different attacks per turn, one with each hand. Your Parry score is (skill/2) + 3, rounded down. Boxing parries are at than thrusting attacks. Boxing also gives an improved retreating bonus when you parry; see Retreat (p. 377). For more on barehanded parries, see Parrying Unarmed (p. 376).</desc>
 			</value>
 		</entry>
@@ -1577,14 +1755,15 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>Special</name>
 					<penalty>0</penalty>
 				</skillDefault>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Psychology</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This is the "black arts" of technological personality alteration and mind control. Only intelligence, military, and security services teach it â€“ and only to individuals with suitable Rank or Security Clearance. Even then, it is rare outside police states (except perhaps during wartime). Brainwashing encompasses many techniques â€“ some proven, others little better than witchcraft. Depending on the setting, these might include drugs, electroshock, hypnotism, sensory deprivation, sleep deprivation, social pressure, subliminal messages, or surgery . . . and most likely a combination of several of these. Regardless of the techniques employed, brainwashing is handled as a Regular Contest (not a Quick Contest) between Brainwashing skill and the victim's Will. Roll once per day. Obviously, the brainwasher has a tremendous advantage: even if the victim wins this time, it is only a matter of time before he slips. Results depend on how effective the GM deems brainwashing to be, but might include insanity, personality alteration, or suggestions that can be triggered by future events. In game terms, the victim can acquire almost any mental quirk or disadvantage. In settings where neural interfaces exist, it might be possible to "hack" the victim's brain using a computer. This takes only a fraction of a second per attempt! Brain Hacking should be treated as its own skill, with Computer Hacking instead of Psychology as a prerequisite. This skill normally has no default. However, GMs who wish to explore the gory details can specify the techniques used in their campaign and have Brainwashing default to one or more of Electronics Operation (Medical)-6, Hypnotism-6, Interrogation-6, Pharmacy-6, Psychology-6, or Surgery6, as appropriate.</desc>
 			</value>
 		</entry>
@@ -1595,6 +1774,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Easy</diff>
+				<mustSpec>false</mustSpec>
 				<desc>This is the skill of "scientific" unarmed combat. Roll against Brawling to hit with a punch, or Brawling-2 to hit with a kick. Brawling can also replace DX when you attack with teeth, claws, horns, or other "natural weapons." Brawling improves damage: if you know Brawling at DX+2 level or better, add +1 per die to basic thrust damage when you calculate damage with Brawling attacks â€“ punches, kicks, claws, bites, etc. Work out damage ahead of time and record it on your character sheet. Brawling includes the ability to use the blackjack or sap. An attack with such a fist load is considered a punch at +1 to damage. When you defend with bare hands, Brawling allows you to parry two different attacks per turn, one with each hand. Your Parry score is (skill/2) + 3, rounded down. Brawling parries are at -3 vs. weapons other than thrusting attacks. For more on barehanded parries, see Parrying Unarmed (p. 376).</desc>
 			</value>
 		</entry>
@@ -1605,10 +1785,11 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<mustSpec>false</mustSpec>
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This skill allows you to find the weakest spot in any object when making a barehanded attack. Each attack requires a separate Breaking Blow roll. Roll against skill after you hit. Breaking Blow costs 1 FP per attempt, whether or not you hit. On a success, your attack gains an armor divisor of (5) against any braced, inanimate, homogenous target (see Injury to Unliving, Homogenous, and Diffuse Targets, p. 380), and you may treat the target as if it were Fragile (Brittle) (p. 136) for this one attack. In a cinematic game, you are not limited to inanimate targets. Your armor divisor affects any artificial armor or force field (not natural DR), and you may treat homogenous opponents as if they were Fragile (Brittle)! On a failure, your attack gains no special benefits. On a critical failure, you do the damage to your own hand or foot. Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns. -1 if your target is wood or plastic, -3 if brick or stone, or -5 if metal or hightech composites.</desc>
 			</value>
 		</entry>
@@ -1619,6 +1800,7 @@
 				<TL>false</TL>
 				<attr>HT</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<desc>This is the ability to breathe at maximum efficiency. On a successful skill roll, you can increase the time you can hold your breath for any reason (e.g., underwater) by 50%, or regain one FP in only two minutes spells that restore FP).</desc>
 			</value>
 		</entry>
@@ -1635,6 +1817,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Easy</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>4</penalty>
@@ -1659,6 +1842,7 @@
 				<TL>false</TL>
 				<attr>HT</attr>
 				<diff>Easy</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>HT</name>
 					<penalty>4</penalty>
@@ -1687,6 +1871,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -1713,6 +1898,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
@@ -1731,6 +1917,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>5</penalty>
@@ -1745,6 +1932,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>5</penalty>
@@ -1767,6 +1955,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Varies</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>Special</name>
 					<penalty>0</penalty>
@@ -1781,10 +1970,11 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
-				<prerequisite>
+				<mustSpec>false</mustSpec>
+				<skillPrerequisite>
 					<name>Computer Hacking</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This is the skill of gaining illegal access to a computer system â€“ usually using another computer over a communications network. A successful Computer Hacking roll allows you to gain surreptitious access to a system, or to find (or change) information on a system you have already broken into. On a critical failure, you fail to gain access and leave some sort of incriminating evidence of your attempt. This skill is cinematic, and simulates the way computer intrusion works in many movies and novels. It does not exist in realistic settings! Realistic "hackers" should learn a combination of Computer Operation intrusion software), Computer Programming (to write intrusion software), Cryptography, Electronics Operation (Communications or Surveillance), Electronics Repair legitimate users to reveal passwords), Research (to find documented security holes), and Scrounging (to words on discarded sticky notes, etc.). Modifiers: Equipment modifiers away from the field for a long time and have not had a chance to become familiar with the changes. Security measures give a penalty, from -1 for the cheapest commercial security software to -15 for the latest technology. Some measures resist your intrusion attempt; treat this as a Quick Contest of Hacking vs. the effective skill of the defenses.</desc>
 			</value>
 		</entry>
@@ -1795,6 +1985,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Easy</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>4</penalty>
@@ -1809,6 +2000,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<desc>This is the ability to write and debug computer software. A successful roll lets you find a bug in a program, determine a program's purpose by examining the code, answer a question about computer programming, or write a new program (time required is up to the GM). In settings where artificial intelligence (AI) exists, those who wish to work with AI must learn Computer Programming (AI). There is no default between this skill and regular Computer Programming. When using Detect Lies, Fast-Talk, Psychology, Teaching, and similar "social" skills on an AI, roll against the lower of Computer Programming (AI) and the relevant skill. Modifiers: -2 or more for an unfamiliar programming language (see Familiarity, p. 169). The time modifiers under Time Spent (p. 346) will often apply. When writing a program that deals with a specialized field of knowledge, the GM may require a roll against the lower of Computer Programming and your skill in that field (e.g., a Mathematics specialty for a complex mathematical program, or the lower of Teaching skill and a "subject" skill for an expert system that will assist users with a particular subject).</desc>
 			</value>
 		</entry>
@@ -1819,11 +2011,68 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
 				</skillDefault>
 				<desc>This skill represents an educated understanding of art and luxury items. It is vital to art dealers, critics, master thieves, and anyone who wishes to appear cultured. A successful roll lets you predict what critics will think of a piece of art, assess how much it will fetch on the market (+1 to Merchant skill when trading it), or impress the culturally literate (may give +1 to Savoir-Faire or reaction rolls, at the GM's option). You must specialize. Specialties include Dance, Literature, Music, Visual Arts, and Wine. Each specialty defaults to skills used to study or create the art at -3: Connoisseur (Literature) defaults to Literature, Poetry, or Writing at -3; Connoisseur (Music) defaults to Group Performance or Musical Instrument at -3; and so on. Modifiers: Cultural Familiarity modifiers (p. 23); -3 for Killjoy (p. 140).</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Connoisseur | Dance</key>
+			<value>
+				<name>Connoisseur | Dance</name>
+				<default>
+					<name>Dance</name>
+					<penalty>3</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Connoisseur | Literature</key>
+			<value>
+				<name>Connoisseur | Literature</name>
+				<default>
+					<name>Literature</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Poetry</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Writing</name>
+					<penalty>3</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Connoisseur | Music</key>
+			<value>
+				<name>Connoisseur | Music</name>
+				<default>
+					<name>Group Performance (Conducting)</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Musical Composition</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Musical Instrument</name>
+					<penalty>3</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Connoisseur | Visual Arts</key>
+			<value>
+				<name>Connoisseur | Painting</name>
+				<default>
+					<name>Music</name>
+					<penalty>3</penalty>
+				</default>
 			</value>
 		</entry>
 		<entry>
@@ -1833,6 +2082,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -1851,6 +2101,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
@@ -1869,6 +2120,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Easy</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>4</penalty>
@@ -1883,6 +2135,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -1901,6 +2154,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Easy</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>4</penalty>
@@ -1915,6 +2169,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>Mathematics | Cryptology</name>
 					<penalty>5</penalty>
@@ -1929,6 +2184,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Easy</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>4</penalty>
@@ -1937,7 +2193,476 @@
 					<name>Research</name>
 					<penalty>4</penalty>
 				</skillDefault>
-				<desc>This is the ability to assimilate quickly whatever qualifies as "news" in your world, and to recall it as needed. You must specialize in one of the following areas: Business: Exchange rates, investment performance, etc. Headline News: Usually bad news, such as assassinations, plagues, and wars. High Culture: Information on galleries, operas, symphonies, and so forth. People: The names of and gossip on celebrities, heads of state, and the like. Politics: Election results, international treaties, etc. Popular Culture: Hit songs, cool fashions, and hot products, among other things. Regional: News of all kinds for a specific region (pick one). This is the definitive "town crier" skill at low TLs. Science &amp; Technology: New discoveries and inventions. Sports: Scores for recent matches, names of star athletes, etc. Travel: Where the "beautiful people" are going this year, and how much it all costs. These specialties default to one another at -4. It is hard to bone up on one kind of news without learning about all the others! On a successful Current Affairs roll, the GM will inform you of any news within your specialty that pertains to the current adventure (possibly including clues, on a good roll) or give you a small skill bonus (e.g., a success on Current Affairs (Sports) might give +1 to Gambling skill when betting on a boxing match). Modifiers: -1 per day that you have been unable to access news media; -3 if you only have one source; +1 or more for "inside" access to the news (a subscription to an ordinary wire service is worth +1, while a job at an intelligence agency might give +3 or more).</desc>
+				<desc>This is the ability to assimilate quickly whatever qualifies as "news" in your world, and to recall it as needed. You must specialize in one of the following areas: Business: Exchange rates, investment performance, etc. Headline News: Usually bad news, such as assassinations, plagues, and wars. High Culture: Information on galleries, operas, symphonies, and so forth. People: The names of and gossip on celebrities, heads of state, and the like. Politics: Election results, international treaties, etc. Popular Culture: Hit songs, cool fashions, and hot products, among other things. Regional: News of all kinds for a specific region (pick one). This is the definitive "town crier" skill at low TLs. Science andamp; Technology: New discoveries and inventions. Sports: Scores for recent matches, names of star athletes, etc. Travel: Where the "beautiful people" are going this year, and how much it all costs. These specialties default to one another at -4. It is hard to bone up on one kind of news without learning about all the others! On a successful Current Affairs roll, the GM will inform you of any news within your specialty that pertains to the current adventure (possibly including clues, on a good roll) or give you a small skill bonus (e.g., a success on Current Affairs (Sports) might give +1 to Gambling skill when betting on a boxing match). Modifiers: -1 per day that you have been unable to access news media; -3 if you only have one source; +1 or more for "inside" access to the news (a subscription to an ordinary wire service is worth +1, while a job at an intelligence agency might give +3 or more).</desc>
+			</value>
+		</entry>
+		<entry>
+			<key>Current Affairs | Buisness</key>
+			<value>
+				<name>Current affairs | Buisness</name>
+				<desc>Exchange rates, investment performance, etc.</desc>
+				<default>
+					<name>Current Affairs | Headline News</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | High Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | People</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Politics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Popular Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Regional</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Science and Technology</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Sports</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Travel</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Current Affairs | Headline News</key>
+			<value>
+				<name>Current affairs | Headline News</name>
+				<desc>Usually bad news, such as assasinations, plagues, and wars</desc>
+				<default>
+					<name>Current Affairs | Buisness</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | High Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | People</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Politics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Popular Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Regional</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Science and Technology</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Sports</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Travel</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Current Affairs | High Culture</key>
+			<value>
+				<name>Current affairs | High Culture</name>
+				<desc>Information on galleries, operas, symphonies and so forth.</desc>
+				<default>
+					<name>Current Affairs | Buisness</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Headlines</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | People</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Politics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Popular Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Regional</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Science and Technology</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Sports</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Travel</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Current Affairs | High Culture</key>
+			<value>
+				<name>Current affairs | High Culture</name>
+				<desc>Exchange rates, investment performance, etc.</desc>
+				<default>
+					<name>Current Affairs | Buisness</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Headline News</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | People</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Politics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Popular Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Regional</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Science and Technology</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Sports</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Travel</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Current Affairs | People</key>
+			<value>
+				<name>Current affairs | People</name>
+				<desc>The names of and gossip on celebrities, heads of state and the like.</desc>
+				<default>
+					<name>Current Affairs | Buisness</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Headline News</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | High Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Politics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Popular Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Regional</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Science and Technology</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Sports</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Travel</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Current Affairs | Politics</key>
+			<value>
+				<name>Current affairs | Politics</name>
+				<desc>Election results, international treaties etc.</desc>
+				<default>
+					<name>Current Affairs | Buisness</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Headline News</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | High Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | People</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Popular Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Regional</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Science and Technology</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Sports</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Travel</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Current Affairs | Popular Culture</key>
+			<value>
+				<name>Current affairs | Popular Culture</name>
+				<desc>Hit songs, cool fashions, and hot products among other things.</desc>
+				<default>
+					<name>Current Affairs | Buisness</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Headline News</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | High Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Politics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Regional</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Science and Technology</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Sports</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Travel</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Current Affairs | Regional</key>
+			<value>
+				<name>Current affairs | Regional</name>
+				<desc>ENews of all kinds for a specific region (pick one)  This is the definitive "town crier" skill at low TLs.</desc>
+				<default>
+					<name>Current Affairs | Buisness</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Headline News</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | High Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | People</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Politics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Popular Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Science and Technology</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Sports</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Travel</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Current Affairs | Science and Technology</key>
+			<value>
+				<name>Current affairs | Science and Technology</name>
+				<desc>New discoveries and inventions.</desc>
+				<default>
+					<name>Current Affairs | Buisness</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Headline News</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | High Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | People</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Politics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Popular Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Regional</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Sports</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Travel</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Current Affairs | Sports</key>
+			<value>
+				<name>Current affairs | Sports</name>
+				<desc>Scores of recent matches, names of star athletes, etc.</desc>
+				<default>
+					<name>Current Affairs | Buisness</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Headline News</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | High Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | People</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Politics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Popular Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Regional</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Science and Technology</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Travel</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Current Affairs | Travel</key>
+			<value>
+				<name>Current affairs | Sports</name>
+				<desc>Where the "beautiful people" are going this year, and how much it all costs..</desc>
+				<default>
+					<name>Current Affairs | Buisness</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Headline News</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | High Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | People</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Politics</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Popular Culture</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Regional</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Science and Technology</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Current Affairs | Sports</name>
+					<penalty>4</penalty>
+				</default>
 			</value>
 		</entry>
 		<entry>
@@ -1961,6 +2686,7 @@
 				<TL>false</TL>
 				<attr>Per</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>Perception</name>
 					<penalty>6</penalty>
@@ -1983,6 +2709,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
@@ -2009,6 +2736,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
@@ -2027,6 +2755,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -2051,6 +2780,7 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>Will</name>
 					<penalty>6</penalty>
@@ -2065,6 +2795,7 @@
 				<TL>true</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>5</penalty>
@@ -2077,12 +2808,379 @@
 			</value>
 		</entry>
 		<entry>
+			<key>Driving | Automobile</key>
+			<value>
+				<desc>Any vehicles with three of mor wheels that weighs less than 5 tons and does not move on rails.</desc>
+				<name>Driving | Automobile</name>
+				<default>
+					<name>Driving | Construction Equipment</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Halftrack</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Heavy Wheeled</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Driving | Hovercraft</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Locomotive</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Mecha</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Motorcycle</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Tracked</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Driving | Construction Equipment</key>
+			<value>
+				<name>Driving | Construction Equipment</name>
+				<desc>Any kind of bulldozer, crane, plow, etc.</desc>
+				<default>
+					<name>Driving | Automobile</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Halftrack</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Heavy Wheeled</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Hovercraft</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Locomotive</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Mecha</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Motorcycle</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Tracked</name>
+					<penalty>5</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Driving | Halftrack</key>
+			<value>
+				<name>Driving | Halftrack</name>
+				<desc>Any vehicle that moves on tracks and either wheels or skids.</desc>
+				<default>
+					<name>Driving | Automobile</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Construction Equipment</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Heavy Wheeled</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Hovercraft</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Locomotive</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Mecha</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Motorcycle</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Tracked</name>
+					<penalty>2</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Driving | Heavy Wheeled</key>
+			<value>
+				<name>Driving | Heavy Wheeled</name>
+				<desc>Any vehicle with 3 or more wheels that weighs 5 tons or more and does not move on rails.</desc>
+				<default>
+					<name>Driving | Automobile</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Driving Construction Equipment</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Halftrack</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Hovercraft</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Locomotive</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Mecha</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Motorcycle</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Tracked</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Driving | Hovercraft</key>
+			<value>
+				<name>Driving | Hovercraft</name>
+				<desc>Any kind of air-cushion vehicle.</desc>
+				<default>
+					<name>Driving | Automobile</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving Construction Equipment</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Halftrack</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Heavy Wheeled</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Locomotive</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Mecha</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Motorcycle</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Tracked</name>
+					<penalty>5</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Driving | Locomotive</key>
+			<value>
+				<name>Driving | Locomotive</name>
+				<desc>Any vehicle that moves on conentional or maglev rails.</desc>
+				<default>
+					<name>Driving | Automobile</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving Construction Equipment</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Halftrack</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Heavy Wheeled</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Hovercraft</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Mecha</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Motorcycle</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Tracked</name>
+					<penalty>5</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Driving | Mecha</key>
+			<value>
+				<name>Driving | Mecha</name>
+				<desc>AAny kind of legged, bouncing, rolling, or slithering vehicle.</desc>
+				<default>
+					<name>Battlesuit</name>
+					<penalty>3</penalty>
+				</default>
+				<default>
+					<name>Driving | Automobile</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving Construction Equipment</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Halftrack</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Heavy Wheeled</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Hovercraft</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Locomotive</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Motorcycle</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Tracked</name>
+					<penalty>5</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Driving | Locomotive</key>
+			<value>
+				<name>Driving | Locomodive</name>
+				<desc>Any vehicle that moves on conentional or maglev rails.</desc>
+				<default>
+					<name>Driving | Automobile</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving Construction Equipment</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Halftrack</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Heavy Wheeled</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Hovercraft</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Mecha</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Motorcycle</name>
+					<penalty>5</penalty>
+				</default>
+				<default>
+					<name>Driving | Tracked</name>
+					<penalty>5</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Driving | Motorcycle</key>
+			<value>
+				<name>Driving | Motorcycle</name>
+				<desc>Any powered one- or two-wheeled vehicle including those with sidecards.  Large motorcycles often have a Minimum ST.</desc>
+				<default>
+					<name>Bycicle</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Driving | Tracked</key>
+			<value>
+				<name>Driving | Tracked</name>
+				<desc>Any vehicle that moves on tracks.</desc>
+				<default>
+					<name>Driving | Automobile</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving Construction Equipment</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Halftrack</name>
+					<penalty>2</penalty>
+				</default>
+				<default>
+					<name>Driving | Heavy Wheeled</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Hovercraft</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Locomotive</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Mecha</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Driving | Motorcycle</name>
+					<penalty>4</penalty>
+				</default>
+			</value>
+		</entry>
+		<entry>
 			<key>Dropping</key>
 			<value>
 				<name>Dropping</name>
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>3</penalty>
@@ -2101,6 +3199,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
@@ -2127,6 +3226,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -2145,6 +3245,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -2161,12 +3262,662 @@
 			</value>
 		</entry>
 		<entry>
+			<key>Electronics Operation | Communications</key>
+			<value>
+				<name>Electronics Operation | Communications</name>
+				<desc>All forms of electronic communications techonology:radios, sattelite uplinks, laser communicators, etc.  Includes knowledge of any standard current communication codes appropriate to your background.  These do not require a skill roll - Although appempts to understand or use an unfamiliar code do require a roll.  At TL5-7 this includes telegraphy: you can send or receive 2 words per minute (wmp) per point of skill at TL5, 3 wpm per point of skill at TL6-7.</desc>
+				<default>
+					<name>Electronics Operation | Electronic Warfare</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Matter Transmitters</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Media</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Medical</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Parachronic</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Psychotronics</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Scientific</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Security</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sensors</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sonar</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Surveillance</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Temporal</name>
+					<penaltly>4</penaltly>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Electronics Operation | Electronic Warfare</key>
+			<value>
+				<name>Electronics Operation | Electronic Warfare</name>
+				<desc>All signals-intelligence and jamming equipment, including electronic countermeasures (ECM) and electronic counter-countermeasures (ECCM).  In most game worlds, only intelligence agencies and the military teach this specialty - and only to individuals with suitiable Military Rank or Security clearance.</desc>
+				<default>
+					<name>Electronics Operation | Communications</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Matter Transmitters</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Media</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Medical</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Parachronic</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Psychotronics</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Scientific</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Security</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sensors</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sonar</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Surveillance</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Temporal</name>
+					<penaltly>4</penaltly>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Electronics Operation | Force Shields</key>
+			<value>
+				<name>Electronics Operation | Force Shields</name>
+				<desc>Portable, vehicular, base, and starship force shields and deflectors.</desc>
+				<default>
+					<name>Electronics Operation | Communications</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Electronic Warfare</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Matter Transmitters</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Media</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Medical</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Parachronic</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Psychotronics</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Scientific</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Security</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sensors</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sonar</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Surveillance</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Temporal</name>
+					<penaltly>4</penaltly>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Electronics Operation | Matter Transmitters</key>
+			<value>
+				<name>Electronics Operation | Media</name>
+				<desc>All matter transmitters and teleporters.  Critical failures can be disastrous especially when transmitting living beings1</desc>
+				<default>
+					<name>Electronics Operation | Communications</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Electronic Warfare</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Media</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Medical</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Parachronic</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Psychotronics</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Scientific</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Security</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sensors</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sonar</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Surveillance</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Temporal</name>
+					<penaltly>4</penaltly>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Electronics Operation | Media</key>
+			<value>
+				<name>Electronics Operation | Media</name>
+				<desc>All forms of audio, film, and video editing equipment.  If three-dimensional video ("holographics") or sensory recording ("sensies") exist in the setting, this specialty includes the setting, this specialty includes the ability to operate the relevant equipment.  Treat different media as mutually unfamilliar technologies.</desc>
+				<default>
+					<name>Electronics Operation | Communications</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Electronic Warfare</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Matter Transmitters</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Medical</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Parachronic</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Psychotronics</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Scientific</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Security</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sensors</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sonar</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Surveillance</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Temporal</name>
+					<penaltly>4</penaltly>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Electronics Operation | Medical</key>
+			<value>
+				<name>Electronics Operation | Medical</name>
+				<desc>All manner of electronic diagnostic and life-support equipment.</desc>
+				<default>
+					<name>Electronics Operation | Communications</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Electronic Warfare</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Matter Transmitters</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Media</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Parachronic</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Psychotronics</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Scientific</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Security</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sensors</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sonar</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Surveillance</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Temporal</name>
+					<penaltly>4</penaltly>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Electronics Operation | Security</key>
+			<value>
+				<name>Electronics Operation | Security</name>
+				<desc>Both operating and cirvumventing all forms of alarms, security sensors, and area-surveillance technology.</desc>
+				<default>
+					<name>Electronics Operation | Communications</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Electronic Warfare</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Matter Transmitters</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Media</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Medical</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Parachronic</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Psychotronics</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Scientific</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sensors</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sonar</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Surveillance</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Temporal</name>
+					<penaltly>4</penaltly>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Electronics Operation | Sensors</key>
+			<value>
+				<name>Electronics Operation | Sensors</name>
+				<desc>Most forms of long-range detection gear, from air-defense radar to starship sensor suites.  Certain highly specialized sensors (such as sonar) have their own specialties.</desc>
+				<default>
+					<name>Electronics Operation | Communications</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Electronic Warfare</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Matter Transmitters</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Media</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Medical</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Parachronic</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Psychotronics</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Scientific</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Security</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sonar</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Surveillance</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Temporal</name>
+					<penaltly>4</penaltly>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Electronics Operation | Sonar</key>
+			<value>
+				<name>Electronics Operation | Sonar</name>
+				<desc>All types of accoustic detection and ranging gear (normally used underwater)</desc>
+				<default>
+					<name>Electronics Operation | Communications</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Electronic Warfare</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Matter Transmitters</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Media</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Medical</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Parachronic</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Psychotronics</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Scientific</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Security</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sensors</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Surveillance</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Temporal</name>
+					<penaltly>4</penaltly>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Electronics Operation | Surveillance</key>
+			<value>
+				<name>Electronics Operation | Surveillance</name>
+				<desc>All forms of concealable or remote surveillance gear: "bugs", hidden cameras, long-range microphones, wiretaps, etc.</desc>
+				<default>
+					<name>Electronics Operation | Communications</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Electronic Warfare</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Matter Transmitters</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Media</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Medical</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Parachronic</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Psychotronics</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Scientific</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Security</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sensors</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sonar</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Temporal</name>
+					<penaltly>4</penaltly>
+				</default>
+			</value>
+		</entry>
+		<entry>
+			<key>Electronics Operation | Temporal</key>
+			<value>
+				<name>Electronics Operation | Temporal</name>
+				<desc>All manner of time machines.  Critical failures can be disastrous for the time travelers! Make sperate rolls to "lock onto" and transfer the travelers.</desc>
+				<default>
+					<name>Electronics Operation | Communications</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Electronic Warfare</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Force Shields</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Matter Transmitters</name>
+					<penalty>4</penalty>
+				</default>
+				<default>
+					<name>Electronics Operation | Media</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Medical</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Parachronic</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Psychotronics</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Scientific</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Security</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sensors</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Sonar</name>
+					<penaltly>4</penaltly>
+				</default>
+				<default>
+					<name>Electronics Operation | Surveillance</name>
+					<penaltly>4</penaltly>
+				</default>
+			</value>
+		</entry>
+		<entry>
 			<key>Electronics Repair</key>
 			<value>
 				<name>Electronics Repair</name>
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -2189,15 +3940,16 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>Special</name>
 					<penalty>0</penalty>
 				</skillDefault>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Mathematics | Applied</name>
 					<TL>5</TL>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This is the ability to design and build technological devices and systems. A successful roll lets you design a new system, diagnose a glitch, identify the purpose of a strange device, or improvise a gadget to solve a problem. Time required for each attempt is up to the GM. Note that engineers are designers and inventors; they are not necessarily skilled at the routine operation or maintenance of the things they design! For instance, Engineer (Small Arms) lets you design a new assault rifle, but you need Armoury skill to maintain it and Guns skill to shoot it. You must specialize. Possible fields include: Artillery: Designing whatever passes for artillery at your TL, from trebuchets to smart missiles. Default: Armoury (Heavy Weapons)-6. Civil: Planning highways, aqueducts, buildings, etc. Default: Architecture-6. Clockwork: Designing wind-up gadgetry â€“ watches, mechanical men, and the like. Default: Mechanic Combat: Building or removing fortifications, trenches, etc. Default: Explosives (Demolition)-6. Electrical: Designing electrical systems, such as power cells and transmission lines. Default: Electrician-6. Electronics: Designing and building electronic apparatus, from computers to starship sensor arrays. (The specific technologies involved â€“ vacuum tubes, transistors, photonics, etc. â€“ will depend on the tech level.) Default: Electronics Repair (any)-6. Materials: Concocting new structural materials. Prerequisites: Chemistry or Metallurgy. Defaults: Chemistry-6 or Metallurgy-6. Microtechnology: Designing micromachines. Default: Mechanic Mining: Designing underground structures. Defaults: Explosives Nanotechnology: Designing nanomachines. Default: Mechanic Parachronic: Designing apparatus for crossing dimensions or timelines. Prerequisite: Physics. Default: Electronics Operation (Parachronic)6, but there is no default if your society has not discovered dimensional travel. Psychotronics: Designing psionic technology, such as telepathic shields and amplifiers. Default: Electronics Operation (Psychotronics)-6, but there is no default for individuals from backgrounds where psionics do not exist. Robotics: Designing robotics and cybernetics. Default: Mechanic Small Arms: Designing personal firearms, such as guns and portable rocket launchers. Default: Armoury Temporal: Designing time machines. Prerequisite: Physics. Default: Electronics Operation for individuals from backgrounds without time travel! Vehicle Type: Designing a single, broad class of vehicle. Examples include Engineer (Automobiles), Engineer (Ships), and Engineer vehicle type)-6. Engineer specialties normally default to one another at -4; however, the GM is free to rule that in his campaign, there is no default between exotic specialties (Nanotechnology, Parachronic, Psychotronics, etc.) and more mundane ones (Civil, Combat, Mining, etc.). Modifiers: Equipment modifiers you can give the GM a good description of what you want it to do.</desc>
 			</value>
 		</entry>
@@ -2208,14 +3960,15 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<mustSpec>false</mustSpec>
+				<skillPrerequisite>
 					<name>Charisma</name>
 					<minimum>1</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Public Speaking</name>
 					<minimum>12</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>Bards in fantasy can often influence others through storytelling. The GM may choose to represent this ability using the four Enthrallment skills described below. Depending on the setting, these skills might be magical, psionic, or a cinematic form of hypnotism. Each has a time requirement, FP cost, and duration, and requires two skill rolls to use. At the outset of the tale, roll vs. Public Speaking skill; if you can't grab your audience's attention early on, you won't have much of a chance of controlling them by the end. On a success, proceed to the Enthrallment skill roll; critical success gives +1 on that roll. On a failure, you may still attempt the Enthrallment roll, but at a penalty equal to your margin of failure. Critical failure means your Enthrallment attempt fails automatically. After the time required to enthrall has passed, roll a Quick Contest of your Enthrallment skill vs. the Will of each audience member. If you win, you affect your audience â€“ see the individual skill description for effects. If you lose or tie, there is no effect. However, if you critically fail, your audience instantly turns hostile! You may never learn these skills at a skill level higher than your Public Speaking skill. Audience Size: An "audience" can be one listener or a hundred â€“ as many as can hear the tale. However, the number of audience members that you can enthrall at one sitting is limited to your Charisma level squared, to a maximum of 25 people at Charisma 5. Modifiers: All four Enthrallment skills are at -3 for Low Empathy good tale, the GM should reward him with +1 to +3 to the Public Speaking and Enthrallment rolls!</desc>
 			</value>
 		</entry>
@@ -2226,10 +3979,11 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<mustSpec>false</mustSpec>
+				<skillPrerequisite>
 					<name>Suggest</name>
 					<minimum>12</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This skill allows you to tell a story so skillfully that those listening lose their will and do whatever you want them to do. In effect, they believe themselves to be in the tale, and are vulnerable to being manipulated by you, the teller of the tale. If you win the Quick Contest, the audience becomes intensely loyal to you. They follow any direct order you give. In the absence of a direct order, they act in your best interest, as they understand it. If you tell someone to do something very hazardous, or that goes against his usual code of behavior (GM's decision), he gets a Will-5 roll to break the captivation. Otherwise, he is your loyal supporter for all intents and purposes. Time: 30 minutes of uninterrupted storytelling. Fatigue Cost: 8 FP, whether successful or not. Duration: Captivation lasts until the subject becomes unconscious or falls asleep, you become unconscious or fall asleep, you attack the subject, or the subject loses half his HP to injury.</desc>
 			</value>
 		</entry>
@@ -2240,6 +3994,7 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<desc>This ability allows you to bring an audience over to your point of view, granting you a bonus to your reaction rolls with them. You may use this skill whenever a reaction roll is called for. If you win the Quick Contest, add your margin of victory to any reaction roll those in the audience make regarding you â€“ for any reason â€“ to a maximum of +3 (+4 on a critical success). If you critically fail, the best possible reaction is Poor (see p. 560). Time: 1 minute. Fatigue Cost: 2 FP, whether successful or not. Duration: Until you do something to change the audience's opinion!</desc>
 			</value>
 		</entry>
@@ -2250,10 +4005,11 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<mustSpec>false</mustSpec>
+				<skillPrerequisite>
 					<name>Persuade</name>
 					<minimum>12</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This ability lets you give your audience a single, simple suggestion. A suggestion should have no complex grammatical clauses â€“ just a subject, verb, object, and at most two modifiers. A given subject gets +5 to resist if your suggestion goes against his personal safety, and tions, or knowledge. If you win the Quick Contest, the audience members try to act on the suggestion to the best of their abilities own. Time: 20 minutes of uninterrupted storytelling. Fatigue Cost: 6 FP, whether successful or not. Duration: 10 minutes â€“ or longer, if you continue to talk to the audience and can make a successful Suggest roll every 10 minutes! Once the suggestion lapses, audience members only wonder why they acted the way they did if the suggestion was something they would never have done normally. he doesn't accede to our demands!" is not.</desc>
 			</value>
 		</entry>
@@ -2264,10 +4020,11 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<mustSpec>false</mustSpec>
+				<skillPrerequisite>
 					<name>Persuade</name>
 					<minimum>12</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This ability allows you to instill the audience with any one emotion. Allowed emotions include anger, boredom, depression, disgust, fear, greed, hate, jealousy, joy, love, lust, patriotism, peace, sadness, and unrest. If you win the Quick Contest, your audience experiences the emotion you select. How they act as a result is up to the GM. Time: 10 minutes of uninterrupted storytelling. Fatigue Cost: 4 FP, whether successful or not. Duration: One hour.</desc>
 			</value>
 		</entry>
@@ -2278,6 +4035,7 @@
 				<TL>true</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>5</penalty>
@@ -2296,6 +4054,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>5</penalty>
@@ -2314,6 +4073,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>6</penalty>
@@ -2328,6 +4088,7 @@
 				<TL>false</TL>
 				<attr>Per</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>Perception</name>
 					<penalty>6</penalty>
@@ -2342,6 +4103,7 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>Will</name>
 					<penalty>6</penalty>
@@ -2368,6 +4130,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>true</mustSpec>
 				<desc>An Expert Skill represents crossdisciplinary knowledge of a single, narrow theme. When answering factual questions on that theme, you may substitute a roll against your Expert Skill for any IQ-based roll against any skill that has a default. Expert Skills do not exempt you from Cultural Familiarity (p. 23) or Language vide the ability to do practical tasks. Experts sometimes complement Expert Skills with related Area Knowledge skills (p. 176), but you must learn these separately. You must specialize by theme, and the GM is free to forbid any theme he feels is too broad. Some examples: Computer Security: Expertise at combating computer intrusion Computer Operation, Cryptography, or Electronics Operation to spot system. Use Computer Programming to patch or exploit such holes. Conspiracy Theory: The study of interlocking networks of conspiracies. Can substitute for Anthropology, Geography, History, Literature, or Occultism to answer questions about conspiracies, and can also work as Intelligence Analysis for this purpose inner secrets, which are the province of Hidden Lore (p. 199). Egyptology: The study of ancient Egypt. Can function as Anthropology, Archaeology, History, Linguistics, or Occultism for that purpose. Epidemiology: The study of the spread of disease. Can serve as Biology, Diagnosis, Forensics, Geography, or Mathematics when deducing how a disease was spread. Hydrology: The study of a planet's water. Can be used in place of Biology, Chemistry, Geography, Geology, or Meteorology to answer questions about precipitation, flooding, irrigation, etc. Military Science: General expertise on military capabilities. Can substitute for Artillery, Armoury, Strategy, or Tactics to answer questions about â€“ but not use â€“ weapons or strategies. Natural Philosophy: A general skill that usually replaces specific science skills (which might not even exist yet!) for scholars at TL1-4. Can be used in place of any science skill (e.g., Biology or Physics) to answer questions about how the universe is believed to work. Political Science: The academic study of politics. Can substitute for Geography, History, Law, Politics, or Sociology when performing political analysis. Psionics: The study of the psionic mind and brain. Can function as Biology, Diagnosis, Physician, Physiology, or Psychology when dealing with psi phenomena in living beings. Cannot substitute for Electronics Operation, Electronics Repair, and Engineer specialties that deal with psychotronics. Thanatology: The esoteric study of death. Can stand in for Anthropology, Archaeology, Occultism, or Theology when dealing with death and the dead. Xenology: General knowledge of the known races in your setting. Can substitute for Anthropology, History, Physiology, or Psychology to identify a member of a race different from your own, or to answer general questions about the race and its culture.</desc>
 			</value>
 		</entry>
@@ -2378,6 +4141,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -2396,6 +4160,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -2436,6 +4201,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Easy</diff>
+				<mustSpec>true</mustSpec>
 				<desc>This skill lets you quickly draw a weapon from its holster, sheath, or hiding place. A successful roll means you ready the weapon instantly. This does not count as a combat maneuver; you can use the weapon to attack on the same turn. On a failure, you ready your weapon normally but may do nothing else on your turn. A critical failure means you drop the weapon! You must specialize in one of these weapon types: Force Sword, Knife, Long Arm (rifle, shotgun, submachine gun, etc.), Pistol, Sword (any onehanded blade larger than a knife), or Two-Handed Sword. The GM may add Fast-Draw skills for other weapons (or even tools) that one could reasonably draw quickly. In addition to the above specialties, there are two Fast-Draw skills that allow you to reload missile weapons quickly: Fast-Draw (Arrow): Lets you ready a single arrow, bolt, or dart instantly. This reduces the time required to reload a bow, crossbow, or blowgun by one second. Fast-Draw/TL (Ammo): Reduces the time required to reload any kind of gun or beam weapon. The exact benefits depend on your weapon, but a successful roll always shaves at least one second off the reload time. This skill varies greatly with TL! At TL4, it covers powder-and-shot drills; at TL6+, it includes speed-loading techniques for detachable magazines; and at higher tech levels, it involves quickly replacing energy cells and attaching power cables. For the Arrow and Ammo specialties, failure means you drop the arrow or bolt, or accidentally discard one round of ammunition. On a critical failure, you drop the entire quiver, powder horn, ammo box, magazine, etc., scattering loose ammunition everywhere! Modifiers: Combat Reflexes (p. 43) gives +1 to all Fast-Draw specialties; Ham-Fisted (p. 138) gives -3 per level.</desc>
 			</value>
 		</entry>
@@ -2446,6 +4212,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -2464,6 +4231,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>DX</name>
 					<penalty>5</penalty>
@@ -2486,6 +4254,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>Accounting</name>
 					<penalty>4</penalty>
@@ -2508,6 +4277,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<desc>This is the performance skill of extinguishing flames in your mouth without burning yourself. Make a skill roll for each item you wish to extinguish. On a success, you put out the flames. On a failure, you take 1d-3 damage (minimum 1) to your mouth. This skill also includes fire breathing: igniting a stream of fuel blown from the mouth. At the GM's option, you may use this as an attack (1d-3 damage).</desc>
 			</value>
 		</entry>
@@ -2518,6 +4288,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Easy</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>4</penalty>
@@ -2544,6 +4315,7 @@
 				<TL>false</TL>
 				<attr>Per</attr>
 				<diff>Easy</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>Perception</name>
 					<penalty>4</penalty>
@@ -2564,15 +4336,16 @@
 				<TL>false</TL>
 				<attr>HT</attr>
 				<diff>Average</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>HT</name>
 					<penalty>5</penalty>
 				</skillDefault>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Flight</name>
 					<!--Advantage-->
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This skill represents training for endurance flying. Use the better of Flight or HT when rolling to avoid fatigue due to flying. When traveling long distances, a successful Flight roll increases the distance traveled by 20%. If a group of fliers is traveling together, all must make the Flight roll in order to get the increased distance.</desc>
 			</value>
 		</entry>
@@ -2583,22 +4356,23 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<mustSpec>false</mustSpec>
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Weapon Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Jumping</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Power Blow</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This skill allows you to make incredible leaps. It costs 1 FP per attempt, successful or not. On a success, you may immediately attempt a jump. Use the standard jumping rules (see Jumping, p. 352), but triple your jumping distance. On a failure, you may still attempt the jump, but you receive no bonus and make all jumping-related rolls at -5. On a critical failure, you fall down! You may use Flying Leap to jump into someone as part of an attack. Such attacks are at an extra -2 to hit, but if you do hit, triple your ST for damage and knockback purposes. In a slam or collision, calculate Move from jumping distance as described for Super Jump (p. 89), and use this velocity to calculate damage. Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns.</desc>
 			</value>
 		</entry>
@@ -2621,6 +4395,7 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Easy</diff>
+				<mustSpec>false</mustSpec>
 				<desc>This is the ability to kick in doors and windows, or demolish them with a crowbar, ram, or sledgehammer, without necessarily being adept at melee combat. Make a skill roll to hit an inanimate object with your foot or an impact weapon. Add +1 per die to basic thrust or swing damage if you have this skill at DX+1, +2 per die if you know it at DX+2 or better. Add a similar bonus (+1 or +2) to ST rolls made for forced entry. The damage bonus also applies when you use Melee Weapon skills to wreck inanimate objects out of combat. For subtle break-ins, use Lockpicking skill (p. 206).</desc>
 			</value>
 		</entry>
@@ -2631,6 +4406,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
@@ -2649,6 +4425,7 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Hard</diff>
+				<mustSpec>false</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>6</penalty>
@@ -2667,6 +4444,7 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Average</diff>
+				<mustSpec>true</mustSpec>
 				<skillDefault>
 					<name>IQ</name>
 					<penalty>5</penalty>
@@ -2935,10 +4713,10 @@
 				<TL>true</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Naturalist</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This is the ability to manufacture herbal concoctions that have magical effects â€“ healing balms, love potions, etc. It only exists in magical game worlds, where it functions much as Alchemy skill (p. 174). Unlike Alchemy, Herb Lore does not include the ability to analyze "elixirs." On the other hand, an expert at this skill can locate magical ingredients for free in the wild by making a few Naturalist rolls, while an alchemist requires rare and expensive materials (such as alkahest, dragon's blood, gemstones, and gold) to do his work.</desc>
 			</value>
 		</entry>
@@ -3048,10 +4826,10 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This skill allows you to anchor yourself to the ground by properly channeling your chi, using secret balancing techniques, etc. Make a skill roll whenever an attack (e.g., a shove or the Push skill, p. 216) would result in knockback or a fall. On a success, you neither experience knockback nor fall down. On a failure, you are knocked back but still get the usual DX roll to avoid falling down. On a critical failure, you automatically suffer full knockback and you fall down. This skill also helps against attacks with the Judo skill (p. 203). If you fail your active defense (or choose not to defend) against a Judo throw, your attacker must win a Quick Contest of Judo vs. your Immovable Stance skill, or his throw fails. Modifiers: -1 per yard of potential knockback; +4 for Perfect Balance</desc>
 			</value>
 		</entry>
@@ -3202,14 +4980,14 @@
 				<TL>false</TL>
 				<attr>HT</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Weapon Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>You can channel your chi outward in a mighty shout (kiai) that freezes lesser foes. This counts as an attack, and costs 1 FP per attempt, successful or not. Roll a Quick Contest: your Kiai skill vs. your target's Will. You are at -1 for every full two yards of distance. Your victim resists at +1 if he is Hard of Hearing, at +2 if Deaf! If you win, your target is mentally stunned (see Effects of Stun, p. 420). This skill only works against a single victim; everyone can hear the shout, but your chi is focused on that one foe. However, a successful Kiai roll gives you +2 to Intimidation rolls vs. everyone within earshot.</desc>
 			</value>
 		</entry>
@@ -3262,10 +5040,10 @@
 					<name>Spear</name>
 					<penalty>3</penalty>
 				</skillDefault>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Riding</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>The ability to use the lance: a long, spear-like weapon wielded from horseback. This is not a Melee Weapon skill (see p. 208). You may not use a lance to parry â€“ you must block or dodge enemy attacks.</desc>
 			</value>
 		</entry>
@@ -3338,18 +5116,18 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Acrobatics</name>
 					<minimum>14</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Stealth</name>
 					<minimum>14</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This skill allows you to exert very little pressure when you walk. On a successful Light Walk roll, you leave no visible tracks. Tracking rolls to follow you automatically fail unless they rely on something more than sight; thus, a human tracker would be baffled, but bloodhounds would suffer no penalty at all. You can also attempt to walk over fragile surfaces without falling through. Maximum Move under such circumstances is 1/3 normal (GM's decision). Thin ice would require an unmodified Light Walk roll, while rice paper would require a roll at -8! Finally, a successful Light Walk roll can give a bonus to Stealth when your intention is to move quietly. This bonus equals half your margin of success, rounded down. Minimum bonus is +1.</desc>
 			</value>
 		</entry>
@@ -3576,14 +5354,14 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Easy</diff>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Weapon Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<!--A mage of psi can also learn this at GM discretion-->
 				<desc>You can actively focus your mind to resist mental attacks. This skill replaces Will when you resist magic spells, psi powers, Hypnotism, Invisibility Art, Kiai, and similar abilities. Mental Strength does not replace most normal Will rolls. Furthermore, it does not work if you are stunned, asleep, or unconscious â€“ for that, buy the Mind Shield advantage (p. 70).</desc>
 			</value>
@@ -3728,18 +5506,18 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Musical Ability</name>
 					<minimum>1</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Musical Instrument</name>
 					<minimum>12</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Singing</name>
 					<minimum>12</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This cinematic skill allows you to influence the emotions of others by playing a musical instrument or singing. In some settings, this is a magical or psionic talent, or a special form of hypnotism, and works with any instrument, as well as with voice. In other settings, this skill is associated with a specific type of magical or ultra-tech instrument. To attempt Musical Influence, you must first get your audience to sit and listen to your performance. You must also make a successful Musical Instrument or Singing roll. You may then roll against your Musical Influence skill. On a success, you can adjust the reaction roll of your audience â€“ to you or to anyone present â€“ up or down by an amount equal to your margin of success, to a maximum of +3 (+4 for critical success). If you have only a few seconds, or if the audience is not paying full attention to your performance, you may adjust reaction rolls by Â±1 at most, regardless of your margin of success. Listeners who do not wish to be influenced may resist with Will. Hard of Hearing (p. 138) gives +4 to resist, and those with Deafness (p. 129) are completely immune. However, some science-fiction devices generate vibrations that affect the body, in which case a listener's sense of hearing is irrelevant. It is up to the GM to determine whether this skill works on animals as well as sapient beings. In classic fantasy, it just might!</desc>
 			</value>
 		</entry>
@@ -3889,7 +5667,7 @@
 					<penalty>4</penalty>
 				</skillDefault>
 				<skillDefault>
-					<name>Fast Talk</name>
+					<name>Fast-Talk</name>
 					<penalty>2</penalty>
 				</skillDefault>
 				<skillDefault>
@@ -4034,11 +5812,11 @@
 					<name>IQ</name>
 					<penalty>6</penalty>
 				</skillDefault>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Mathematics | Applied</name>
 					<TL>5</TL>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This is the science dealing with the properties and interactions of matter and energy. Beyond the basics (such as the behavior of moving bodies), a physicist's knowledge includes whatever is understood about electricity, gravity, heat, light, magnetism, radiation, and sound at his tech level. At TL6+, most physicists have an optional specialty (p. 169): acoustics, astrophysics, geophysics, nuclear physics, optics, particle physics, quantum physics, relativity, solid-state physics, etc. Some settings offer exotic options, such as hyperspace physics points), parachronic physics (the study of other realities and timelines), paraphysics (the physics of psi phenomena), probability physics (the study of probability manipulation), and temporal physics (the science of time travel).</desc>
 			</value>
 		</entry>
@@ -4179,14 +5957,14 @@
 				<TL>false</TL>
 				<attr>Will</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Weapon Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This is the ability to draw on your inner strength to deliver a devastating blow in melee combat. Roll once per attack. Power Blow costs 1 FP per attempt, successful or not. If successful, double your ST for damage purposes for the next attack only. This attack takes all normal modifiers, and must occur immediately after the Power Blow roll. If you know Power Blow at better than skill 20, you can triple your ST by accepting an extra -10 to the skill roll. You can also use this skill in noncombat situations. For instance, you could use Power Blow to double or triple your ST momentarily in order to move a heavy object. Such feats cost 1 FP and require a skill roll, as described above. Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns.</desc>
 			</value>
 		</entry>
@@ -4212,14 +5990,14 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Pressure Points</name>
 					<minimum>16</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This skill represents knowledge of the most vulnerable vital points of the human body. It allows you to maim and kill by crushing and tearing vital organs and nerve clusters with deadly precision. To use this ability, you must make a successful unarmed attack. This attack is at -2 in addition to any hit location modifier (see Hit Location, p. 398). If you hit, make a Pressure Secrets roll. On a success, any damage that penetrates DR is doubled – or tripled if you targeted the vital organs. In effect, your hands and feet have become impaling weapons! You can also use this ability with locks and similar grappling attacks. This represents knowledge of exactly where to apply pressure to tear or sprain joints and ligaments. After applying the lock, make a Pressure Secrets roll. On a success, double the damage, shock, or harmful effects of the lock for that turn. This skill is unrealistic and potentially unbalancing. The GM should carefully weigh its impact before allowing it, and may wish to make it very difficult for PCs to learn – or even restrict it to deadly NPC opponents. Modifiers: Physiology modifiers (p. 181).</desc>
 			</value>
 		</entry>
@@ -4328,10 +6106,10 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This skill allows you to channel your chi in order to "gently" push away an adversary or cause him to lose his balance. Roll against Push skill to hit. This counts as a barehanded attack (see Shove, p. 372), and your target may attempt any legal active defense. If you hit, use the higher of your ST or your Push skill as your effective ST. Roll swing damage for that ST, and double the result. For instance, if you had ST 10 and Push-15, you would roll swing damage for ST 15 (2d+1), and double it. This damage inflicts knockback (see Knockback, p. 378) but never actual physical injury.</desc>
 			</value>
 		</entry>
@@ -4477,10 +6255,10 @@
 					<name>Diving Suit</name>
 					<penalty>2</penalty>
 				</skillDefault>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Swimming</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This is the ability to use self-contained underwater breathing apparatus (scuba). Roll when you first enter the water, and again every 30 minutes thereafter, to avoid inhaling water p. 436). If you know this skill above default level, a successful roll also lets you spot problems with the equipment before you put it on. Modifiers: -2 to -4 for unfamiliar scuba rigs; e.g., closed-circuit gear when you're used to open-circuit.</desc>
 			</value>
 		</entry>
@@ -4943,14 +6721,14 @@
 					<name>Veterinary</name>
 					<penalty>5</penalty>
 				</skillDefault>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>First Aid</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Physician</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This is skill at using invasive medical techniques to treat sickness or injury. Roll once per operation. On a success, the operation proceeded without complications. On a failure, the patient took damage â€“ 2d for a simple amputation, 3d for other procedures. Surgery rolls can also facilitate recovery from wounds; see Surgery (p. 424). This skill represents general surgical expertise, which is relatively rare in real life. Most surgeons have an optional specialty (p. 169) in a certain part of the body (brain, heart, etc.) or a specific type of surgery (cosmetic surgery, microsurgery, transplant surgery, etc.). Modifiers: Equipment modifiers properly cleaned and sterilized; -3 for head or chest surgery; -5 for undiagnosed problems. If you lack Physician skill, you are at -5 to do anything but wounds or extract arrowheads, bullets, and shrapnel).</desc>
 			</value>
 		</entry>
@@ -5118,14 +6896,14 @@
 				<TL>false</TL>
 				<attr>DX</attr>
 				<diff>Hard</diff>
-				<prerequisite>
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Weapon Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This is the cinematic ability to throw anything you are strong enough to lift: knives, medicine balls, televisions . . . anything! Roll against skill to hit. Furthermore, if you know Throwing Art at DX level, add +1 to ST when figuring throwing distance, and weapons. These bonuses increase to or better. If you are a Weapon Master, this bonus is instead of the usual damage bonus for your weapon. You can use the items you throw as improvised weapons. Treat forks, kitchen knives, and other long, sharp objects as daggers. Any small, blunt object does thrust+1 crushing damage. Baseball bats do swing+1 crushing. Pencils do thrust-3 impaling. Playing cards do thrust-3 cutting. Throwing Art lets you throw anything covered by the Throwing and Thrown Weapon skills. If you have Throwing Art, you do not need those skills.</desc>
 			</value>
 		</entry>
@@ -5335,23 +7113,23 @@
 				<TL>false</TL>
 				<attr>IQ</attr>
 				<diff>Very Hard</diff>
-				<!--Requires (a | b) & c & d-->
-				<prerequisite>
+				<!--Requires (a | b) and c and d-->
+				<skillPrerequisite>
 					<name>Trained By A Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Weapon Master</name>
 					<minimum>0</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Bow</name>
 					<minimum>18</minimum>
-				</prerequisite>
-				<prerequisite>
+				</skillPrerequisite>
+				<skillPrerequisite>
 					<name>Meditation</name>
 					<minimum>0</minimum>
-				</prerequisite>
+				</skillPrerequisite>
 				<desc>This skill allows you to strike difficult targets with ease when using a bow. On a success, add up the penalties for size and speed/range, and then divide them by three (round down). Modifiers: -10 if used instantly, dropping to -5 after 1 turn of concentration, -4 after 2 turns, -3 after 4 turns, -2 after 8 turns, -1 after 16 turns, and no penalty after 32 turns.</desc>
 			</value>
 		</entry>

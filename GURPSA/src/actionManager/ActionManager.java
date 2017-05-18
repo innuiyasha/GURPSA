@@ -7,6 +7,8 @@ import skillManager.SkillManager;
 import java.util.Scanner;
 import java.util.Vector;
 
+import javax.naming.directory.InvalidAttributesException;
+
 import advantageManager.AdvantageManager;
 
 public class ActionManager {
@@ -35,8 +37,9 @@ public class ActionManager {
 		CharactersSkill chosenSkill = null;
 		String line;
 		Scanner in = new Scanner(System.in);
-		line = in.nextLine();
 
+		line = utilities.Utilities.formatSkillName(in.nextLine());
+		
 		for(int i = 0 ; i < appropriateSkills.size(); i++)
 			if(line.equals(appropriateSkills.get(i).getSkillName()))
 				chosenSkill = appropriateSkills.get(i);
@@ -83,6 +86,13 @@ public class ActionManager {
 			chosenAttribute = "Per";
 			attributeValue = character.getPER();
 			break;
+		case "ST":
+			chosenAttribute = "ST";
+			attributeValue = character.getST();
+			break;
+		default:
+			System.out.println("Fuck.");
+			System.exit(-1);
 		}
 		
 		System.out.println("Roll " + chosenAttribute + " (" + attributeValue + ") at " + chosenSkill.getLevel() + " (" + chosenSkill.getSkillName() + ")");
