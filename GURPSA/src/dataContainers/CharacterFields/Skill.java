@@ -15,6 +15,7 @@ public class Skill {
 	private boolean TL;
 	private Vector<SkillDefault> skillDefault;
 	private Vector<Specialty> skillSpecialty;
+	private Vector<Prerequisite> skillPrerequisite;
 	private String desc;
 	
 	public Skill(String name, String baseAttribute, String difficulty, boolean TL, Vector<SkillDefault> skillDefault, Vector<Specialty> skillSpecialty, String description, boolean mustSpec)
@@ -44,12 +45,13 @@ public class Skill {
 	public Skill()
 	{
 		this.name = "";
-		this.attr = "DX";
-		this.diff = "None";
+		this.attr = "";
+		this.diff = "";
 		this.TL = false;
 		this.mustSpec = false;
 		this.skillSpecialty = new Vector<Specialty>();
 		this.skillDefault = new Vector<SkillDefault>();
+		this.skillPrerequisite = new Vector<Prerequisite>();
 		this.desc = "";
 	}
 
@@ -95,6 +97,12 @@ public class Skill {
 		this.skillSpecialty = skillSpecialty;
 	}
 	
+//	@XmlElement(name = "prerequisite")
+	public void setPrerequisites(Vector<Prerequisite> skillPrerequisite)
+	{
+		this.skillPrerequisite = skillPrerequisite;
+	}
+	
 //	@XmlElement(name = "desc")
 	public void setDescription(String description)
 	{
@@ -133,6 +141,11 @@ public class Skill {
 	public List<Specialty> getSpecialties()
 	{
 		return skillSpecialty;
+	}
+	
+	public List<Prerequisite> getPrerequisite()
+	{
+		return skillPrerequisite;
 	}
 	
 	public String getDescription()

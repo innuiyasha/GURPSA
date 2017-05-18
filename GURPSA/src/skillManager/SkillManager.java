@@ -6,7 +6,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Vector;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -14,11 +13,10 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.*;
 
-
+import dataContainers.CharacterFields.Prerequisite;
 import dataContainers.CharacterFields.Skill;
 import dataContainers.CharacterFields.SkillDefault;
 import dataContainers.CharacterFields.Specialty;
-import utilities.Utilities;
 
 @XmlRootElement
 public class SkillManager {
@@ -26,39 +24,14 @@ public class SkillManager {
 	@XmlElementWrapper(name = "skillList")
 	private Map<String, Skill> skillMap;
 	
-	public SkillManager()
-	{
+	public SkillManager() {
 		skillMap = new HashMap<String, Skill>();
 	}
 	
-	public SkillManager(boolean makeXML) {
-		if(makeXML)
-		{
-			skillMap = new HashMap<String, Skill>();
-			
-			Vector<SkillDefault> tempList1 = new Vector<SkillDefault>(1,1);
-			tempList1.add(new SkillDefault("DX",6));
-			skillMap.put("Acrobatics", new Skill("Acrobatics", "DX", "Hard", false, tempList1, "showoff skill"));
-			
-			Vector<SkillDefault> tempList2 = new Vector<SkillDefault>(1,1);
-			tempList2.add(new SkillDefault("DX",5));
-			skillMap.put("Bow", new Skill("Bow", "DX", "Average", false, tempList2, "legolas"));
-			
-			Vector<SkillDefault> tempList3 = new Vector<SkillDefault>(0,1);
-			skillMap.put("Brawling", new Skill("Brawling", "DX", "Easy", false, tempList3, "punching, but not very good"));
-			
-			Vector<SkillDefault> tempList4 = new Vector<SkillDefault>(4,1);
-			tempList4.add(new SkillDefault("IQ",4));
-			tempList4.add(new SkillDefault("Esoteric Medicine",0));
-			tempList4.add(new SkillDefault("Physician",0));
-			tempList4.add(new SkillDefault("Veterinary",4));
-			
-			skillMap.put("First Aid", new Skill("First Aid", "IQ", "Easy", false, tempList4, "you will be bullied"));
-		}
-		else
-		{
-			skillMap = new HashMap<String, Skill>();
-		}
+	public SkillManager(File file)
+	{
+		skillMap = new HashMap<String, Skill>();
+		generateSkills(file);
 	}
 
 	private Map<String,Skill> getMap()
@@ -88,7 +61,7 @@ public class SkillManager {
 		      }
 	}
 
-	public void GenerateSkills(File XMLInput) {
+	public void generateSkills(File XMLInput) {
 		try {	
 			JAXBContext jaxbContext = JAXBContext.newInstance(SkillManager.class);
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
@@ -96,6 +69,41 @@ public class SkillManager {
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
+		
+		forwardSpecializations();	
+	}
+	
+	private void forwardSpecializations() {
+		Iterator<Entry<String, Skill>> i = skillMap.entrySet().iterator();
+		
+		while(i.hasNext())
+			{
+				Map.Entry<String, Skill> pair = (Entry<String, Skill>)i.next();
+				
+				List<Specialty> specs = pair.getValue().getSpecialties();
+				
+				if(!specs.isEmpty()) {
+					Skill genSkill = pair.getValue();
+					for(Specialty spec : specs) {
+						Skill specSkill = skillMap.get(pair.getKey() + " | " + spec.getName());
+						
+						if(specSkill.getBaseAttribute() == "") {
+							specSkill.setBaseAttribute(genSkill.getBaseAttribute());
+						}
+						
+						if(specSkill.getDifficulty() == "") {
+							specSkill.setDifficulty(genSkill.getDifficulty());
+						}
+						
+						if(specSkill.getTLDependancy() == false) {
+							specSkill.setTLDependancy(genSkill.getTLDependancy());
+						}
+						
+						specSkill.getDefaults().addAll(genSkill.getDefaults());
+					}
+				}
+				
+			}
 	}
 	
 	public String toString()
@@ -180,6 +188,22 @@ public class SkillManager {
 		return specs;
 	}
 	
+	public String getRequirements(String skillName) {
+		List<Prerequisite> ls = skillMap.get(skillName).getPrerequisite();
+		
+		String reqs = "";
+		
+		if(ls.size() > 0) {
+			reqs += ls.get(0).getName();
+		}
+		
+		for(int i = 1; i < ls.size(); i++) {
+			reqs += ", " + ls.get(i).getName();
+		}
+		
+		return reqs;
+	}
+	
 	public Boolean canSpec(String skillName) {
 		return ! skillMap.get(skillName).getSpecialties().isEmpty();
 	}
@@ -187,6 +211,8 @@ public class SkillManager {
 	public Boolean mustSpec(String skillName) {
 		return skillMap.get(skillName).getSpecFlag();
 	}
+	
+	
 	
 	public String request(String skillName, String element) {
 		element = element.toLowerCase();
@@ -204,6 +230,8 @@ public class SkillManager {
 			return getTL(skillName);
 		case "specialize":
 			return getSpec(skillName);
+		case "requirement":
+			return getRequirements(skillName);
 		default:
 			return "Invalid Entry: " + element;
 		}
