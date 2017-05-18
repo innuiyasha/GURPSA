@@ -35,7 +35,7 @@ public class TurnManager {
 		for(int i = 0 ; i < turnList.size() ; i++)
 		{
 			if(characterName == turnList.get(i).getCharacterName())
-				turnList.get(i).run();
+				turnList.get(i).runTurn();
 		}
 	}
 	
@@ -44,7 +44,7 @@ public class TurnManager {
 		for(int i = 0 ; i < turnList.size() ; i++)
 		{
 			if(character.getName() == turnList.get(i).getCharacterName())
-				turnList.get(i).run();
+				turnList.get(i).runTurn();
 		}
 	}
 }

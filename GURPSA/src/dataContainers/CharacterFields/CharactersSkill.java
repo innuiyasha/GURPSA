@@ -47,4 +47,9 @@ public class CharactersSkill {
 		return relativeLevel;
 	}
 	
+	public String toString()
+	{
+		return skillName + " at " + relativeLevel;
+	}
+	
 }

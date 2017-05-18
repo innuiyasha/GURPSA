@@ -1,11 +1,13 @@
 package characterManager;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 import javax.xml.bind.annotation.*;
 
 import dataContainers.CharacterFields.*;
 import dataContainers.CharacterFields.ReactionModifiers.*;
+import skillManager.SkillManager;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -119,7 +121,31 @@ public class Character {
 		
 	}
 
-
+	//A liiiittle slower than it should be.
+	public Vector<CharactersSkill> checkForAppropriateSkills(SkillManager skillManager, String skillName)
+	{
+		Vector<CharactersSkill> possibleSkills = new Vector<CharactersSkill>();
+		
+		
+		Vector<SkillDefault> defaults = new Vector<SkillDefault>();
+		
+		defaults = (Vector<SkillDefault>) skillManager.getSkill(skillName).getDefaults();
+		
+		for(int i = 0 ; i < playerSkills.size() ; i++)
+		{
+			if(playerSkills.get(i).getSkillName().equals(skillName))
+				possibleSkills.add(playerSkills.get(i));
+			for(int j = 0 ; j < defaults.size(); j++)
+			{
+				
+				if(playerSkills.get(i).getSkillName().equals(defaults.get(j).getName()))
+					possibleSkills.add(new CharactersSkill(playerSkills.get(i).getSkillName(), playerSkills.get(i).getLevel() - defaults.get(j).getPenalty()));
+			}
+		}
+		
+		return possibleSkills;
+	}
+	
 	public String getName()
 	{
 		return name;
@@ -354,4 +380,6 @@ public class Character {
 	public void setTL(int tL) {
 		TL = tL;
 	}
+	
+	
 }
