@@ -9,7 +9,6 @@ import characterManager.*;
 import characterManager.Character;
 import skillManager.SkillManager;
 import turnManager.TurnManager;
-import utilities.Utilities;
 
 //This will one day be one of our most important classes, but for now I'm using this as a test main.
 public class AdventureMain {
@@ -48,7 +47,7 @@ public class AdventureMain {
 				+ "4. Make Characters\n"
 				+ "5. Begin play\n\n"
 				+ "Type 'exit' to close.\n");
-		
+
 		Scanner in = new Scanner(System.in);
 		
 		String line;

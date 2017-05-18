@@ -1,6 +1,5 @@
 package characterManager;
 
-import java.util.ArrayList;
 import java.util.Vector;
 
 import javax.xml.bind.annotation.*;

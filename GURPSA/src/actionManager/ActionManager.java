@@ -7,8 +7,6 @@ import skillManager.SkillManager;
 import java.util.Scanner;
 import java.util.Vector;
 
-import javax.naming.directory.InvalidAttributesException;
-
 import advantageManager.AdvantageManager;
 
 public class ActionManager {
@@ -36,6 +34,8 @@ public class ActionManager {
 
 		CharactersSkill chosenSkill = null;
 		String line;
+		
+		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 
 		line = utilities.Utilities.formatSkillName(in.nextLine());

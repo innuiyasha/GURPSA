@@ -22,6 +22,7 @@ public class Turn {
 	}
 
 	//woefully insufficient. Not sure when a turn is told/determines what move to run, so this is what I have for now.
+	@SuppressWarnings("resource")
 	public void runTurn()
 	{
 		while(true)
@@ -35,9 +36,9 @@ public class Turn {
 				String[] parts = line.split(" ");
 				skillName = parts[0];
 				actionManager.SkillCheck(initiator, skillName);
-			}
-			else
+			} else {
 				return;
+			}
 		}
 	}
 
