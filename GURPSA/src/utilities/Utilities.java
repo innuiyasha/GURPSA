@@ -1,6 +1,19 @@
 package utilities;
 
+import java.util.Random;
+
 public class Utilities {
+	
+	public static int standardDiceRoll()
+	{
+		int result = 0;
+		Random gen = new Random();
+		for(int i = 0 ; i < 3 ; i++)
+		{
+			result += gen.nextInt(6) + 1;
+		}
+		return result;
+	}
 	
 	public static String capitalizeFully(String input) {
 		String[] parts = input.split(" ");

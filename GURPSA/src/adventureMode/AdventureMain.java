@@ -9,6 +9,7 @@ import characterManager.*;
 import characterManager.Character;
 import skillManager.SkillManager;
 import turnManager.TurnManager;
+import utilities.Utilities;
 
 //This will one day be one of our most important classes, but for now I'm using this as a test main.
 public class AdventureMain {
@@ -45,7 +46,8 @@ public class AdventureMain {
 				+ "2. Look up Advantages\n"
 				+ "3. Load Characters\n"
 				+ "4. Make Characters\n"
-				+ "5. Begin play\n\n"
+				+ "5. Begin play\n"
+				+ "6. Roll some dice\n\n"
 				+ "Type 'exit' to close.\n");
 
 		Scanner in = new Scanner(System.in);
@@ -69,6 +71,9 @@ public class AdventureMain {
 			case "5":
 				PrototypeSkillCheck(in);
 				break;
+			case "6":
+				diceRollCheck(in);
+				break;
 			}
 			
 			System.out.println("MAIN MENU\n\n"
@@ -76,7 +81,8 @@ public class AdventureMain {
 					+ "2. Look up Advantages\n"
 					+ "3. Load Characters\n"
 					+ "4. Make Characters\n"
-					+ "5. Begin play\n\n"
+					+ "5. Begin play\n"
+					+ "6. Roll some dice\n\n"
 					+ "Type 'exit' to close.\n");
 		}
 		in.close();
@@ -84,6 +90,40 @@ public class AdventureMain {
 
 	}
 
+	private static void diceRollCheck(Scanner in)
+	{
+		int min, max, total, numOfRolls;
+		float average = 0.0f;
+		int [] frequency = new int[16];
+		min = 100;
+		max = 0;
+		total = 0;
+		numOfRolls = 0;
+		for(Integer i : frequency)
+			i = 0;
+		
+		for(int i = 0 ; i < 10000 ; i++)
+		{
+			int roll = Utilities.standardDiceRoll();
+			System.out.println(roll);
+			
+			numOfRolls++;
+			total += roll;
+			average = (float)total / (float)numOfRolls;
+			
+			if(roll < min)
+				min = roll;
+			else if(roll > max)
+				max = roll;
+			
+			frequency[roll - 3]++;
+		}
+		
+		System.out.println("Stats:\nAverage roll: " + average + "\nMinimum roll: " + min + "\nMaximum roll: " + max + "\n");
+		for(int i = 0 ; i < 16 ; i++)
+			System.out.println((i + 3) + " appeared " + frequency[i] + " times.\n");
+	}
+	
 	private static void SkillMenu(Scanner in)
 	{
 		System.out.println("SKILL MENU\n");
