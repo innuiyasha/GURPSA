@@ -29,7 +29,7 @@ public class Character {
 	
 	@XmlElementWrapper(name = "AdvantageList")
 	@XmlElement(name = "Advantage")
-	private Vector<Advantage> playerAdvantages;
+	private Vector<CharactersAdvantage> playerAdvantages;
 
 	@XmlElementWrapper(name = "LanguageList")
 	@XmlElement(name = "Language")
@@ -97,7 +97,7 @@ public class Character {
 //
 		playerSkills = new Vector<CharactersSkill>();
 //		
-		playerAdvantages = new Vector<Advantage>();
+		playerAdvantages = new Vector<CharactersAdvantage>();
 //		playerAdvantages.add(new Advantage("Very Fit", "15 Points", "Placeholder for Very Fit description."));
 //		playerAdvantages.add(new Advantage("Ambidexterity", "5 Points", "Placeholder for Ambidexterity description."));
 //		playerAdvantages.add(new Advantage("Fast Swimmer (+1 basic move)", "5 Points", "Placeholder for increased Move Speed description."));
@@ -229,10 +229,27 @@ public class Character {
 	{
 		return move;
 	}
+	
+	public Vector<Language> getLanguages() {
+		return playerLanguages;
+	}
 
 	public Vector<CharactersSkill> getSkills()
 	{
 		return playerSkills;
+	}
+	
+	public Vector<CulturalFamiliarity> getCultures()
+	{
+		return playerCultures;
+	}
+	
+	public AppearanceModifier getAppearanceMod() {
+		return playerAppearance;
+	}
+	
+	public Vector<CharactersAdvantage> getAdvantages() {
+		return playerAdvantages;
 	}
 	
 	public void addSkill(String skillName, int relativeLevel)
@@ -243,6 +260,16 @@ public class Character {
 	public void setSkills(Vector<CharactersSkill> newSkills)
 	{
 		this.playerSkills = newSkills;
+	}
+	
+	public void addAdvantage(String advantageName)
+	{
+		this.playerAdvantages.addElement(new CharactersAdvantage(advantageName));
+	}
+	
+	public void setAdvantages(Vector<CharactersAdvantage> newAdvantages)
+	{
+		this.playerAdvantages = newAdvantages;
 	}
 
 	public void setName(String name)
@@ -329,6 +356,52 @@ public class Character {
 	{
 		this.move = move;
 	}
+	public void addLanguage(String lang, String written, String spoken) {
+		Language.Fluency s = Language.Fluency.NONE;
+		Language.Fluency w = Language.Fluency.NONE;
+		
+		switch(spoken.toUpperCase()) {
+		case "NONE":
+			s = Language.Fluency.NONE;
+			break;
+		case "BROKEN":
+			s = Language.Fluency.BROKEN;
+			break;
+		case "ACCENTED":
+			s = Language.Fluency.ACCENTED;
+			break;
+		case "NATIVE":
+			s = Language.Fluency.NATIVE;
+			break;
+		}
+		
+		switch(written.toUpperCase()) {
+		case "NONE":
+			w = Language.Fluency.NONE;
+			break;
+		case "BROKEN":
+			w = Language.Fluency.BROKEN;
+			break;
+		case "ACCENTED":
+			w = Language.Fluency.ACCENTED;
+			break;
+		case "NATIVE":
+			w = Language.Fluency.NATIVE;
+			break;
+		}
+		
+		playerLanguages.add(new Language(lang, w, s));
+	}
+	
+	public void addCulture(String culture) {
+		playerCultures.add(new CulturalFamiliarity(culture));
+	}
+	
+	public void setAppearanceMod(int appropriate, int other) {
+		playerAppearance = new AppearanceModifier(appropriate, other);
+	}
+	
+	
 //Just to help me test reading the XML file
 	public String toString()
 	{

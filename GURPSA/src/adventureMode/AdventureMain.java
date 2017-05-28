@@ -43,8 +43,8 @@ public class AdventureMain {
 		System.out.println("MAIN MENU\n\n"
 				+ "1. Look up Skills\n"
 				+ "2. Look up Advantages\n"
-				+ "3. Load Characters\n"
-				+ "4. Make Characters\n"
+				+ "3. Make Characters\n"
+				+ "4. Load Characters\n"
 				+ "5. Begin play\n\n"
 				+ "Type 'exit' to close.\n");
 
@@ -61,10 +61,10 @@ public class AdventureMain {
 				AdvantageMenu(in);
 				break;
 			case "3": 
-				CharacterMenu(in);
+				CharacterMaker(in);
 				break;
 			case "4": 
-				CharacterMaker(in);
+				CharacterMenu(in);
 				break;
 			case "5":
 				PrototypeSkillCheck(in);
@@ -74,8 +74,8 @@ public class AdventureMain {
 			System.out.println("MAIN MENU\n\n"
 					+ "1. Look up Skills\n"
 					+ "2. Look up Advantages\n"
-					+ "3. Load Characters\n"
-					+ "4. Make Characters\n"
+					+ "3. Make Characters\n"
+					+ "4. Load Characters\n"
 					+ "5. Begin play\n\n"
 					+ "Type 'exit' to close.\n");
 		}
@@ -87,21 +87,33 @@ public class AdventureMain {
 	private static void SkillMenu(Scanner in)
 	{
 		System.out.println("SKILL MENU\n");
-		// Format of a command looks like the following:
-		// SkillName FieldOfInterest FieldOfInterest . . .
-		// Valid fields are: 'difficulty' 'description' 'attribute' 'default' 'TL'
+		String[] fields = {"dificulty", "description", "attribute", "default", "TL"};
+		System.out.println("Please enter skill of interest and field(s) of interest OR type 'exit' to leave");
 		
-		System.out.println("Please enter skill of interest and field(s) of interest OR type 'exit' to leave\n"
-				+ "If a multi-word skill, use periods rather than spaces\n"
-				+ "Valid fields are: 'difficulty' 'description' 'attribute' 'default' 'TL'\n"
-				+ "'SkillName' Field1 Field2 . . . FieldN");
+		System.out.print("Valid fields are: '" + fields[0] + "'");
+		for(int i = 1; i < fields.length; i++) {
+			System.out.print(", '" + fields[i] + "'");
+		}
+		System.out.println("\n'Skill Name' Field1 Field2 . . . FieldN");
 		
 		String line;
-		while(!(line = in.nextLine()).equals("exit")) {
+		while(!(line = in.nextLine()).equals("exit")) {		
+			line = line.toLowerCase();
 			String[] parts = line.split(" ");
-			String name = utilities.Utilities.formatSkillName(parts[0]);
+			
+			int nameEnd = 1;
+			String skill = parts[0];
+			for(int i = 1; i < parts.length; i++) {
+				if(utilities.Utilities.isIn(parts[i], fields)) {
+					nameEnd = i;
+					break;
+				}
+				skill += " " + parts[i];
+			}
+			
+			String name = utilities.Utilities.formatSkillName(skill);
 			System.out.println(name + ":");
-			for (int i = 1; i < parts.length; i++) {
+			for (int i = nameEnd; i < parts.length; i++) {
 				System.out.println("\t" + parts[i] + ": " + skillManager.request(name, parts[i]));
 			}
 		}
@@ -153,6 +165,12 @@ public class AdventureMain {
 		else
 			return;
 		
+		System.out.println("Describe the basic appearance of the character in one line.");
+		if(!(line = in.nextLine()).equals("exit")) {
+			newChara.setAppearance(line);
+		} else
+			return;
+		
 		System.out.println("Enter their ST, DX, IQ, and HT, all separated by spaces.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -194,11 +212,60 @@ public class AdventureMain {
 		else
 			return;
 		
-		System.out.println("Now enter their skills and their relative level in that skill, one at a time.\n"
-				+ "As an example, 'First.Aid -1'. Type 'exit' to finish character creation.");
+		System.out.println("Enter a language, writen, and spoken proficiency (None, Broken, Accented, Native).");
+		System.out.println("Example: English native nAtIVe");
 		while(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
-			String name = utilities.Utilities.formatSkillName(parts[0]);
+			newChara.addLanguage(parts[0], parts[1], parts[2]);
+			System.out.println("Enter another language or type 'exit'");
+		}
+		
+		System.out.println("Add any cultures other than your character's culture that they are familiar with or type exit.");
+		while(!(line = in.nextLine()).equals("exit")) {
+			newChara.addCulture(line);
+			System.out.println("Enter another culture or type 'exit'");
+		}
+		
+		System.out.println("Enter how overwhelmingly sexy your character is to those attracted to you. (-6 to 8).");
+		int interest = 0;
+		int other = 0;
+		if(!(line = in.nextLine()).equals("exit")) {
+			interest = Integer.parseInt(line);
+		} else
+			return;
+		
+		System.out.println("Now enter how absolutely repulsive your character is to those who aren't yet into you.(-6 to 8).");
+		if(!(line = in.nextLine()).equals("exit")) {
+				other = Integer.parseInt(line);
+		} else
+			return;
+		
+		newChara.setAppearanceMod(interest, other);
+		
+		System.out.println("Now enter their advantages. One per line. As always, 'exit' to finish advantage selection.");
+		while(!(line = in.nextLine()).equals("exit")) {
+			String name = utilities.Utilities.formatSkillName(line);
+			
+			if(advantageManager.isAdvantage(name)) {
+				newChara.addAdvantage(name);
+			}
+			
+		}
+		
+		
+		System.out.println("Now enter their skills and their relative level in that skill, one at a time.\n"
+				+ "As an example, 'First Aid -1'. Type 'exit' to finish character creation.");
+		while(!(line = in.nextLine()).equals("exit")) {
+			String[] parts = line.split(" ");
+			String skill = parts[0];
+			
+			for (int i = 1; i < parts.length - 1; i++) {
+				skill += " " + parts[i];
+			}
+
+			int modifier = Integer.parseInt(parts[parts.length - 1]);
+			String name = utilities.Utilities.formatSkillName(skill);
+			
 			if(parts.length > 1)
 			{
 				if(skillManager.isSkill(name)) {
@@ -224,16 +291,13 @@ public class AdventureMain {
 							}
 						}
 						
-						
-						int level = Integer.parseInt(parts[1]);
-						
-						System.out.println("Adding skill: " + name + " (" + specs[choice] + ") at: +" + level);
-						newChara.addSkill(name + " | " + specs[choice], level);
+						System.out.println("Adding skill: " + name + " (" + specs[choice] + ") at: +" + modifier);
+						newChara.addSkill(name + " | " + specs[choice], modifier);
 						
 						
 						
 					} else {
-						newChara.addSkill(name, Integer.parseInt(parts[1]));						
+						newChara.addSkill(name, modifier);						
 					}
 				} else {
 					System.out.println(name + " is not a skill");
@@ -248,18 +312,32 @@ public class AdventureMain {
 	private static void AdvantageMenu(Scanner in)
 		{
 			System.out.println("ADVANTAGE MENU\n");
-	
-			System.out.println("Please enter advantage of interest and field(s) of interest OR type 'exit' to leave\n"
-					+ "If a multi-word skill, use periods rather than spaces\n"
-					+ "Valid fields are: 'cost' 'description' 'nums'\n"
-					+ "'AdvantageName' Field1 Field2 . . . FieldN");
+			String[] fields = {"cost", "description", "nums"};
+			System.out.println("Please enter advantage of interest and field(s) of interest OR type 'exit' to leave.");
+			System.out.print("Valid fields are: '" + fields[0] + "'");
+			for(int i = 1; i < fields.length; i++) {
+				System.out.print(", '" + fields[i] + "'");
+			}
+			System.out.println("\n'Advantage Name' Field1 Field2 . . . FieldN");
 	
 			String line;
 			while(!(line = in.nextLine()).equals("exit")) {
 				String[] parts = line.split(" ");
-				String name = utilities.Utilities.formatSkillName(parts[0]);
+				
+				int nameEnd = 1;
+				String advantage = parts[0];
+				for(int i = 1; i < parts.length; i++) {
+					if(utilities.Utilities.isIn(parts[i], fields)) {
+						nameEnd = i;
+						break;
+					}
+					advantage += " " + parts[i];
+				}
+				
+				
+				String name = utilities.Utilities.formatSkillName(advantage);
 				System.out.println(name + ":");
-				for (int i = 1; i < parts.length; i++) {
+				for (int i = nameEnd; i < parts.length; i++) {
 					System.out.println("\t" + parts[i] + ": " + advantageManager.request(name, parts[i]));
 				}
 			}

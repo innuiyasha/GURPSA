@@ -116,4 +116,9 @@ public class AdvantageManager {
 		
 	}
 	
+	public Boolean isAdvantage(String advantageName) {
+		
+		return advantageMap.containsKey(advantageName);
+	}
+	
 }
