@@ -47,7 +47,7 @@ public class SkillManager {
 	public void toXMLFile() {
 		try {
 
-			File file = new File("skillList.xml");
+			File file = new File("resources\\skillList.xml");
 			JAXBContext jaxbContext = JAXBContext.newInstance(SkillManager.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 

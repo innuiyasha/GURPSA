@@ -13,16 +13,15 @@ import adventureMode.AdventureMain;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
+import org.eclipse.wb.swing.FocusTraversalOnArray;
+import java.awt.Component;
+import java.awt.Toolkit;
 
 public class MainWindow extends JFrame {
 
-	/**
-	 * 
-	 */
+	// This simply gets rid of a warning. I don't know what it is.
 	private static final long serialVersionUID = -8205062842025549985L;
-	/**
-	 * 
-	 */
+	
 	private JPanel contentPane;
 	private static JTextArea control;
 	private static JTextField textField;
@@ -84,12 +83,18 @@ public class MainWindow extends JFrame {
 	 * Create the frame.
 	 */
 	public MainWindow() {
+		/*
+		 * setIconImage should use the classpath to find an image rather than the absolute path being used.
+		 */
+		setIconImage(Toolkit.getDefaultToolkit().getImage(System.getProperty("user.dir") + "\\resources\\Guthix_Tome.png"));
+		setTitle("GURPSA");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 812, 547);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
 		
 		textField = new JTextField();
 		textField.setBounds(10, 415, 776, 25);
@@ -102,14 +107,7 @@ public class MainWindow extends JFrame {
 		
 		control = new JTextArea();
 		control.setEditable(false);
-		scrollPane.setViewportView(control);/*
-		textField.addKeyListener(new KeyAdapter() {
-			@Override
-			public void keyReleased(KeyEvent arg0) {
-				if(arg0.getKeyCode() == KeyEvent.VK_ENTER) {
-					System.out.println("Pressed");
-				}
-			}
-		});*/
+		scrollPane.setViewportView(control);
+		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{textField, contentPane, scrollPane, control}));
 	}
 }
