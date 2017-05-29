@@ -136,10 +136,19 @@ public class Character {
 				possibleSkills.add(playerSkills.get(i));
 			for(int j = 0 ; j < defaults.size(); j++)
 			{
-				
 				if(playerSkills.get(i).getSkillName().equals(defaults.get(j).getName()))
 					possibleSkills.add(new CharactersSkill(playerSkills.get(i).getSkillName(), playerSkills.get(i).getLevel() - defaults.get(j).getPenalty()));
 			}
+		}
+		
+		for(int i = 0 ; i < defaults.size(); i++)
+		{
+			if(defaults.get(i).getName().equals("DX") ||
+					defaults.get(i).getName().equals("IQ") ||
+					defaults.get(i).getName().equals("HT") ||
+					defaults.get(i).getName().equals("Will") ||
+					defaults.get(i).getName().equals("Per"))
+				possibleSkills.add(new CharactersSkill(defaults.get(i).getName(), -1 * defaults.get(i).getPenalty()));
 		}
 		
 		return possibleSkills;

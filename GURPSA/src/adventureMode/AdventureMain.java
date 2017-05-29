@@ -12,11 +12,12 @@ import characterManager.Character;
 import dataContainers.CharacterFields.Prerequisite;
 import skillManager.SkillManager;
 import turnManager.TurnManager;
+import utilities.Utilities;
 
 //This will one day be one of our most important classes, but for now I'm using this as a test main.
 public class AdventureMain {
-	
-	
+
+
 	//This is a toggle for read/write XML
 	static boolean MakeXML = false;
 	static boolean Characters = true;
@@ -35,7 +36,7 @@ public class AdventureMain {
 		playerManager = new CharacterManager();
 
 		skillManager = new SkillManager(new File("skills.xml"));
-		
+
 		advantageManager = new AdvantageManager();
 		advantageManager.GenerateAdvantages(new File("advantages.xml"));
 
@@ -46,13 +47,14 @@ public class AdventureMain {
 		System.out.println("MAIN MENU\n\n"
 				+ "1. Look up Skills\n"
 				+ "2. Look up Advantages\n"
-				+ "3. Make Characters\n"
-				+ "4. Load Characters\n"
-				+ "5. Begin play\n\n"
+				+ "3. Load Characters\n"
+				+ "4. Make Characters\n"
+				+ "5. Begin play\n"
+				+ "6. Roll some dice\n\n"
 				+ "Type 'exit' to close.\n");
 
 		Scanner in = new Scanner(System.in);
-		
+
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
 			System.out.println(line);
@@ -70,26 +72,65 @@ public class AdventureMain {
 				CharacterMenu(in);
 				break;
 			case "5":
-				PrototypeSkillCheck(in);
+				beginPlay();
+				break;
+			case "6":
+				diceRollCheck(in);
 				break;
 			}
-			
+
 			System.out.println("MAIN MENU\n\n"
 					+ "1. Look up Skills\n"
 					+ "2. Look up Advantages\n"
-					+ "3. Make Characters\n"
-					+ "4. Load Characters\n"
-					+ "5. Begin play\n\n"
+					+ "3. Load Characters\n"
+					+ "4. Make Characters\n"
+					+ "5. Begin play\n"
+					+ "6. Roll some dice\n\n"
 					+ "Type 'exit' to close.\n");
 		}
 		in.close();
-		
 
+
+	}
+
+	private static void diceRollCheck(Scanner in)
+	{
+		int min, max, total, numOfRolls;
+		float average = 0.0f;
+		int [] frequency = new int[16];
+		min = 100;
+		max = 0;
+		total = 0;
+		numOfRolls = 0;
+		for(Integer i : frequency)
+			i = 0;
+
+		for(int i = 0 ; i < 10000 ; i++)
+		{
+			int roll = Utilities.standardDiceRoll();
+			System.out.println(roll);
+
+			numOfRolls++;
+			total += roll;
+			average = (float)total / (float)numOfRolls;
+
+			if(roll < min)
+				min = roll;
+			else if(roll > max)
+				max = roll;
+
+			frequency[roll - 3]++;
+		}
+
+		System.out.println("Stats:\nAverage roll: " + average + "\nMinimum roll: " + min + "\nMaximum roll: " + max + "\n");
+		for(int i = 0 ; i < 16 ; i++)
+			System.out.println((i + 3) + " appeared " + frequency[i] + " times.\n");
 	}
 
 	private static void SkillMenu(Scanner in)
 	{
 		System.out.println("SKILL MENU\n");
+
 		String[] fields = {"dificulty", "description", "attribute", "default", "TL"};
 		System.out.println("Please enter skill of interest and field(s) of interest OR type 'exit' to leave");
 		
@@ -126,12 +167,12 @@ public class AdventureMain {
 	{
 		System.out.println("CHARACTER MENU\n");
 		System.out.println("Enter the character's name, and we'll look for their file. Type 'exit' to leave.");
-		
+
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
 			playerManager.AddCharacter(new File(line + ".xml"));
 			playerManager.displayCharacters();
-			
+
 			System.out.println("CHARACTER MENU\n");
 			System.out.println("Enter the character's name, and we'll look for their file. Type 'exit' to leave.");
 		}
@@ -144,21 +185,21 @@ public class AdventureMain {
 
 		Character newChara = new Character();
 		String line;
-		
+
 		System.out.println("What is the character's name?");
 		if(!(line = in.nextLine()).equals("exit")) {
 			newChara.setName(line);
 		}
 		else
 			return;
-		
+
 		System.out.println("What is the player's name?");
 		if(!(line = in.nextLine()).equals("exit")) {
 			newChara.setPlayer(line);
 		}
 		else
 			return;
-		
+
 		System.out.println("What is the character's height and weight? Only use a space to separate the two.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -167,8 +208,8 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
-		System.out.println("Describe the basic appearance of the character in one line.");
+
+System.out.println("Describe the basic appearance of the character in one line.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			newChara.setAppearance(line);
 		} else
@@ -184,7 +225,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter their HP, Will, Per, and FP, all separated by spaces.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -195,7 +236,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter their basic speed and basic move, separated by a space.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -204,7 +245,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter their TL, SM, and age, separated by spaces.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -214,7 +255,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter a language, writen, and spoken proficiency (None, Broken, Accented, Native).");
 		System.out.println("Example: English native nAtIVe");
 		while(!(line = in.nextLine()).equals("exit")) {
@@ -312,7 +353,7 @@ public class AdventureMain {
 				}
 			}
 		}
-		
+
 		playerManager.AddCharacter(newChara);
 		playerManager.toXMLFile(newChara);
 	}
@@ -385,7 +426,9 @@ public class AdventureMain {
 				}
 			}
 		}
+	
 
+	/*
 	private static void PrototypeSkillCheck(Scanner in)
 	{
 		System.out.println("SKILL CHECK\n");
@@ -406,6 +449,53 @@ public class AdventureMain {
 		}
 		else
 			return;
+	}*/
+
+	private static void beginPlay()
+	{
+		System.out.println("PLAY MENU\n");
+
+		System.out.println("Enter a character's name to give them a turn"
+				+ " or 'combat' to enter combat mode. Type 'exit' to leave.");
+
+
+		@SuppressWarnings("resource")
+		Scanner in = new Scanner(System.in);
+
+		String line;
+
+		turnManager.clearTurnList();
+		turnManager.buildTurnList(playerManager.getCharacters());
+		
+		while(!(line = in.nextLine()).equals("exit"))
+		{
+			switch(line){
+			case "combat":
+				combatModeStart();
+				break;
+			default:
+				Character character = playerManager.getCharacter(line);
+				if(character != null)
+					adventureModeStart(character);
+				break;
+			}
+			
+			System.out.println("PLAY MENU\n");
+
+			System.out.println("Enter a character's name to give them a turn"
+					+ " or 'combat' to enter combat mode. Type 'exit' to leave.");
+		}
+	}
+
+	//Perhaps a little excessive. I'm not thinking 100% clearly atm lol
+	private static void adventureModeStart(Character character)
+	{
+		turnManager.runTurn(character.getName());
+	}
+
+	private static void combatModeStart()
+	{
+		turnManager.runCombatTurns();
 	}
 
 }
