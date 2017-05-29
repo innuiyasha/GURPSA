@@ -453,5 +453,25 @@ public class Character {
 		TL = tL;
 	}
 	
+	public boolean has(String name, int minimum) {
+		
+		for(CharactersAdvantage adv : playerAdvantages) {
+			if(adv.getAdvantageName().equals(name)) {
+				return true;
+			}
+		}
+		
+		for(CharactersSkill skill : playerSkills) {
+			if(skill.getSkillName().equals(name)) {
+				if(skill.getLevel() >= minimum) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		}
+		
+		return false;
+	}
 	
 }

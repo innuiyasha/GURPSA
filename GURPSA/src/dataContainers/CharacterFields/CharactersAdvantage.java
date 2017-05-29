@@ -22,12 +22,12 @@ public class CharactersAdvantage {
 		this.advantageName = "Not a Skill";
 	}
 	
-	public void setSkillName(String name)
+	public void setAdvantageName(String name)
 	{
 		this.advantageName = name;
 	}
 	
-	public String getSkillName()
+	public String getAdvantageName()
 	{
 		return advantageName;
 	}

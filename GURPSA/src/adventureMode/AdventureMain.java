@@ -1,12 +1,15 @@
 package adventureMode;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import actionManager.ActionManager;
 import advantageManager.AdvantageManager;
 import characterManager.*;
 import characterManager.Character;
+import dataContainers.CharacterFields.Prerequisite;
 import skillManager.SkillManager;
 import turnManager.TurnManager;
 
@@ -26,7 +29,7 @@ public class AdventureMain {
 	static AdvantageManager advantageManager;
 	static TurnManager turnManager;
 
-	public static void main(String[] args) {
+	public static void MainMenu() {
 
 
 		playerManager = new CharacterManager();
@@ -52,7 +55,7 @@ public class AdventureMain {
 		
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
-			
+			System.out.println(line);
 			switch(line) {
 			case "1":
 				SkillMenu(in);
@@ -269,36 +272,41 @@ public class AdventureMain {
 			if(parts.length > 1)
 			{
 				if(skillManager.isSkill(name)) {
-					if(skillManager.canSpec(name) && skillManager.mustSpec(name)) {
-						System.out.println("You must specialize in one of the following. Enter the index of the desired specialty.");
-						String[] specs = skillManager.getSpecialties(name);
-						for(int i = 0; i < specs.length; i++) {
-							// People don't like zeroes so I'll increment the index just for display
-							System.out.println("\t" + (i + 1) + ": " + specs[i]);
-						}
-						
-						int choice;
-						
-						while(true) {
-							line = in.nextLine();
-							choice = Integer.parseInt(line);
-							if (choice > 0 && choice <= specs.length) {
-								// Then I'll decrement it back to proper index
-								choice--;
-								break;
-							} else {
-								System.out.println("Invalid. Please try again.");
+					if(meetsRequirements(newChara, name)) {
+						if(skillManager.canSpec(name) && skillManager.mustSpec(name)) {
+							System.out.println("You must specialize in one of the following. Enter the index of the desired specialty.");
+							String[] specs = skillManager.getSpecialties(name);
+							for(int i = 0; i < specs.length; i++) {
+								// People don't like zeroes so I'll increment the index just for display
+								System.out.println("\t" + (i + 1) + ": " + specs[i]);
 							}
+							
+							int choice;
+							
+							while(true) {
+								line = in.nextLine();
+								choice = Integer.parseInt(line);
+								if (choice > 0 && choice <= specs.length) {
+									// Then I'll decrement it back to proper index
+									choice--;
+									break;
+								} else {
+									System.out.println("Invalid. Please try again.");
+								}
+							}
+							
+							System.out.println("Adding skill: " + name + " (" + specs[choice] + ") at: +" + modifier);
+							newChara.addSkill(name + " | " + specs[choice], modifier);
+							
+							
+							
+						} else {
+							newChara.addSkill(name, modifier);						
 						}
-						
-						System.out.println("Adding skill: " + name + " (" + specs[choice] + ") at: +" + modifier);
-						newChara.addSkill(name + " | " + specs[choice], modifier);
-						
-						
-						
-					} else {
-						newChara.addSkill(name, modifier);						
 					}
+					
+					// Need to skip this is prerequisite is not met
+					
 				} else {
 					System.out.println(name + " is not a skill");
 				}
@@ -307,6 +315,41 @@ public class AdventureMain {
 		
 		playerManager.AddCharacter(newChara);
 		playerManager.toXMLFile(newChara);
+	}
+	
+	private static boolean meetsRequirements(Character newChara, String name) {
+		List<Prerequisite> pres = skillManager.getSkill(name).getPrerequisite();
+		List<Prerequisite> unmet = new ArrayList<Prerequisite>();
+		if(!pres.isEmpty()) {
+			for(Prerequisite pre : pres) {
+				if( ! newChara.has(pre.getName(), pre.getMinimum())) {
+					unmet.add(pre);
+				}
+			}
+		}
+		
+		if(! unmet.isEmpty()) {
+			System.out.print("You require " + unmet.get(0).getName());
+			if(unmet.get(0).getMinimum() > 0)
+				System.out.print(" at " + unmet.get(0).getMinimum());
+			
+			for(int i = 1; i < unmet.size(); i++) {
+				if(i == unmet.size() - 1) {
+					System.out.print(", and " + unmet.get(i).getName());
+					if(unmet.get(i).getMinimum() > 0)
+						System.out.print(" at " + unmet.get(i).getMinimum());
+				} else {
+					System.out.print(", " + unmet.get(i).getName());
+					if(unmet.get(i).getMinimum() > 0)
+						System.out.print(" at " + unmet.get(i).getMinimum());
+				}
+			}
+			
+			System.out.println(" to have this skill.");
+			return false;
+		}
+		
+		return true;
 	}
 	
 	private static void AdvantageMenu(Scanner in)
