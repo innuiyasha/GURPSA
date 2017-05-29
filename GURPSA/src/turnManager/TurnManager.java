@@ -77,16 +77,18 @@ public class TurnManager {
 	{
 		enforceTurnOrder = enforce;
 		if(enforce && turnList.size() != 0)
+			sortBySpeed();
+	}
+	
+	private void sortBySpeed()
+	{
+		for(int i = 0 ; i < turnList.size(); i++)
 		{
-			
-			for(int i = 0 ; i < turnList.size(); i++)
-			{
-				int highestSpeedChara = i;
-				for(int j = i ; j < turnList.size() ; j++)
-					if(turnList.get(j).getCharacter().getSpeed() > turnList.get(highestSpeedChara).getCharacter().getSpeed())
-						highestSpeedChara = j;
-				Collections.swap(turnList, i, highestSpeedChara);
-			}
+			int highestSpeedChara = i;
+			for(int j = i ; j < turnList.size() ; j++)
+				if(turnList.get(j).getCharacter().getSpeed() > turnList.get(highestSpeedChara).getCharacter().getSpeed())
+					highestSpeedChara = j;
+			Collections.swap(turnList, i, highestSpeedChara);
 		}
 	}
 }
