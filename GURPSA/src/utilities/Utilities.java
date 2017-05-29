@@ -126,4 +126,12 @@ public class Utilities {
 		}
 		return skillName;
 	}
+	
+	public static Boolean isIn(String a, String[] list) {
+		for(String entry : list) {
+			if(entry.equals(a))
+				return true;
+		}
+		return false;
+	}
 }
