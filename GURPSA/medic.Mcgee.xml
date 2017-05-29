@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<character>
+    <name>medic.Mcgee</name>
+    <player>loserson</player>
+    <height>5'5"</height>
+    <weight>120</weight>
+    <appearance></appearance>
+    <SM>0</SM>
+    <age>25</age>
+    <ST>8</ST>
+    <DX>11</DX>
+    <IQ>13</IQ>
+    <HT>10</HT>
+    <HP>9</HP>
+    <FP>9</FP>
+    <Will>10</Will>
+    <PER>14</PER>
+    <TL>6</TL>
+    <speed>4.5</speed>
+    <move>5</move>
+    <SkillList>
+        <PlayerSkill>
+            <skillName>First Aid</skillName>
+            <relativeLevel>5</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Physician</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Physiology</skillName>
+            <relativeLevel>-1</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Veterinary</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Surgery</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+    </SkillList>
+    <AdvantageList/>
+    <LanguageList/>
+    <CultureList/>
+    <AppearanceModifier appropriateSex="0" otherSex="0"/>
+    <ReputationList/>
+    <StatusList/>
+</character>
