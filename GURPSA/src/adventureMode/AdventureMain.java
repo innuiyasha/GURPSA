@@ -13,8 +13,8 @@ import utilities.Utilities;
 
 //This will one day be one of our most important classes, but for now I'm using this as a test main.
 public class AdventureMain {
-	
-	
+
+
 	//This is a toggle for read/write XML
 	static boolean MakeXML = false;
 	static boolean Characters = true;
@@ -33,7 +33,7 @@ public class AdventureMain {
 		playerManager = new CharacterManager();
 
 		skillManager = new SkillManager(new File("skills.xml"));
-		
+
 		advantageManager = new AdvantageManager();
 		advantageManager.GenerateAdvantages(new File("advantages.xml"));
 
@@ -51,10 +51,10 @@ public class AdventureMain {
 				+ "Type 'exit' to close.\n");
 
 		Scanner in = new Scanner(System.in);
-		
+
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
-			
+
 			switch(line) {
 			case "1":
 				SkillMenu(in);
@@ -69,13 +69,13 @@ public class AdventureMain {
 				CharacterMaker(in);
 				break;
 			case "5":
-				PrototypeSkillCheck(in);
+				beginPlay();
 				break;
 			case "6":
 				diceRollCheck(in);
 				break;
 			}
-			
+
 			System.out.println("MAIN MENU\n\n"
 					+ "1. Look up Skills\n"
 					+ "2. Look up Advantages\n"
@@ -86,7 +86,7 @@ public class AdventureMain {
 					+ "Type 'exit' to close.\n");
 		}
 		in.close();
-		
+
 
 	}
 
@@ -101,41 +101,41 @@ public class AdventureMain {
 		numOfRolls = 0;
 		for(Integer i : frequency)
 			i = 0;
-		
+
 		for(int i = 0 ; i < 10000 ; i++)
 		{
 			int roll = Utilities.standardDiceRoll();
 			System.out.println(roll);
-			
+
 			numOfRolls++;
 			total += roll;
 			average = (float)total / (float)numOfRolls;
-			
+
 			if(roll < min)
 				min = roll;
 			else if(roll > max)
 				max = roll;
-			
+
 			frequency[roll - 3]++;
 		}
-		
+
 		System.out.println("Stats:\nAverage roll: " + average + "\nMinimum roll: " + min + "\nMaximum roll: " + max + "\n");
 		for(int i = 0 ; i < 16 ; i++)
 			System.out.println((i + 3) + " appeared " + frequency[i] + " times.\n");
 	}
-	
+
 	private static void SkillMenu(Scanner in)
 	{
 		System.out.println("SKILL MENU\n");
 		// Format of a command looks like the following:
 		// SkillName FieldOfInterest FieldOfInterest . . .
 		// Valid fields are: 'difficulty' 'description' 'attribute' 'default' 'TL'
-		
+
 		System.out.println("Please enter skill of interest and field(s) of interest OR type 'exit' to leave\n"
 				+ "If a multi-word skill, use periods rather than spaces\n"
 				+ "Valid fields are: 'difficulty' 'description' 'attribute' 'default' 'TL'\n"
 				+ "'SkillName' Field1 Field2 . . . FieldN");
-		
+
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -151,12 +151,12 @@ public class AdventureMain {
 	{
 		System.out.println("CHARACTER MENU\n");
 		System.out.println("Enter the character's name, and we'll look for their file. Type 'exit' to leave.");
-		
+
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
 			playerManager.AddCharacter(new File(line + ".xml"));
 			playerManager.displayCharacters();
-			
+
 			System.out.println("CHARACTER MENU\n");
 			System.out.println("Enter the character's name, and we'll look for their file. Type 'exit' to leave.");
 		}
@@ -169,21 +169,21 @@ public class AdventureMain {
 
 		Character newChara = new Character();
 		String line;
-		
+
 		System.out.println("What is the character's name?");
 		if(!(line = in.nextLine()).equals("exit")) {
 			newChara.setName(line);
 		}
 		else
 			return;
-		
+
 		System.out.println("What is the player's name?");
 		if(!(line = in.nextLine()).equals("exit")) {
 			newChara.setPlayer(line);
 		}
 		else
 			return;
-		
+
 		System.out.println("What is the character's height and weight? Only use a space to separate the two.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -192,7 +192,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter their ST, DX, IQ, and HT, all separated by spaces.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -203,7 +203,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter their HP, Will, Per, and FP, all separated by spaces.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -214,7 +214,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter their basic speed and basic move, separated by a space.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -223,7 +223,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Enter their TL, SM, and age, separated by spaces.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -233,7 +233,7 @@ public class AdventureMain {
 		}
 		else
 			return;
-		
+
 		System.out.println("Now enter their skills and their relative level in that skill, one at a time.\n"
 				+ "As an example, 'First.Aid -1'. Type 'exit' to finish character creation.");
 		while(!(line = in.nextLine()).equals("exit")) {
@@ -249,9 +249,9 @@ public class AdventureMain {
 							// People don't like zeroes so I'll increment the index just for display
 							System.out.println("\t" + (i + 1) + ": " + specs[i]);
 						}
-						
+
 						int choice;
-						
+
 						while(true) {
 							line = in.nextLine();
 							choice = Integer.parseInt(line);
@@ -263,15 +263,15 @@ public class AdventureMain {
 								System.out.println("Invalid. Please try again.");
 							}
 						}
-						
-						
+
+
 						int level = Integer.parseInt(parts[1]);
-						
+
 						System.out.println("Adding skill: " + name + " (" + specs[choice] + ") at: +" + level);
 						newChara.addSkill(name + " | " + specs[choice], level);
-						
-						
-						
+
+
+
 					} else {
 						newChara.addSkill(name, Integer.parseInt(parts[1]));						
 					}
@@ -280,31 +280,32 @@ public class AdventureMain {
 				}
 			}
 		}
-		
+
 		playerManager.AddCharacter(newChara);
 		playerManager.toXMLFile(newChara);
 	}
-	
+
 	private static void AdvantageMenu(Scanner in)
-		{
-			System.out.println("ADVANTAGE MENU\n");
-	
-			System.out.println("Please enter advantage of interest and field(s) of interest OR type 'exit' to leave\n"
-					+ "If a multi-word skill, use periods rather than spaces\n"
-					+ "Valid fields are: 'cost' 'description' 'nums'\n"
-					+ "'AdvantageName' Field1 Field2 . . . FieldN");
-	
-			String line;
-			while(!(line = in.nextLine()).equals("exit")) {
-				String[] parts = line.split(" ");
-				String name = utilities.Utilities.formatSkillName(parts[0]);
-				System.out.println(name + ":");
-				for (int i = 1; i < parts.length; i++) {
-					System.out.println("\t" + parts[i] + ": " + advantageManager.request(name, parts[i]));
-				}
+	{
+		System.out.println("ADVANTAGE MENU\n");
+
+		System.out.println("Please enter advantage of interest and field(s) of interest OR type 'exit' to leave\n"
+				+ "If a multi-word skill, use periods rather than spaces\n"
+				+ "Valid fields are: 'cost' 'description' 'nums'\n"
+				+ "'AdvantageName' Field1 Field2 . . . FieldN");
+
+		String line;
+		while(!(line = in.nextLine()).equals("exit")) {
+			String[] parts = line.split(" ");
+			String name = utilities.Utilities.formatSkillName(parts[0]);
+			System.out.println(name + ":");
+			for (int i = 1; i < parts.length; i++) {
+				System.out.println("\t" + parts[i] + ": " + advantageManager.request(name, parts[i]));
 			}
 		}
+	}
 
+	/*
 	private static void PrototypeSkillCheck(Scanner in)
 	{
 		System.out.println("SKILL CHECK\n");
@@ -325,6 +326,53 @@ public class AdventureMain {
 		}
 		else
 			return;
+	}*/
+
+	private static void beginPlay()
+	{
+		System.out.println("PLAY MENU\n");
+
+		System.out.println("Enter a character's name to give them a turn"
+				+ " or 'combat' to enter combat mode. Type 'exit' to leave.");
+
+
+		@SuppressWarnings("resource")
+		Scanner in = new Scanner(System.in);
+
+		String line;
+
+		turnManager.clearTurnList();
+		turnManager.buildTurnList(playerManager.getCharacters());
+		
+		while(!(line = in.nextLine()).equals("exit"))
+		{
+			switch(line){
+			case "combat":
+				combatModeStart();
+				break;
+			default:
+				Character character = playerManager.getCharacter(line);
+				if(character != null)
+					adventureModeStart(character);
+				break;
+			}
+			
+			System.out.println("PLAY MENU\n");
+
+			System.out.println("Enter a character's name to give them a turn"
+					+ " or 'combat' to enter combat mode. Type 'exit' to leave.");
+		}
+	}
+
+	//Perhaps a little excessive. I'm not thinking 100% clearly atm lol
+	private static void adventureModeStart(Character character)
+	{
+		turnManager.runTurn(character.getName());
+	}
+
+	private static void combatModeStart()
+	{
+		turnManager.runCombatTurns();
 	}
 
 }
