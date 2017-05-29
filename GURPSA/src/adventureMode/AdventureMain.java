@@ -66,10 +66,10 @@ public class AdventureMain {
 				AdvantageMenu(in);
 				break;
 			case "3": 
-				CharacterMaker(in);
+				CharacterMenu(in);
 				break;
 			case "4": 
-				CharacterMenu(in);
+				CharacterMaker(in);
 				break;
 			case "5":
 				beginPlay();
