@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<character>
+    <name>Teresa</name>
+    <player>David Clare</player>
+    <height>5'8"</height>
+    <weight>200lbs</weight>
+    <appearance></appearance>
+    <SM>0</SM>
+    <age>24</age>
+    <ST>15</ST>
+    <DX>12</DX>
+    <IQ>8</IQ>
+    <HT>15</HT>
+    <HP>18</HP>
+    <FP>18</FP>
+    <Will>13</Will>
+    <PER>6</PER>
+    <TL>4</TL>
+    <speed>7.0</speed>
+    <move>7</move>
+    <SkillList>
+        <PlayerSkill>
+            <skillName>Acrobatics</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Bow</skillName>
+            <relativeLevel>1</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Brawling</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Breath Control</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Carousing</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Climbing</skillName>
+            <relativeLevel>2</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>First Aid</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Filch</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Hiking</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Lifting</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Melee Weapon</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Gunner</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Naturalist</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Pharmacy</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Pickpocket</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Running</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Throwing</skillName>
+            <relativeLevel>1</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Shield</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Stealth</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Swimming</skillName>
+            <relativeLevel>0</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Tracking</skillName>
+            <relativeLevel>2</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Explosives</skillName>
+            <relativeLevel>3</relativeLevel>
+        </PlayerSkill>
+        <PlayerSkill>
+            <skillName>Traps</skillName>
+            <relativeLevel>2</relativeLevel>
+        </PlayerSkill>
+    </SkillList>
+    <AdvantageList>
+        <Advantage>
+            <advantageName>Fearlessness</advantageName>
+        </Advantage>
+        <Advantage>
+            <advantageName>Very Fit</advantageName>
+        </Advantage>
+        <Advantage>
+            <advantageName>Ambidexterity</advantageName>
+        </Advantage>
+    </AdvantageList>
+    <LanguageList>
+        <Language languageName="Human" written="NATIVE" spoken="NATIVE"/>
+    </LanguageList>
+    <CultureList>
+        <Culture cultureName="Human"/>
+        <Culture cultureName="Lytherian"/>
+        <Culture cultureName="Wyverian"/>
+    </CultureList>
+    <AppearanceModifier appropriateSex="0" otherSex="0"/>
+    <ReputationList/>
+    <StatusList/>
+</character>
