@@ -1,11 +1,11 @@
 package turnManager;
 
 import java.util.Collections;
+import java.util.Scanner;
 import java.util.Vector;
 
 import actionManager.ActionManager;
 import characterManager.Character;
-import characterManager.CharacterManager;
 
 public class TurnManager {
 
@@ -63,12 +63,26 @@ public class TurnManager {
 		}
 	}
 	
+	@SuppressWarnings("resource")
 	public void runCombatTurns()
 	{
 		enforceTurns(true);
 		
-		for(int i = 0 ; i < turnList.size(); i++)
-			runTurn(i);
+		Scanner in = new Scanner(System.in);
+		boolean stop = false;
+		
+		while(!stop)
+			for(int i = 0 ; i < turnList.size(); i++)
+			{
+				if(stop)
+					break;
+
+				runTurn(i);
+
+				System.out.println("Type exit if you want to leave combat mode. Anything else will proceed with the next turn.\n");
+				if(in.nextLine().equals("exit"))
+					stop = true;
+			}
 		
 		enforceTurns(false);
 	}

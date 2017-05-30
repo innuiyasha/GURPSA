@@ -26,26 +26,51 @@ public class Turn {
 		return initiator;
 	}
 
-	//This is incomplete as heck atm. This should be when move pieces + archetypes should be determined.
 	@SuppressWarnings("resource")
 	public void runTurn()
 	{
 		while(true)
 		{
-			System.out.println("This is " + initiator.getName() + "'s turn.");
-			System.out.println("Enter the name of the skill you want to check.");
-
 			Scanner in = new Scanner(System.in);
-			String line, skillName;
-
-			if(!(line = in.nextLine()).equals("exit")) {
-				String[] parts = line.split(" ");
-				skillName = parts[0];
-				actionManager.SkillCheck(initiator, skillName);
-			} else {
+			
+			System.out.println("This is " + initiator.getName() + "'s turn.");
+			System.out.println("What kind of move do they want to do?\n"
+					+ "1. Skill Check\n"
+					+ "2. Perception Check\n");
+			String line = in.nextLine();
+			
+			switch(line){
+			case "1":
+				skillCheck();
+				break;
+			case "2":
+				perceptionCheck();
+				break;
+			case "exit":
 				return;
 			}
 		}
+	}
+	
+	private void skillCheck()
+	{
+		System.out.println("Enter the name of the skill you want to check. ((This still requires '.'s instead of spaces))");
+
+		Scanner in = new Scanner(System.in);
+		String line, skillName;
+
+		if(!(line = in.nextLine()).equals("exit")) {
+			String[] parts = line.split(" ");
+			skillName = parts[0];
+			actionManager.SkillCheck(initiator, skillName);
+		} else {
+			return;
+		}
+	}
+	
+	private void perceptionCheck()
+	{
+		actionManager.PerceptionCheck(initiator);
 	}
 
 }
