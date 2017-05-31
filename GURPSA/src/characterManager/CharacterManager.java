@@ -51,6 +51,11 @@ public class CharacterManager {
 		return players.get(i);
 	}
 	
+	public Vector<Character> getCharacters()
+	{
+		return players;
+	}
+	
 	public Character getCharacter(String name)
 	{
 		for(int i = 0 ; i < players.size() ; i++)

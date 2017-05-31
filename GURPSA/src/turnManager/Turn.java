@@ -20,13 +20,19 @@ public class Turn {
 	{
 		return initiator.getName();
 	}
+	
+	public Character getCharacter()
+	{
+		return initiator;
+	}
 
-	//woefully insufficient. Not sure when a turn is told/determines what move to run, so this is what I have for now.
+	//This is incomplete as heck atm. This should be when move pieces + archetypes should be determined.
 	@SuppressWarnings("resource")
 	public void runTurn()
 	{
 		while(true)
 		{
+			System.out.println("This is " + initiator.getName() + "'s turn.");
 			System.out.println("Enter the name of the skill you want to check.");
 
 			Scanner in = new Scanner(System.in);

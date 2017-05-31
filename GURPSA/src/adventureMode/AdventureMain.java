@@ -46,9 +46,10 @@ public class AdventureMain {
 		System.out.println("MAIN MENU\n\n"
 				+ "1. Look up Skills\n"
 				+ "2. Look up Advantages\n"
-				+ "3. Make Characters\n"
-				+ "4. Load Characters\n"
-				+ "5. Begin play\n\n"
+				+ "3. Load Characters\n"
+				+ "4. Make Characters\n"
+				+ "5. Begin play\n"
+				+ "6. Roll some dice\n\n"
 				+ "Type 'exit' to close.\n");
 
 		Scanner in = new Scanner(System.in);
@@ -64,27 +65,66 @@ public class AdventureMain {
 				AdvantageMenu(in);
 				break;
 			case "3": 
-				CharacterMaker(in);
-				break;
-			case "4": 
 				CharacterMenu(in);
 				break;
+			case "4": 
+				CharacterMaker(in);
+				break;
 			case "5":
-				PrototypeSkillCheck(in);
+				beginPlay();
+				break;
+			case "6":
+				diceRollCheck(in);
 				break;
 			}
 			
 			System.out.println("MAIN MENU\n\n"
 					+ "1. Look up Skills\n"
 					+ "2. Look up Advantages\n"
-					+ "3. Make Characters\n"
-					+ "4. Load Characters\n"
-					+ "5. Begin play\n\n"
+					+ "3. Load Characters\n"
+					+ "4. Make Characters\n"
+					+ "5. Begin play\n"
+					+ "6. Roll some dice\n\n"
 					+ "Type 'exit' to close.\n");
 		}
 		in.close();
 		
 
+
+	}
+
+	private static void diceRollCheck(Scanner in)
+	{
+		int min, max, total, numOfRolls;
+		float average = 0.0f;
+		int [] frequency = new int[16];
+		min = 100;
+		max = 0;
+		total = 0;
+		numOfRolls = 0;
+		for(Integer i : frequency)
+			i = 0;
+
+		for(int i = 0 ; i < 10000 ; i++)
+		{
+			int roll = Utilities.standardDiceRoll();
+			System.out.println(roll);
+
+			numOfRolls++;
+			total += roll;
+			average = (float)total / (float)numOfRolls;
+
+			if(roll < min)
+				min = roll;
+			else if(roll > max)
+				max = roll;
+
+			frequency[roll - 3]++;
+		}
+
+		System.out.println("Stats:\nAverage roll: " + average + "\nMinimum roll: " + min + "\nMaximum roll: " + max + "\n");
+		for(int i = 0 ; i < 16 ; i++)
+			System.out.println((i + 3) + " appeared " + frequency[i] + " times.\n");
 	}
 
 	private static void SkillMenu(Scanner in)
@@ -406,6 +446,53 @@ public class AdventureMain {
 		}
 		else
 			return;
+	}*/
+
+	private static void beginPlay()
+	{
+		System.out.println("PLAY MENU\n");
+
+		System.out.println("Enter a character's name to give them a turn"
+				+ " or 'combat' to enter combat mode. Type 'exit' to leave.");
+
+
+		@SuppressWarnings("resource")
+		Scanner in = new Scanner(System.in);
+
+		String line;
+
+		turnManager.clearTurnList();
+		turnManager.buildTurnList(playerManager.getCharacters());
+		
+		while(!(line = in.nextLine()).equals("exit"))
+		{
+			switch(line){
+			case "combat":
+				combatModeStart();
+				break;
+			default:
+				Character character = playerManager.getCharacter(line);
+				if(character != null)
+					adventureModeStart(character);
+				break;
+			}
+			
+			System.out.println("PLAY MENU\n");
+
+			System.out.println("Enter a character's name to give them a turn"
+					+ " or 'combat' to enter combat mode. Type 'exit' to leave.");
+		}
+	}
+
+	//Perhaps a little excessive. I'm not thinking 100% clearly atm lol
+	private static void adventureModeStart(Character character)
+	{
+		turnManager.runTurn(character.getName());
+	}
+
+	private static void combatModeStart()
+	{
+		turnManager.runCombatTurns();
 	}
 
 }

@@ -3,6 +3,7 @@ package actionManager;
 import characterManager.Character;
 import dataContainers.CharacterFields.CharactersSkill;
 import skillManager.SkillManager;
+import utilities.Utilities;
 
 import java.util.Scanner;
 import java.util.Vector;
@@ -26,6 +27,8 @@ public class ActionManager {
 		skillName = skillName.replace(".", " ");
 
 		Vector<CharactersSkill> appropriateSkills = new Vector<CharactersSkill>();
+		
+		//TODO: This needs to look for attributes as defaults as well.
 		appropriateSkills = character.checkForAppropriateSkills(skillManager, skillName);
 
 		System.out.println(appropriateSkills.toString());
@@ -96,5 +99,59 @@ public class ActionManager {
 		}
 		
 		System.out.println("Roll " + chosenAttribute + " (" + attributeValue + ") at " + chosenSkill.getLevel() + " (" + chosenSkill.getSkillName() + ")");
+	}
+	
+	public void PerceptionCheck(Vector<Character> characters)
+	{
+		//TODO: Modifiers should be able to be applied to single characters
+		System.out.println("Enter the modifier you want to apply to this roll. 0 is the default.");
+		
+		@SuppressWarnings("resource")
+		Scanner in = new Scanner(System.in);
+		
+		int modifier = 0;
+		
+		try{
+			modifier = Integer.parseInt(in.nextLine());
+		} catch (NumberFormatException e) {
+			modifier = 0;
+		}
+		
+		int results[] = new int[characters.size()];
+		
+		for(int i = 0 ; i < characters.size(); i++)
+		{
+			int perception = characters.elementAt(i).getPER() + modifier;
+			int roll = Utilities.standardDiceRoll();
+			System.out.println(characters.elementAt(i).getName() + " rolled " + roll + "and has Perception at " + perception + " for this roll.");
+			
+			if(roll <= perception)
+				System.out.println("They succeeded by " + (perception - roll));
+			else
+				System.out.println("They failed by " + (perception - roll) + "\n");
+			
+			results[i] = perception - roll;
+		}
+		
+	}
+	
+	public void FrightCheck()
+	{
+		
+	}
+	
+	public void RecoveryCheck()
+	{
+		
+	}
+	
+	public void SkillContest()
+	{
+		
+	}
+	
+	public void ReactionRoll()
+	{
+		
 	}
 }
