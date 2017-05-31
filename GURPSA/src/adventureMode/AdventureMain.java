@@ -1,6 +1,7 @@
 package adventureMode;
 
 import java.io.File;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,6 +13,7 @@ import characterManager.Character;
 import dataContainers.CharacterFields.Prerequisite;
 import skillManager.SkillManager;
 import turnManager.TurnManager;
+import utilities.Utilities;
 
 //This will one day be one of our most important classes, but for now I'm using this as a test main.
 public class AdventureMain {
@@ -426,6 +428,7 @@ public class AdventureMain {
 			}
 		}
 
+	/*
 	private static void PrototypeSkillCheck(Scanner in)
 	{
 		System.out.println("SKILL CHECK\n");
