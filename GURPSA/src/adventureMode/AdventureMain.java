@@ -36,10 +36,10 @@ public class AdventureMain {
 
 		playerManager = new CharacterManager();
 
-		skillManager = new SkillManager(new File("resources\\skills.xml"));
+		skillManager = new SkillManager(new File("GURPSA\\resources\\skills.xml"));
 		
 		advantageManager = new AdvantageManager();
-		advantageManager.GenerateAdvantages(new File("resources\\advantages.xml"));
+		advantageManager.GenerateAdvantages(new File("GURPSA\\resources\\advantages.xml"));
 
 		actionManager = new ActionManager(skillManager, advantageManager);
 
@@ -91,7 +91,7 @@ public class AdventureMain {
 		}
 		in.close();
 		
-
+		System.exit(0);
 
 	}
 
@@ -104,9 +104,9 @@ public class AdventureMain {
 		max = 0;
 		total = 0;
 		numOfRolls = 0;
-		for(Integer i : frequency)
+		/*for(Integer i : frequency)
 			i = 0;
-
+		*/
 		for(int i = 0 ; i < 10000 ; i++)
 		{
 			int roll = Utilities.standardDiceRoll();

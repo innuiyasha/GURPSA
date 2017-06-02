@@ -72,7 +72,7 @@ public class CharacterManager {
 		try {
 
 			//File file = new File("defaultCharacter.xml");
-			File file = new File("characters\\" + character.getName() + ".xml");
+			File file = new File("GURPSA\\characters\\" + character.getName() + ".xml");
 			JAXBContext jaxbContext = JAXBContext.newInstance(Character.class,CharactersSkill.class,Skill.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
