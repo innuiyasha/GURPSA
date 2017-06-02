@@ -48,6 +48,7 @@ public class MainWindow extends JFrame {
 	private JList participant_list;
 	private JButton to_participate_button;
 	private JButton to_characters_button;
+	private JButton btnNewButton;
 	
 	public static void main(String[] args) {
 		if(runUI) {
@@ -144,7 +145,7 @@ public class MainWindow extends JFrame {
 		action_list.setVisibleRowCount(15);
 		action_list.setLayoutOrientation(JList.VERTICAL_WRAP);
 		JScrollPane action_scroller = new JScrollPane(action_list);
-		action_scroller.setBounds(10, 212, 749, 257);
+		action_scroller.setBounds(10, 212, 749, 226);
 		adventure_panel.add(action_scroller);
 		
 		
@@ -259,6 +260,15 @@ public class MainWindow extends JFrame {
 		});
 		to_characters_button.setBounds(345, 116, 79, 23);
 		adventure_panel.add(to_characters_button);
+		
+		btnNewButton = new JButton("Run");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
+		btnNewButton.setBounds(345, 446, 79, 23);
+		adventure_panel.add(btnNewButton);
 		
 		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{textField, console_panel, adventure_panel}));
 	}
