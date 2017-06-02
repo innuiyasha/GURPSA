@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import adventureMode.AdventureMain;
+import characterManager.Character;
 
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
@@ -48,7 +49,7 @@ public class MainWindow extends JFrame {
 	private JList participant_list;
 	private JButton to_participate_button;
 	private JButton to_characters_button;
-	private JButton btnNewButton;
+	private JButton run_button;
 	
 	public static void main(String[] args) {
 		if(runUI) {
@@ -173,43 +174,7 @@ public class MainWindow extends JFrame {
 		to_participate_button.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent arg0) {
-				int[] indices = character_list.getSelectedIndices();
-			    for(int index : indices) {
-			    	
-			    	index--;
-			    	
-			    	if (index == -1) { //no selection, so insert at beginning
-				        index = 0;
-				    } else {           //add after the selected item
-				        index++;
-				    }
-
-				    participant_model.addElement(character_model.getElementAt(index));
-
-				    //Select the new item and make it visible.
-				    participant_list.setSelectedIndex(index);
-				    participant_list.ensureIndexIsVisible(index);
-			    	
-			    	
-			    	
-			    	character_model.remove(index);
-
-				    int size = character_model.getSize();
-
-				    if (size == 0) { //Nobody's left, disable firing.
-				     //   to_participate_button.setEnabled(false);
-
-				    } else { //Select an index.
-				        if (index == character_model.getSize()) {
-				            //removed item in last position
-				            index--;
-				        }
-
-				        character_list.setSelectedIndex(index);
-				        character_list.ensureIndexIsVisible(index);
-				    }
-				    
-			    }
+				moveSelectedToParticipants();
 			}
 		});
 		to_participate_button.setBounds(345, 64, 79, 23);
@@ -219,57 +184,111 @@ public class MainWindow extends JFrame {
 		to_characters_button.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent arg0) {
-				int[] indices = participant_list.getSelectedIndices();
-			    for(int index : indices) {
-			    	
-			    	index--;
-			    	
-			    	if (index == -1) { //no selection, so insert at beginning
-				        index = 0;
-				    } else {           //add after the selected item
-				        index++;
-				    }
-
-				    character_model.addElement(participant_model.getElementAt(index));
-
-				    //Select the new item and make it visible.
-				    character_list.setSelectedIndex(index);
-				    character_list.ensureIndexIsVisible(index);
-			    	
-			    	
-			    	
-			    	participant_model.remove(index);
-
-				    int size = participant_model.getSize();
-
-				    if (size == 0) { //Nobody's left, disable firing.
-				       // to_characters_button.setEnabled(false);
-
-				    } else { //Select an index.
-				        if (index == participant_model.getSize()) {
-				            //removed item in last position
-				            index--;
-				        }
-
-				        participant_list.setSelectedIndex(index);
-				        participant_list.ensureIndexIsVisible(index);
-				    }
-				    
-			    }
+				moveSelectedToCharacters();
 			}
 		});
 		to_characters_button.setBounds(345, 116, 79, 23);
 		adventure_panel.add(to_characters_button);
 		
-		btnNewButton = new JButton("Run");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		run_button = new JButton("Run");
+		run_button.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent e) {
 			}
 		});
-		btnNewButton.setBounds(345, 446, 79, 23);
-		adventure_panel.add(btnNewButton);
+		run_button.setBounds(345, 446, 79, 23);
+		adventure_panel.add(run_button);
 		
 		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{textField, console_panel, adventure_panel}));
 	}
+
+	private void moveSelectedToCharacters() {
+		DefaultListModel<characterManager.Character> character_model = (DefaultListModel<Character>) character_list.getModel();
+		DefaultListModel<characterManager.Character> participant_model = (DefaultListModel<Character>) participant_list.getModel();
+		
+		int[] indices = participant_list.getSelectedIndices();
+	    
+		for(int index : indices) {
+	    	
+	    	index--;
+	    	
+	    	if (index == -1) { //no selection, so insert at beginning
+		        index = 0;
+		    } else {           //add after the selected item
+		        index++;
+		    }
+
+		    character_model.addElement(participant_model.getElementAt(index));
+
+		    //Select the new item and make it visible.
+		    character_list.setSelectedIndex(index);
+		    character_list.ensureIndexIsVisible(index);
+	    	
+	    	
+	    	
+	    	participant_model.remove(index);
+
+		    int size = participant_model.getSize();
+
+		    if (size == 0) { //Nobody's left, disable firing.
+		       // to_characters_button.setEnabled(false);
+
+		    } else { //Select an index.
+		        if (index == participant_model.getSize()) {
+		            //removed item in last position
+		            index--;
+		        }
+
+		        participant_list.setSelectedIndex(index);
+		        participant_list.ensureIndexIsVisible(index);
+		    }
+		    
+	    }
+	}
+	
+	private void moveSelectedToParticipants() {
+		DefaultListModel<characterManager.Character> character_model = (DefaultListModel<Character>) character_list.getModel();
+		DefaultListModel<characterManager.Character> participant_model = (DefaultListModel<Character>) participant_list.getModel();
+		
+		int[] indices = character_list.getSelectedIndices();
+		
+	    for(int index : indices) {
+	    	
+	    	index--;
+	    	
+	    	if (index == -1) { //no selection, so insert at beginning
+		        index = 0;
+		    } else {           //add after the selected item
+		        index++;
+		    }
+
+		    participant_model.addElement(character_model.getElementAt(index));
+
+		    //Select the new item and make it visible.
+		    participant_list.setSelectedIndex(index);
+		    participant_list.ensureIndexIsVisible(index);
+	    	
+	    	
+	    	
+	    	character_model.remove(index);
+
+		    int size = character_model.getSize();
+
+		    if (size == 0) { //Nobody's left, disable firing.
+		     //   to_participate_button.setEnabled(false);
+
+		    } else { //Select an index.
+		        if (index == character_model.getSize()) {
+		            //removed item in last position
+		            index--;
+		        }
+
+		        character_list.setSelectedIndex(index);
+		        character_list.ensureIndexIsVisible(index);
+		    }
+		    
+	    }
+	    
+	}
+	
 }
