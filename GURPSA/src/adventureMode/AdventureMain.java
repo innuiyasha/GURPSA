@@ -36,10 +36,10 @@ public class AdventureMain {
 
 		playerManager = new CharacterManager();
 
-		skillManager = new SkillManager(new File("GURPSA\\resources\\skills.xml"));
+		skillManager = new SkillManager(new File("resources\\skills.xml"));
 		
 		advantageManager = new AdvantageManager();
-		advantageManager.GenerateAdvantages(new File("GURPSA\\resources\\advantages.xml"));
+		advantageManager.GenerateAdvantages(new File("resources\\advantages.xml"));
 
 		actionManager = new ActionManager(skillManager, advantageManager);
 
@@ -132,7 +132,7 @@ public class AdventureMain {
 	private static void SkillMenu(Scanner in)
 	{
 		System.out.println("SKILL MENU\n");
-		String[] fields = {"dificulty", "description", "attribute", "default", "TL", "specialize", "requirement"};
+		String[] fields = {"difficulty", "description", "attribute", "default", "TL", "specialize", "requirement"};
 		System.out.println("Please enter skill of interest and field(s) of interest OR type 'exit' to leave");
 		
 		System.out.print("Valid fields are: '" + fields[0] + "'");
