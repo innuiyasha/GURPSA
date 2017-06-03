@@ -26,6 +26,8 @@ import javax.swing.JButton;
 import javax.swing.ListModel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.SwingConstants;
+import javax.swing.JSeparator;
 
 public class MainWindow extends JFrame {
 
@@ -50,6 +52,9 @@ public class MainWindow extends JFrame {
 	private JButton to_participate_button;
 	private JButton to_characters_button;
 	private JButton run_button;
+	private JButton roll_button;
+	private JTextField roll_result_field;
+	private JButton reset_button;
 	
 	public static void main(String[] args) {
 		if(runUI) {
@@ -112,7 +117,7 @@ public class MainWindow extends JFrame {
 		contentPane.setLayout(null);
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setBounds(0, 0, 774, 508);
+		tabbedPane.setBounds(0, 0, 796, 455);
 		contentPane.add(tabbedPane);
 		
 		JPanel console_panel = new JPanel();
@@ -120,7 +125,7 @@ public class MainWindow extends JFrame {
 		console_panel.setLayout(null);
 		
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 21, 749, 419);
+		scrollPane.setBounds(10, 21, 771, 339);
 		console_panel.add(scrollPane);
 		
 		control = new JTextArea();
@@ -129,7 +134,7 @@ public class MainWindow extends JFrame {
 		
 		
 		textField = new JTextField();
-		textField.setBounds(10, 449, 749, 20);
+		textField.setBounds(10, 371, 771, 45);
 		console_panel.add(textField);
 		textField.setColumns(10);
 		
@@ -146,7 +151,7 @@ public class MainWindow extends JFrame {
 		action_list.setVisibleRowCount(15);
 		action_list.setLayoutOrientation(JList.VERTICAL_WRAP);
 		JScrollPane action_scroller = new JScrollPane(action_list);
-		action_scroller.setBounds(10, 212, 749, 226);
+		action_scroller.setBounds(10, 212, 771, 168);
 		adventure_panel.add(action_scroller);
 		
 		
@@ -167,7 +172,7 @@ public class MainWindow extends JFrame {
 		participant_list = new JList(participant_model);
 		participant_list.setVisibleRowCount(-1);
 		JScrollPane participant_scroller = new JScrollPane(participant_list);
-		participant_scroller.setBounds(434, 11, 325, 190);
+		participant_scroller.setBounds(456, 11, 325, 190);
 		adventure_panel.add(participant_scroller);
 		
 		to_participate_button = new JButton(">");
@@ -177,7 +182,7 @@ public class MainWindow extends JFrame {
 				moveSelectedToParticipants();
 			}
 		});
-		to_participate_button.setBounds(345, 64, 79, 23);
+		to_participate_button.setBounds(345, 61, 101, 23);
 		adventure_panel.add(to_participate_button);
 		
 		to_characters_button = new JButton("<");
@@ -187,7 +192,7 @@ public class MainWindow extends JFrame {
 				moveSelectedToCharacters();
 			}
 		});
-		to_characters_button.setBounds(345, 116, 79, 23);
+		to_characters_button.setBounds(345, 114, 101, 23);
 		adventure_panel.add(to_characters_button);
 		
 		run_button = new JButton("Run");
@@ -196,8 +201,44 @@ public class MainWindow extends JFrame {
 			public void mouseReleased(MouseEvent e) {
 			}
 		});
-		run_button.setBounds(345, 446, 79, 23);
+		run_button.setBounds(345, 393, 101, 23);
 		adventure_panel.add(run_button);
+		
+		reset_button = new JButton("Reset");
+		reset_button.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				resetParticipants();
+			}
+		});
+		reset_button.setBounds(345, 178, 101, 23);
+		adventure_panel.add(reset_button);
+		
+		roll_result_field = new JTextField();
+		roll_result_field.setText("0");
+		roll_result_field.setHorizontalAlignment(SwingConstants.CENTER);
+		roll_result_field.setEditable(false);
+		roll_result_field.setBounds(736, 466, 38, 31);
+		contentPane.add(roll_result_field);
+		roll_result_field.setColumns(10);
+		
+		roll_button = new JButton("Roll");
+		roll_button.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				roll_result_field.setText(utilities.Utilities.standardDiceRoll() + "");
+			}
+			@Override
+			public void mousePressed(MouseEvent e) {
+				roll_result_field.setText("??");
+			}
+		});
+		roll_button.setBounds(670, 466, 61, 31);
+		contentPane.add(roll_button);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(0, 455, 796, 3);
+		contentPane.add(separator);
 		
 		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{textField, console_panel, adventure_panel}));
 	}
@@ -208,16 +249,11 @@ public class MainWindow extends JFrame {
 		
 		int[] indices = participant_list.getSelectedIndices();
 	    
-		for(int index : indices) {
-	    	
-	    	index--;
-	    	
-	    	if (index == -1) { //no selection, so insert at beginning
-		        index = 0;
-		    } else {           //add after the selected item
-		        index++;
-		    }
+		for(int i = indices.length - 1; i > -1; i--) {
+	    	//System.out.println(index + "");
 
+	    	int index = indices[i];
+	    	
 		    character_model.addElement(participant_model.getElementAt(index));
 
 		    //Select the new item and make it visible.
@@ -227,21 +263,6 @@ public class MainWindow extends JFrame {
 	    	
 	    	
 	    	participant_model.remove(index);
-
-		    int size = participant_model.getSize();
-
-		    if (size == 0) { //Nobody's left, disable firing.
-		       // to_characters_button.setEnabled(false);
-
-		    } else { //Select an index.
-		        if (index == participant_model.getSize()) {
-		            //removed item in last position
-		            index--;
-		        }
-
-		        participant_list.setSelectedIndex(index);
-		        participant_list.ensureIndexIsVisible(index);
-		    }
 		    
 	    }
 	}
@@ -252,16 +273,11 @@ public class MainWindow extends JFrame {
 		
 		int[] indices = character_list.getSelectedIndices();
 		
-	    for(int index : indices) {
-	    	
-	    	index--;
-	    	
-	    	if (index == -1) { //no selection, so insert at beginning
-		        index = 0;
-		    } else {           //add after the selected item
-		        index++;
-		    }
+	    for(int i = indices.length - 1; i > -1; i--) {
+	    	//System.out.println(index + "");
 
+	    	int index = indices[i];
+	    	
 		    participant_model.addElement(character_model.getElementAt(index));
 
 		    //Select the new item and make it visible.
@@ -271,24 +287,37 @@ public class MainWindow extends JFrame {
 	    	
 	    	
 	    	character_model.remove(index);
-
-		    int size = character_model.getSize();
-
-		    if (size == 0) { //Nobody's left, disable firing.
-		     //   to_participate_button.setEnabled(false);
-
-		    } else { //Select an index.
-		        if (index == character_model.getSize()) {
-		            //removed item in last position
-		            index--;
-		        }
-
-		        character_list.setSelectedIndex(index);
-		        character_list.ensureIndexIsVisible(index);
-		    }
 		    
 	    }
 	    
 	}
 	
+	private characterManager.Character[] getParticipants() {
+		DefaultListModel<characterManager.Character> model = (DefaultListModel<Character>) character_list.getModel();
+		Character[] characters = new Character[model.getSize()];
+		for(int i = 0; i < model.getSize(); i++) {
+			characters[i] = model.getElementAt(i);
+		}
+		
+		return characters;
+	}
+	
+	private void resetParticipants() {
+		DefaultListModel<characterManager.Character> character_model = (DefaultListModel<Character>) character_list.getModel();
+		DefaultListModel<characterManager.Character> participant_model = (DefaultListModel<Character>) participant_list.getModel();
+		
+		for(int index = participant_model.size() - 1; index > -1; index--) {
+	    	
+		    character_model.addElement(participant_model.getElementAt(index));
+
+		    //Select the new item and make it visible.
+		    character_list.setSelectedIndex(index);
+		    character_list.ensureIndexIsVisible(index);
+	    	
+	    	
+	    	
+	    	participant_model.remove(index);
+		    
+	    }
+	}
 }
