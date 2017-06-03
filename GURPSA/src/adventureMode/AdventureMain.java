@@ -487,7 +487,6 @@ System.out.println("Describe the basic appearance of the character in one line."
 		}
 	}
 
-	//Perhaps a little excessive. I'm not thinking 100% clearly atm lol
 	private static void adventureModeStart(Character character)
 	{
 		turnManager.runTurn(character.getName());

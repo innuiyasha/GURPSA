@@ -63,6 +63,14 @@ public class TurnManager {
 		}
 	}
 	
+	public void runTurn(Vector<Character> characters)
+	{
+		for(int i = 0 ; i < characters.size(); i++)
+			for(int j = 0 ; j < turnList.size() ; j++)
+				if(characters.get(i).getName() == turnList.get(j).getCharacterName())
+					turnList.get(j).runTurn();
+	}
+	
 	@SuppressWarnings("resource")
 	public void runCombatTurns()
 	{

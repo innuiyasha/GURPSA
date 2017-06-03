@@ -68,9 +68,19 @@ public class Turn {
 		}
 	}
 	
+	private void skillCheck(String skillName)
+	{
+		actionManager.SkillCheck(initiator, skillName);
+	}
+	
 	private void perceptionCheck()
 	{
 		actionManager.PerceptionCheck(initiator);
 	}
 
+	public enum moveArchetypes
+	{
+		SKILL_CHECK, REACTION_CHECK, FRIGHT_CHECK, CONTEST, PHYSICAL_FEAT, COMBAT
+	}
+	
 }
