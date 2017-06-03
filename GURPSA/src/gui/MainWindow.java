@@ -199,6 +199,13 @@ public class MainWindow extends JFrame {
 		run_button.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent e) {
+				AdventureMain adventureMain = new AdventureMain();
+				
+				
+				
+				
+				
+				
 			}
 		});
 		run_button.setBounds(345, 393, 101, 23);
