@@ -414,6 +414,7 @@ public class Character {
 //Just to help me test reading the XML file
 	public String toString()
 	{
+		/*
 		String output =  "Name: " + name + "\r\n";
 		output += "Player: " + player + "\r\n";
 		output += "Height: " + height + "\r\n";
@@ -450,6 +451,8 @@ public class Character {
 			output += playerStatuses.get(i).toString() + "\r\n";
 		
 		return output;
+		*/
+		return name;
 	}
 
 

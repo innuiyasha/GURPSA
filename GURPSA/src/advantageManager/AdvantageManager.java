@@ -38,7 +38,7 @@ public class AdvantageManager {
 	public void toXMLFile() {
 		try {
 
-			File file = new File("advantageList.xml");
+			File file = new File("GURPSA\\resources\\advantageList.xml");
 			JAXBContext jaxbContext = JAXBContext.newInstance(AdvantageManager.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 

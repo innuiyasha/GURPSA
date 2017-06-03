@@ -1,6 +1,7 @@
 package adventureMode;
 
 import java.io.File;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,8 +17,8 @@ import utilities.Utilities;
 
 //This will one day be one of our most important classes, but for now I'm using this as a test main.
 public class AdventureMain {
-
-
+	
+	
 	//This is a toggle for read/write XML
 	static boolean MakeXML = false;
 	static boolean Characters = true;
@@ -35,10 +36,10 @@ public class AdventureMain {
 
 		playerManager = new CharacterManager();
 
-		skillManager = new SkillManager(new File("skills.xml"));
-
+		skillManager = new SkillManager(new File("GURPSA\\resources\\skills.xml"));
+		
 		advantageManager = new AdvantageManager();
-		advantageManager.GenerateAdvantages(new File("advantages.xml"));
+		advantageManager.GenerateAdvantages(new File("GURPSA\\resources\\advantages.xml"));
 
 		actionManager = new ActionManager(skillManager, advantageManager);
 
@@ -54,7 +55,7 @@ public class AdventureMain {
 				+ "Type 'exit' to close.\n");
 
 		Scanner in = new Scanner(System.in);
-
+		
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
 			System.out.println(line);
@@ -78,7 +79,7 @@ public class AdventureMain {
 				diceRollCheck(in);
 				break;
 			}
-
+			
 			System.out.println("MAIN MENU\n\n"
 					+ "1. Look up Skills\n"
 					+ "2. Look up Advantages\n"
@@ -89,7 +90,8 @@ public class AdventureMain {
 					+ "Type 'exit' to close.\n");
 		}
 		in.close();
-
+		
+		System.exit(0);
 
 	}
 
@@ -102,9 +104,9 @@ public class AdventureMain {
 		max = 0;
 		total = 0;
 		numOfRolls = 0;
-		for(Integer i : frequency)
+		/*for(Integer i : frequency)
 			i = 0;
-
+		*/
 		for(int i = 0 ; i < 10000 ; i++)
 		{
 			int roll = Utilities.standardDiceRoll();
@@ -130,8 +132,7 @@ public class AdventureMain {
 	private static void SkillMenu(Scanner in)
 	{
 		System.out.println("SKILL MENU\n");
-
-		String[] fields = {"dificulty", "description", "attribute", "default", "TL"};
+		String[] fields = {"dificulty", "description", "attribute", "default", "TL", "specialize", "requirement"};
 		System.out.println("Please enter skill of interest and field(s) of interest OR type 'exit' to leave");
 		
 		System.out.print("Valid fields are: '" + fields[0] + "'");
@@ -167,12 +168,12 @@ public class AdventureMain {
 	{
 		System.out.println("CHARACTER MENU\n");
 		System.out.println("Enter the character's name, and we'll look for their file. Type 'exit' to leave.");
-
+		
 		String line;
 		while(!(line = in.nextLine()).equals("exit")) {
-			playerManager.AddCharacter(new File(line + ".xml"));
+			playerManager.AddCharacter( new File("characters\\" + line + ".xml"));
 			playerManager.displayCharacters();
-
+			
 			System.out.println("CHARACTER MENU\n");
 			System.out.println("Enter the character's name, and we'll look for their file. Type 'exit' to leave.");
 		}
@@ -185,21 +186,21 @@ public class AdventureMain {
 
 		Character newChara = new Character();
 		String line;
-
+		
 		System.out.println("What is the character's name?");
 		if(!(line = in.nextLine()).equals("exit")) {
-			newChara.setName(line);
+			newChara.setName(line.trim());
 		}
 		else
 			return;
-
+		
 		System.out.println("What is the player's name?");
 		if(!(line = in.nextLine()).equals("exit")) {
-			newChara.setPlayer(line);
+			newChara.setPlayer(line.trim());
 		}
 		else
 			return;
-
+		
 		System.out.println("What is the character's height and weight? Only use a space to separate the two.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -208,8 +209,8 @@ public class AdventureMain {
 		}
 		else
 			return;
-
-System.out.println("Describe the basic appearance of the character in one line.");
+		
+		System.out.println("Describe the basic appearance of the character in one line.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			newChara.setAppearance(line);
 		} else
@@ -225,7 +226,7 @@ System.out.println("Describe the basic appearance of the character in one line."
 		}
 		else
 			return;
-
+		
 		System.out.println("Enter their HP, Will, Per, and FP, all separated by spaces.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -236,7 +237,7 @@ System.out.println("Describe the basic appearance of the character in one line."
 		}
 		else
 			return;
-
+		
 		System.out.println("Enter their basic speed and basic move, separated by a space.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -245,7 +246,7 @@ System.out.println("Describe the basic appearance of the character in one line."
 		}
 		else
 			return;
-
+		
 		System.out.println("Enter their TL, SM, and age, separated by spaces.");
 		if(!(line = in.nextLine()).equals("exit")) {
 			String[] parts = line.split(" ");
@@ -255,7 +256,7 @@ System.out.println("Describe the basic appearance of the character in one line."
 		}
 		else
 			return;
-
+		
 		System.out.println("Enter a language, writen, and spoken proficiency (None, Broken, Accented, Native).");
 		System.out.println("Example: English native nAtIVe");
 		while(!(line = in.nextLine()).equals("exit")) {
@@ -353,7 +354,7 @@ System.out.println("Describe the basic appearance of the character in one line."
 				}
 			}
 		}
-
+		
 		playerManager.AddCharacter(newChara);
 		playerManager.toXMLFile(newChara);
 	}
@@ -426,7 +427,6 @@ System.out.println("Describe the basic appearance of the character in one line."
 				}
 			}
 		}
-	
 
 	/*
 	private static void PrototypeSkillCheck(Scanner in)

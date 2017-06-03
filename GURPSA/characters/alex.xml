@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<character>
+    <name>alex</name>
+    <player>pence</player>
+    <height>1</height>
+    <weight>1</weight>
+    <appearance>Tall dark and handsome</appearance>
+    <SM>5</SM>
+    <age>5</age>
+    <ST>5</ST>
+    <DX>5</DX>
+    <IQ>5</IQ>
+    <HT>5</HT>
+    <HP>5</HP>
+    <FP>5</FP>
+    <Will>5</Will>
+    <PER>5</PER>
+    <TL>5</TL>
+    <speed>5.0</speed>
+    <move>5</move>
+    <SkillList>
+        <PlayerSkill>
+            <skillName>First Aid</skillName>
+            <relativeLevel>70</relativeLevel>
+        </PlayerSkill>
+    </SkillList>
+    <AdvantageList>
+        <Advantage>
+            <advantageName>Trained By A Master</advantageName>
+        </Advantage>
+    </AdvantageList>
+    <LanguageList>
+        <Language languageName="english" written="NATIVE" spoken="NATIVE"/>
+    </LanguageList>
+    <CultureList/>
+    <AppearanceModifier appropriateSex="8" otherSex="8"/>
+    <ReputationList/>
+    <StatusList/>
+</character>
