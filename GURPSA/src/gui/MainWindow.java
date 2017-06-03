@@ -1,6 +1,7 @@
 package gui;
 
 import java.awt.EventQueue;
+import java.io.File;
 import java.io.PrintStream;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -10,11 +11,17 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import adventureMode.AdventureMain;
 import characterManager.Character;
+import characterManager.CharacterManager;
+import skillManager.SkillManager;
 
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import org.eclipse.wb.swing.FocusTraversalOnArray;
+
+import actionManager.ActionManager;
+import advantageManager.AdvantageManager;
+
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -56,7 +63,19 @@ public class MainWindow extends JFrame {
 	private JTextField roll_result_field;
 	private JButton reset_button;
 	
+
+	static CharacterManager playerManager;
+	static SkillManager skillManager;
+	static AdvantageManager advantageManager;
+	
 	public static void main(String[] args) {
+		playerManager = new CharacterManager();
+
+		skillManager = new SkillManager(new File("GURPSA\\resources\\skills.xml"));
+		
+		advantageManager = new AdvantageManager(new File("GURPSA\\resources\\advantages.xml"));		
+		
+		
 		if(runUI) {
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -92,11 +111,11 @@ public class MainWindow extends JFrame {
 					
 					System.out.println();
 					
-					AdventureMain.MainMenu();
+					AdventureMain.MainMenu(playerManager, skillManager, advantageManager);
 				}
 			});
 		} else {
-			AdventureMain.MainMenu();
+			AdventureMain.MainMenu(playerManager, skillManager, advantageManager);
 		}
 	}
 
@@ -156,9 +175,8 @@ public class MainWindow extends JFrame {
 		
 		
 		DefaultListModel<characterManager.Character> character_model = new DefaultListModel<characterManager.Character>();
-		for(int i = 0; i < 15; i++) {
-			characterManager.Character character = new characterManager.Character();
-			character.setName("John " + i);
+		
+		for(Character character : playerManager.getCharacters()) {
 			character_model.addElement(character);
 		}
 		

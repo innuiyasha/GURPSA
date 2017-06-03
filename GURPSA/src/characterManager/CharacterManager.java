@@ -19,6 +19,10 @@ public class CharacterManager {
 	public CharacterManager()
 	{
 		players = new Vector<Character>();
+		File folder = new File("GURPSA\\characters");
+		for(File file : folder.listFiles()) {
+			AddCharacter(file);
+		}
 	}
 	
 	//Generates a character from an XML file.
