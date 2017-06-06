@@ -19,7 +19,7 @@ public class CharacterManager {
 	public CharacterManager()
 	{
 		players = new Vector<Character>();
-		File folder = new File("GURPSA\\characters");
+		File folder = new File("characters");
 		for(File file : folder.listFiles()) {
 			AddCharacter(file);
 		}

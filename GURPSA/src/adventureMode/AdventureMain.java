@@ -5,6 +5,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Vector;
 
 import actionManager.ActionManager;
 import advantageManager.AdvantageManager;
@@ -15,15 +16,9 @@ import skillManager.SkillManager;
 import turnManager.TurnManager;
 import utilities.Utilities;
 
-//This will one day be one of our most important classes, but for now I'm using this as a test main.
 public class AdventureMain {
 	
-	
-	//This is a toggle for read/write XML
-	static boolean MakeXML = false;
-	static boolean Characters = true;
-	static boolean Skill = false;
-	static boolean Interactive = true;
+
 
 	static ActionManager actionManager;
 	static CharacterManager playerManager;
@@ -31,16 +26,17 @@ public class AdventureMain {
 	static AdvantageManager advantageManager;
 	static TurnManager turnManager;
 
-	public static void MainMenu(CharacterManager cm, SkillManager sm, AdvantageManager am) {
-
-
-
-		playerManager = cm;
-		skillManager = sm;
-		advantageManager = am;
-
+	public AdventureMain()
+	{
+		playerManager = new CharacterManager();
+		skillManager = new SkillManager(new File("resources\\skills.xml"));
+		advantageManager = new AdvantageManager(new File("resources\\advantages.xml"));	
+		
 		actionManager = new ActionManager(skillManager, advantageManager);
 		turnManager = new TurnManager(actionManager);
+	}
+	
+	public static void MainMenu() {
 
 		System.out.println("MAIN MENU\n\n"
 				+ "1. Look up Skills\n"
@@ -492,6 +488,11 @@ public class AdventureMain {
 	private static void combatModeStart()
 	{
 		turnManager.runCombatTurns();
+	}
+	
+	public Vector<Character> getCharacters()
+	{
+		return playerManager.getCharacters();
 	}
 
 }

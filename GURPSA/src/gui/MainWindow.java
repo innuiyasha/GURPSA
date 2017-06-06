@@ -63,18 +63,11 @@ public class MainWindow extends JFrame {
 	private JTextField roll_result_field;
 	private JButton reset_button;
 	
-
-	static CharacterManager playerManager;
-	static SkillManager skillManager;
-	static AdvantageManager advantageManager;
+	private static AdventureMain adventureMain;
 	
-	public static void main(String[] args) {
-		playerManager = new CharacterManager();
+	public static void main(String[] args) {	
 
-		skillManager = new SkillManager(new File("GURPSA\\resources\\skills.xml"));
-		
-		advantageManager = new AdvantageManager(new File("GURPSA\\resources\\advantages.xml"));		
-		
+		adventureMain = new AdventureMain();
 		
 		if(runUI) {
 			EventQueue.invokeLater(new Runnable() {
@@ -88,7 +81,6 @@ public class MainWindow extends JFrame {
 				}
 			});
 			
-
 			ExecutorService pool = Executors.newFixedThreadPool(3);
 			
 			pool.execute(new Runnable() {
@@ -102,6 +94,7 @@ public class MainWindow extends JFrame {
 							e.printStackTrace();
 						}
 					}
+
 					
 					PrintStream out = new PrintStream( new JTextAreaOutputStream( control ) );
 					System.setOut( out );
@@ -111,11 +104,11 @@ public class MainWindow extends JFrame {
 					
 					System.out.println();
 					
-					AdventureMain.MainMenu(playerManager, skillManager, advantageManager);
+					AdventureMain.MainMenu();
 				}
 			});
 		} else {
-			AdventureMain.MainMenu(playerManager, skillManager, advantageManager);
+			AdventureMain.MainMenu();
 		}
 	}
 
@@ -176,7 +169,7 @@ public class MainWindow extends JFrame {
 		
 		DefaultListModel<characterManager.Character> character_model = new DefaultListModel<characterManager.Character>();
 		
-		for(Character character : playerManager.getCharacters()) {
+		for(Character character : adventureMain.getCharacters()) {
 			character_model.addElement(character);
 		}
 		
