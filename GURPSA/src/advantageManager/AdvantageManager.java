@@ -25,6 +25,11 @@ public class AdvantageManager {
 		advantageMap = new HashMap<String, Advantage>();
 	}
 
+	public AdvantageManager(File XMLInput) {
+		advantageMap = new HashMap<String, Advantage>();
+		GenerateAdvantages(XMLInput);
+	}
+	
 	private Map<String,Advantage> getMap()
 	{
 		return advantageMap;

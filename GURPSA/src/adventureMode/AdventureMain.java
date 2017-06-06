@@ -31,18 +31,15 @@ public class AdventureMain {
 	static AdvantageManager advantageManager;
 	static TurnManager turnManager;
 
-	public static void MainMenu() {
+	public static void MainMenu(CharacterManager cm, SkillManager sm, AdvantageManager am) {
 
 
-		playerManager = new CharacterManager();
 
-		skillManager = new SkillManager(new File("resources\\skills.xml"));
-		
-		advantageManager = new AdvantageManager();
-		advantageManager.GenerateAdvantages(new File("resources\\advantages.xml"));
+		playerManager = cm;
+		skillManager = sm;
+		advantageManager = am;
 
 		actionManager = new ActionManager(skillManager, advantageManager);
-
 		turnManager = new TurnManager(actionManager);
 
 		System.out.println("MAIN MENU\n\n"
