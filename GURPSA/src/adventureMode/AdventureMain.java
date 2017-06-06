@@ -13,6 +13,7 @@ import characterManager.*;
 import characterManager.Character;
 import dataContainers.CharacterFields.Prerequisite;
 import skillManager.SkillManager;
+import turnManager.Turn;
 import turnManager.TurnManager;
 import utilities.Utilities;
 
@@ -493,6 +494,16 @@ public class AdventureMain {
 	public Vector<Character> getCharacters()
 	{
 		return playerManager.getCharacters();
+	}
+	
+	public Vector<Turn> getTurn(Vector<Character> characters)
+	{
+		return turnManager.getTurn(characters);
+	}
+	
+	public Vector<Turn> getTurn(String [] characters)
+	{
+		return turnManager.getTurn(characters);
 	}
 
 }
