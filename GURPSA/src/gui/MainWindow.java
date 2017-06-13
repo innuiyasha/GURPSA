@@ -21,6 +21,7 @@ import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import org.eclipse.wb.swing.FocusTraversalOnArray;
 
+import actionManager.ActionList;
 import actionManager.ActionManager;
 import advantageManager.AdvantageManager;
 
@@ -29,6 +30,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JTabbedPane;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollBar;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -157,8 +159,9 @@ public class MainWindow extends JFrame {
 		adventure_panel.setLayout(null);
 		
 		DefaultListModel<String> action_model = new DefaultListModel<String>();
-		for(int i = 0; i < 100; i++) {
-			action_model.addElement("Action " + i);
+		
+		for(int i = 0; i < ActionList.actionList.length; i++) {
+			action_model.addElement(ActionList.actionList[i]);
 		}
 		
 		JList action_list = new JList(action_model);
@@ -216,17 +219,23 @@ public class MainWindow extends JFrame {
 				Vector<Character> participants = new Vector<Character>();
 				
 				for(int i = 0 ; i < participant_model.size() ; i++)
-					participants.add(participant_model.getElementAt(i));
+				{
+					participants.add(participant_model.get(i));
+				}
 				
 				Vector<Turn> turnQueue = adventureMain.getTurn(participants);
 				
 				//Now we need to figure out what action they have selected and adjust the Turn accordingly.
+				String actionCode = (String)action_list.getSelectedValue();
 				
-				
-				
-				
-				
-				
+				switch(actionCode){
+				case "Skill Check":
+					for(int i = 0 ; i < turnQueue.size() ; i++)
+						turnQueue.get(i).skillCheck();
+					break;
+				case "Perception Check":
+					break;
+				}
 			}
 		});
 		run_button.setBounds(345, 393, 101, 23);

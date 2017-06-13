@@ -52,25 +52,19 @@ public class Turn {
 		}
 	}
 	
-	private void skillCheck()
+	public void skillCheck()
 	{
-		System.out.println("Enter the name of the skill you want to check. ((This still requires '.'s instead of spaces))");
-
-		Scanner in = new Scanner(System.in);
-		String line, skillName;
-
-		if(!(line = in.nextLine()).equals("exit")) {
-			String[] parts = line.split(" ");
-			skillName = parts[0];
-			actionManager.SkillCheck(initiator, skillName);
-		} else {
-			return;
-		}
+			actionManager.SkillCheck(initiator);
 	}
 	
 	private void skillCheck(String skillName)
 	{
 		actionManager.SkillCheck(initiator, skillName);
+	}
+	
+	public void skillCheck(String skillName, int modifier)
+	{
+		actionManager.SkillCheck(initiator, skillName, modifier);
 	}
 	
 	private void perceptionCheck()

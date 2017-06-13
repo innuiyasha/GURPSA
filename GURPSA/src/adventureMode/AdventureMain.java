@@ -35,6 +35,7 @@ public class AdventureMain {
 		
 		actionManager = new ActionManager(skillManager, advantageManager);
 		turnManager = new TurnManager(actionManager);
+		turnManager.buildTurnList(playerManager.getCharacters());
 	}
 	
 	public static void MainMenu() {

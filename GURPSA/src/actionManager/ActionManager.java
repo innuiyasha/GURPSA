@@ -2,11 +2,14 @@ package actionManager;
 
 import characterManager.Character;
 import dataContainers.CharacterFields.CharactersSkill;
+import dataContainers.CharacterFields.Skill;
 import skillManager.SkillManager;
 import utilities.Utilities;
 
 import java.util.Scanner;
 import java.util.Vector;
+
+import javax.swing.JOptionPane;
 
 import advantageManager.AdvantageManager;
 
@@ -22,6 +25,60 @@ public class ActionManager {
 	}
 
 
+	public void SkillCheck(Character character)
+	{
+		String skill = JOptionPane.showInputDialog("Which Skill do you want to check?");
+		
+		Vector<CharactersSkill> appropriateSkills = new Vector<CharactersSkill>();
+		appropriateSkills = character.checkForAppropriateSkills(skillManager, skill);
+
+		String chosenSkill = JOptionPane.showInputDialog(appropriateSkills.toString() + "\nWhich would you like to use?");
+		chosenSkill = utilities.Utilities.formatSkillName(chosenSkill);
+		
+		CharactersSkill usedSkill = null;
+		
+		for(int i = 0 ; i < appropriateSkills.size(); i++)
+			if(chosenSkill.equals(appropriateSkills.get(i).getSkillName()))
+				usedSkill = appropriateSkills.get(i);
+		
+		String chosenAttribute = JOptionPane.showInputDialog(skillManager.getSkill(skill).getBaseAttribute() + " is the typical base attribute.\n"
+				+ "Which would you like to use?");
+		
+		int attributeValue = 0;
+
+		switch(chosenAttribute) {
+		case "DX":
+			chosenAttribute = "DX";
+			attributeValue = character.getDX();
+			break;
+		case "IQ":
+			chosenAttribute = "IQ";
+			attributeValue = character.getIQ();
+			break;
+		case "HT":
+			chosenAttribute = "HT";
+			attributeValue = character.getHT();
+			break;
+		case "Will":
+			chosenAttribute = "Will";
+			attributeValue = character.getWill();
+			break;
+		case "Per":
+			chosenAttribute = "Per";
+			attributeValue = character.getPER();
+			break;
+		case "ST":
+			chosenAttribute = "ST";
+			attributeValue = character.getST();
+			break;
+		default:
+			System.out.println("Fuck.");
+			System.exit(-1);
+		}
+
+		System.out.println("Roll " + chosenAttribute + " (" + attributeValue + ") at " + usedSkill.getLevel() + " (" + usedSkill.getSkillName() + ")\n");
+	}
+	
 	public void SkillCheck(Character character, String skillName)
 	{
 		skillName = skillName.replace(".", " ");
@@ -100,6 +157,10 @@ public class ActionManager {
 
 		System.out.println("Roll " + chosenAttribute + " (" + attributeValue + ") at " + chosenSkill.getLevel() + " (" + chosenSkill.getSkillName() + ")\n");
 	}
+	public void SkillCheck(Character initiator, String skillName, int modifier) {
+		// TODO Auto-generated method stub
+		
+	}
 
 	public void PerceptionCheck(Character character)
 	{
@@ -147,4 +208,6 @@ public class ActionManager {
 	{
 
 	}
+
+
 }
