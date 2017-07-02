@@ -2,7 +2,6 @@ package actionManager;
 
 import characterManager.Character;
 import dataContainers.CharacterFields.CharactersSkill;
-import dataContainers.CharacterFields.Skill;
 import skillManager.SkillManager;
 import utilities.Utilities;
 
@@ -85,7 +84,6 @@ public class ActionManager {
 
 		Vector<CharactersSkill> appropriateSkills = new Vector<CharactersSkill>();
 
-		//TODO: This needs to look for attributes as defaults as well.
 		appropriateSkills = character.checkForAppropriateSkills(skillManager, skillName);
 
 		System.out.println(appropriateSkills.toString());

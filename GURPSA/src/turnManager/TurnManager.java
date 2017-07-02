@@ -1,7 +1,6 @@
 package turnManager;
 
 import java.util.Collections;
-import java.util.Scanner;
 import java.util.Vector;
 
 import actionManager.ActionManager;
@@ -40,43 +39,22 @@ public class TurnManager {
 		turnList = new Vector<Turn>();
 	}
 	
-	public void runTurn(int index)
-	{
-		turnList.get(index).runTurn();
-	}
-	
-	public void runTurn(String characterName)
-	{
-		for(int i = 0 ; i < turnList.size() ; i++)
-		{
-			if(characterName == turnList.get(i).getCharacterName())
-				turnList.get(i).runTurn();
-		}
-	}
-	
-	public void runTurn(Character character)
-	{
-		for(int i = 0 ; i < turnList.size() ; i++)
-		{
-			if(character.getName() == turnList.get(i).getCharacterName())
-				turnList.get(i).runTurn();
-		}
-	}
-	
-	public void runTurn(Vector<Character> characters)
-	{
-		for(int i = 0 ; i < characters.size(); i++)
-			for(int j = 0 ; j < turnList.size() ; j++)
-				if(characters.get(i).getName() == turnList.get(j).getCharacterName())
-					turnList.get(j).runTurn();
-	}
-	
 	public Vector<Turn> getTurn(Character[] characters)
 	{
 		Vector<Turn> turns = new Vector<Turn>();
 		for(int i = 0 ; i < characters.length; i++)
 			for(int j = 0 ; j < turnList.size() ; j++)
 				if(characters[i].getName() == turnList.get(j).getCharacterName())
+					turns.add(turnList.get(j));
+		return turns;
+	}
+	
+	public Vector<Turn> getTurn(Vector<Character> characters)
+	{
+		Vector<Turn> turns = new Vector<Turn>();
+		for(int i = 0 ; i < characters.size(); i++)
+			for(int j = 0 ; j < turnList.size() ; j++)
+				if(characters.get(i).getName() == turnList.get(j).getCharacterName())
 					turns.add(turnList.get(j));
 		return turns;
 	}
@@ -89,37 +67,6 @@ public class TurnManager {
 				if(characters[i] == turnList.get(j).getCharacterName())
 					turns.add(turnList.get(j));
 		return turns;
-	}
-	
-	@SuppressWarnings("resource")
-	public void runCombatTurns()
-	{
-		enforceTurns(true);
-		
-		Scanner in = new Scanner(System.in);
-		boolean stop = false;
-		
-		while(!stop)
-			for(int i = 0 ; i < turnList.size(); i++)
-			{
-				if(stop)
-					break;
-
-				runTurn(i);
-
-				System.out.println("Type exit if you want to leave combat mode. Anything else will proceed with the next turn.\n");
-				if(in.nextLine().equals("exit"))
-					stop = true;
-			}
-		
-		enforceTurns(false);
-	}
-	
-	private void enforceTurns(boolean enforce)
-	{
-		enforceTurnOrder = enforce;
-		if(enforce && turnList.size() != 0)
-			sortBySpeed();
 	}
 	
 	private void sortBySpeed()

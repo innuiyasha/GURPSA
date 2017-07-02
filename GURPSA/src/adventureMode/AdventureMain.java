@@ -45,8 +45,7 @@ public class AdventureMain {
 				+ "2. Look up Advantages\n"
 				+ "3. Load Characters\n"
 				+ "4. Make Characters\n"
-				+ "5. Begin play\n"
-				+ "6. Roll some dice\n\n"
+				+ "5. Roll some dice\n\n"
 				+ "Type 'exit' to close.\n");
 
 		Scanner in = new Scanner(System.in);
@@ -68,9 +67,6 @@ public class AdventureMain {
 				CharacterMaker(in);
 				break;
 			case "5":
-				beginPlay();
-				break;
-			case "6":
 				diceRollCheck(in);
 				break;
 			}
@@ -80,8 +76,7 @@ public class AdventureMain {
 					+ "2. Look up Advantages\n"
 					+ "3. Load Characters\n"
 					+ "4. Make Characters\n"
-					+ "5. Begin play\n"
-					+ "6. Roll some dice\n\n"
+					+ "5. Roll some dice\n\n"
 					+ "Type 'exit' to close.\n");
 		}
 		in.close();
@@ -422,59 +417,18 @@ public class AdventureMain {
 				}
 			}
 		}
-
-	private static void beginPlay()
-	{
-		System.out.println("PLAY MENU\n");
-
-		System.out.println("Enter a character's name to give them a turn"
-				+ " or 'combat' to enter combat mode. Type 'exit' to leave.");
-
-
-		@SuppressWarnings("resource")
-		Scanner in = new Scanner(System.in);
-
-		String line;
-
-		turnManager.clearTurnList();
-		turnManager.buildTurnList(playerManager.getCharacters());
-		
-		while(!(line = in.nextLine()).equals("exit"))
-		{
-			switch(line){
-			case "combat":
-				combatModeStart();
-				break;
-			default:
-				Character character = playerManager.getCharacter(line);
-				if(character != null)
-					adventureModeStart(character);
-				break;
-			}
-			
-			System.out.println("PLAY MENU\n");
-
-			System.out.println("Enter a character's name to give them a turn"
-					+ " or 'combat' to enter combat mode. Type 'exit' to leave.");
-		}
-	}
-
-	private static void adventureModeStart(Character character)
-	{
-		turnManager.runTurn(character.getName());
-	}
-
-	private static void combatModeStart()
-	{
-		turnManager.runCombatTurns();
-	}
 	
 	public Vector<Character> getCharacters()
 	{
 		return playerManager.getCharacters();
 	}
 	
-	public Vector<Turn> getTurn(Character[] characters)
+	public Vector<Turn> getTurn(Vector<Character> characters)
+	{
+		return turnManager.getTurn(characters);
+	}
+	
+	public Vector<Turn> getTurn(Character [] characters)
 	{
 		return turnManager.getTurn(characters);
 	}
