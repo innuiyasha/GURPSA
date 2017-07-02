@@ -1,7 +1,6 @@
 package gui;
 
 import java.awt.EventQueue;
-import java.io.File;
 import java.io.PrintStream;
 import java.util.Vector;
 import java.util.concurrent.ExecutorService;
@@ -12,8 +11,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import adventureMode.AdventureMain;
 import characterManager.Character;
-import characterManager.CharacterManager;
-import skillManager.SkillManager;
 import turnManager.Turn;
 
 import javax.swing.JTextField;
@@ -22,19 +19,12 @@ import javax.swing.JScrollPane;
 import org.eclipse.wb.swing.FocusTraversalOnArray;
 
 import actionManager.ActionList;
-import actionManager.ActionManager;
-import advantageManager.AdvantageManager;
-
 import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JTabbedPane;
 import javax.swing.JList;
-import javax.swing.JOptionPane;
-import javax.swing.JScrollBar;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
-import javax.swing.ListModel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.SwingConstants;
@@ -350,8 +340,6 @@ public class MainWindow extends JFrame {
 		    //Select the new item and make it visible.
 		    character_list.setSelectedIndex(index);
 		    character_list.ensureIndexIsVisible(index);
-	    	
-	    	
 	    	
 	    	participant_model.remove(index);
 		    
