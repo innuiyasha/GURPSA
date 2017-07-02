@@ -423,29 +423,6 @@ public class AdventureMain {
 			}
 		}
 
-	/*
-	private static void PrototypeSkillCheck(Scanner in)
-	{
-		System.out.println("SKILL CHECK\n");
-
-		System.out.println("Which character do you want to do a skill check on?");
-
-		String line;
-
-		if(!(line = in.nextLine()).equals("exit")) {
-			String[] parts = line.split(" ");
-			Character characterUnderTest = playerManager.getCharacter(parts[0]);
-
-			turnManager.addTurn(characterUnderTest);
-
-			turnManager.runTurn(characterUnderTest);
-
-			turnManager.clearTurnList();
-		}
-		else
-			return;
-	}*/
-
 	private static void beginPlay()
 	{
 		System.out.println("PLAY MENU\n");
@@ -497,7 +474,7 @@ public class AdventureMain {
 		return playerManager.getCharacters();
 	}
 	
-	public Vector<Turn> getTurn(Vector<Character> characters)
+	public Vector<Turn> getTurn(Character[] characters)
 	{
 		return turnManager.getTurn(characters);
 	}

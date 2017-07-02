@@ -206,14 +206,7 @@ public class MainWindow extends JFrame {
 			@Override
 			public void mouseReleased(MouseEvent e) {
 				//Retrieve the Turn of each participant
-				Vector<Character> participants = new Vector<Character>();
-				
-				for(int i = 0 ; i < participant_model.size() ; i++)
-				{
-					participants.add(participant_model.get(i));
-				}
-				
-				Vector<Turn> turnQueue = adventureMain.getTurn(participants);
+				Vector<Turn> turnQueue = adventureMain.getTurn(getParticipants());
 				
 				//Now we need to figure out what action they have selected and adjust the Turn accordingly.
 				String actionCode = (String)action_list.getSelectedValue();
@@ -224,6 +217,7 @@ public class MainWindow extends JFrame {
 						turnQueue.get(i).skillCheck();
 					break;
 				case "Perception Check":
+					//TODO
 					break;
 				}
 			}

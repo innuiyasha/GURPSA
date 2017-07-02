@@ -71,12 +71,12 @@ public class TurnManager {
 					turnList.get(j).runTurn();
 	}
 	
-	public Vector<Turn> getTurn(Vector<Character> characters)
+	public Vector<Turn> getTurn(Character[] characters)
 	{
 		Vector<Turn> turns = new Vector<Turn>();
-		for(int i = 0 ; i < characters.size(); i++)
+		for(int i = 0 ; i < characters.length; i++)
 			for(int j = 0 ; j < turnList.size() ; j++)
-				if(characters.get(i).getName() == turnList.get(j).getCharacterName())
+				if(characters[i].getName() == turnList.get(j).getCharacterName())
 					turns.add(turnList.get(j));
 		return turns;
 	}
