@@ -80,7 +80,7 @@ public class ActionManager {
 	
 	public void SkillCheck(Character character, String skillName)
 	{
-		skillName = skillName.replace(".", " ");
+		skillName = utilities.Utilities.formatSkillName(skillName);
 
 		Vector<CharactersSkill> appropriateSkills = new Vector<CharactersSkill>();
 
