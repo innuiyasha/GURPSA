@@ -8,9 +8,7 @@ public class Advantage {
 
 	String name;
 	String desc;
-	String stat/*cost*/; //String isn't a useful data type for us. ENUM perhaps?
-	//This is also likely where we're going to deal with archetypes.
-	//This might need to be abstract or an interface or something
+	String stat/*cost*/;
 	String nums; //Identifying nums
 	
 	public Advantage()

@@ -152,17 +152,7 @@ public class Skill {
 	{
 		return desc;
 	}
-/*	
-	@XmlEnum
-	public enum Difficulty {
-		Easy, Average, Hard, VeryHard, WildCard
-	}
-	
-	@XmlEnum
-	public enum BaseAttribute {
-		ST, DX, IQ, HT, Will, PER
-	}
-	*/
+
 	public String toString()
 	{
 		String tempString = name + " " + attr + "/" + diff + ". " + desc + ". Its defaults are ";
