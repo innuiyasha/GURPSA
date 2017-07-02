@@ -15,7 +15,6 @@ public class CharacterManager {
 
 	Vector<Character> players;
 	
-	//This needs to be changed later. Right now, it's a toggle between read/write the XML file.
 	public CharacterManager()
 	{
 		players = new Vector<Character>();
@@ -70,7 +69,7 @@ public class CharacterManager {
 		return null;
 	}
 	
-	//Turns a character into an XML file. Currently overwrites a single file.
+	//Turns a character into an XML file. Uses the character's name as the file's name.
 	public void toXMLFile(Character character)
 	{
 		try {

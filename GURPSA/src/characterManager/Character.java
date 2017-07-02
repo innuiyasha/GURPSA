@@ -54,70 +54,37 @@ public class Character {
 	@XmlElement(name = "Status")
 	private Vector<StatusModifier> playerStatuses;
 	
-//This constructor is just for generating an XML file to test.
-//We'll need much, much more awesome constructors soon.
 	public Character()
 	{
-//		name = "Teresa";
 		name = "";
-//		player = "David Clare";
 		player = "";
-//		height = "5'8";
 		height = "";
-//		weight = "200lbs";
 		weight = "";
-//		appearance = "Purple hair??";
 		appearance = "";
-//		SM = 0;
 		SM = 0;
-//		age = 24;
 		age = 0;
-//		ST = 15;
 		ST = 10;
-//		DX = 12;
 		DX = 10;
-//		IQ = 8;
 		IQ = 10;
-//		HT = 15;
 		HT = 10;
-//		HP = 18;
 		HP = 10;
-//		FP = 18;
 		FP = 10;
-//		Will = 13;
 		Will = 10;
-//		PER = 6;
 		PER = 10;
-//		TL = 4;
 		setTL(7);
-//		speed = 7.0f;
 		speed = 5.0f;
-//		move = 7;
 		move = 5;
-//
 		playerSkills = new Vector<CharactersSkill>();
-//		
 		playerAdvantages = new Vector<CharactersAdvantage>();
-//		playerAdvantages.add(new Advantage("Very Fit", "15 Points", "Placeholder for Very Fit description."));
-//		playerAdvantages.add(new Advantage("Ambidexterity", "5 Points", "Placeholder for Ambidexterity description."));
-//		playerAdvantages.add(new Advantage("Fast Swimmer (+1 basic move)", "5 Points", "Placeholder for increased Move Speed description."));
-//		
+
 		playerCultures = new Vector<CulturalFamiliarity>();
-//		playerCultures.add(new CulturalFamiliarity("Human"));
-//		playerCultures.add(new CulturalFamiliarity("Lynian"));
-//		playerCultures.add(new CulturalFamiliarity("Wyverian"));
-//		
+		
 		playerLanguages = new Vector<Language>();
-//		playerLanguages.add(new Language("Human",Language.Fluency.NATIVE,Language.Fluency.NATIVE));
-//		
+
 		playerAppearance = new AppearanceModifier(0,0);
 		playerReputations = new Vector<ReputationModifier>();
-//		playerReputations.add(new ReputationModifier("Loc Lac Guild workers", +2, "recognized on a 10- roll."));
-//		playerReputations.add(new ReputationModifier("Loc Lac Guild workers", -2, "recognized on a 7- roll."));
 		
 		playerStatuses = new Vector<StatusModifier>();
-//		playerStatuses.add(new StatusModifier("Hunter",1));
-		
 	}
 
 	//A liiiittle slower than it should be.
