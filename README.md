@@ -1,29 +1,17 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+GURPSA is aimed to be an tool for the game master of a GURPS game. It is intended to help aid in the complexities of combat, turns, and tracking time-based events like poison damage.
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* This is very much a Work In Progress.
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
+* Simply clone the repo
+* Compile GURPSA/src/AdventureMode/AdventureMain.java
+* Execute AdventureMain
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* spencerbriere
